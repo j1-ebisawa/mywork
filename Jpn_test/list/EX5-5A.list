@@ -1,8 +1,8 @@
-*>(c) 2005 - 2019 Veryant
-*>compiler version: isCOBOL release 2020 R2 build#1023.11-20210311-31455
-*>source file name:  C:\work\gitrepos\Jpn_test\source\EX5-5A.cbl
-*>date generated  :  Mon May 24 10:15:40 JST 2021
-*>compiler options:  -tasks -jj -lo=C:/work/gitrepos/Jpn_test/list -sp=cpy;screenpgm;fdsl -dx -esme=100 -g -od=C:/work/gitrepos/Jpn_test/output -eo=C:/work/gitrepos/Jpn_test/errs -d -smat
+*>(c) 2005 - 2021 Veryant
+*>compiler version: isCOBOL-BETA release 2021 R1 build#1041.1-20210329-31547
+*>source file name:  C:\COBOL\Remote_Repos\JPN_TEST\Jpn_test\source\EX5-5A.cbl
+*>date generated  :  Mon May 24 10:58:25 GMT+09:00 2021
+*>compiler options:  -dx -eo=C:/COBOL/Remote_Repos/JPN_TEST/Jpn_test/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/COBOL/Remote_Repos/JPN_TEST/Jpn_test/list -tasks -od=C:/COBOL/Remote_Repos/JPN_TEST/Jpn_test/output -jj
 *>*****************************************************************
 *>    テストケース：5-5A                                                  
 *>    プログラム名：日本語化テスト （手続き部）MOVE命令                                  

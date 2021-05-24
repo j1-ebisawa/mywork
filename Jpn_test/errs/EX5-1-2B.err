@@ -1,3 +1,3 @@
-I --> C:\work\gitrepos\Jpn_test\source\EX5-1-2B.cbl
+I --> C:\COBOL\Remote_Repos\JPN_TEST\Jpn_test\source\EX5-1-2B.cbl
 --E: #218 Numeric literal treated as alphanumeric: A-20; file = EX5-1-2B.cbl, line = 105, col 29
 --W: #170 VALUE size error "Ç†Å^Ç¢Å^Ç§Å^Ç¶Å^Ç®Å^Ç©"; file = EX5-1-2B.cbl, line = 88, col 29

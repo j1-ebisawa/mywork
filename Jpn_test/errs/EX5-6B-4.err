@@ -1,4 +1,4 @@
-I --> C:\work\gitlocal\Jpn_test\source\EX5-6B-4.cbl
+I --> C:\COBOL\Remote_Repos\JPN_TEST\Jpn_test\source\EX5-6B-4.cbl
 --S: #68 Usage must be DISPLAY: N-05; file = EX5-6B-4.cbl, line = 75, col 11
 --S: #45 Unmatched <END-STRING>; file = EX5-6B-4.cbl, line = 79, col 4
 --S: #68 Usage must be DISPLAY: N-06; file = EX5-6B-4.cbl, line = 82, col 11

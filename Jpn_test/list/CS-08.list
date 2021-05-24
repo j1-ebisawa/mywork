@@ -1,8 +1,8 @@
-*>(c) 2005 - 2019 Veryant
-*>compiler version: isCOBOL release 2020 R2 build#1023.11-20210311-31455
-*>source file name:  C:\work\gitrepos\Jpn_test\source\CS-08.cbl
-*>date generated  :  Mon May 24 10:15:38 JST 2021
-*>compiler options:  -tasks -jj -lo=C:/work/gitrepos/Jpn_test/list -sp=cpy;screenpgm;fdsl -dx -esme=100 -g -od=C:/work/gitrepos/Jpn_test/output -eo=C:/work/gitrepos/Jpn_test/errs -d -smat
+*>(c) 2005 - 2021 Veryant
+*>compiler version: isCOBOL-BETA release 2021 R1 build#1041.1-20210329-31547
+*>source file name:  C:\COBOL\Remote_Repos\JPN_TEST\Jpn_test\source\CS-08.cbl
+*>date generated  :  Mon May 24 14:57:56 GMT+09:00 2021
+*>compiler options:  -dx -eo=C:/COBOL/Remote_Repos/JPN_TEST/Jpn_test/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/COBOL/Remote_Repos/JPN_TEST/Jpn_test/list -tasks -od=C:/COBOL/Remote_Repos/JPN_TEST/Jpn_test/output -jj
 *>*****************************************************************
 *>    テストケース：CS-08                                                 
 *>    プログラム名：通貨記号テスト                                               
@@ -82,115 +82,117 @@ P-010.
 *>ケース1.                                                            
      MOVE "P-010-01"        TO CASE-ID.                          
      MOVE -123.456 TO NEDIT-01.                                  
-     IF NEDIT-01X = "     NG"                                    
+     IF NEDIT-01X = "\ 0/00,123.45-"                             
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG:" NEDIT-01X    
      END-IF.                                                     
 *>                                                                 
      MOVE "P-010-02"        TO CASE-ID.                          
      MOVE -123.456 TO NEDIT-02.                                  
-     IF NEDIT-02X = "     NG"                                    
+     IF NEDIT-02X = "\ 0/00,123.45-"                             
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG:" NEDIT-02X    
      END-IF.                                                     
 *>                                                                 
      MOVE "P-010-03"        TO CASE-ID.                          
      MOVE -123.456 TO NEDIT-03.                                  
-     IF NEDIT-03X = "     NG"                                    
+     IF NEDIT-03X = "\ 0/00,123.45CR"                            
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG:" NEDIT-03X    
      END-IF.                                                     
 *>                                                                 
      MOVE "P-010-04"        TO CASE-ID.                          
      MOVE -123.456 TO NEDIT-04.                                  
-     IF NEDIT-04X = "     NG"                                    
+     IF NEDIT-04X = "-\ 0/00,123.45"                             
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG:" NEDIT-04X    
      END-IF.                                                     
 *>                                                                 
      MOVE "P-010-05"        TO CASE-ID.                          
      MOVE -123.456 TO NEDIT-05.                                  
-     IF NEDIT-05X = "     NG"                                    
+     IF NEDIT-05X = "-\ 0/00,123.45"                             
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG:" NEDIT-05X    
      END-IF.                                                     
 *>                                                                 
      MOVE "P-010-06"        TO CASE-ID.                          
      MOVE -123.456 TO NEDIT-06.                                  
-     IF NEDIT-06X = "     NG"                                    
+     IF NEDIT-06X = "\ 0/00,123.45DB"                            
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG:" NEDIT-06X    
      END-IF.                                                     
 *>                                                                 
      MOVE "P-010-07"        TO CASE-ID.                          
      MOVE -123.456 TO NEDIT-07.                                  
-     IF NEDIT-07X = "     NG"                                    
+     IF NEDIT-07X = "-\ 0/00,123.45"                             
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG:" NEDIT-07X    
      END-IF.                                                     
 *>                                                                 
      MOVE "P-010-08"        TO CASE-ID.                          
      MOVE -123.456 TO NEDIT-08.                                  
-     IF NEDIT-08X = "     NG"                                    
+     IF NEDIT-08X = "-\ 0/00,123.45"                             
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG:" NEDIT-08X    
      END-IF.                                                     
 *>ケース2.                                                            
      MOVE "P-010-11"        TO CASE-ID.                          
      MOVE -123.456 TO NEDIT-11.                                  
-     IF NEDIT-11X = "     NG"                                    
+     IF NEDIT-11X = "  \ 0/00,123.45-"                           
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG:" NEDIT-11X    
      END-IF.                                                     
 *>                                                                 
      MOVE "P-010-12"        TO CASE-ID.                          
      MOVE -123.456 TO NEDIT-12.                                  
-     IF NEDIT-12X = "     NG"                                    
+     IF NEDIT-12X = "  \ 0/00,123.45-"                           
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG:" NEDIT-12X    
      END-IF.                                                     
 *>                                                                 
      MOVE "P-010-13"        TO CASE-ID.                          
      MOVE -123.456 TO NEDIT-13.                                  
-     IF NEDIT-13X = "     NG"                                    
+     IF NEDIT-13X = "  \ 0/00,123.45CR"                          
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG:" NEDIT-13X    
      END-IF.                                                     
 *>                                                                 
      MOVE "P-010-14"        TO CASE-ID.                          
      MOVE -123.456 TO NEDIT-14.                                  
-     IF NEDIT-14X = "     NG"                                    
+     IF NEDIT-14X = "-  \ 0/00,123.45"                           
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG:" NEDIT-14X    
      END-IF.                                                     
 *>                                                                 
      MOVE "P-010-15"        TO CASE-ID.                          
      MOVE -123.456 TO NEDIT-15.                                  
-     IF NEDIT-15X = "     NG"                                    
+     IF NEDIT-15X = "-  \ 0/00,123.45"                           
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG:" NEDIT-15X    
      END-IF.                                                     
 *>                                                                 
      MOVE "P-010-16"        TO CASE-ID.                          
      MOVE -123.456 TO NEDIT-16.                                  
-     IF NEDIT-16X = "     NG"                                    
+     IF NEDIT-16X = "  \ 0/00,123.45DB"                          
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG:" NEDIT-16X    
      END-IF.                                                     
 *>                                                                 
      MOVE "P-010-17"        TO CASE-ID.                          
      MOVE -123.456 TO NEDIT-17.                                  
-     IF NEDIT-17X = "     NG"                                    
+     IF NEDIT-17X = "-  \ 0/00,123.45"                           
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG:" NEDIT-17X    
      END-IF.                                                     
 *>                                                                 
      MOVE "P-010-18"        TO CASE-ID.                          
      MOVE -123.456 TO NEDIT-18.                                  
-     IF NEDIT-18X = "     NG"                                    
+     IF NEDIT-18X = "-  \ 0/00,123.45"                           
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG:" NEDIT-18X    
      END-IF.                                                     
+*>                                                                 
+*>                                                                 
 *>                                                                 
 *>                                                                 
      DISPLAY "TEST END   (CS-08)".                               

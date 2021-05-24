@@ -18,8 +18,8 @@
        CONFIGURATION         SECTION.
        SOURCE-COMPUTER.      PC.
        OBJECT-COMPUTER.      PC.
-      * SPECIAL-NAMES.
-      *        CURRENCY SIGN IS "\".
+       SPECIAL-NAMES.
+              CURRENCY SIGN IS "\".
       ******************************************************************
        DATA                  DIVISION.
       ******************************************************************
@@ -34,10 +34,8 @@
        01  NUM-03        PIC S9(5).
       *
        01  NEDIT-01X.
-           *>05 NEDIT-01   PIC \\\,\\9.  *>20210521 #1 '\' can't available
-           05 NEDIT-01   PIC $$$,$$9.
-      *01  NEDIT-02X.
-      *    05  NEDIT-02  PIC \\\,\\9.
+           05 NEDIT-01   PIC \\\,\\9. 
+       01  NEDIT-02X.
        01  WK-I          PIC S9(3).
       ******************************************************************
        PROCEDURE             DIVISION.

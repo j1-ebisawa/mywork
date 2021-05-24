@@ -1,8 +1,8 @@
-*>(c) 2005 - 2019 Veryant
-*>compiler version: isCOBOL release 2020 R2 build#1023.11-20210311-31455
-*>source file name:  C:\work\gitrepos\Jpn_test\source\CS-04.cbl
-*>date generated  :  Mon May 24 10:15:38 JST 2021
-*>compiler options:  -tasks -jj -lo=C:/work/gitrepos/Jpn_test/list -sp=cpy;screenpgm;fdsl -dx -esme=100 -g -od=C:/work/gitrepos/Jpn_test/output -eo=C:/work/gitrepos/Jpn_test/errs -d -smat
+*>(c) 2005 - 2021 Veryant
+*>compiler version: isCOBOL-BETA release 2021 R1 build#1041.1-20210329-31547
+*>source file name:  C:\COBOL\Remote_Repos\JPN_TEST\Jpn_test\source\CS-04.cbl
+*>date generated  :  Mon May 24 14:58:09 GMT+09:00 2021
+*>compiler options:  -dx -eo=C:/COBOL/Remote_Repos/JPN_TEST/Jpn_test/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/COBOL/Remote_Repos/JPN_TEST/Jpn_test/list -tasks -od=C:/COBOL/Remote_Repos/JPN_TEST/Jpn_test/output -jj
 *>*****************************************************************
 *>    テストケース：CS-04                                                 
 *>    プログラム名：通貨記号テスト                                               
@@ -24,7 +24,7 @@ CONFIGURATION         SECTION.
 SOURCE-COMPUTER. PC.                                        
 OBJECT-COMPUTER. PC.                                        
  SPECIAL-NAMES.                                                  
-       CURRENCY SIGN IS "$".                                     
+       CURRENCY SIGN IS "\".                                     
 *>*****************************************************************
 DATA                  DIVISION.                                  
 *>*****************************************************************
@@ -39,10 +39,9 @@ WORKING-STORAGE       SECTION.
 01  NUM-03        PIC S9(5).                                     
 *>                                                                 
 01  NEDIT-01X.                                                   
-    *>05 NEDIT-01   PIC \\\,\\9.  *>20210521 #1 '\' can't availab
-    05 NEDIT-01   PIC $$$,$$9.                                   
-*>01  NEDIT-02X.                                                   
-*>    05  NEDIT-02  PIC \\\,\\9.                                   
+    05 NEDIT-01   PIC \\\,\\9.                                   
+01  NEDIT-02X.                                                   
+    05 NEDIT-02  PIC $$$,$$9. *>#002 C-SIGN only 1 character   
 01  WK-I          PIC S9(3).                                     
 *>*****************************************************************
 PROCEDURE             DIVISION.                                  
@@ -81,3 +80,4 @@ P-010.
      GOBACK                                                      
      .                                                           
                                                                  
+*> --S: #32 Illegal picture: $; file = CS-04.cbl, line = 39, col 7

@@ -1,5 +1,5 @@
 *>********************************************************************<*
-*>***** Copyright (c) 2005 - 2020 Veryant. Users of isCOBOL      *****<*
+*>***** Copyright (c) 2005 - 2021 Veryant. Users of isCOBOL      *****<*
 *>***** may freely modify and redistribute this program.         *****<*
 *>********************************************************************<*
 
@@ -25,6 +25,7 @@
 78  ctl-slider                                   value 21.
 78  ctl-java-bean                                value 22.
 78  ctl-ribbon                                   value 23.
+78  ctl-scroll-pane                              value 24.
 
 78  s-permanent                                  value 1073741824.
 78  s-temporary                                  value 536870912.
@@ -121,6 +122,13 @@
 78  pbp-bitmap-disabled                          value 21.
 78  pbp-bitmap-rollover                          value 22.
 78  pbp-bitmap-pressed                           value 23.
+78  pbp-disabled-color                           value 4097.
+78  pbp-disabled-background-color                value 4098.
+78  pbp-disabled-foreground-color                value 4099.
+78  pbp-rollover-color                           value 4100.
+78  pbp-rollover-background-color                value 4101.
+78  pbp-rollover-foreground-color                value 4102.
+
 
 78  cbs-transparent                              value 65536.
 78  cbs-bitmap                                   value 32768.
@@ -141,6 +149,12 @@
 78  cbp-bitmap-rollover-selected                 value 24.
 78  cbp-bitmap-selected                          value 25.
 78  cbp-bitmap-disabled-selected                 value 26.
+78  cbp-disabled-color                           value 4097.
+78  cbp-disabled-background-color                value 4098.
+78  cbp-disabled-foreground-color                value 4099.
+78  cbp-rollover-color                           value 4100.
+78  cbp-rollover-background-color                value 4101.
+78  cbp-rollover-foreground-color                value 4102.
 
 78  rbs-no-group-tab                             value 1.
 78  rbs-left-text                                value 2.
@@ -164,6 +178,12 @@
 78  rbp-bitmap-rollover-selected                 value 24.
 78  rbp-bitmap-selected                          value 25.
 78  rbp-bitmap-disabled-selected                 value 26.
+78  rbp-disabled-color                           value 4097.
+78  rbp-disabled-background-color                value 4098.
+78  rbp-disabled-foreground-color                value 4099.
+78  rbp-rollover-color                           value 4100.
+78  rbp-rollover-background-color                value 4101.
+78  rbp-rollover-foreground-color                value 4102.
 
 78  sbs-horizontal                               value 1.
 78  sbs-track-thumb                              value 2.
@@ -248,6 +268,9 @@
 78  fp-fill-percent                              value 4.
 78  fp-fill-color2                               value 5.
 78  fp-title-position                            value 6.
+78  fp-gradient-orientation                      value 4097.
+78  fp-gradient-color-1                          value 4098.
+78  fp-gradient-color-2                          value 4099.
 
 78  ts-multiline                                 value 1.
 78  ts-buttons                                   value 2.
@@ -275,6 +298,17 @@
 78  tp-tab-foreground-color                      value 4102.
 78  tp-tab-rollover-color                        value 4103.
 78  tp-tab-delay                                 value 4104.
+78  tp-active-tab-color                          value 4105.
+78  tp-active-tab-background-color               value 4106.
+78  tp-active-tab-foreground-color               value 4107.
+78  tp-tab-border-width                          value 4108.
+78  tp-tab-border-color                          value 4109.
+78  tp-active-tab-border-color                   value 4110.
+78  tp-active-tab-border-width                   value 4111.
+78  tp-tab-widths                                value 4112.
+78  tp-gradient-orientation                      value 4113.
+78  tp-gradient-color-1                          value 4114.
+78  tp-gradient-color-2                          value 4115.
 
 78  brs-dotted                                   value 1.
 78  brs-dashed                                   value 2.
@@ -488,6 +522,11 @@
 78  dap-min-val                                  value 10.
 78  dap-maxday-characters                        value 11.
 78  dap-display-format                           value 4097.
+78  dap-illegal-date-value                       value 4098.
+
+78  spp-gradient-orientation                     value 4097.
+78  spp-gradient-color-1                         value 4098.
+78  spp-gradient-color-2                         value 4099.
 
 78  sps-no-box                                   value 1.
 78  sps-transparent                              value 2.
