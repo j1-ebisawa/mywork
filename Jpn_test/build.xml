@@ -1,0 +1,70 @@
+
+<project name="Test taskdef iscc" default="build" basedir="." >
+
+    <description>
+         Simple ant script to compile and run isCOBOL issamples programs
+    </description>
+    
+    <!-- Cobol sources -->
+    <property name="src.dir" location="source" />
+
+    <!-- Java classes -->
+    <property name="build.dir" location="output" />
+    
+    <path id="iscobol-classpath">
+         <pathelement path="lib/iscobol.jar"/>
+         <pathelement path="lib/jcommon-1.0.13.jar"/>
+         <pathelement path="lib/jacoco.core-0.8.5.jar"/>
+         <pathelement path="${build.dir}"/>
+         <pathelement path="."/>
+    </path>
+      
+    <pathconvert property="iscobol-classpath-prop" refid="iscobol-classpath"/>
+                     
+    <taskdef name="iscc" classname="com.iscobol.ant.iscc" classpathref="iscobol-classpath"/>
+
+    <target name="init">
+         <!-- Create the build directory structure used by compile -->
+        <mkdir dir="${build.dir}" />
+    </target>
+
+    <target name="compile" depends="init" description="compile the source ">
+         <sequential>
+         <iscc 
+             javacOptions="-classpath ${iscobol-classpath-prop} "
+             nosummary="false"
+             nowarn="true"
+             noerr="true"
+             force="true"
+             options="-sp=cpy"
+             failOnError="false"
+             destDir="${build.dir}">
+            <fileset dir="${src.dir}">
+               <include name="**/*.cbl"/>
+            </fileset>
+         </iscc>
+      </sequential>
+    </target>
+    
+    <target name="run" description="run the program ">
+        <!--java classname="com.iscobol.invoke.Isrun"
+            fork="true" 
+            classpath="${iscobol-classpath-prop}" >
+            <arg value="-c" /> 
+            <arg value="iscobol.properties" /> 
+            <arg value="AJ_ISRUN -c run.cfg jcl/test01.jcl" /> 
+        </java--> 
+        <exec executable="cmd">
+            <arg value="/c" />
+            <arg value="runAJ_JCL.bat" />
+        </exec>
+    	
+    </target>
+ 
+    <target name="clean" description="clean up">
+        <delete dir="${build.dir}" />
+    </target>
+
+    <!-- Default, run this -->
+    <target name="build" depends="clean, compile, run" />	
+</project>

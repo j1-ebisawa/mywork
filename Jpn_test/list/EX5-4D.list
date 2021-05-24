@@ -1,0 +1,88 @@
+*>(c) 2005 - 2019 Veryant
+*>compiler version: isCOBOL release 2020 R2 build#1023.11-20210311-31455
+*>source file name:  C:\work\gitlocal\Jpn_test\source\EX5-4D.cbl
+*>date generated  :  Mon May 24 10:21:22 JST 2021
+*>compiler options:  -tasks -jj -lo=C:/work/gitlocal/Jpn_test/list -sp=cpy;screenpgm;fdsl -dx -esme=100 -g -od=C:/work/gitlocal/Jpn_test/output -eo=C:/work/gitlocal/Jpn_test/errs -d -smat
+*>*****************************************************************
+*>    テストケース：5-4D                                                  
+*>    プログラム名：日本語化テスト （手続き部）INSPECT命令                               
+*>    処理概要    ：INSPECT命令で正しくエラーチェックされるか。                           
+*>  -------------------------------------------------------------- 
+*>  コンパイルエラーのチェックのため、実行できない。                                       
+*>   テストケース:６２～６５                                                  
+*>*****************************************************************
+IDENTIFICATION        DIVISION.                                  
+*>*****************************************************************
+PROGRAM-ID. EX5-4D.                                    
+AUTHOR. TSH.                                       
+DATE-WRITTEN. 2011-08-25.                                
+DATE-COMPILED. 2011-08-25.                                
+*>*****************************************************************
+ENVIRONMENT           DIVISION.                                  
+*>*****************************************************************
+CONFIGURATION         SECTION.                                   
+SOURCE-COMPUTER. PC.                                        
+OBJECT-COMPUTER. PC.                                        
+SPECIAL-NAMES.                                                   
+*>*****************************************************************
+DATA                  DIVISION.                                  
+*>*****************************************************************
+*>*****************************************************************
+WORKING-STORAGE       SECTION.                                   
+*>*****************************************************************
+01  OMIT-WK            PIC X.                                    
+01  CASE-ID            PIC X(10).                                
+01  W-TALLY  PIC 999.                                            
+01  G-01     PIC N(10).                                          
+01  GE-01    PIC NN/NNNN/NN.                                     
+01  G-03-1   PIC N.                                              
+01  G-03-2   PIC NN.                                             
+01  G-04-1   PIC N.                                              
+01  G-04-2   PIC NN.                                             
+01  G-05-1   PIC N.                                              
+01  G-05-2   PIC NN.                                             
+01  G-06-1   PIC N.                                              
+01  G-06-2   PIC NN.                                             
+01  G-08-1   PIC N.                                              
+01  G-08-2   PIC NN.                                             
+01  AN-06    PIC X(6).                                           
+*>*****************************************************************
+PROCEDURE             DIVISION.                                  
+*>*****************************************************************
+MAIN                  SECTION.                                   
+P-010.                                                           
+*>ケース62.エラー1（日本語項類以外との組み合わせ）                                       
+     MOVE "P-620-01"        TO CASE-ID.                          
+     MOVE "あいうえおかきくけこ" TO G-01.                                  
+                                                                 
+     INSPECT G-01 REPLACING ALL "０" BY "a".                      
+*>     コンパイルエラー                                                    
+*>                                                                 
+*>ケース63.エラー２（日本語項類以外との組み合わせ）                                       
+     MOVE "P-630-01"        TO CASE-ID.                          
+     MOVE "あいうえおかきくけこ" TO G-01.                                  
+                                                                 
+     INSPECT G-01 REPLACING ALL "かきく" BY AN-06.                  
+*>     コンパイルエラー                                                    
+*>ケース64.エラー２（サイズ不一致）                                               
+     MOVE "P-640-01"        TO CASE-ID.                          
+     MOVE "あいうえおかきくけこ" TO G-01.                                  
+                                                                 
+     INSPECT G-01 REPLACING ALL "かきく" BY "さ".                    
+*>     コンパイルエラー                                                    
+*>                                                                 
+*>ケース65.エラー３（CHARACTERS）                                           
+     MOVE "P-650-01"        TO CASE-ID.                          
+     MOVE "あいうえおかきくけこ" TO G-01.                                  
+                                                                 
+     INSPECT G-01 REPLACING CHARACTERS BY "かきく".                 
+*>     コンパイルエラー                                                    
+*>                                                                 
+     DISPLAY "EX5-4D NG".                                        
+     ACCEPT OMIT-WK.                                             
+     GOBACK                                                      
+     .                                                           
+                                                                 
+*> --S: #70 Illegal size: AN-06; file = EX5-4D.cbl, line = 60, col 41
+*> --S: #70 Illegal size: "さ"; file = EX5-4D.cbl, line = 66, col 41
+*> --S: #69 Must be size 1 in this context: "かきく"; file = EX5-4D.cbl, line = 73, col 42

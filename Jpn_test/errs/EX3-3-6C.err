@@ -1,0 +1,17 @@
+I --> C:\work\gitlocal\Jpn_test\source\EX3-3-6C.cbl
+--S: #49 Numeric expression expected: "A"; file = EX3-3-6C.cbl, line = 112, col 17
+--E: #173 Reference modifier out of range 0; file = EX3-3-6C.cbl, line = 114, col 21
+--E: #173 Reference modifier out of range -3; file = EX3-3-6C.cbl, line = 118, col 21
+--E: #173 Reference modifier out of range -2; file = EX3-3-6C.cbl, line = 120, col 23
+--E: #173 Reference modifier out of range 100; file = EX3-3-6C.cbl, line = 122, col 21
+--E: #173 Reference modifier out of range 5; file = EX3-3-6C.cbl, line = 122, col 25
+--S: #59 Illegal receiver from source type: R-G; file = EX3-3-6C.cbl, line = 139, col 24
+--S: #59 Illegal receiver from source type: R-GE; file = EX3-3-6C.cbl, line = 149, col 24
+--E: #43 Illegal condition L-ZONE-DEC & R-G; file = EX3-3-6C.cbl, line = 158, col 5
+--E: #43 Illegal condition L-PACK-DEC & R-G; file = EX3-3-6C.cbl, line = 160, col 5
+--E: #43 Illegal condition L-BIN-DEC & R-G; file = EX3-3-6C.cbl, line = 162, col 5
+--S: #43 Illegal condition 123.5 & R-G; file = EX3-3-6C.cbl, line = 164, col 5
+--E: #43 Illegal condition L-ZONE-DEC & R-GE; file = EX3-3-6C.cbl, line = 168, col 5
+--E: #43 Illegal condition L-PACK-DEC & R-GE; file = EX3-3-6C.cbl, line = 170, col 5
+--E: #43 Illegal condition L-BIN-DEC & R-GE; file = EX3-3-6C.cbl, line = 172, col 5
+--S: #43 Illegal condition 123.5 & R-GE; file = EX3-3-6C.cbl, line = 174, col 5

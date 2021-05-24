@@ -1,0 +1,12 @@
+I --> C:\work\gitlocal\Jpn_test\source\EX4-4C.cbl
+--W: #170 VALUE size error "ÇPÇQÇRÇSÇT"; file = EX4-4C.cbl, line = 31, col 31
+--W: #170 VALUE size error "ÇPÅ^ÇQÅ^ÇRÅ^ÇSÅ^ÇT"; file = EX4-4C.cbl, line = 33, col 31
+--S: #30 Invalid value: ERR-01; file = EX4-4C.cbl, line = 35, col 32
+--W: #170 VALUE size error -123.5; file = EX4-4C.cbl, line = 36, col 32
+--W: #170 VALUE size error "ÇPÇQÇRÇSÇT"; file = EX4-4C.cbl, line = 44, col 44
+--S: #30 Invalid value: N-ZONE; file = EX4-4C.cbl, line = 46, col 44
+--S: #30 Invalid value: N-ZONE-DEC; file = EX4-4C.cbl, line = 47, col 44
+--S: #30 Invalid value: N-PACK; file = EX4-4C.cbl, line = 48, col 44
+--S: #30 Invalid value: N-PACK-DEC; file = EX4-4C.cbl, line = 49, col 44
+--S: #30 Invalid value: N-BIN; file = EX4-4C.cbl, line = 50, col 44
+--S: #30 Invalid value: N-BIN-DEC; file = EX4-4C.cbl, line = 51, col 44

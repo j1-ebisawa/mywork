@@ -1,0 +1,9 @@
+I --> C:\work\gitlocal\Jpn_test\source\EX5-5D.cbl
+--S: #15 Unexpected token <NATIONAL>; file = EX5-5D.cbl, line = 194, col 19
+--S: #15 Unexpected token <BY>; file = EX5-5D.cbl, line = 194, col 39
+--S: #15 Unexpected token <"‚ ">; file = EX5-5D.cbl, line = 194, col 42
+--S: #13 Missing dot ; file = EX5-5D.cbl, line = 194, col 42
+--E: #212 Assumed to be a paragraph without final dot: NATIONAL-EDITED; file = EX5-5D.cbl, line = 195, col 19
+--W: #253 Paragraph name found in Area B: NATIONAL-EDITED; file = EX5-5D.cbl, line = 195, col 19
+--S: #15 Unexpected token <BY>; file = EX5-5D.cbl, line = 195, col 39
+--S: #15 Unexpected token <"‚©">; file = EX5-5D.cbl, line = 195, col 42

@@ -1,0 +1,11 @@
+I --> C:\work\gitlocal\Jpn_test\source\EX5-1-1G.cbl
+--S: #43 Illegal condition L-G & 123.45; file = EX5-1-1G.cbl, line = 103, col 5
+--S: #43 Illegal condition L-GE & 123.45; file = EX5-1-1G.cbl, line = 126, col 5
+--E: #43 Illegal condition L-PACK & R-G; file = EX5-1-1G.cbl, line = 175, col 5
+--S: #43 Illegal condition 123.45 & R-G; file = EX5-1-1G.cbl, line = 185, col 5
+--E: #43 Illegal condition L-PACK & R-GE; file = EX5-1-1G.cbl, line = 207, col 5
+--S: #43 Illegal condition 123.45 & R-GE; file = EX5-1-1G.cbl, line = 217, col 5
+--E: #43 Illegal condition L-ZONE-DEC & "‚ ‚¢‚¤"; file = EX5-1-1G.cbl, line = 233, col 5
+--E: #43 Illegal condition L-PACK-DEC & "‚ ‚¢‚¤"; file = EX5-1-1G.cbl, line = 238, col 5
+--E: #43 Illegal condition L-ZONE-DEC & "‚ ‚¢‚¤"; file = EX5-1-1G.cbl, line = 254, col 5
+--E: #43 Illegal condition L-PACK-DEC & "‚ ‚¢‚¤"; file = EX5-1-1G.cbl, line = 260, col 5

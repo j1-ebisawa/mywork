@@ -1,0 +1,61 @@
+      ******************************************************************
+      *    ÉeÉXÉgÉPÅ[ÉXÅFQA-17
+      *    ÉvÉçÉOÉâÉÄñºÅFì˙ñ{åÍâªÉeÉXÉg QA
+      ******************************************************************
+       IDENTIFICATION        DIVISION.
+      ******************************************************************
+       PROGRAM-ID.           QA-17.
+       AUTHOR.               TSH.
+       DATE-WRITTEN.         2011-08-25.
+       DATE-COMPILED.        2011-08-25.
+      ******************************************************************
+       ENVIRONMENT           DIVISION.
+      ******************************************************************
+       CONFIGURATION         SECTION.
+       SOURCE-COMPUTER.      PC.
+       OBJECT-COMPUTER.      PC.
+       SPECIAL-NAMES.
+      ******************************************************************
+       DATA                  DIVISION.
+      ******************************************************************
+      ******************************************************************
+       WORKING-STORAGE       SECTION.
+      ******************************************************************
+       01  OMIT-WK            PIC X.
+       01  CASE-ID            PIC X(10).
+       01  A        PIC X(30) VALUE "Ç`ÇaÇbÇcÇd".
+       01  B        PIC N(05) VALUE "Ç`ÇaÇbÇcÇd".
+       01  C        PIC N(10) VALUE "Ç`ÇaÇbÇcÇd".
+      ******************************************************************
+       PROCEDURE             DIVISION.
+      ******************************************************************
+       MAIN                  SECTION.
+       P-010. 
+            DISPLAY "QA-17 test start".
+      *ÉPÅ[ÉX1:
+            MOVE "A = B"  TO CASE-ID.
+            IF A = B
+               DISPLAY CASE-ID "TRUE:OK"
+            ELSE
+               DISPLAY CASE-ID "FALSE:NG"
+            END-IF.
+      *ÉPÅ[ÉX2:
+            MOVE "A = C"        TO CASE-ID.
+            IF A = C
+               DISPLAY CASE-ID "TRUE:NG"
+            ELSE
+               DISPLAY CASE-ID "FALSE:OK"
+            END-IF.
+      *ÉPÅ[ÉX3:
+            MOVE "B = C"        TO CASE-ID.
+            IF B = C
+               DISPLAY CASE-ID "TRUE:OK"
+            ELSE
+               DISPLAY CASE-ID "FALSE:NG"
+            END-IF.
+      *     
+            DISPLAY "QA-17 test end".
+            ACCEPT OMIT-WK.
+            GOBACK
+            .
+

@@ -1,0 +1,13 @@
+I --> C:\work\gitlocal\Jpn_test\source\EX6-1.cbl
+--S: #15 Unexpected token <BINARY-SHORT>; file = EX6-1.cbl, line = 62, col 24
+--S: #27 Invalid level number 05; file = EX6-1.cbl, line = 63, col 4
+--S: #27 Invalid level number 05; file = EX6-1.cbl, line = 64, col 4
+--S: #27 Invalid level number 05; file = EX6-1.cbl, line = 65, col 4
+--S: #27 Invalid level number 05; file = EX6-1.cbl, line = 66, col 4
+--S: #27 Invalid level number 05; file = EX6-1.cbl, line = 67, col 4
+--S: #15 Unexpected token <BINARY-SHORT>; file = EX6-1.cbl, line = 72, col 24
+--S: #27 Invalid level number 05; file = EX6-1.cbl, line = 73, col 4
+--S: #27 Invalid level number 05; file = EX6-1.cbl, line = 75, col 4
+--S: #27 Invalid level number 05; file = EX6-1.cbl, line = 76, col 4
+--S: #27 Invalid level number 05; file = EX6-1.cbl, line = 77, col 4
+--S: #27 Invalid level number 05; file = EX6-1.cbl, line = 79, col 4

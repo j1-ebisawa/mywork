@@ -1,0 +1,219 @@
+      ******************************************************************
+      *    ÉeÉXÉgÉPÅ[ÉXÅF4-2A
+      *    ÉvÉçÉOÉâÉÄñºÅFì˙ñ{åÍâªÉeÉXÉg ÅiÉfÅ[É^ïîÅjPICTUREãÂ
+      *    èàóùäTóvÅ@Å@ÅFPICTUREãÂéwíËÇ™ê≥ÇµÇ≠é¿çsÇ≥ÇÍÇÈÇ©ÇÉ`ÉFÉbÉNÇ∑ÇÈÅB
+      *  --------------------------------------------------------------
+      *   ÉeÉXÉgÉPÅ[ÉX:ÇPÅ`ÇT
+      ******************************************************************
+      * REPLACE ==BYTE-LENGTH== BY ==LENGTH-AN==.
+       IDENTIFICATION        DIVISION.
+      ******************************************************************
+       PROGRAM-ID.           EX4-2A.
+       AUTHOR.               TSH.
+       DATE-WRITTEN.         2011-08-18.
+       DATE-COMPILED.        2011-08-18.
+      ******************************************************************
+       ENVIRONMENT           DIVISION.
+      ******************************************************************
+       CONFIGURATION         SECTION.
+       SOURCE-COMPUTER.      PC.
+       OBJECT-COMPUTER.      PC.
+       SPECIAL-NAMES.
+      ******************************************************************
+       DATA                  DIVISION.
+      ******************************************************************
+      ******************************************************************
+       WORKING-STORAGE       SECTION.
+      ******************************************************************
+       01  OMIT-WK            PIC X.
+       01  CASE-ID            PIC X(10).
+       01  G-01               PICTURE N.
+       01  G-02               PIC NNN.
+       01  G-03               PIC N(10).
+       01  G-04               PIC N(5)NNN(5).
+       01  G-05               PIC NNNNNNNNNNNNNNNNNNNNNNNNNNNNNN.
+       01  G-06               PIC N(2)N(2)N(2)N(2)N(2)N(2)N(2)NN.
+       01  G-07               PIC N(20)N(20)N(20)N(20)N(20)N(20).
+       01  G-08               PIC N(20)N(20)NNNNNNNNNNNNNNNN(20).
+       01  G-09               PIC N(16383).
+       
+       01  GE-01              PICTURE NBN.
+       01  GE-02              PIC N/N.
+       01  GE-03              PIC N0N.
+       01  GE-04              PIC N/NBN0N.
+       01  GE-05              PIC NBNBNBNBNBNBNBNBNBNBNBNBNBNBNB.
+       01  GE-06              PIC N(3)/N(3)/N(3)/N(3)/N(3)/N(3)/.
+       01  GE-07              PIC N(20)0N(20)0N(20)0N(20)0N(20)0.
+       01  GE-08              PIC N(09)0BN(09)0BN(09)0BN(09)0BNN.
+       01  GE-09              PIC N(16383)/.
+       
+      ******************************************************************
+       PROCEDURE             DIVISION.
+      ******************************************************************
+       MAIN                  SECTION.
+       P-010. 
+            DISPLAY "TEST START (EX4-2A)".
+      *  ÉPÅ[ÉX1.ì˙ñ{åÍÉfÅ[É^ÅiNÅj
+      *
+            MOVE "P-010-01"             TO CASE-ID.
+            MOVE "Ç†" TO G-01.
+            IF G-01 = "Ç†" 
+               AND FUNCTION BYTE-LENGTH(G-01) = 2
+                                        DISPLAY CASE-ID "OK"
+               ELSE                     DISPLAY CASE-ID "NG"
+            END-IF.
+      *
+            MOVE "P-010-02"             TO CASE-ID.
+            MOVE "Ç†Ç¢Ç§"               TO G-02.
+            IF G-02 = "Ç†Ç¢Ç§" 
+               AND FUNCTION BYTE-LENGTH(G-02) = 6
+                                        DISPLAY CASE-ID "OK"
+               ELSE                     DISPLAY CASE-ID "NG"
+            END-IF.
+      *
+            MOVE "P-010-03"             TO CASE-ID.
+            MOVE "Ç†Ç¢Ç§Ç¶Ç®Ç©Ç´Ç≠ÇØÇ±" TO G-03.
+            IF G-03 = "Ç†Ç¢Ç§Ç¶Ç®Ç©Ç´Ç≠ÇØÇ±"
+               AND FUNCTION BYTE-LENGTH(G-03) = 20
+                                        DISPLAY CASE-ID "OK"
+               ELSE                     DISPLAY CASE-ID "NG"
+            END-IF.
+      *
+            MOVE "P-010-04"             TO CASE-ID.
+            MOVE "ÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQ" TO G-04.
+            IF G-04 = "ÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQ" 
+               AND FUNCTION BYTE-LENGTH(G-04) = 24
+                                        DISPLAY CASE-ID "OK"
+               ELSE                     DISPLAY CASE-ID "NG"
+            END-IF.
+      *
+       P-020. 
+      *  ÉPÅ[ÉX2.ì˙ñ{åÍï“èWÉfÅ[É^(N,B,/,0)
+      *
+            MOVE "P-020-01"             TO CASE-ID.
+            MOVE "Ç†Ç¢" TO GE-01
+            IF GE-01 = "Ç†Å@Ç¢"
+               AND FUNCTION BYTE-LENGTH(GE-01) = 6
+                                        DISPLAY CASE-ID "OK"
+               ELSE                     DISPLAY CASE-ID "NG"
+            END-IF.
+      *
+            MOVE "P-020-02"             TO CASE-ID.
+            MOVE "Ç†Ç¢"  TO GE-02.  
+            IF GE-02 = "Ç†Å^Ç¢"
+               AND FUNCTION BYTE-LENGTH(GE-02) = 6
+                                        DISPLAY CASE-ID "OK"
+               ELSE                     DISPLAY CASE-ID "NG"
+            END-IF.
+      *
+            MOVE "P-020-03"             TO CASE-ID.
+            MOVE "Ç†Ç¢"  TO GE-03.  
+            IF GE-03 = "Ç†ÇOÇ¢"
+               AND FUNCTION BYTE-LENGTH(GE-03) = 6
+                                        DISPLAY CASE-ID "OK"
+               ELSE                     DISPLAY CASE-ID "NG"
+            END-IF.
+      *
+            MOVE "P-020-04"             TO CASE-ID.
+            MOVE "ÇPÇQÇRÇS"  TO GE-04.  
+            IF GE-04 = "ÇPÅ^ÇQÅ@ÇRÇOÇS"
+               AND FUNCTION BYTE-LENGTH(GE-04) = 14
+                                        DISPLAY CASE-ID "OK"
+               ELSE                     DISPLAY CASE-ID "NG"
+            END-IF.
+      *
+       P-030. 
+      *  ÉPÅ[ÉX3.ì˙ñ{åÍÉfÅ[É^ÅiPICï∂éöóÒ30éöÅj
+            MOVE "P-030-01"             TO CASE-ID.
+            MOVE ALL "Ç†Ç¢" TO G-05.
+            IF G-05 = ALL "Ç†Ç¢"
+               AND FUNCTION BYTE-LENGTH(G-05) = 60
+                                        DISPLAY CASE-ID "OK"
+               ELSE                     DISPLAY CASE-ID "NG"
+            END-IF.
+      *
+            MOVE "P-030-02"             TO CASE-ID.
+            MOVE ALL "Ç†Ç¢Ç§" TO G-06.
+            IF G-06 = ALL "Ç†Ç¢Ç§"
+               AND FUNCTION BYTE-LENGTH(G-06) = 32
+                                        DISPLAY CASE-ID "OK"
+               ELSE                     DISPLAY CASE-ID "NG"
+            END-IF.
+      *
+            MOVE "P-030-03"             TO CASE-ID.
+            MOVE ALL "ÇOÇPÇQÇRÇSÇTÇUÇVÇWÇX" TO G-07.
+            IF G-07 = ALL "ÇOÇPÇQÇRÇSÇTÇUÇVÇWÇX"
+               AND FUNCTION BYTE-LENGTH(G-07) = 240
+                                        DISPLAY CASE-ID "OK"
+               ELSE                     DISPLAY CASE-ID "NG"
+            END-IF.
+      *
+            MOVE "P-030-04"             TO CASE-ID.
+            MOVE ALL "ÇOÇPÇQÇRÇSÇTÇUÇVÇWÇX" TO G-08.
+            IF G-08 = ALL "ÇOÇPÇQÇRÇSÇTÇUÇVÇWÇX"
+               AND FUNCTION BYTE-LENGTH(G-08) = 150
+                                        DISPLAY CASE-ID "OK"
+               ELSE                     DISPLAY CASE-ID "NG"
+            END-IF.
+       P-040. 
+      *  ÉPÅ[ÉX4.ì˙ñ{åÍï“èWÉfÅ[É^ÅiPICï∂éöóÒ30éöÅj
+      *
+            MOVE "P-040-01"             TO CASE-ID.
+            MOVE ALL "Ç†Ç¢Ç§Ç¶Ç®Ç©Ç´Ç≠ÇØÇ±Ç≥ÇµÇ∑ÇπÇª" TO GE-05.
+            IF GE-05 = 
+        "Ç†Å@Ç¢Å@Ç§Å@Ç¶Å@Ç®Å@Ç©Å@Ç´Å@Ç≠Å@ÇØÅ@Ç±Å@Ç≥Å@ÇµÅ@Ç∑Å@ÇπÅ@ÇªÅ@"
+               AND FUNCTION BYTE-LENGTH(GE-05) = 60
+                                        DISPLAY CASE-ID "OK"
+               ELSE                     DISPLAY CASE-ID "NG"
+            END-IF.
+      *
+            MOVE "P-040-02"             TO CASE-ID.
+            MOVE ALL "Ç†Ç¢Ç§"          TO GE-06.
+            IF GE-06 = ALL "Ç†Ç¢Ç§Å^"
+               AND FUNCTION BYTE-LENGTH(GE-06) = 48
+                                        DISPLAY CASE-ID "OK"
+               ELSE                     DISPLAY CASE-ID "NG"
+            END-IF.
+      *
+            MOVE "P-040-03"             TO CASE-ID.
+            MOVE ALL "Ç`ÇaÇbÇcÇdÇeÇfÇgÇhÇi"   TO GE-07.
+            IF GE-07 = ALL "Ç`ÇaÇbÇcÇdÇeÇfÇgÇhÇiÇ`ÇaÇbÇcÇdÇeÇfÇgÇhÇiÇO"       *>20111012 QA-25
+               AND FUNCTION BYTE-LENGTH(GE-07) = 210
+                                        DISPLAY CASE-ID "OK"
+               ELSE                     DISPLAY CASE-ID "NG"
+            END-IF.
+      *
+            MOVE "P-040-04"             TO CASE-ID.
+            MOVE ALL "ÇPÇQÇRÇSÇTÇUÇVÇWÇX"   TO GE-08.
+            IF GE-08 = ALL "ÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÅ@"
+               AND FUNCTION BYTE-LENGTH(GE-08) = 92
+                                        DISPLAY CASE-ID "OK"
+               ELSE                     DISPLAY CASE-ID "NG"
+            END-IF.
+      *
+       P-050. 
+      *  ÉPÅ[ÉX5.å¿äEånÅiÉfÅ[É^ÉTÉCÉYÅj
+      *
+            MOVE "P-050-01"             TO CASE-ID.
+            MOVE ALL "ÇOÇPÇQÇRÇSÇTÇUÇVÇWÇX" TO G-09.
+            IF G-09 = ALL "ÇOÇPÇQÇRÇSÇTÇUÇVÇWÇX"
+               AND FUNCTION BYTE-LENGTH(G-09) = 32766
+                                        DISPLAY CASE-ID "OK"
+               ELSE                     DISPLAY CASE-ID "NG"
+            END-IF.
+      *
+            MOVE "P-050-02"             TO CASE-ID.
+            MOVE ALL "ÇOÇPÇQÇRÇSÇTÇUÇVÇWÇX" TO GE-09.
+            IF GE-09(1:16383) = ALL "ÇOÇPÇQÇRÇSÇTÇUÇVÇWÇX" AND
+               GE-09(16384:1) = "Å^"
+               AND FUNCTION BYTE-LENGTH(GE-09) = 32768
+                                        DISPLAY CASE-ID "OK"
+               ELSE                     DISPLAY CASE-ID "NG"
+            END-IF.
+      *
+            DISPLAY "TEST END   (EX4-2A)".
+            ACCEPT OMIT-WK.
+      *
+            GOBACK
+            .
+

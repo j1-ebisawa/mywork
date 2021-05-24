@@ -1,0 +1,51 @@
+*>(c) 2005 - 2019 Veryant
+*>compiler version: isCOBOL release 2020 R2 build#1023.11-20210311-31455
+*>source file name:  C:\work\gitlocal\Jpn_test\source\EX5-4-1.cbl
+*>date generated  :  Mon May 24 10:21:22 JST 2021
+*>compiler options:  -tasks -jj -lo=C:/work/gitlocal/Jpn_test/list -sp=cpy;screenpgm;fdsl -dx -esme=100 -g -od=C:/work/gitlocal/Jpn_test/output -eo=C:/work/gitlocal/Jpn_test/errs -d -smat
+*>*****************************************************************
+*>    テストケース：5-4-1                                                 
+*>    プログラム名：日本語化テスト （手続き部）INSPECT命令                               
+*>    処理概要    ：一意名－１，定数１が日本語のとき、テイプ不一致                             
+*>*****************************************************************
+IDENTIFICATION        DIVISION.                                  
+*>*****************************************************************
+PROGRAM-ID. EX5-4-1.                                   
+AUTHOR. LA.                                        
+DATE-WRITTEN. 2011-11-09.                                
+DATE-COMPILED. 2011-11-09.                                
+*>*****************************************************************
+ENVIRONMENT           DIVISION.                                  
+*>*****************************************************************
+CONFIGURATION         SECTION.                                   
+SOURCE-COMPUTER. PC.                                        
+OBJECT-COMPUTER. PC.                                        
+SPECIAL-NAMES.                                                   
+*>*****************************************************************
+DATA                  DIVISION.                                  
+*>*****************************************************************
+*>*****************************************************************
+WORKING-STORAGE       SECTION.                                   
+*>*****************************************************************
+01  OMIT-WK           PIC X.                                     
+01  CASE-ID           PIC X(10).                                 
+01  G-01              PIC N(10).                                 
+*>*****************************************************************
+PROCEDURE             DIVISION.                                  
+*>*****************************************************************
+MAIN                  SECTION.                                   
+*>                                                                 
+     MOVE "5-4-1"          TO CASE-ID.                           
+     MOVE "ABCDE"          TO G-01.                              
+     INSPECT G-01 REPLACING ALL "Ａ" BY "**".                     
+*>                                                                 
+     IF G-01 = "**ＢＣＤＥ"                                          
+           DISPLAY CASE-ID "OK"                                  
+     ELSE  DISPLAY CASE-ID "NG:" G-01                            
+     END-IF.                                                     
+*>                                                                 
+     ACCEPT OMIT-WK.                                             
+     GOBACK                                                      
+     .                                                           
+                                                                 
+*> --S: #70 Illegal size: "**"; file = EX5-4-1.cbl, line = 35, col 39

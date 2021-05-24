@@ -1,0 +1,1321 @@
+*>(c) 2005 - 2019 Veryant
+*>compiler version: isCOBOL release 2020 R2 build#1023.11-20210311-31455
+*>source file name:  C:\work\gitrepos\Jpn_test\source\IF_TEST.cbl
+*>date generated  :  Mon May 24 10:15:41 JST 2021
+*>compiler options:  -tasks -jj -lo=C:/work/gitrepos/Jpn_test/list -sp=cpy;screenpgm;fdsl -dx -esme=100 -g -od=C:/work/gitrepos/Jpn_test/output -eo=C:/work/gitrepos/Jpn_test/errs -d -smat
+*>*****************************************************************
+*>    ¥Æ¥¹¥È¥±¡¼¥¹¡§5-1-1A                                         
+*>    ¥×¥úÁ°¥é¥àÌ¾¡§Æ?ËÜ¸?²½¥Æ¥¹¥È ¡Ê¼?Â³¤­Éô¡Ë¾ò·? Èæ³Ó¾ò·?              
+*>    ½èÍ?³µÍ×¡¡¡¡¡§Æ?ËÜ¸?Èæ³Ó¤¬Àµ¤·¤¯Èæ³ÓÉ½¤Ë¤·¤¿¤¬¤Ã¤Æ              
+*>                  Àµ¤·¤¯¥¨¥é¡¼¥Á¥§¥Ã¥¯¤µ¤?¤?¤«¤ò¥Á¥§¥Ã¥¯¤¹¤?¡£     
+*>  -------------------------------------------------------------- 
+*>    ¤³¤Î¥×¥úÁ°¥é¥à¤Ï¥¨¥é¡¼¥Á¥§¥Ã¥¯¤òÄ´¤Ù¤?¤Î¤Ç¡¢¼Â¹Ô¤Ç¤­¤Ê¤¤¡£        
+*>*****************************************************************
+IDENTIFICATION        DIVISION.                                  
+*>*****************************************************************
+PROGRAM-ID. IF_TEST.                                   
+AUTHOR. TSH.                                       
+DATE-WRITTEN. 2011-08-18.                                
+DATE-COMPILED. 2011-08-18.                                
+*>*****************************************************************
+ENVIRONMENT           DIVISION.                                  
+*>*****************************************************************
+CONFIGURATION         SECTION.                                   
+SOURCE-COMPUTER. PC.                                        
+OBJECT-COMPUTER. PC.                                        
+SPECIAL-NAMES.                                                   
+*>*****************************************************************
+DATA                  DIVISION.                                  
+*>*****************************************************************
+*>*****************************************************************
+WORKING-STORAGE       SECTION.                                   
+*>*****************************************************************
+01  OMIT-WK            PIC X.                                    
+01  W-L-GRP.                                                     
+    05  L-A            PIC A(10).                                
+    05  L-AN           PIC X(10).                                
+    05  L-ANE          PIC XX/XX/XX.                             
+    05  L-ZONE         PIC 9(5).                                 
+    05  L-ZONE-DEC     PIC S9(3)V9(2).                           
+    05  L-PACK         PIC S9(5)       COMP-3.                   
+    05  L-PACK-DEC     PIC S9(3)V9(2)  COMP-3.                   
+    05  L-BIN          PIC S9(5)       COMP.                     
+    05  L-BIN-DEC      PIC S9(3)V9(2)  COMP.                     
+    05  L-NE           PIC ----9.                                
+    05  L-G            PIC NNN.                                  
+    05  L-GE           PIC N/N/N.                                
+                                                                 
+01  W-R-GRP.                                                     
+    05  R-A            PIC A(10).                                
+    05  R-AN           PIC X(10).                                
+    05  R-ANE          PIC XX/XX/XX.                             
+    05  R-ZONE         PIC 9(5).                                 
+    05  R-ZONE-DEC     PIC S9(3)V9(2).                           
+    05  R-PACK         PIC S9(5)       COMP-3.                   
+    05  R-PACK-DEC     PIC S9(3)V9(2)  COMP-3.                   
+    05  R-BIN          PIC S9(5)       COMP.                     
+    05  R-BIN-DEC      PIC S9(3)V9(2)  COMP.                     
+    05  R-NE           PIC ----9.                                
+    05  R-G            PIC NNN.                                  
+    05  R-GE           PIC N/N/N.                                
+*>*****************************************************************
+PROCEDURE             DIVISION.                                  
+*>*****************************************************************
+MAIN                  SECTION.                                   
+P-010.                                                           
+     DISPLAY "TEST START (EX5-1-1A)".                            
+*>   ½¸ÃÄ                                                          
+*>     ¡Ü½¸ÃÄ                                                      
+     IF W-L-GRP = W-R-GRP                                        
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +±Ñ»?                                                       
+     IF W-L-GRP = R-A                                            
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +±Ñ¿ô»?                                                      
+     IF W-L-GRP = R-AN                                           
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(ZONEÀ°¿?)                                              
+     IF W-L-GRP = R-ZONE                                         
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(ZONEÈóÀ°¿ô¡Ë                                             
+     IF W-L-GRP = R-ZONE-DEC                                     
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(PACKÀ°¿?)                                              
+     IF W-L-GRP = R-PACK                                         
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(PACKÈóÀ°¿ô¡Ë                                             
+     IF W-L-GRP =  R-PACK-DEC                                    
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(BINÀ°¿?)                                               
+     IF W-L-GRP = R-BIN                                          
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(BINÈóÀ°¿ô¡Ë                                              
+     IF W-L-GRP = R-BIN-DEC                                      
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(¿ô»úÊÔ½¸¡Ë                                               
+     IF W-L-GRP =  R-NE                                          
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +Æ?ËÜ¸?                                                     
+     IF W-L-GRP =  R-G                                           
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +Æ?ËÜ¸?ÊÔ½¸                                                 
+     IF W-L-GRP =  R-GE                                          
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +Æ?ËÜ¸?Ä?¿?                                                 
+     IF W-L-GRP =  "Æ?ËÜ¸?"                                      
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +ALL Æ?ËÜ¸?Ä?¿?                                             
+     IF W-L-GRP = ALL "Æ?ËÜ¸?"                                   
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +É½°ÕÄ?¿?                                                   
+     IF W-L-GRP = QUOTES                                         
+        CONTINUE                                                 
+     END-IF.                                                     
+*>                                                                 
+P-020.                                                           
+*>   ±Ñ»?                                                          
+*>     +½¸ÃÄ                                                       
+     IF L-A = W-R-GRP                                            
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +±Ñ»?                                                       
+     IF L-A =  R-A                                               
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +±Ñ¿ô»?                                                      
+     IF L-A =  R-AN                                              
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(ZONEÀ°¿?)                                              
+     IF L-A = R-ZONE                                             
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(ZONEÈóÀ°¿ô¡Ë                                             
+     IF L-A = R-ZONE-DEC                                         
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(PACKÀ°¿?)                                              
+     IF L-A = R-PACK                                             
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(PACKÈóÀ°¿ô¡Ë                                             
+     IF L-A = R-PACK-DEC                                         
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(BINÀ°¿?)                                               
+     IF L-A =  R-BIN                                             
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(BINÈóÀ°¿ô¡Ë                                              
+     IF L-A =  R-BIN-DEC                                         
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(¿ô»úÊÔ½¸¡Ë                                               
+     IF L-A =  R-NE                                              
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +Æ?ËÜ¸?                                                     
+     IF L-A =  R-G                                               
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +Æ?ËÜ¸?ÊÔ½¸                                                 
+     IF L-A =  R-GE                                              
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +Æ?ËÜ¸?Ä?¿?                                                 
+     IF L-A =  "Æ?ËÜ¸?"                                          
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +ALL Æ?ËÜ¸?Ä?¿?                                             
+     IF L-A = ALL "Æ?ËÜ¸?"                                       
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +É½°ÕÄ?¿?                                                   
+     IF L-A =  QUOTES                                            
+        CONTINUE                                                 
+     END-IF.                                                     
+*>                                                                 
+*>                                                                 
+P-030.                                                           
+*>   ±Ñ¿ô»?                                                         
+*>     +½¸ÃÄ                                                       
+     IF L-AN =  W-R-GRP                                          
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +±Ñ»?                                                       
+     IF L-AN =  R-A                                              
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +±Ñ¿ô»?                                                      
+     IF L-AN =  R-AN                                             
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(ZONEÀ°¿?)                                              
+     IF L-AN =  R-ZONE                                           
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(ZONEÈóÀ°¿ô¡Ë                                             
+     IF L-AN =  R-ZONE-DEC                                       
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(PACKÀ°¿?)                                              
+     IF L-AN =  R-PACK                                           
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(PACKÈóÀ°¿ô¡Ë                                             
+     IF L-AN =  R-PACK-DEC                                       
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(BINÀ°¿?)                                               
+     IF L-AN =  R-BIN                                            
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(BINÈóÀ°¿ô¡Ë                                              
+     IF L-AN =  R-BIN-DEC                                        
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(¿ô»úÊÔ½¸¡Ë                                               
+     IF L-AN = R-NE                                              
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +Æ?ËÜ¸?                                                     
+     IF L-AN =  R-G                                              
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +Æ?ËÜ¸?ÊÔ½¸                                                 
+     IF L-AN =  R-GE                                             
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +Æ?ËÜ¸?Ä?¿?                                                 
+     IF L-AN =  "Æ?ËÜ¸?"                                         
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +ALL Æ?ËÜ¸?Ä?¿?                                             
+     IF L-AN = ALL "Æ?ËÜ¸?"                                      
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +É½°ÕÄ?¿?                                                   
+     IF L-AN =  QUOTES                                           
+        CONTINUE                                                 
+     END-IF.                                                     
+*>                                                                 
+*>                                                                 
+P-040.                                                           
+*>   ±Ñ¿ô»úÊÔ½¸                                                      
+*>     +½¸ÃÄ                                                       
+     IF L-ANE =  W-R-GRP                                         
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +±Ñ»?                                                       
+     IF L-ANE =  R-A                                             
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +±Ñ¿ô»?                                                      
+     IF L-ANE =  R-AN                                            
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(ZONEÀ°¿?)                                              
+     IF L-ANE =  R-ZONE                                          
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(ZONEÈóÀ°¿ô¡Ë                                             
+     IF L-ANE =  R-ZONE-DEC                                      
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(PACKÀ°¿?)                                              
+     IF L-ANE =  R-PACK                                          
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(PACKÈóÀ°¿ô¡Ë                                             
+     IF L-ANE =  R-PACK-DEC                                      
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(BINÀ°¿?)                                               
+     IF L-ANE =  R-BIN                                           
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(BINÈóÀ°¿ô¡Ë                                              
+     IF L-ANE =  R-BIN-DEC                                       
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(¿ô»úÊÔ½¸¡Ë                                               
+     IF L-ANE =  R-NE                                            
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +Æ?ËÜ¸?                                                     
+     IF L-ANE =  R-G                                             
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +Æ?ËÜ¸?ÊÔ½¸                                                 
+     IF L-ANE =  R-GE                                            
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +Æ?ËÜ¸?Ä?¿?                                                 
+     IF L-ANE =  "Æ?ËÜ¸?"                                        
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +ALL Æ?ËÜ¸?Ä?¿?                                             
+     IF L-ANE = ALL "Æ?ËÜ¸?"                                     
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +É½°ÕÄ?¿?                                                   
+     IF L-ANE =  QUOTES                                          
+        CONTINUE                                                 
+     END-IF.                                                     
+*>                                                                 
+P-050.                                                           
+*>   ¿ô»úÊÔ½¸                                                        
+*>     +½¸ÃÄ                                                       
+     IF L-NE =  W-R-GRP                                          
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +±Ñ»?                                                       
+     IF L-NE =  R-A                                              
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +±Ñ¿ô»?                                                      
+     IF L-NE =  R-AN                                             
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(ZONEÀ°¿?)                                              
+     IF L-NE =  R-ZONE                                           
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(ZONEÈóÀ°¿ô¡Ë                                             
+     IF L-NE = R-ZONE-DEC                                        
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(PACKÀ°¿?)                                              
+     IF L-NE = R-PACK                                            
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(PACKÈóÀ°¿ô¡Ë                                             
+     IF L-NE =  R-PACK-DEC                                       
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(BINÀ°¿?)                                               
+     IF L-NE =  R-BIN                                            
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(BINÈóÀ°¿ô¡Ë                                              
+     IF L-NE =  R-BIN-DEC                                        
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(¿ô»úÊÔ½¸¡Ë                                               
+     IF L-NE =  R-NE                                             
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +Æ?ËÜ¸?                                                     
+     IF L-NE =  R-G                                              
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +Æ?ËÜ¸?ÊÔ½¸                                                 
+     IF L-NE =  R-GE                                             
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +Æ?ËÜ¸?Ä?¿?                                                 
+     IF L-NE =  "Æ?ËÜ¸?"                                         
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +ALL Æ?ËÜ¸?Ä?¿?                                             
+     IF L-NE = ALL "Æ?ËÜ¸?"                                      
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +É½°ÕÄ?¿?                                                   
+     IF L-NE = QUOTES                                            
+        CONTINUE                                                 
+     END-IF.                                                     
+*>                                                                 
+*>                                                                 
+P-060.                                                           
+*>   ±Ñ»?                                                          
+*>     +½¸ÃÄ                                                       
+     IF L-A = W-R-GRP                                            
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +±Ñ»?                                                       
+     IF L-A =  R-A                                               
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +±Ñ¿ô»?                                                      
+     IF L-A =  R-AN                                              
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(ZONEÀ°¿?)                                              
+     IF L-A =  R-ZONE                                            
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(ZONEÈóÀ°¿ô¡Ë                                             
+     IF L-A = R-ZONE-DEC                                         
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(PACKÀ°¿?)                                              
+     IF L-A =  R-PACK                                            
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(PACKÈóÀ°¿ô¡Ë                                             
+     IF L-A = R-PACK-DEC                                         
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(BINÀ°¿?)                                               
+     IF L-A = R-BIN                                              
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(BINÈóÀ°¿ô¡Ë                                              
+     IF L-A =  R-BIN-DEC                                         
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(¿ô»úÊÔ½¸¡Ë                                               
+     IF L-A =  R-NE                                              
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +Æ?ËÜ¸?                                                     
+     IF L-A =  R-G                                               
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +Æ?ËÜ¸?ÊÔ½¸                                                 
+     IF L-A =  R-GE                                              
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +Æ?ËÜ¸?Ä?¿?                                                 
+     IF L-A = "Æ?ËÜ¸?"                                           
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +ALL Æ?ËÜ¸?Ä?¿?                                             
+     IF L-A = ALL "Æ?ËÜ¸?"                                       
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +É½°ÕÄ?¿?                                                   
+     IF L-A =  QUOTES                                            
+        CONTINUE                                                 
+     END-IF.                                                     
+*>                                                                 
+*>                                                                 
+P-070.                                                           
+*>   ZONEÀ°¿?                                                      
+*>     +½¸ÃÄ                                                       
+     IF L-ZONE =  W-R-GRP                                        
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +±Ñ»?                                                       
+     IF L-ZONE =  R-A                                            
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +±Ñ¿ô»?                                                      
+     IF L-ZONE =  R-AN                                           
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(ZONEÀ°¿?)                                              
+     IF L-ZONE =  R-ZONE                                         
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(ZONEÈóÀ°¿ô¡Ë                                             
+     IF L-ZONE =  R-ZONE-DEC                                     
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(PACKÀ°¿?)                                              
+     IF L-ZONE =  R-PACK                                         
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(PACKÈóÀ°¿ô¡Ë                                             
+     IF L-ZONE =  R-PACK-DEC                                     
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(BINÀ°¿?)                                               
+     IF L-ZONE =  R-BIN                                          
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(BINÈóÀ°¿ô¡Ë                                              
+     IF L-ZONE = R-BIN-DEC                                       
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(¿ô»úÊÔ½¸¡Ë                                               
+     IF L-ZONE =  R-NE                                           
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +Æ?ËÜ¸?                                                     
+     IF L-ZONE =  R-G                                            
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +Æ?ËÜ¸?ÊÔ½¸                                                 
+     IF L-ZONE =  R-GE                                           
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +Æ?ËÜ¸?Ä?¿?                                                 
+     IF L-ZONE =  "Æ?ËÜ¸?"                                       
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +ALL Æ?ËÜ¸?Ä?¿?                                             
+     IF L-ZONE = ALL "Æ?ËÜ¸?"                                    
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +É½°ÕÄ?¿?                                                   
+     IF L-ZONE =  QUOTES                                         
+        CONTINUE                                                 
+     END-IF.                                                     
+*>                                                                 
+*>                                                                 
+P-080.                                                           
+*>   ZONEÈóÀ°¿?                                                     
+*>     +½¸ÃÄ                                                       
+     IF L-ZONE-DEC =  W-R-GRP                                    
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +±Ñ»?                                                       
+     IF L-ZONE-DEC =  R-A                                        
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +±Ñ¿ô»?                                                      
+     IF L-ZONE-DEC =  R-AN                                       
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(ZONEÀ°¿?)                                              
+     IF L-ZONE-DEC =  R-ZONE                                     
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(ZONEÈóÀ°¿ô¡Ë                                             
+     IF L-ZONE-DEC =  R-ZONE-DEC                                 
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(PACKÀ°¿?)                                              
+     IF L-ZONE-DEC =  R-PACK                                     
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(PACKÈóÀ°¿ô¡Ë                                             
+     IF L-ZONE-DEC = R-PACK-DEC                                  
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(BINÀ°¿?)                                               
+     IF L-ZONE-DEC =  R-BIN                                      
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(BINÈóÀ°¿ô¡Ë                                              
+     IF L-ZONE-DEC =  R-BIN-DEC                                  
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(¿ô»úÊÔ½¸¡Ë                                               
+     IF L-ZONE-DEC =  R-NE                                       
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +Æ?ËÜ¸?                                                     
+     IF L-ZONE-DEC =  R-G                                        
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +Æ?ËÜ¸?ÊÔ½¸                                                 
+     IF L-ZONE-DEC =  R-GE                                       
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +Æ?ËÜ¸?Ä?¿?                                                 
+     IF L-ZONE-DEC =  "Æ?ËÜ¸?"                                   
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +ALL Æ?ËÜ¸?Ä?¿?                                             
+     IF L-ZONE-DEC = ALL "Æ?ËÜ¸?"                                
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +É½°ÕÄ?¿?                                                   
+     IF L-ZONE-DEC =  QUOTES                                     
+        CONTINUE                                                 
+     END-IF.                                                     
+*>                                                                 
+P-090.                                                           
+*>   PACKÀ°¿?                                                      
+*>     +½¸ÃÄ                                                       
+     IF L-PACK =  W-R-GRP                                        
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +±Ñ»?                                                       
+     IF L-PACK =  R-A                                            
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +±Ñ¿ô»?                                                      
+     IF L-PACK =  R-AN                                           
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(ZONEÀ°¿?)                                              
+     IF L-PACK =  R-ZONE                                         
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(ZONEÈóÀ°¿ô¡Ë                                             
+     IF L-PACK =  R-ZONE-DEC                                     
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(PACKÀ°¿?)                                              
+     IF L-PACK =  R-PACK                                         
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(PACKÈóÀ°¿ô¡Ë                                             
+     IF L-PACK =  R-PACK-DEC                                     
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(BINÀ°¿?)                                               
+     IF L-PACK =  R-BIN                                          
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(BINÈóÀ°¿ô¡Ë                                              
+     IF L-PACK =  R-BIN-DEC                                      
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(¿ô»úÊÔ½¸¡Ë                                               
+     IF L-PACK =  R-NE                                           
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +Æ?ËÜ¸?                                                     
+     IF L-PACK =  R-G                                            
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +Æ?ËÜ¸?ÊÔ½¸                                                 
+     IF L-PACK =  R-GE                                           
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +Æ?ËÜ¸?Ä?¿?                                                 
+     IF L-PACK =  "Æ?ËÜ¸?"                                       
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +ALL Æ?ËÜ¸?Ä?¿?                                             
+     IF L-PACK = ALL "Æ?ËÜ¸?"                                    
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +É½°ÕÄ?¿?                                                   
+     IF L-PACK =  QUOTES                                         
+        CONTINUE                                                 
+     END-IF.                                                     
+*>                                                                 
+*>                                                                 
+P-100.                                                           
+*>   PACKÈóÀ°¿?                                                     
+*>     +½¸ÃÄ                                                       
+     IF L-PACK-DEC =  W-R-GRP                                    
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +±Ñ»?                                                       
+     IF L-PACK-DEC =  R-A                                        
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +±Ñ¿ô»?                                                      
+     IF L-PACK-DEC =  R-AN                                       
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(ZONEÀ°¿?)                                              
+     IF L-PACK-DEC =  R-ZONE                                     
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(ZONEÈóÀ°¿ô¡Ë                                             
+     IF L-PACK-DEC =  R-ZONE-DEC                                 
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(PACKÀ°¿?)                                              
+     IF L-PACK-DEC =  R-PACK                                     
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(PACKÈóÀ°¿ô¡Ë                                             
+     IF L-PACK-DEC =  R-PACK-DEC                                 
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(BINÀ°¿?)                                               
+     IF L-PACK-DEC =  R-BIN                                      
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(BINÈóÀ°¿ô¡Ë                                              
+     IF L-PACK-DEC =  R-BIN-DEC                                  
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(¿ô»úÊÔ½¸¡Ë                                               
+     IF L-PACK-DEC =  R-NE                                       
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +Æ?ËÜ¸?                                                     
+     IF L-PACK-DEC =  R-G                                        
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +Æ?ËÜ¸?ÊÔ½¸                                                 
+     IF L-PACK-DEC =  R-GE                                       
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +Æ?ËÜ¸?Ä?¿?                                                 
+     IF L-PACK-DEC =  "Æ?ËÜ¸?"                                   
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +ALL Æ?ËÜ¸?Ä?¿?                                             
+     IF L-PACK-DEC = ALL "Æ?ËÜ¸?"                                
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +É½°ÕÄ?¿?                                                   
+     IF L-PACK-DEC =  QUOTES                                     
+        CONTINUE                                                 
+     END-IF.                                                     
+*>                                                                 
+*>                                                                 
+P-110.                                                           
+*>   BINÀ°¿?                                                       
+*>     +½¸ÃÄ                                                       
+     IF L-BIN =  W-R-GRP                                         
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +±Ñ»?                                                       
+     IF L-BIN =  R-A                                             
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +±Ñ¿ô»?                                                      
+     IF L-BIN =  R-AN                                            
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(ZONEÀ°¿?)                                              
+     IF L-BIN =  R-ZONE                                          
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(ZONEÈóÀ°¿ô¡Ë                                             
+     IF L-BIN =  R-ZONE-DEC                                      
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(PACKÀ°¿?)                                              
+     IF L-BIN =  R-PACK                                          
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(PACKÈóÀ°¿ô¡Ë                                             
+     IF L-BIN =  R-PACK-DEC                                      
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(BINÀ°¿?)                                               
+     IF L-BIN =  R-BIN                                           
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(BINÈóÀ°¿ô¡Ë                                              
+     IF L-BIN =  R-BIN-DEC                                       
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(¿ô»úÊÔ½¸¡Ë                                               
+     IF L-BIN =  R-NE                                            
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +Æ?ËÜ¸?                                                     
+     IF L-BIN =  R-G                                             
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +Æ?ËÜ¸?ÊÔ½¸                                                 
+     IF L-BIN =  R-GE                                            
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +Æ?ËÜ¸?Ä?¿?                                                 
+     IF L-BIN =  "Æ?ËÜ¸?"                                        
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +ALL Æ?ËÜ¸?Ä?¿?                                             
+     IF L-BIN = ALL "Æ?ËÜ¸?"                                     
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +É½°ÕÄ?¿?                                                   
+     IF L-BIN =  QUOTES                                          
+        CONTINUE                                                 
+     END-IF.                                                     
+*>                                                                 
+*>                                                                 
+P-120.                                                           
+*>   BINÈóÀ°¿?                                                      
+*>     +½¸ÃÄ                                                       
+     IF L-BIN-DEC =  W-R-GRP                                     
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +±Ñ»?                                                       
+     IF L-BIN-DEC =  R-A                                         
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +±Ñ¿ô»?                                                      
+     IF L-BIN-DEC =  R-AN                                        
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(ZONEÀ°¿?)                                              
+     IF L-BIN-DEC =  R-ZONE                                      
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(ZONEÈóÀ°¿ô¡Ë                                             
+     IF L-BIN-DEC =  R-ZONE-DEC                                  
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(PACKÀ°¿?)                                              
+     IF L-BIN-DEC =  R-PACK                                      
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(PACKÈóÀ°¿ô¡Ë                                             
+     IF L-BIN-DEC =  R-PACK-DEC                                  
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(BINÀ°¿?)                                               
+     IF L-BIN-DEC =  R-BIN                                       
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(BINÈóÀ°¿ô¡Ë                                              
+     IF L-BIN-DEC =  R-BIN-DEC                                   
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(¿ô»úÊÔ½¸¡Ë                                               
+     IF L-BIN-DEC =  R-NE                                        
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +Æ?ËÜ¸?                                                     
+     IF L-BIN-DEC =  R-G                                         
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +Æ?ËÜ¸?ÊÔ½¸                                                 
+     IF L-BIN-DEC =  R-GE                                        
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +Æ?ËÜ¸?Ä?¿?                                                 
+     IF L-BIN-DEC =  "Æ?ËÜ¸?"                                    
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +ALL Æ?ËÜ¸?Ä?¿?                                             
+     IF L-BIN-DEC = ALL "Æ?ËÜ¸?"                                 
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +É½°ÕÄ?¿?                                                   
+     IF L-BIN-DEC =  QUOTES                                      
+        CONTINUE                                                 
+     END-IF.                                                     
+*>                                                                 
+*>                                                                 
+P-130.                                                           
+*>   ¿ô»úÊÔ½¸                                                        
+*>     +½¸ÃÄ                                                       
+     IF L-NE =  W-R-GRP                                          
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +±Ñ»?                                                       
+     IF L-NE =  R-A                                              
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +±Ñ¿ô»?                                                      
+     IF L-NE =  R-AN                                             
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(ZONEÀ°¿?)                                              
+     IF L-NE =  R-ZONE                                           
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(ZONEÈóÀ°¿ô¡Ë                                             
+     IF L-NE =  R-ZONE-DEC                                       
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(PACKÀ°¿?)                                              
+     IF L-NE =  R-PACK                                           
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(PACKÈóÀ°¿ô¡Ë                                             
+     IF L-NE =  R-PACK-DEC                                       
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(BINÀ°¿?)                                               
+     IF L-NE =  R-BIN                                            
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(BINÈóÀ°¿ô¡Ë                                              
+     IF L-NE =  R-BIN-DEC                                        
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(¿ô»úÊÔ½¸¡Ë                                               
+     IF L-NE =  R-NE                                             
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +Æ?ËÜ¸?                                                     
+     IF L-NE =  R-G                                              
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +Æ?ËÜ¸?ÊÔ½¸                                                 
+     IF L-NE =  R-GE                                             
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +Æ?ËÜ¸?Ä?¿?                                                 
+     IF L-NE =  "Æ?ËÜ¸?"                                         
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +ALL Æ?ËÜ¸?Ä?¿?                                             
+     IF L-NE = ALL "Æ?ËÜ¸?"                                      
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +É½°ÕÄ?¿?                                                   
+     IF L-NE =  QUOTES                                           
+        CONTINUE                                                 
+     END-IF.                                                     
+*>                                                                 
+*>                                                                 
+P-140.                                                           
+*>   Æ?ËÜ¸?                                                        
+*>     +½¸ÃÄ                                                       
+     IF L-G =  W-R-GRP                                           
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +±Ñ»?                                                       
+     IF L-G =  R-A                                               
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +±Ñ¿ô»?                                                      
+     IF L-G =  R-AN                                              
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(ZONEÀ°¿?)                                              
+     IF L-G =  R-ZONE                                            
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(ZONEÈóÀ°¿ô¡Ë                                             
+     IF L-G =  R-ZONE-DEC                                        
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(PACKÀ°¿?)                                              
+     IF L-G =  R-PACK                                            
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(PACKÈóÀ°¿ô¡Ë                                             
+     IF L-G =  R-PACK-DEC                                        
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(BINÀ°¿?)                                               
+     IF L-G =  R-BIN                                             
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(BINÈóÀ°¿ô¡Ë                                              
+     IF L-G =  R-BIN-DEC                                         
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(¿ô»úÊÔ½¸¡Ë                                               
+     IF L-G =  R-NE                                              
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +Æ?ËÜ¸?                                                     
+     IF L-G =  R-G                                               
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +Æ?ËÜ¸?ÊÔ½¸                                                 
+     IF L-G =  R-GE                                              
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +Æ?ËÜ¸?Ä?¿?                                                 
+     IF L-G =  "Æ?ËÜ¸?"                                          
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +ALL Æ?ËÜ¸?Ä?¿?                                             
+     IF L-G = ALL "Æ?ËÜ¸?"                                       
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +É½°ÕÄ?¿?                                                   
+     IF L-G =  QUOTES                                            
+        CONTINUE                                                 
+     END-IF.                                                     
+*>                                                                 
+P-150.                                                           
+*>   Æ?ËÜ¸?ÊÔ½¸                                                    
+*>     +½¸ÃÄ                                                       
+     IF L-GE =  W-R-GRP                                          
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +±Ñ»?                                                       
+     IF L-GE =  R-A                                              
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +±Ñ¿ô»?                                                      
+     IF L-GE =  R-AN                                             
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(ZONEÀ°¿?)                                              
+     IF L-GE =  R-ZONE                                           
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(ZONEÈóÀ°¿ô¡Ë                                             
+     IF L-GE =  R-ZONE-DEC                                       
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(PACKÀ°¿?)                                              
+     IF L-GE =  R-PACK                                           
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(PACKÈóÀ°¿ô¡Ë                                             
+     IF L-GE =  R-PACK-DEC                                       
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(BINÀ°¿?)                                               
+     IF L-GE =  R-BIN                                            
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(BINÈóÀ°¿ô¡Ë                                              
+     IF L-GE =  R-BIN-DEC                                        
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(¿ô»úÊÔ½¸¡Ë                                               
+     IF L-GE =  R-NE                                             
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +Æ?ËÜ¸?                                                     
+     IF L-GE =  R-G                                              
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +Æ?ËÜ¸?ÊÔ½¸                                                 
+     IF L-GE =  R-GE                                             
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +Æ?ËÜ¸?Ä?¿?                                                 
+     IF L-GE =  "Æ?ËÜ¸?"                                         
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +ALL Æ?ËÜ¸?Ä?¿?                                             
+     IF L-GE = ALL "Æ?ËÜ¸?"                                      
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +É½°ÕÄ?¿?                                                   
+     IF L-GE =  QUOTES                                           
+        CONTINUE                                                 
+     END-IF.                                                     
+*>                                                                 
+*>                                                                 
+P-160.                                                           
+*>   Æ?ËÜ¸?Ä?¿?                                                    
+*>     +½¸ÃÄ                                                       
+     IF "Æ?ËÜ¸?" =  W-R-GRP                                      
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +±Ñ»?                                                       
+     IF "Æ?ËÜ¸?" =  R-A                                          
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +±Ñ¿ô»?                                                      
+     IF "Æ?ËÜ¸?" =  R-AN                                         
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(ZONEÀ°¿?)                                              
+     IF "Æ?ËÜ¸?" =  R-ZONE                                       
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(ZONEÈóÀ°¿ô¡Ë                                             
+     IF "Æ?ËÜ¸?" =  R-ZONE-DEC                                   
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(PACKÀ°¿?)                                              
+     IF "Æ?ËÜ¸?" =  R-PACK                                       
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(PACKÈóÀ°¿ô¡Ë                                             
+     IF "Æ?ËÜ¸?" =  R-PACK-DEC                                   
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(BINÀ°¿?)                                               
+     IF "Æ?ËÜ¸?" =  R-BIN                                        
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(BINÈóÀ°¿ô¡Ë                                              
+     IF "Æ?ËÜ¸?" =  R-BIN-DEC                                    
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(¿ô»úÊÔ½¸¡Ë                                               
+     IF "Æ?ËÜ¸?" =  R-NE                                         
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +Æ?ËÜ¸?                                                     
+     IF "Æ?ËÜ¸?" =  R-G                                          
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +Æ?ËÜ¸?ÊÔ½¸                                                 
+     IF "Æ?ËÜ¸?" =  R-GE                                         
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +Æ?ËÜ¸?Ä?¿?                                                 
+     IF "Æ?ËÜ¸?" =  "Æ?ËÜ¸?"                                     
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +ALL Æ?ËÜ¸?Ä?¿?                                             
+     IF "Æ?ËÜ¸?" = ALL "Æ?ËÜ¸?"                                  
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +É½°ÕÄ?¿?                                                   
+     IF "Æ?ËÜ¸?" =  QUOTES                                       
+        CONTINUE                                                 
+     END-IF.                                                     
+*>                                                                 
+P-170.                                                           
+*>   ALL Æ?ËÜ¸?Ä?¿?                                                
+*>     +½¸ÃÄ                                                       
+     IF ALL "Æ?ËÜ¸?" =  W-R-GRP                                  
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +±Ñ»?                                                       
+     IF ALL "Æ?ËÜ¸?" =  R-A                                      
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +±Ñ¿ô»?                                                      
+     IF ALL "Æ?ËÜ¸?" =  R-AN                                     
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(ZONEÀ°¿?)                                              
+     IF ALL "Æ?ËÜ¸?" =  R-ZONE                                   
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(ZONEÈóÀ°¿ô¡Ë                                             
+     IF ALL "Æ?ËÜ¸?" =  R-ZONE-DEC                               
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(PACKÀ°¿?)                                              
+     IF ALL "Æ?ËÜ¸?" =  R-PACK                                   
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(PACKÈóÀ°¿ô¡Ë                                             
+     IF ALL "Æ?ËÜ¸?" =  R-PACK-DEC                               
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(BINÀ°¿?)                                               
+     IF ALL "Æ?ËÜ¸?" =  R-BIN                                    
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(BINÈóÀ°¿ô¡Ë                                              
+     IF ALL "Æ?ËÜ¸?" =  R-BIN-DEC                                
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(¿ô»úÊÔ½¸¡Ë                                               
+     IF ALL "Æ?ËÜ¸?" =  R-NE                                     
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +Æ?ËÜ¸?                                                     
+     IF ALL "Æ?ËÜ¸?" =  R-G                                      
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +Æ?ËÜ¸?ÊÔ½¸                                                 
+     IF ALL "Æ?ËÜ¸?" =  R-GE                                     
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +Æ?ËÜ¸?Ä?¿?                                                 
+     IF ALL "Æ?ËÜ¸?" =  "Æ?ËÜ¸?"                                 
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +ALL Æ?ËÜ¸?Ä?¿?                                             
+     IF ALL "Æ?ËÜ¸?" = ALL "Æ?ËÜ¸?"                              
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +É½°ÕÄ?¿?                                                   
+     IF ALL "Æ?ËÜ¸?" =  QUOTES                                   
+        CONTINUE                                                 
+     END-IF.                                                     
+*>                                                                 
+*>                                                                 
+P-170.                                                           
+*>   É½°ÕÄ?¿?                                                      
+*>     +½¸ÃÄ                                                       
+     IF SPACES =  W-R-GRP                                        
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +±Ñ»?                                                       
+     IF SPACES =  R-A                                            
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +±Ñ¿ô»?                                                      
+     IF SPACES =  R-AN                                           
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(ZONEÀ°¿?)                                              
+     IF SPACES =  R-ZONE                                         
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(ZONEÈóÀ°¿ô¡Ë                                             
+     IF SPACES =  R-ZONE-DEC                                     
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(PACKÀ°¿?)                                              
+     IF SPACES =  R-PACK                                         
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(PACKÈóÀ°¿ô¡Ë                                             
+     IF SPACES =  R-PACK-DEC                                     
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(BINÀ°¿?)                                               
+     IF SPACES =  R-BIN                                          
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(BINÈóÀ°¿ô¡Ë                                              
+     IF SPACES =  R-BIN-DEC                                      
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +¿ô»?(¿ô»úÊÔ½¸¡Ë                                               
+     IF SPACES =  R-NE                                           
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +Æ?ËÜ¸?                                                     
+     IF SPACES =  R-G                                            
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +Æ?ËÜ¸?ÊÔ½¸                                                 
+     IF SPACES =  R-GE                                           
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +Æ?ËÜ¸?Ä?¿?                                                 
+     IF SPACES =  "Æ?ËÜ¸?"                                       
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +ALL Æ?ËÜ¸?Ä?¿?                                             
+     IF SPACES = ALL "Æ?ËÜ¸?"                                    
+        CONTINUE                                                 
+     END-IF.                                                     
+*>     +É½°ÕÄ?¿?                                                   
+     IF SPACES =  QUOTES                                         
+        CONTINUE                                                 
+     END-IF.                                                     
+*>                                                                 
+     DISPLAY "TEST END   (EX5-1-1A)".                            
+    ACCEPT OMIT-WK.                                              
+    GOBACK                                                       
+    .                                                            
+                                                                 
+*> --E: #43 Illegal condition W-L-GRP & R-ZONE-DEC; file = IF_TEST.cbl, line = 80, col 5
+*> --E: #43 Illegal condition W-L-GRP & R-PACK; file = IF_TEST.cbl, line = 84, col 5
+*> --E: #43 Illegal condition W-L-GRP & R-PACK-DEC; file = IF_TEST.cbl, line = 88, col 5
+*> --E: #43 Illegal condition W-L-GRP & R-BIN; file = IF_TEST.cbl, line = 92, col 5
+*> --E: #43 Illegal condition W-L-GRP & R-BIN-DEC; file = IF_TEST.cbl, line = 96, col 5
+*> --E: #43 Illegal condition L-A & R-ZONE-DEC; file = IF_TEST.cbl, line = 143, col 5
+*> --E: #43 Illegal condition L-A & R-PACK; file = IF_TEST.cbl, line = 147, col 5
+*> --E: #43 Illegal condition L-A & R-PACK-DEC; file = IF_TEST.cbl, line = 151, col 5
+*> --E: #43 Illegal condition L-A & R-BIN; file = IF_TEST.cbl, line = 155, col 5
+*> --E: #43 Illegal condition L-A & R-BIN-DEC; file = IF_TEST.cbl, line = 159, col 5
+*> --E: #43 Illegal condition L-AN & R-ZONE-DEC; file = IF_TEST.cbl, line = 207, col 5
+*> --E: #43 Illegal condition L-AN & R-PACK; file = IF_TEST.cbl, line = 211, col 5
+*> --E: #43 Illegal condition L-AN & R-PACK-DEC; file = IF_TEST.cbl, line = 215, col 5
+*> --E: #43 Illegal condition L-AN & R-BIN; file = IF_TEST.cbl, line = 219, col 5
+*> --E: #43 Illegal condition L-AN & R-BIN-DEC; file = IF_TEST.cbl, line = 223, col 5
+*> --E: #43 Illegal condition L-ANE & R-ZONE-DEC; file = IF_TEST.cbl, line = 271, col 5
+*> --E: #43 Illegal condition L-ANE & R-PACK; file = IF_TEST.cbl, line = 275, col 5
+*> --E: #43 Illegal condition L-ANE & R-PACK-DEC; file = IF_TEST.cbl, line = 279, col 5
+*> --E: #43 Illegal condition L-ANE & R-BIN; file = IF_TEST.cbl, line = 283, col 5
+*> --E: #43 Illegal condition L-ANE & R-BIN-DEC; file = IF_TEST.cbl, line = 287, col 5
+*> --E: #43 Illegal condition L-NE & R-ZONE-DEC; file = IF_TEST.cbl, line = 334, col 5
+*> --E: #43 Illegal condition L-NE & R-PACK; file = IF_TEST.cbl, line = 338, col 5
+*> --E: #43 Illegal condition L-NE & R-PACK-DEC; file = IF_TEST.cbl, line = 342, col 5
+*> --E: #43 Illegal condition L-NE & R-BIN; file = IF_TEST.cbl, line = 346, col 5
+*> --E: #43 Illegal condition L-NE & R-BIN-DEC; file = IF_TEST.cbl, line = 350, col 5
+*> --E: #43 Illegal condition L-A & R-ZONE-DEC; file = IF_TEST.cbl, line = 398, col 5
+*> --E: #43 Illegal condition L-A & R-PACK; file = IF_TEST.cbl, line = 402, col 5
+*> --E: #43 Illegal condition L-A & R-PACK-DEC; file = IF_TEST.cbl, line = 406, col 5
+*> --E: #43 Illegal condition L-A & R-BIN; file = IF_TEST.cbl, line = 410, col 5
+*> --E: #43 Illegal condition L-A & R-BIN-DEC; file = IF_TEST.cbl, line = 414, col 5
+*> --E: #43 Illegal condition L-ZONE-DEC & W-R-GRP; file = IF_TEST.cbl, line = 510, col 5
+*> --E: #43 Illegal condition L-ZONE-DEC & R-A; file = IF_TEST.cbl, line = 514, col 5
+*> --E: #43 Illegal condition L-ZONE-DEC & R-AN; file = IF_TEST.cbl, line = 518, col 5
+*> --E: #43 Illegal condition L-ZONE-DEC & R-NE; file = IF_TEST.cbl, line = 546, col 5
+*> --E: #43 Illegal condition L-ZONE-DEC & R-G; file = IF_TEST.cbl, line = 550, col 5
+*> --E: #43 Illegal condition L-ZONE-DEC & R-GE; file = IF_TEST.cbl, line = 554, col 5
+*> --E: #43 Illegal condition L-ZONE-DEC & "Æ?ËÜ¸?"; file = IF_TEST.cbl, line = 558, col 5
+*> --E: #43 Illegal condition L-ZONE-DEC & "Æ?ËÜ¸?"; file = IF_TEST.cbl, line = 562, col 5
+*> --E: #43 Illegal condition L-ZONE-DEC & '"'; file = IF_TEST.cbl, line = 566, col 5
+*> --E: #43 Illegal condition L-PACK & W-R-GRP; file = IF_TEST.cbl, line = 573, col 5
+*> --E: #43 Illegal condition L-PACK & R-A; file = IF_TEST.cbl, line = 577, col 5
+*> --E: #43 Illegal condition L-PACK & R-AN; file = IF_TEST.cbl, line = 581, col 5
+*> --E: #43 Illegal condition L-PACK & R-NE; file = IF_TEST.cbl, line = 609, col 5
+*> --E: #43 Illegal condition L-PACK & R-G; file = IF_TEST.cbl, line = 613, col 5
+*> --E: #43 Illegal condition L-PACK & R-GE; file = IF_TEST.cbl, line = 617, col 5
+*> --E: #43 Illegal condition L-PACK & "Æ?ËÜ¸?"; file = IF_TEST.cbl, line = 621, col 5
+*> --E: #43 Illegal condition L-PACK & "Æ?ËÜ¸?"; file = IF_TEST.cbl, line = 625, col 5
+*> --E: #43 Illegal condition L-PACK & '"'; file = IF_TEST.cbl, line = 629, col 5
+*> --E: #43 Illegal condition L-PACK-DEC & W-R-GRP; file = IF_TEST.cbl, line = 637, col 5
+*> --E: #43 Illegal condition L-PACK-DEC & R-A; file = IF_TEST.cbl, line = 641, col 5
+*> --E: #43 Illegal condition L-PACK-DEC & R-AN; file = IF_TEST.cbl, line = 645, col 5
+*> --E: #43 Illegal condition L-PACK-DEC & R-NE; file = IF_TEST.cbl, line = 673, col 5
+*> --E: #43 Illegal condition L-PACK-DEC & R-G; file = IF_TEST.cbl, line = 677, col 5
+*> --E: #43 Illegal condition L-PACK-DEC & R-GE; file = IF_TEST.cbl, line = 681, col 5
+*> --E: #43 Illegal condition L-PACK-DEC & "Æ?ËÜ¸?"; file = IF_TEST.cbl, line = 685, col 5
+*> --E: #43 Illegal condition L-PACK-DEC & "Æ?ËÜ¸?"; file = IF_TEST.cbl, line = 689, col 5
+*> --E: #43 Illegal condition L-PACK-DEC & '"'; file = IF_TEST.cbl, line = 693, col 5
+*> --E: #43 Illegal condition L-BIN & W-R-GRP; file = IF_TEST.cbl, line = 701, col 5
+*> --E: #43 Illegal condition L-BIN & R-A; file = IF_TEST.cbl, line = 705, col 5
+*> --E: #43 Illegal condition L-BIN & R-AN; file = IF_TEST.cbl, line = 709, col 5
+*> --E: #43 Illegal condition L-BIN & R-NE; file = IF_TEST.cbl, line = 737, col 5
+*> --E: #43 Illegal condition L-BIN & R-G; file = IF_TEST.cbl, line = 741, col 5
+*> --E: #43 Illegal condition L-BIN & R-GE; file = IF_TEST.cbl, line = 745, col 5
+*> --E: #43 Illegal condition L-BIN & "Æ?ËÜ¸?"; file = IF_TEST.cbl, line = 749, col 5
+*> --E: #43 Illegal condition L-BIN & "Æ?ËÜ¸?"; file = IF_TEST.cbl, line = 753, col 5
+*> --E: #43 Illegal condition L-BIN & '"'; file = IF_TEST.cbl, line = 757, col 5
+*> --E: #43 Illegal condition L-BIN-DEC & W-R-GRP; file = IF_TEST.cbl, line = 765, col 5
+*> --E: #43 Illegal condition L-BIN-DEC & R-A; file = IF_TEST.cbl, line = 769, col 5
+*> --E: #43 Illegal condition L-BIN-DEC & R-AN; file = IF_TEST.cbl, line = 773, col 5
+*> --E: #43 Illegal condition L-BIN-DEC & R-NE; file = IF_TEST.cbl, line = 801, col 5
+*> --E: #43 Illegal condition L-BIN-DEC & R-G; file = IF_TEST.cbl, line = 805, col 5
+*> --E: #43 Illegal condition L-BIN-DEC & R-GE; file = IF_TEST.cbl, line = 809, col 5
+*> --E: #43 Illegal condition L-BIN-DEC & "Æ?ËÜ¸?"; file = IF_TEST.cbl, line = 813, col 5
+*> --E: #43 Illegal condition L-BIN-DEC & "Æ?ËÜ¸?"; file = IF_TEST.cbl, line = 817, col 5
+*> --E: #43 Illegal condition L-BIN-DEC & '"'; file = IF_TEST.cbl, line = 821, col 5
+*> --E: #43 Illegal condition L-NE & R-ZONE-DEC; file = IF_TEST.cbl, line = 845, col 5
+*> --E: #43 Illegal condition L-NE & R-PACK; file = IF_TEST.cbl, line = 849, col 5
+*> --E: #43 Illegal condition L-NE & R-PACK-DEC; file = IF_TEST.cbl, line = 853, col 5
+*> --E: #43 Illegal condition L-NE & R-BIN; file = IF_TEST.cbl, line = 857, col 5
+*> --E: #43 Illegal condition L-NE & R-BIN-DEC; file = IF_TEST.cbl, line = 861, col 5
+*> --E: #43 Illegal condition L-G & R-ZONE-DEC; file = IF_TEST.cbl, line = 909, col 5
+*> --E: #43 Illegal condition L-G & R-PACK; file = IF_TEST.cbl, line = 913, col 5
+*> --E: #43 Illegal condition L-G & R-PACK-DEC; file = IF_TEST.cbl, line = 917, col 5
+*> --E: #43 Illegal condition L-G & R-BIN; file = IF_TEST.cbl, line = 921, col 5
+*> --E: #43 Illegal condition L-G & R-BIN-DEC; file = IF_TEST.cbl, line = 925, col 5
+*> --E: #43 Illegal condition L-GE & R-ZONE-DEC; file = IF_TEST.cbl, line = 972, col 5
+*> --E: #43 Illegal condition L-GE & R-PACK; file = IF_TEST.cbl, line = 976, col 5
+*> --E: #43 Illegal condition L-GE & R-PACK-DEC; file = IF_TEST.cbl, line = 980, col 5
+*> --E: #43 Illegal condition L-GE & R-BIN; file = IF_TEST.cbl, line = 984, col 5
+*> --E: #43 Illegal condition L-GE & R-BIN-DEC; file = IF_TEST.cbl, line = 988, col 5
+*> --E: #43 Illegal condition "Æ?ËÜ¸?" & R-ZONE-DEC; file = IF_TEST.cbl, line = 1036, col 5
+*> --E: #43 Illegal condition "Æ?ËÜ¸?" & R-PACK; file = IF_TEST.cbl, line = 1040, col 5
+*> --E: #43 Illegal condition "Æ?ËÜ¸?" & R-PACK-DEC; file = IF_TEST.cbl, line = 1044, col 5
+*> --E: #43 Illegal condition "Æ?ËÜ¸?" & R-BIN; file = IF_TEST.cbl, line = 1048, col 5
+*> --E: #43 Illegal condition "Æ?ËÜ¸?" & R-BIN-DEC; file = IF_TEST.cbl, line = 1052, col 5
+*> --E: #43 Illegal condition "Æ?ËÜ¸?" & R-ZONE-DEC; file = IF_TEST.cbl, line = 1099, col 5
+*> --E: #43 Illegal condition "Æ?ËÜ¸?" & R-PACK; file = IF_TEST.cbl, line = 1103, col 5
+*> --E: #43 Illegal condition "Æ?ËÜ¸?" & R-PACK-DEC; file = IF_TEST.cbl, line = 1107, col 5
+*> --E: #43 Illegal condition "Æ?ËÜ¸?" & R-BIN; file = IF_TEST.cbl, line = 1111, col 5
+*> --E: #43 Illegal condition "Æ?ËÜ¸?" & R-BIN-DEC; file = IF_TEST.cbl, line = 1115, col 5
+*> --E: #43 Illegal condition ' ' & R-ZONE-DEC; file = IF_TEST.cbl, line = 1163, col 5
+*> --E: #43 Illegal condition ' ' & R-PACK; file = IF_TEST.cbl, line = 1167, col 5
+*> --E: #43 Illegal condition ' ' & R-PACK-DEC; file = IF_TEST.cbl, line = 1171, col 5
+*> --E: #43 Illegal condition ' ' & R-BIN; file = IF_TEST.cbl, line = 1175, col 5
+*> --E: #43 Illegal condition ' ' & R-BIN-DEC; file = IF_TEST.cbl, line = 1179, col 5

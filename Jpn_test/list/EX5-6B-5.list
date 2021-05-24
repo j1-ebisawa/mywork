@@ -1,0 +1,65 @@
+*>(c) 2005 - 2019 Veryant
+*>compiler version: isCOBOL release 2020 R2 build#1023.11-20210311-31455
+*>source file name:  C:\work\gitlocal\Jpn_test\source\EX5-6B-5.cbl
+*>date generated  :  Mon May 24 10:21:22 JST 2021
+*>compiler options:  -tasks -jj -lo=C:/work/gitlocal/Jpn_test/list -sp=cpy;screenpgm;fdsl -dx -esme=100 -g -od=C:/work/gitlocal/Jpn_test/output -eo=C:/work/gitlocal/Jpn_test/errs -d -smat
+*>*****************************************************************
+*>    テストケース：EX5-6B-4                                              
+*>    プログラム名：日本語化テスト （手続き部）STRING命令                                
+*>    処理概要　　：STRING命令の構文チェックでエラーとなるかを                              
+*>    　　　　　　　チェックする。                                               
+*>  -------------------------------------------------------------- 
+*>   テストケース:1  このプログラムは実行できない。                                     
+*>*****************************************************************
+IDENTIFICATION        DIVISION.                                  
+*>*****************************************************************
+PROGRAM-ID. EX5-6B-5.                                  
+AUTHOR. TSH.                                       
+DATE-WRITTEN. 2011-08-24.                                
+DATE-COMPILED. 2011-08-24.                                
+*>*****************************************************************
+ENVIRONMENT           DIVISION.                                  
+*>*****************************************************************
+CONFIGURATION         SECTION.                                   
+SOURCE-COMPUTER. PC.                                        
+OBJECT-COMPUTER. PC.                                        
+SPECIAL-NAMES.                                                   
+*>*****************************************************************
+DATA                  DIVISION.                                  
+*>*****************************************************************
+*>*****************************************************************
+WORKING-STORAGE       SECTION.                                   
+*>*****************************************************************
+01  OMIT-WK            PIC X.                                    
+01  OVER-SW            PIC 9.                                    
+01  CASE-ID            PIC X(10).                                
+01  W-PTR    PIC 9/9.                                            
+01  W-INTO   PIC N(10).                                          
+01  W-INTO-2 PIC N(20).                                          
+01  G-01     PIC N(5).                                           
+01  G-02     PIC N(5).                                           
+01  W-INTO-X PIC X(20).                                          
+*>*****************************************************************
+PROCEDURE             DIVISION.                                  
+*>*****************************************************************
+MAIN                  SECTION.                                   
+P-010.                                                           
+*> ケース1.WITH POINTER 一意名４が数字項目でない場合                                
+    MOVE "あいうえお" TO G-01.                                        
+    MOVE "かきくけこ" TO G-02.                                        
+    MOVE 1 TO W-PTR.                                             
+*> コンパイルエラー                                                        
+    STRING G-01 DELIMITED BY "え"                                 
+                INTO G-02                                        
+                WITH POINTER W-PTR                               
+           ON OVERFLOW MOVE 1 TO OVER-SW                         
+    END-STRING.                                                  
+    DISPLAY N-04.                                                
+*>***                                                              
+                                                                 
+    ACCEPT OMIT-WK.                                              
+    GOBACK                                                       
+    .                                                            
+*> --S: #46 Integer variable expected: W-PTR; file = EX5-6B-5.cbl, line = 49, col 29
+*> --S: #45 Unmatched <END-STRING>; file = EX5-6B-5.cbl, line = 51, col 4
+*> --S: #35 Undefined data item N-04; file = EX5-6B-5.cbl, line = 52, col 12

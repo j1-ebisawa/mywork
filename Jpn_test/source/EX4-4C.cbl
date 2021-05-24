@@ -1,0 +1,88 @@
+      ******************************************************************
+      *    ÉeÉXÉgÉPÅ[ÉXÅF4-4C
+      *    ÉvÉçÉOÉâÉÄñºÅFì˙ñ{åÍâªÉeÉXÉg ÅiÉfÅ[É^ïîÅjVALUEãÂ
+      *    èàóùäTóvÅ@Å@ÅFVALUEãÂéwíËÇ™åÎÇ¡ÇƒÇ¢ÇÈÇ∆Ç´ÅAÉGÉâÅ[ï\é¶Ç≥ÇÍÇÈÇ©
+      *                  ÇÉ`ÉFÉbÉNÇ∑ÇÈÅB
+      *  --------------------------------------------------------------
+      *   ÉeÉXÉgÉPÅ[ÉX:ÇWÅ`ÇX
+      *   Ç±ÇÃÉvÉçÉOÉâÉÄÇÕÉGÉâÅ[É`ÉFÉbÉNÇÃÇΩÇﬂÅAé¿çsÇ≈Ç´Ç»Ç¢
+      ******************************************************************
+       IDENTIFICATION        DIVISION.
+      ******************************************************************
+       PROGRAM-ID.           EX4-4C.
+       AUTHOR.               TSH.
+       DATE-WRITTEN.         2011-08-18.
+       DATE-COMPILED.        2011-08-18.
+      ******************************************************************
+       ENVIRONMENT           DIVISION.
+      ******************************************************************
+       CONFIGURATION         SECTION.
+       SOURCE-COMPUTER.      PC.
+       OBJECT-COMPUTER.      PC.
+       SPECIAL-NAMES.
+      ******************************************************************
+       DATA                  DIVISION.
+      ******************************************************************
+      ******************************************************************
+       WORKING-STORAGE       SECTION.
+      ******************************************************************
+       01  OMIT-WK            PIC X.
+       01  CASE-ID            PIC X(10).
+       01  G-08      PIC NNN    VALUE "ÇPÇQÇRÇSÇT".
+       01  G-09      PIC NNN    VALUE "ABC".
+       01  GE-08     PIC N/N/N  VALUE "ÇPÅ^ÇQÅ^ÇRÅ^ÇSÅ^ÇT".
+       01  GE-09     PIC N/N/N  VALUE "ABC".
+       01  ERR-01     PIC NNN    VALUE 123.
+       01  ERR-02     PIC NNN    VALUE -123.5.
+       01  ERR-03.
+           05  ERR-03-1          
+           VALUE "01Å@ÇPåé02Å@ÇQåé03Å@ÇRåé04Å@ÇSåé05Å@ÇTåé06Å@ÇUåé" &
+                 "07Å@ÇVåé08Å@ÇWåé09Å@ÇXåé10ÇPÇOåé11ÇPÇPåé12ÇPÇQåé".
+            10  FILLER          OCCURS 10.
+              15  ERR-03-11     PIC 99.
+              15  ERR-03-12     PIC NNN.
+       01  A-01           PIC AAA            VALUE "ÇPÇQÇRÇSÇT".
+       01  X-01           PIC XXX            VALUE "Ç`ÇaÇb".
+       01  N-ZONE         PIC 9999           VALUE "ÇPÅ^ÇQÅ^ÇRÅ^ÇSÅ^ÇT".
+       01  N-ZONE-DEC     PIC 999V99         VALUE "Ç†Ç¢Ç§".
+       01  N-PACK         PIC 9999   COMP-3  VALUE "ÇPÇQÇR".
+       01  N-PACK-DEC     PIC 99V999 COMP-3  VALUE "ÇXÇWÇV".
+       01  N-BIN          PIC 9999   COMP    VALUE "ÇPÇQÇR".
+       01  N-BIN-DEC      PIC 99V999 COMP    VALUE "ÇXÇWÇV".
+       01  NE-01          PIC --99.999       VALUE "ÇXÇWÇV".
+       
+      ******************************************************************
+       PROCEDURE             DIVISION.
+      ******************************************************************
+       MAIN                  SECTION.
+       P-010. 
+            DISPLAY "TEST START (EX4-4C)".
+      *  ÉPÅ[ÉX9.VALUEãÂÇÃÉGÉâÅ[É`ÉFÉbÉN(ÇªÇÃÇPÅj
+      *
+            MOVE "P-010-01"             TO CASE-ID.
+            DISPLAY  G-08.
+            DISPLAY  G-09.
+            DISPLAY  GE-08.
+            DISPLAY  GE-09.
+            DISPLAY  ERR-01.
+            DISPLAY  ERR-02.
+            DISPLAY  ERR-03-1.
+      *  ÉPÅ[ÉX10.VALUEãÂÇÃÉGÉâÅ[É`ÉFÉbÉN(ÇªÇÃÇQÅj
+      *
+            MOVE "P-010-02"             TO CASE-ID.
+            DISPLAY  A-01.
+            DISPLAY  X-01.
+            DISPLAY  N-ZONE.
+            DISPLAY  N-ZONE-DEC.
+            DISPLAY  N-PACK.
+            DISPLAY  N-PACK-DEC.
+            DISPLAY  N-BIN.
+            DISPLAY  N-BIN-DEC.
+            DISPLAY  NE-01.
+      *
+            DISPLAY "TEST END   (EX4-4C)".
+            ACCEPT OMIT-WK.
+      *
+            GOBACK
+            .
+
