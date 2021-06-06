@@ -1,4 +1,4 @@
-I --> C:\COBOL\Remote_Repos\JPN_TEST\Jpn_test\source\QA-39.cbl
+I --> C:\isTEST\JPN_TEST\Jpn_test\source\QA-39.cbl
 --S: #69 Must be size 1 in this context: "ÅñÇP"; file = QA-39.cbl, line = 46, col 42
 --S: #69 Must be size 1 in this context: "*1"; file = QA-39.cbl, line = 62, col 42
 --S: #70 Illegal size: "*1"; file = QA-39.cbl, line = 78, col 39

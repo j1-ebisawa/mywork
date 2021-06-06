@@ -1,4 +1,4 @@
-I --> C:\COBOL\Remote_Repos\JPN_TEST\Jpn_test\source\IF_TEST.cbl
+I --> C:\isTEST\JPN_TEST\Jpn_test\source\IF_TEST.cbl
 --E: #43 Illegal condition W-L-GRP & R-ZONE-DEC; file = IF_TEST.cbl, line = 80, col 5
 --E: #43 Illegal condition W-L-GRP & R-PACK; file = IF_TEST.cbl, line = 84, col 5
 --E: #43 Illegal condition W-L-GRP & R-PACK-DEC; file = IF_TEST.cbl, line = 88, col 5

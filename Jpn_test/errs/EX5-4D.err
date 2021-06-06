@@ -1,4 +1,4 @@
-I --> C:\COBOL\Remote_Repos\JPN_TEST\Jpn_test\source\EX5-4D.cbl
+I --> C:\isTEST\JPN_TEST\Jpn_test\source\EX5-4D.cbl
 --S: #70 Illegal size: AN-06; file = EX5-4D.cbl, line = 60, col 41
 --S: #70 Illegal size: "‚³"; file = EX5-4D.cbl, line = 66, col 41
 --S: #69 Must be size 1 in this context: "‚©‚«‚­"; file = EX5-4D.cbl, line = 73, col 42
