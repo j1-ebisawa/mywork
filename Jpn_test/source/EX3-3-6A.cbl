@@ -107,7 +107,7 @@
             
             IF L-G(3:2) = "うえ"
                                         DISPLAY CASE-ID "OK"
-               ELSE                     DISPLAY CASE-ID "NG"
+               ELSE                     DISPLAY CASE-ID "NG;" L-G
             END-IF.
       *
             MOVE "P-010-02"             TO CASE-ID.
@@ -115,25 +115,25 @@
             
             IF L-GE(3:2) = "い／"
                                         DISPLAY CASE-ID "OK"
-               ELSE                     DISPLAY CASE-ID "NG"
+               ELSE                     DISPLAY CASE-ID "NG:" L-GE
             END-IF.
       *
             MOVE "P-010-03"             TO CASE-ID.
-            MOVE ALL "＊"               TO L-G.
+            MOVE "＊＊＊＊＊＊＊＊＊＊"               TO L-G.
             MOVE "あいう"               TO L-G(3:3).
             
             IF L-G = "＊＊あいう＊＊＊＊＊"    
                                         DISPLAY CASE-ID "OK"
-               ELSE                     DISPLAY CASE-ID "NG"
+               ELSE                     DISPLAY CASE-ID "NG:" L-G
             END-IF.
       *
             MOVE "P-010-04"             TO CASE-ID.
-            MOVE ALL "＊"               TO L-GE.
+            MOVE "＊＊＊"                TO L-GE.
             MOVE "？"                   TO L-GE(3:1).
             
             IF L-GE = "＊／？／＊"
                                         DISPLAY CASE-ID "OK"
-               ELSE                     DISPLAY CASE-ID "NG"
+               ELSE                     DISPLAY CASE-ID "NG:"  L-GE
             END-IF.
       *
        P-020. 
@@ -145,36 +145,36 @@
             MOVE 2 TO L.
             IF L-G(P:L) = "えお"
                                         DISPLAY CASE-ID "OK"
-               ELSE                     DISPLAY CASE-ID "NG"
+               ELSE                     DISPLAY CASE-ID "NG:"  L-G
             END-IF.
       *
             MOVE "P-020-02"             TO CASE-ID.
-            MOVE "あいう" TO L-GE.
+            MOVE "あいう"                  TO L-GE.
             MOVE 3 TO P.
             MOVE 2 TO L.
             IF L-GE(P:L) = "い／"
                                         DISPLAY CASE-ID "OK"
-               ELSE                     DISPLAY CASE-ID "NG"
+               ELSE                     DISPLAY CASE-ID "NG:" L-GE
             END-IF.
       *
             MOVE "P-020-03"             TO CASE-ID.
-            MOVE ALL "＊"               TO L-G.
+            MOVE "＊＊＊＊＊＊＊＊＊＊"    TO L-G.
             MOVE 3 TO P.
             MOVE 3 TO L.
             MOVE "あいう"               TO L-G(P:L).
             IF L-G = "＊＊あいう＊＊＊＊＊"    
                                         DISPLAY CASE-ID "OK"
-               ELSE                     DISPLAY CASE-ID "NG"
+               ELSE                     DISPLAY CASE-ID "NG:" L-G
             END-IF.
       *
             MOVE "P-020-04"             TO CASE-ID.
-            MOVE ALL "＊"               TO L-GE.
+            MOVE "＊＊＊"                TO L-GE.
             MOVE 3 TO P.
             MOVE 2 TO L.
             MOVE "１２"                 TO L-GE(P:L).
             IF L-GE = "＊／１２＊"
                                         DISPLAY CASE-ID "OK"
-               ELSE                     DISPLAY CASE-ID "NG"
+               ELSE                     DISPLAY CASE-ID "NG:" L-GE
             END-IF.
       *
        P-030. 
@@ -185,7 +185,7 @@
             MOVE 2 TO L.
             IF L-G(P * 2 :  L + 3) = "いうえおか"
                                         DISPLAY CASE-ID "OK"
-               ELSE                     DISPLAY CASE-ID "NG"
+               ELSE                     DISPLAY CASE-ID "NG:"  L-G
             END-IF.
       *
             MOVE "P-030-02"             TO CASE-ID.
@@ -194,106 +194,106 @@
             MOVE 1 TO L.
             IF L-GE(P * 2 : L + 1) = "／い"
                                         DISPLAY CASE-ID "OK"
-               ELSE                     DISPLAY CASE-ID "NG"
+               ELSE                     DISPLAY CASE-ID "NG:" L-GE
             END-IF.
       *
             MOVE "P-030-03"             TO CASE-ID.
-            MOVE ALL "＊"               TO L-G.
+            MOVE "＊＊＊＊＊＊＊＊＊＊"    TO L-G.
             MOVE 1 TO P.
             MOVE 2 TO L.
             MOVE "あいう"               TO L-G(P + 1:L * 2).
             IF L-G = "＊あいう　＊＊＊＊＊"
                                         DISPLAY CASE-ID "OK"
-               ELSE                     DISPLAY CASE-ID "NG"
+               ELSE                     DISPLAY CASE-ID "NG:" L-G
             END-IF.
       *
             MOVE "P-030-04"             TO CASE-ID.
-            MOVE ALL "＊"               TO L-GE.
+            MOVE "＊＊＊"                TO L-GE.
             MOVE 3 TO P.
             MOVE 1 TO L.
             MOVE "？"                   TO L-GE(P:L*2).
             IF L-GE = "＊／？　＊"
                                         DISPLAY CASE-ID "OK"
-               ELSE                     DISPLAY CASE-ID "NG"
+               ELSE                     DISPLAY CASE-ID "NG:" L-GE
             END-IF.
        P-040. 
       *  ケース4.日本語→日本語
       *
             MOVE "P-040-01"        TO CASE-ID.
-            MOVE ALL "＊"          TO L-G-5.
+            MOVE "＊＊＊＊＊"        TO L-G-5.
             MOVE "あいうえおかきくけこ" TO L-G-5(1:3).
             IF L-G-5 = "あいう＊＊"    
                                      DISPLAY CASE-ID "OK"
-               ELSE                  DISPLAY CASE-ID "NG"
+               ELSE                  DISPLAY CASE-ID "NG:"  L-G-5
             END-IF.
       *
             MOVE "P-040-02"        TO CASE-ID.
-            MOVE ALL "＊"          TO L-G-5.
+            MOVE "＊＊＊＊＊"        TO L-G-5.
             MOVE "あい"            TO L-G-5(2:3).
-            IF L-G-5 = "＊あい　＊"  DISPLAY CASE-ID "OK"
-               ELSE                  DISPLAY CASE-ID "NG"
+            IF L-G-5 = "＊あい　＊"     DISPLAY CASE-ID "OK"
+               ELSE                  DISPLAY CASE-ID "NG:"  L-G-5
             END-IF.
       *
             MOVE "P-040-03"        TO CASE-ID.
-            MOVE ALL "＊"          TO L-GE.
-            MOVE "あいうえお"      TO L-GE(1:2).
-            IF L-GE = "あい＊／＊"   DISPLAY CASE-ID "OK"
-               ELSE                  DISPLAY CASE-ID "NG"
+            MOVE "＊＊＊"           TO L-GE.
+            MOVE "あいうえお"       TO L-GE(1:2).
+            IF L-GE = "あい＊／＊"     DISPLAY CASE-ID "OK"
+               ELSE                  DISPLAY CASE-ID "NG:" L-GE
             END-IF.
       *
             MOVE "P-040-04"        TO CASE-ID.
-            MOVE ALL "＊"          TO L-GE.
+            MOVE "＊＊＊"          TO L-GE.
             MOVE "あい"            TO L-GE(1:3).
             IF L-GE = "あい　／＊"    DISPLAY CASE-ID "OK"
-               ELSE                   DISPLAY CASE-ID "NG"
+               ELSE                DISPLAY CASE-ID "NG:" L-GE
             END-IF.
       *
             MOVE "P-040-05"        TO CASE-ID.
             MOVE "あいうえおかきくけこ" TO R-G-5.
             MOVE "＊＊"                 TO R-G-5(2:2).
             IF R-G-5 = "あ＊＊えお"   DISPLAY CASE-ID "OK"
-               ELSE                   DISPLAY CASE-ID "NG"
+               ELSE                   DISPLAY CASE-ID "NG:" R-G-5
             END-IF.
       *
             MOVE "P-040-06"        TO CASE-ID.
             MOVE "あいうえおかきくけこ" TO R-GJ-5.
             MOVE "＊＊"                 TO R-GJ-5(2:2).
             IF R-GJ-5 = "か＊＊けこ"   DISPLAY CASE-ID "OK"
-               ELSE                    DISPLAY CASE-ID "NG"
+               ELSE                    DISPLAY CASE-ID "NG:" R-GJ-5
             END-IF.
       *
        P-050. 
       *  ケース5.日本語/日本語編集 日本語転記(1B->２B変換）
       *
             MOVE "P-050-01"        TO CASE-ID.
-            MOVE ALL "＊"   TO R-G-5.
+            MOVE "＊＊＊＊＊"   TO R-G-5.
             MOVE "ABCDE"    TO R-G-5(3:3).
             IF R-G-5 = "＊＊ＡＢＣ"    DISPLAY CASE-ID "OK"
-               ELSE                    DISPLAY CASE-ID "NG:"
+               ELSE                 DISPLAY CASE-ID "NG:" R-G-5
             END-IF.
       *
             MOVE "P-050-02"        TO CASE-ID.
-            MOVE ALL "＊" TO R-G-5.
+            MOVE "＊＊＊＊＊" TO R-G-5.
             MOVE "ｱｲ"     TO R-G-5(1:3).
             IF R-G-5 = "アイ　＊＊"   DISPLAY CASE-ID "OK"
-               ELSE                   DISPLAY CASE-ID "NG:"
+               ELSE                   DISPLAY CASE-ID "NG:" R-G-5
             END-IF.
       *
             MOVE "P-050-03"        TO CASE-ID.
-            MOVE ALL "＊" TO R-GE.
+            MOVE "＊＊＊" TO R-GE.
             MOVE "ABCDE"  TO R-GE(1:3).
             IF R-GE = "ＡＢＣ／＊"   DISPLAY CASE-ID "OK"
-               ELSE                  DISPLAY CASE-ID "NG:"
+               ELSE                  DISPLAY CASE-ID "NG:" R-GE
             END-IF.
       *
             MOVE "P-050-04"        TO CASE-ID.
-            MOVE ALL "＊" TO R-GE.
+            MOVE "＊＊＊" TO R-GE.
             MOVE "ｱｲ"     TO R-GE(1:3).
             IF R-GE = "アイ　／＊"   DISPLAY CASE-ID "OK"
-               ELSE                  DISPLAY CASE-ID "NG:"
+               ELSE                  DISPLAY CASE-ID "NG:" R-GE
             END-IF.
       *
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK. 
       *
        P-060. 
       *  ケース6.日本語/日本語編集 日本語転記（表意定数、ALL 定数）
@@ -302,28 +302,28 @@
             MOVE ALL "＊"   TO R-G-5.
             MOVE SPACE      TO R-G-5(3:3).
             IF R-G-5 = "＊＊　　　"    DISPLAY CASE-ID "OK"
-               ELSE                    DISPLAY CASE-ID "NG:"
+               ELSE                    DISPLAY CASE-ID "NG:" R-G-5
             END-IF.
       *
             MOVE "P-060-02"        TO CASE-ID.
             MOVE ALL "＊" TO R-G-5.
             MOVE ALL "?"  TO R-G-5(1:3).
             IF R-G-5 = "？？？＊＊"   DISPLAY CASE-ID "OK"
-               ELSE                   DISPLAY CASE-ID "NG:"
+               ELSE                   DISPLAY CASE-ID "NG:" R-G-5
             END-IF.
       *
             MOVE "P-060-03"        TO CASE-ID.
             MOVE ALL "＊" TO R-GE.
             MOVE QUOTES   TO R-GE(1:3).
             IF R-GE = "”””／＊"   DISPLAY CASE-ID "OK"
-               ELSE                  DISPLAY CASE-ID "NG:"
+               ELSE                  DISPLAY CASE-ID "NG:" R-GE
             END-IF.
       *
             MOVE "P-060-04"        TO CASE-ID.
             MOVE ALL "＊" TO R-GE.
             MOVE ALL ZERO TO R-GE(1:3).
             IF R-GE = "０００／＊"   DISPLAY CASE-ID "OK"
-               ELSE                  DISPLAY CASE-ID "NG:"
+               ELSE                  DISPLAY CASE-ID "NG:" R-GE
             END-IF.
       *
        P-070. 
@@ -333,28 +333,28 @@
             MOVE "あいうえおかきくけこ" TO L-G.
             IF L-G(1:3) = "あいう　　　　　　　"
                                    DISPLAY CASE-ID "OK"
-               ELSE                DISPLAY CASE-ID "NG"
+               ELSE                DISPLAY CASE-ID "NG:" L-G
             END-IF.
       *
             MOVE "P-070-02"        TO CASE-ID.
             MOVE "あいう" TO L-G.
             IF L-G(1:5) = "あいう"    
                                    DISPLAY CASE-ID "OK"
-               ELSE                DISPLAY CASE-ID "NG"
+               ELSE                DISPLAY CASE-ID "NG:" L-G
             END-IF.
       *
             MOVE "P-070-03"        TO CASE-ID.
             MOVE ALL "＊"          TO L-GE.
             IF L-GE(1:3) = "＊／＊　　　　"
                                    DISPLAY CASE-ID "OK"
-               ELSE                DISPLAY CASE-ID "NG"
+               ELSE                DISPLAY CASE-ID "NG:" L-GE
             END-IF.
       *
             MOVE "P-070-04"        TO CASE-ID.
             MOVE "あい"            TO L-GE(1:5).
             IF L-GE(1:5) = "あい"
                                    DISPLAY CASE-ID "OK"
-               ELSE                DISPLAY CASE-ID "NG"
+               ELSE                DISPLAY CASE-ID "NG:" L-GE
             END-IF.
       *
        P-080. 
@@ -364,59 +364,63 @@
             MOVE SPACE TO L-G.
             IF L-G(1:3) = SPACE
                                    DISPLAY CASE-ID "OK"
-               ELSE                DISPLAY CASE-ID "NG"
+               ELSE                DISPLAY CASE-ID "NG:" L-G
             END-IF.
       *
             MOVE "P-080-02"        TO CASE-ID.
             MOVE ALL "あいう" TO L-G.
             IF L-G(1:5) = ALL "あいう"    
                                    DISPLAY CASE-ID "OK"
-               ELSE                DISPLAY CASE-ID "NG"
+               ELSE                DISPLAY CASE-ID "NG:" L-G
             END-IF.
       *
             MOVE "P-080-03"        TO CASE-ID.
             MOVE QUOTE             TO L-GE.
             IF L-GE(1:3) = "”／”"
                                    DISPLAY CASE-ID "OK"
-               ELSE                DISPLAY CASE-ID "NG"
+               ELSE                DISPLAY CASE-ID "NG:" L-GE
             END-IF.
       *
             MOVE "P-080-04"        TO CASE-ID.
             MOVE ALL QUOTE         TO L-GE(1:5).
             IF L-GE(1:5) = ALL QUOTE
                                    DISPLAY CASE-ID "OK"
-               ELSE                DISPLAY CASE-ID "NG"
+               ELSE                DISPLAY CASE-ID "NG:" L-GE
             END-IF.
       *
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
        P-090. 
       *  ケース09.日本語/日本語編集 日本語比較(修飾）
             MOVE "P-090-01"        TO CASE-ID.
             MOVE "あいうえおかきくけこ" TO L-G.
             IF L-G OF W-L-GRP(1:3) = "あいう　　　　　　　"
                                    DISPLAY CASE-ID "OK"
-               ELSE                DISPLAY CASE-ID "NG"
+               ELSE                DISPLAY CASE-ID "NG:"
+                                           L-G OF W-L-GRP(1:3)
             END-IF.
       *
             MOVE "P-090-02"        TO CASE-ID.
             MOVE "あいう" TO L-G.
             IF L-G OF W-L-GRP(1:5) = "あいう"    
                                    DISPLAY CASE-ID "OK"
-               ELSE                DISPLAY CASE-ID "NG"
+               ELSE                DISPLAY CASE-ID "NG:"
+                                           L-G OF W-L-GRP(1:5)
             END-IF.
       *
             MOVE "P-090-03"        TO CASE-ID.
             MOVE ALL "＊"          TO L-GE OF W-L-GRP(1:3).
             IF L-GE OF W-L-GRP(1:3) = "＊＊＊　　　　"
                                    DISPLAY CASE-ID "OK"
-               ELSE                DISPLAY CASE-ID "NG"
+               ELSE                DISPLAY CASE-ID "NG:"
+                                           L-GE OF W-L-GRP(1:3)
             END-IF.
       *
             MOVE "P-090-04"        TO CASE-ID.
             MOVE "あい"            TO L-GE OF W-L-GRP(1:5).
             IF L-GE OF W-L-GRP(1:5) = "あい"
                                    DISPLAY CASE-ID "OK"
-               ELSE                DISPLAY CASE-ID "NG"
+               ELSE                DISPLAY CASE-ID "NG:"
+                                           L-GE OF W-L-GRP(1:5) 
             END-IF.
       *
        P-100. 
@@ -428,6 +432,7 @@
             IF W-OCC-G(1)(3:2) = "うえ"   
                                      DISPLAY CASE-ID "OK"
                ELSE                  DISPLAY CASE-ID "NG:" 
+                                             W-OCC-G(1)(3:2)
             END-IF.
       *
             MOVE "P-100-02"        TO CASE-ID.
@@ -436,6 +441,7 @@
             IF W-OCC-G(W-I)(2:4) = "いうえお"   
                                      DISPLAY CASE-ID "OK"
                ELSE                  DISPLAY CASE-ID "NG:" 
+                                             W-OCC-G(W-I)(2:4)
             END-IF.
       *
             MOVE "P-100-03"        TO CASE-ID.
@@ -443,6 +449,7 @@
             IF W-OCC-GE(1)(3:3) = "あいう"
                                      DISPLAY CASE-ID "OK"
                ELSE                  DISPLAY CASE-ID "NG:" 
+                                             W-OCC-GE(1)(3:3)
             END-IF.
       *
             MOVE "P-100-04"        TO CASE-ID.
@@ -451,6 +458,7 @@
             IF W-OCC-GE(W-I)(1:3) = "あい　"   
                                      DISPLAY CASE-ID "OK"
                ELSE                  DISPLAY CASE-ID "NG:" 
+                                             W-OCC-GE(W-I)(1:3)
             END-IF.
       *
       *  ケース11.日本語/日本語編集 日本語比較(修飾+添え字）
@@ -461,6 +469,7 @@
             IF W-OCC-G OF W-OCC-GRP(1)(3:2) = "うえ"   
                                      DISPLAY CASE-ID "OK"
                ELSE                  DISPLAY CASE-ID "NG:" 
+                                     W-OCC-G OF W-OCC-GRP(1)(3:2)
             END-IF.
       *
             MOVE "P-110-02"        TO CASE-ID.
@@ -469,6 +478,7 @@
             IF W-OCC-G OF W-OCC-GRP(W-I)(2:4) = "いうえお"   
                                      DISPLAY CASE-ID "OK"
                ELSE                  DISPLAY CASE-ID "NG:" 
+                                     W-OCC-G OF W-OCC-GRP(W-I)(2:4)
             END-IF.
       *
             MOVE "P-110-03"        TO CASE-ID.
@@ -476,6 +486,7 @@
             IF W-OCC-GE OF W-OCC-GRP(1)(3:2) = "あい"
                                      DISPLAY CASE-ID "OK"
                ELSE                  DISPLAY CASE-ID "NG:" 
+                                     W-OCC-GE OF W-OCC-GRP(1)(3:2)
             END-IF.
       *
             MOVE "P-110-04"        TO CASE-ID.
@@ -484,6 +495,7 @@
             IF W-OCC-GE OF W-OCC-GRP(W-I)(1:3) = "あい　"   
                                      DISPLAY CASE-ID "OK"
                ELSE                  DISPLAY CASE-ID "NG:" 
+                                     W-OCC-GE OF W-OCC-GRP(W-I)(1:3) 
             END-IF.
       *
       *

@@ -1,3 +1,5 @@
 20210521 #001 '\' Default  inavailable
 20210521 #002 C-SIGN only 1 character
-20210501 pm2:31
+20210607 #003 Pic string / treated as 1B
+20210607 #004 move 1B->2B convert when PIC N
+ 
