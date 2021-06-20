@@ -110,13 +110,15 @@
             IF L-G = "＊あいうえお＊＊＊＊"
                                         DISPLAY CASE-ID "OK"
                ELSE                     DISPLAY CASE-ID "NG"
+                                        display "＊あいうえお＊＊＊＊"
+                                        display L-G
             END-IF.
       *
             MOVE "P-120-02"             TO CASE-ID.
             DISPLAY L-G.
-            DISPLAY L-G(1:1) "," L-G(2:5) "," L-G(7:4)
+            DISPLAY L-G(1:1)  L-G(2:5)  L-G(7:4)
             DISPLAY "同じならばOK".
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
       *
        P-130. 
       *  ケース13.日本語/日本語編集 （EVALUATE/SEARCH WHEN）
