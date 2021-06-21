@@ -105,11 +105,12 @@
             MOVE "P-120-01"             TO CASE-ID.
             MOVE ALL "Åñ" TO L-G.
             DISPLAY "KEY-IN=Ç†Ç¢Ç§Ç¶Ç®".
-            ACCEPT L-G(2:5).
+            *>ACCEPT L-G(2:5).
+            move "Ç†Ç¢Ç§Ç¶Ç®" to L-G(2:5). 
             
             IF L-G = "ÅñÇ†Ç¢Ç§Ç¶Ç®ÅñÅñÅñÅñ"
                                         DISPLAY CASE-ID "OK"
-               ELSE                     DISPLAY CASE-ID "NG"
+               ELSE                     DISPLAY CASE-ID "NG:" L-G                                                
                                         display "ÅñÇ†Ç¢Ç§Ç¶Ç®ÅñÅñÅñÅñ"
                                         display L-G
             END-IF.
@@ -129,7 +130,7 @@
             MOVE 2 TO L.
             EVALUATE L-G(P:L) 
               WHEN "Ç¶Ç®"               DISPLAY CASE-ID "OK"
-              WHEN OTHER                DISPLAY CASE-ID "NG"
+              WHEN OTHER              DISPLAY CASE-ID "NG"
             END-EVALUATE.
       *
             MOVE "P-130-02"             TO CASE-ID.
@@ -158,7 +159,7 @@
             MOVE "Ç†Ç¢Ç§Ç¶Ç®Ç©Ç´Ç≠ÇØÇ±" TO L-G.
             MOVE 3 TO P.
             MOVE 2 TO L.
-            MOVE ALL "*" TO L-G(P:).
+            MOVE ALL "Åñ" TO L-G(P:).
             
             IF L-G = "Ç†Ç¢ÅñÅñÅñÅñÅñÅñÅñÅñ"
                                         DISPLAY CASE-ID "OK"
@@ -167,7 +168,7 @@
       *
             MOVE "P-140-02"             TO CASE-ID.
             MOVE "Ç†Ç¢Ç§" TO L-GE.
-            MOVE ALL "*"  TO L-GE(3:).
+            MOVE ALL "Åñ"  TO L-GE(3:).
             
             IF L-GE = "Ç†Å^ÅñÅñÅñ"
                                         DISPLAY CASE-ID "OK"

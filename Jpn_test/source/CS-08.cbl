@@ -191,7 +191,7 @@
       *
       *
             DISPLAY "TEST END   (CS-08)".
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
             GOBACK
             .
 
