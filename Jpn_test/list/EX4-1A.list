@@ -1,14 +1,14 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
 *>source file name:  C:\ISTEST\Git\Jpn_test\source\EX4-1A.cbl
-*>date generated  :  Sun Jun 20 14:59:30 JST 2021
-*>compiler options:  -dx -eo=C:/ISTEST/Git/Jpn_test/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks -od=C:/ISTEST/Git/Jpn_test/output -jj
+*>date generated  :  Mon Jun 21 16:26:13 JST 2021
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/ISTEST/Git/Jpn_test/output -jj -eo=C:/ISTEST/Git/Jpn_test/errs -d -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks
 *>*****************************************************************
-*>    テストケース：4-1A                                                  
-*>    プログラム名：日本語化テスト （データ部）JUSTIFIED句                              
-*>    処理概要　　：JUST指定が正しく実行されるかをチェックする。                              
+*>    テストケース：4-1A                                           
+*>    プログラム名：日本語化テスト （データ部）JUSTIFIED句         
+*>    処理概要　　：JUST指定が正しく実行されるかをチェックする。   
 *>  -------------------------------------------------------------- 
-*>   テストケース:１～４                                                    
+*>   テストケース:１～４                                           
 *>*****************************************************************
 IDENTIFICATION        DIVISION.                                  
 *>*****************************************************************
@@ -45,87 +45,87 @@ PROCEDURE             DIVISION.
 MAIN                  SECTION.                                   
 P-010.                                                           
      DISPLAY "TEST START (EX4-1A)".                              
-*>  ケース1.日本語データ（JUST句なし）                                           
+*>  ケース1.日本語データ（JUST句なし）                             
 *>                                                                 
      MOVE "P-010-01"             TO CASE-ID.                     
-     MOVE "あいうえおかきくけこ" TO G-01.                                  
-     IF G-01 = "あいうえお"                                           
+     MOVE "あいうえおかきくけこ" TO G-01.                        
+     IF G-01 = "あいうえお"                                      
                                  DISPLAY CASE-ID "OK"            
         ELSE                     DISPLAY CASE-ID "NG"            
      END-IF.                                                     
 *>                                                                 
      MOVE "P-010-02"             TO CASE-ID.                     
-     MOVE "あいう"               TO G-01.                           
-     IF G-01 = "あいう　　"                                           
+     MOVE "あいう"               TO G-01.                        
+     IF G-01 = "あいう　　"                                      
                                  DISPLAY CASE-ID "OK"            
-        ELSE                     DISPLAY CASE-ID "NG"            
+        ELSE                     DISPLAY CASE-ID "NG:" G-01      
      END-IF.                                                     
 *>                                                                 
      MOVE "P-010-03"             TO CASE-ID.                     
-     MOVE "あいうえお"           TO GE-01.                            
-     IF GE-01 = "あ／い／う"                                          
+     MOVE "あいうえお"           TO GE-01.                       
+     IF GE-01 = "あ／い／う"                                     
                                  DISPLAY CASE-ID "OK"            
-        ELSE                     DISPLAY CASE-ID "NG"            
+        ELSE                     DISPLAY CASE-ID "NG:" GE-01     
      END-IF.                                                     
 *>                                                                 
      MOVE "P-010-04"             TO CASE-ID.                     
-     MOVE "あ"                   TO GE-01.                        
-     IF GE-01 = "あ／　／　"                                          
+     MOVE "あ"                   TO GE-01.                       
+     IF GE-01 = "あ／　／　"                                     
                                  DISPLAY CASE-ID "OK"            
-        ELSE                     DISPLAY CASE-ID "NG"            
+        ELSE                     DISPLAY CASE-ID "NG:" GE-01     
      END-IF.                                                     
 *>                                                                 
 P-020.                                                           
-*>  ケース2.日本語定数→日本語データ（JUST句あり）                                     
+*>  ケース2.日本語定数→日本語データ（JUST句あり）                 
 *>                                                                 
      MOVE "P-020-01"             TO CASE-ID.                     
-     MOVE "あいうえおかきくけこ" TO G-J-01                                 
-     IF G-J-01 = "かきくけこ"                                         
+     MOVE "あいうえおかきくけこ" TO G-J-01                       
+     IF G-J-01 = "かきくけこ"                                    
                                  DISPLAY CASE-ID "OK"            
         ELSE                     DISPLAY CASE-ID "NG"            
      END-IF.                                                     
 *>                                                                 
      MOVE "P-020-02"             TO CASE-ID.                     
-     MOVE "あいう"               TO G-J-01.                         
-     IF G-J-01 = "　　あいう"                                         
+     MOVE "あいう"               TO G-J-01.                      
+     IF G-J-01 = "　　あいう"                                    
                                  DISPLAY CASE-ID "OK"            
         ELSE                     DISPLAY CASE-ID "NG"            
      END-IF.                                                     
 *>                                                                 
 P-030.                                                           
-*>  ケース3.日本語データ→日本語データ（JUST句あり）                                    
+*>  ケース3.日本語データ→日本語データ（JUST句あり）               
      MOVE "P-030-01"             TO CASE-ID.                     
-     MOVE "あいうえおかきくけこ" TO L-J-10.                                
+     MOVE "あいうえおかきくけこ" TO L-J-10.                      
      MOVE L-J-10 TO G-J-01.                                      
-     IF G-J-01 = "かきくけこ"                                         
+     IF G-J-01 = "かきくけこ"                                    
                                  DISPLAY CASE-ID "OK"            
         ELSE                     DISPLAY CASE-ID "NG"            
      END-IF.                                                     
 *>                                                                 
      MOVE "P-030-02"             TO CASE-ID.                     
-     MOVE "あいう"               TO L-J-3.                          
+     MOVE "あいう"               TO L-J-3.                       
      MOVE L-J-3 TO G-J-01                                        
-     IF G-J-01 = "　　あいう"                                         
+     IF G-J-01 = "　　あいう"                                    
                                  DISPLAY CASE-ID "OK"            
         ELSE                     DISPLAY CASE-ID "NG"            
      END-IF.                                                     
 P-040.                                                           
-*>  ケース4.英数字データ→日本語データ（JUST句あり）                                    
+*>  ケース4.英数字データ→日本語データ（JUST句あり）               
 *>                                                                 
      MOVE "P-040-01"             TO CASE-ID.                     
      MOVE "ｱｲｳｴｵｶｷｸｹｺ" TO L-X-10.                                
      MOVE L-X-10 TO G-J-01.                                      
-     IF G-J-01 = "カキクケコ"                                         
+     IF G-J-01 = "カキクケコ"                                    
                                  DISPLAY CASE-ID "OK"            
-        ELSE                     DISPLAY CASE-ID "NG"            
+        ELSE                     DISPLAY CASE-ID "NG:" G-J-01    
      END-IF.                                                     
 *>                                                                 
      MOVE "P-040-02"             TO CASE-ID.                     
      MOVE "ｱｲｳ"               TO L-X-3.                          
      MOVE L-X-3 TO G-J-01                                        
-     IF G-J-01 = "　　アイウ"                                         
+     IF G-J-01 = "　　アイウ"                                    
                                  DISPLAY CASE-ID "OK"            
-        ELSE                     DISPLAY CASE-ID "NG"            
+        ELSE                     DISPLAY CASE-ID "NG:" G-J-01    
      END-IF.                                                     
 *>                                                                 
 *>                                                                 

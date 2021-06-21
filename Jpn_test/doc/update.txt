@@ -4,5 +4,5 @@
 20210621 #004 ALL      Use -cndbcs compile option
 20210621 #005 EX3-3-6D subsscirp check EX3-3-6D
 20210621 #006 EX3-4    move AN(1B)->N(2B) convert  when PIC N
-update b
+20210621 #007 EX4-1A   JUST dosen't work
  

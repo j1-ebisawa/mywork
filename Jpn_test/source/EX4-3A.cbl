@@ -36,6 +36,7 @@
        01  GE-02              PIC N/N          USAGE NATIONAL.
        01  GE-03              PIC N0N          USAGE NATIONAL.
        01  GE-04              PIC N/NBN0N      USAGE NATIONAL.
+       01  wk-len             pic 999.
        
       ******************************************************************
        PROCEDURE             DIVISION.
@@ -82,10 +83,12 @@
       *
             MOVE "P-020-01"             TO CASE-ID.
             MOVE "Ç†Ç¢" TO GE-01
+            move FUNCTION BYTE-LENGTH(GE-01) to wk-len
             IF GE-01 = "Ç†Å@Ç¢"
                AND FUNCTION BYTE-LENGTH(GE-01) = 6
                                         DISPLAY CASE-ID "OK"
-               ELSE                     DISPLAY CASE-ID "NG"
+               ELSE                     DISPLAY CASE-ID "NG:" GE-01 
+                                                        "WK-L=" wk-len
             END-IF.
       *
             MOVE "P-020-02"             TO CASE-ID.
@@ -93,7 +96,7 @@
             IF GE-02 = "Ç†Å^Ç¢"
                AND FUNCTION BYTE-LENGTH(GE-02) = 6
                                         DISPLAY CASE-ID "OK"
-               ELSE                     DISPLAY CASE-ID "NG"
+               ELSE                     DISPLAY CASE-ID "NG:" GE-02
             END-IF.
       *
             MOVE "P-020-03"             TO CASE-ID.
@@ -101,7 +104,7 @@
             IF GE-03 = "Ç†ÇOÇ¢"
                AND FUNCTION BYTE-LENGTH(GE-03) = 6
                                         DISPLAY CASE-ID "OK"
-               ELSE                     DISPLAY CASE-ID "NG"
+               ELSE                     DISPLAY CASE-ID "NG:" GE-03
             END-IF.
       *
             MOVE "P-020-04"             TO CASE-ID.
@@ -109,7 +112,7 @@
             IF GE-04 = "ÇPÅ^ÇQÅ@ÇRÇOÇS"
                AND FUNCTION BYTE-LENGTH(GE-04) = 14
                                         DISPLAY CASE-ID "OK"
-               ELSE                     DISPLAY CASE-ID "NG"
+               ELSE                     DISPLAY CASE-ID "NG:" GE-04
             END-IF.
       *
       *
