@@ -1,7 +1,7 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
 *>source file name:  C:\isTEST\Git\Jpn_test\source\EX5-6B-2.cbl
-*>date generated  :  Mon Jun 21 09:48:10 JST 2021
+*>date generated  :  Mon Jun 21 10:38:39 JST 2021
 *>compiler options:  -dx -cndbcs -eo=C:/isTEST/Git/Jpn_test/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/isTEST/Git/Jpn_test/list -tasks -od=C:/isTEST/Git/Jpn_test/output -jj
 *>*****************************************************************
 *>    テストケース：EX5-6B-2                                              

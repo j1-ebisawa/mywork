@@ -1,7 +1,7 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
 *>source file name:  C:\isTEST\Git\Jpn_test\source\EX3-3-6A.cbl
-*>date generated  :  Mon Jun 21 08:42:27 JST 2021
+*>date generated  :  Mon Jun 21 10:38:39 JST 2021
 *>compiler options:  -dx -cndbcs -eo=C:/isTEST/Git/Jpn_test/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/isTEST/Git/Jpn_test/list -tasks -od=C:/isTEST/Git/Jpn_test/output -jj
 *>*****************************************************************
 *>    テストケース：3-3-6A                                                
@@ -298,7 +298,7 @@ P-050.
         ELSE                  DISPLAY CASE-ID "NG:" R-GE         
      END-IF.                                                     
 *>                                                                 
-     *>ACCEPT OMIT-WK.                                           
+     *>ACCEPT OMIT-W K.                                          
 *>                                                                 
 P-060.                                                           
 *>  ケース6.日本語/日本語編集 日本語転記（表意定数、ALL 定数）                              
