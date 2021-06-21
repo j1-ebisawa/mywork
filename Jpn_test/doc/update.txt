@@ -1,5 +1,7 @@
-20210521 #001 '\' Default  inavailable
-20210521 #002 C-SIGN only 1 character
-20210607 #003 Pic string / treated as 1B
-20210607 #004 move 1B->2B convert when PIC N
+20210521 #001 CS_011   '\' Default  Currency sign inavailable
+20210521 #002 CS_03    C-SIGN only 1 character
+20210607 #003 EX3-3-6A move 1B->2B convert when PIC N
+20210621 #004 ALL      Use -cndbcs compile option
+20210621 #005 EX3-3-6D subsscirp check EX3-3-6D
+20210621 #006 EX3-4    move AN(1B)->N(2B) convert  when PIC N
  

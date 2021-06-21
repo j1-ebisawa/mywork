@@ -1,8 +1,8 @@
 *>(c) 2005 - 2021 Veryant
-*>compiler version: isCOBOL-BETA release 2021 R1 build#1041.1-20210329-31547
-*>source file name:  C:\isTEST\JPN_TEST\Jpn_test\source\EX3-4.cbl
-*>date generated  :  Sun Jun 06 07:55:28 GMT+09:00 2021
-*>compiler options:  -dx -eo=C:/isTEST/JPN_TEST/Jpn_test/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/isTEST/JPN_TEST/Jpn_test/list -tasks -od=C:/isTEST/JPN_TEST/Jpn_test/output -jj
+*>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
+*>source file name:  C:\ISTEST\Git\Jpn_test\source\EX3-4.cbl
+*>date generated  :  Mon Jun 21 11:03:13 JST 2021
+*>compiler options:  -dx -cndbcs -eo=C:/ISTEST/Git/Jpn_test/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks -od=C:/ISTEST/Git/Jpn_test/output -jj
 *>*****************************************************************
 *>    テストケース：3-4                                                   
 *>    プログラム名：日本語化テスト （言語要素）英数字データ                                  
@@ -100,7 +100,7 @@ P-030.
      MOVE AN-01 TO G-01.                                         
      IF G-01 = "あいｘ"                                             
                                  DISPLAY CASE-ID "OK"            
-        ELSE                     DISPLAY CASE-ID "NG"            
+        ELSE                     DISPLAY CASE-ID "NG:" G-01      
      END-IF.                                                     
 *>                                                                 
      MOVE "P-030-02"             TO CASE-ID.                     
@@ -108,7 +108,7 @@ P-030.
      MOVE AN-02 TO G-02.                                         
      IF G-02 = "あ９８７６"                                           
                                  DISPLAY CASE-ID "OK"            
-        ELSE                     DISPLAY CASE-ID "NG"            
+        ELSE                     DISPLAY CASE-ID "NG:" G-02      
      END-IF.                                                     
 *>                                                                 
      MOVE "P-030-03"             TO CASE-ID.                     
@@ -116,7 +116,7 @@ P-030.
      MOVE AN-03 TO G-03.                                         
      IF G-03 = "あｘｙｚｗ"                                           
                                  DISPLAY CASE-ID "OK"            
-        ELSE                     DISPLAY CASE-ID "NG"            
+        ELSE                     DISPLAY CASE-ID "NG:" G-03      
      END-IF.                                                     
 P-040.                                                           
 *>  ケース4.英数字データの日本語への転記（１B→２B変換、ILLEGAL DATA）                      
@@ -126,7 +126,7 @@ P-040.
      MOVE AN-01 TO G-01.                                         
      IF G-01 = "あ" & X"0000" & "い"                               
                               DISPLAY CASE-ID "OK"               
-        ELSE                  DISPLAY CASE-ID "NG"               
+        ELSE                  DISPLAY CASE-ID "NG:" G-01         
      END-IF.                                                     
 *>                                                                 
      MOVE "P-040-02"        TO CASE-ID.                          
@@ -134,7 +134,7 @@ P-040.
      MOVE AN-02 TO G-02.                                         
      IF G-02 = "あ" & X"FFFF" & "い"                               
                               DISPLAY CASE-ID "OK"               
-        ELSE                  DISPLAY CASE-ID "NG"               
+        ELSE                  DISPLAY CASE-ID "NG:" G-02         
      END-IF.                                                     
 *>                                                                 
      MOVE "P-040-03"        TO CASE-ID.                          
@@ -142,7 +142,7 @@ P-040.
      MOVE AN-03 TO G-03.                                         
      IF G-03 = "あ" & X"8140" & "い"                               
                               DISPLAY CASE-ID "OK"               
-        ELSE                  DISPLAY CASE-ID "NG"               
+        ELSE                  DISPLAY CASE-ID "NG:" G-03         
      END-IF.                                                     
 *>                                                                 
      MOVE "P-040-04"        TO CASE-ID.                          
@@ -150,7 +150,7 @@ P-040.
      MOVE AN-04 TO G-04.                                         
      IF G-04 = "あ" & X"8140" & "い"                               
                               DISPLAY CASE-ID "OK"               
-        ELSE                  DISPLAY CASE-ID "NG"               
+        ELSE                  DISPLAY CASE-ID "NG:" G-04         
      END-IF.                                                     
 *>                                                                 
 P-050.                                                           
@@ -161,7 +161,7 @@ P-050.
      MOVE AN-01 TO G-01.                                         
      IF G-01 = "あ" & X"0000" & "い"                               
                               DISPLAY CASE-ID "OK"               
-        ELSE                  DISPLAY CASE-ID "NG:"              
+        ELSE                  DISPLAY CASE-ID "NG:" G-01         
      END-IF.                                                     
 *>                                                                 
      MOVE "P-050-02"        TO CASE-ID.                          
@@ -169,7 +169,7 @@ P-050.
      MOVE AN-02 TO G-02.                                         
      IF G-02 = "あ" & X"FFFF" & "い"                               
                               DISPLAY CASE-ID "OK"               
-        ELSE                  DISPLAY CASE-ID "NG:"              
+        ELSE                  DISPLAY CASE-ID "NG:" G-02         
      END-IF.                                                     
 *>                                                                 
      MOVE "P-050-03"        TO CASE-ID.                          
@@ -177,7 +177,7 @@ P-050.
      MOVE AN-03 TO G-03.                                         
      IF G-03 = "あ" & X"81408140" & "い"                           
                               DISPLAY CASE-ID "OK"               
-        ELSE                  DISPLAY CASE-ID "NG:"              
+        ELSE                  DISPLAY CASE-ID "NG:" G-03         
      END-IF.                                                     
 *>                                                                 
      MOVE "P-050-04"        TO CASE-ID.                          
@@ -185,7 +185,7 @@ P-050.
      MOVE AN-04 TO G-04.                                         
      IF G-04 = "あ" & X"81408140" & "い"                           
                               DISPLAY CASE-ID "OK"               
-        ELSE                  DISPLAY CASE-ID "NG:"              
+        ELSE                  DISPLAY CASE-ID "NG:" G-04         
      END-IF.                                                     
 *>                                                                 
      DISPLAY "TEST END   (EX3-4)".                               

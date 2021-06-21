@@ -1,8 +1,8 @@
 *>(c) 2005 - 2021 Veryant
-*>compiler version: isCOBOL-BETA release 2021 R1 build#1041.1-20210329-31547
-*>source file name:  C:\isTEST\JPN_TEST\Jpn_test\source\EX3-3-6D.cbl
-*>date generated  :  Sun Jun 06 07:55:28 GMT+09:00 2021
-*>compiler options:  -dx -eo=C:/isTEST/JPN_TEST/Jpn_test/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/isTEST/JPN_TEST/Jpn_test/list -tasks -od=C:/isTEST/JPN_TEST/Jpn_test/output -jj
+*>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
+*>source file name:  C:\ISTEST\Git\Jpn_test\source\EX3-3-6D.cbl
+*>date generated  :  Mon Jun 21 11:03:12 JST 2021
+*>compiler options:  -dx -cndbcs -eo=C:/ISTEST/Git/Jpn_test/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks -od=C:/ISTEST/Git/Jpn_test/output -jj
 *>*****************************************************************
 *>    テストケース：3-3-6D                                                
 *>    プログラム名：日本語化テスト （言語要素）部分参照                                    
@@ -107,6 +107,8 @@ MAIN                  SECTION.
 P-150.                                                           
      DISPLAY "TEST START (EX3-3-6D)".                            
 *>  ケース18.コンパイルエラー (左端位置、長さ)                                       
+    set configuration "iscobol.array_check" to 1.                
+    set configuration "iscobol.substring.check" to 1.            
 *>                                                                 
      MOVE "P-180-01"             TO CASE-ID.                     
 *>                                                                 

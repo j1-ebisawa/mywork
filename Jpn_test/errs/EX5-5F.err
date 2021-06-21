@@ -1,4 +1,4 @@
-I --> C:\isTEST\JPN_TEST\Jpn_test\source\EX5-5F.cbl
+I --> C:\ISTEST\Git\Jpn_test\source\EX5-5F.cbl
 --S: #59 Illegal receiver from source type: R-ZONE; file = EX5-5F.cbl, line = 134, col 18
 --S: #59 Illegal receiver from source type: R-ZONE-DEC; file = EX5-5F.cbl, line = 135, col 18
 --S: #59 Illegal receiver from source type: R-PACK; file = EX5-5F.cbl, line = 138, col 18
