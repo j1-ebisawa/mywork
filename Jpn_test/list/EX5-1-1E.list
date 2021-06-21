@@ -1,8 +1,8 @@
 *>(c) 2005 - 2021 Veryant
-*>compiler version: isCOBOL-BETA release 2021 R1 build#1041.1-20210329-31547
-*>source file name:  C:\isTEST\JPN_TEST\Jpn_test\source\EX5-1-1E.cbl
-*>date generated  :  Sun Jun 06 07:55:38 GMT+09:00 2021
-*>compiler options:  -dx -eo=C:/isTEST/JPN_TEST/Jpn_test/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/isTEST/JPN_TEST/Jpn_test/list -tasks -od=C:/isTEST/JPN_TEST/Jpn_test/output -jj
+*>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
+*>source file name:  C:\isTEST\Git\Jpn_test\source\EX5-1-1E.cbl
+*>date generated  :  Sun Jun 20 15:23:46 JST 2021
+*>compiler options:  -dx -eo=C:/isTEST/Git/Jpn_test/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/isTEST/Git/Jpn_test/list -tasks -od=C:/isTEST/Git/Jpn_test/output -jj
 *>*****************************************************************
 *>    テストケース：5-1-1E                                                
 *>    プログラム名：日本語化テスト （手続き部）条件 比較条件                                 

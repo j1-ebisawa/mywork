@@ -1,4 +1,4 @@
-I --> C:\isTEST\JPN_TEST\Jpn_test\source\EX3-3-6C.cbl
+I --> C:\isTEST\Git\Jpn_test\source\EX3-3-6C.cbl
 --S: #49 Numeric expression expected: "A"; file = EX3-3-6C.cbl, line = 112, col 17
 --E: #173 Reference modifier out of range 0; file = EX3-3-6C.cbl, line = 114, col 21
 --E: #173 Reference modifier out of range -3; file = EX3-3-6C.cbl, line = 118, col 21

@@ -105,18 +105,19 @@
             MOVE "P-120-01"             TO CASE-ID.
             MOVE ALL "＊" TO L-G.
             DISPLAY "KEY-IN=あいうえお".
-            ACCEPT L-G(2:5).
+            *>ACCEPT L-G(2:5).
+            move "あいうえお" to L-G(2:5).
             
             IF L-G = "＊あいうえお＊＊＊＊"
                                         DISPLAY CASE-ID "OK"
-               ELSE                     DISPLAY CASE-ID "NG"
+               ELSE                     DISPLAY CASE-ID "NG:" L-G                                                
             END-IF.
       *
             MOVE "P-120-02"             TO CASE-ID.
             DISPLAY L-G.
-            DISPLAY L-G(1:1) "," L-G(2:5) "," L-G(7:4)
-            DISPLAY "同じならばOK".
-            ACCEPT OMIT-WK.
+            DISPLAY L-G(1:1)  L-G(2:5)  L-G(7:4)
+            DISPLAY "It's OK if above 2 lines are same".
+            *>ACCEPT OMIT-WK.
       *
        P-130. 
       *  ケース13.日本語/日本語編集 （EVALUATE/SEARCH WHEN）
@@ -127,7 +128,7 @@
             MOVE 2 TO L.
             EVALUATE L-G(P:L) 
               WHEN "えお"               DISPLAY CASE-ID "OK"
-              WHEN OTHER                DISPLAY CASE-ID "NG"
+              WHEN OTHER              DISPLAY CASE-ID "NG"
             END-EVALUATE.
       *
             MOVE "P-130-02"             TO CASE-ID.
@@ -156,7 +157,7 @@
             MOVE "あいうえおかきくけこ" TO L-G.
             MOVE 3 TO P.
             MOVE 2 TO L.
-            MOVE ALL "*" TO L-G(P:).
+            MOVE ALL "＊" TO L-G(P:).
             
             IF L-G = "あい＊＊＊＊＊＊＊＊"
                                         DISPLAY CASE-ID "OK"
@@ -165,7 +166,7 @@
       *
             MOVE "P-140-02"             TO CASE-ID.
             MOVE "あいう" TO L-GE.
-            MOVE ALL "*"  TO L-GE(3:).
+            MOVE ALL "＊"  TO L-GE(3:).
             
             IF L-GE = "あ／＊＊＊"
                                         DISPLAY CASE-ID "OK"

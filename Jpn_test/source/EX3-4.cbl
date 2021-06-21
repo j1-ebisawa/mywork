@@ -95,7 +95,7 @@
             MOVE AN-01 TO G-01.
             IF G-01 = "Ç†Ç¢Çò"
                                         DISPLAY CASE-ID "OK"
-               ELSE                     DISPLAY CASE-ID "NG"
+               ELSE                     DISPLAY CASE-ID "NG:" G-01
             END-IF.
       *
             MOVE "P-030-02"             TO CASE-ID.
@@ -103,7 +103,7 @@
             MOVE AN-02 TO G-02.
             IF G-02 = "Ç†ÇXÇWÇVÇU"
                                         DISPLAY CASE-ID "OK"
-               ELSE                     DISPLAY CASE-ID "NG"
+               ELSE                     DISPLAY CASE-ID "NG:" G-02
             END-IF.
       *
             MOVE "P-030-03"             TO CASE-ID.
@@ -111,7 +111,7 @@
             MOVE AN-03 TO G-03.
             IF G-03 = "Ç†ÇòÇôÇöÇó"
                                         DISPLAY CASE-ID "OK"
-               ELSE                     DISPLAY CASE-ID "NG"
+               ELSE                     DISPLAY CASE-ID "NG:" G-03
             END-IF.
        P-040. 
       *  ÉPÅ[ÉX4.âpêîéöÉfÅ[É^ÇÃì˙ñ{åÍÇ÷ÇÃì]ãLÅiÇPBÅ®ÇQBïœä∑ÅAILLEGAL DATAÅj
@@ -121,7 +121,7 @@
             MOVE AN-01 TO G-01.
             IF G-01 = "Ç†" & X"0000" & "Ç¢"   
                                      DISPLAY CASE-ID "OK"
-               ELSE                  DISPLAY CASE-ID "NG"
+               ELSE                  DISPLAY CASE-ID "NG:" G-01
             END-IF.
       *
             MOVE "P-040-02"        TO CASE-ID.
@@ -129,7 +129,7 @@
             MOVE AN-02 TO G-02.
             IF G-02 = "Ç†" & X"FFFF" & "Ç¢"   
                                      DISPLAY CASE-ID "OK"
-               ELSE                  DISPLAY CASE-ID "NG"
+               ELSE                  DISPLAY CASE-ID "NG:" G-02
             END-IF.
       *
             MOVE "P-040-03"        TO CASE-ID.
@@ -137,7 +137,7 @@
             MOVE AN-03 TO G-03.
             IF G-03 = "Ç†" & X"8140" & "Ç¢"   
                                      DISPLAY CASE-ID "OK"
-               ELSE                  DISPLAY CASE-ID "NG"
+               ELSE                  DISPLAY CASE-ID "NG:" G-03
             END-IF.
       *
             MOVE "P-040-04"        TO CASE-ID.
@@ -145,7 +145,7 @@
             MOVE AN-04 TO G-04.
             IF G-04 = "Ç†" & X"8140" & "Ç¢"   
                                      DISPLAY CASE-ID "OK"
-               ELSE                  DISPLAY CASE-ID "NG"
+               ELSE                  DISPLAY CASE-ID "NG:" G-04
             END-IF.
       *
        P-050. 
@@ -156,7 +156,7 @@
             MOVE AN-01 TO G-01.
             IF G-01 = "Ç†" & X"0000" & "Ç¢"   
                                      DISPLAY CASE-ID "OK"
-               ELSE                  DISPLAY CASE-ID "NG:"
+               ELSE                  DISPLAY CASE-ID "NG:" G-01
             END-IF.
       *
             MOVE "P-050-02"        TO CASE-ID.
@@ -164,7 +164,7 @@
             MOVE AN-02 TO G-02.
             IF G-02 = "Ç†" & X"FFFF" & "Ç¢"   
                                      DISPLAY CASE-ID "OK"
-               ELSE                  DISPLAY CASE-ID "NG:"
+               ELSE                  DISPLAY CASE-ID "NG:" G-02
             END-IF.
       *
             MOVE "P-050-03"        TO CASE-ID.
@@ -172,7 +172,7 @@
             MOVE AN-03 TO G-03.
             IF G-03 = "Ç†" & X"81408140" & "Ç¢"
                                      DISPLAY CASE-ID "OK"
-               ELSE                  DISPLAY CASE-ID "NG:"
+               ELSE                  DISPLAY CASE-ID "NG:" G-03
             END-IF.
       *
             MOVE "P-050-04"        TO CASE-ID.
@@ -180,7 +180,7 @@
             MOVE AN-04 TO G-04.
             IF G-04 = "Ç†" & X"81408140" & "Ç¢"
                                      DISPLAY CASE-ID "OK"
-               ELSE                  DISPLAY CASE-ID "NG:"
+               ELSE                  DISPLAY CASE-ID "NG:" G-04
             END-IF.
       *
             DISPLAY "TEST END   (EX3-4)".

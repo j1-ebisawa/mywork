@@ -302,12 +302,12 @@
             MOVE ALL "＊"   TO R-G-5.
             MOVE SPACE      TO R-G-5(3:3).
             IF R-G-5 = "＊＊　　　"    DISPLAY CASE-ID "OK"
-               ELSE                    DISPLAY CASE-ID "NG:" R-G-5
+               ELSE                DISPLAY CASE-ID "NG:" R-G-5
             END-IF.
       *
             MOVE "P-060-02"        TO CASE-ID.
-            MOVE ALL "＊" TO R-G-5.
-            MOVE ALL "?"  TO R-G-5(1:3).
+            MOVE ALL "＊"  TO R-G-5.
+            MOVE ALL "？"  TO R-G-5(1:3).
             IF R-G-5 = "？？？＊＊"   DISPLAY CASE-ID "OK"
                ELSE                   DISPLAY CASE-ID "NG:" R-G-5
             END-IF.

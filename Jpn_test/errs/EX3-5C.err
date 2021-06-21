@@ -1,4 +1,4 @@
-I --> C:\isTEST\JPN_TEST\Jpn_test\source\EX3-5C.cbl
+I --> C:\isTEST\Git\Jpn_test\source\EX3-5C.cbl
 --S: #35 Undefined data item データ; file = EX3-5C.cbl, line = 50, col 21
 --S: #35 Undefined data item データ名-A; file = EX3-5C.cbl, line = 58, col 21
 --S: #35 Undefined data item 原価; file = EX3-5C.cbl, line = 66, col 30

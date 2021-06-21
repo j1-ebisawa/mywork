@@ -1,8 +1,8 @@
 *>(c) 2005 - 2021 Veryant
-*>compiler version: isCOBOL-BETA release 2021 R1 build#1041.1-20210329-31547
-*>source file name:  C:\isTEST\JPN_TEST\Jpn_test\source\EX3-3-6B.cbl
-*>date generated  :  Sun Jun 06 07:55:27 GMT+09:00 2021
-*>compiler options:  -dx -eo=C:/isTEST/JPN_TEST/Jpn_test/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/isTEST/JPN_TEST/Jpn_test/list -tasks -od=C:/isTEST/JPN_TEST/Jpn_test/output -jj
+*>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
+*>source file name:  C:\isTEST\Git\Jpn_test\source\EX3-3-6B.cbl
+*>date generated  :  Mon Jun 21 08:49:47 JST 2021
+*>compiler options:  -dx -cndbcs -eo=C:/isTEST/Git/Jpn_test/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/isTEST/Git/Jpn_test/list -tasks -od=C:/isTEST/Git/Jpn_test/output -jj
 *>*****************************************************************
 *>    テストケース：3-3-6B                                                
 *>    プログラム名：日本語化テスト （言語要素）部分参照                                    
@@ -110,18 +110,19 @@ P-010.
      MOVE "P-120-01"             TO CASE-ID.                     
      MOVE ALL "＊" TO L-G.                                        
      DISPLAY "KEY-IN=あいうえお".                                     
-     ACCEPT L-G(2:5).                                            
+     *>ACCEPT L-G(2:5).                                          
+     move "あいうえお" to L-G(2:5).                                   
                                                                  
      IF L-G = "＊あいうえお＊＊＊＊"                                       
                                  DISPLAY CASE-ID "OK"            
-        ELSE                     DISPLAY CASE-ID "NG"            
+        ELSE                     DISPLAY CASE-ID "NG:" L-G       
      END-IF.                                                     
 *>                                                                 
      MOVE "P-120-02"             TO CASE-ID.                     
      DISPLAY L-G.                                                
-     DISPLAY L-G(1:1) "," L-G(2:5) "," L-G(7:4)                  
-     DISPLAY "同じならばOK".                                          
-     ACCEPT OMIT-WK.                                             
+     DISPLAY L-G(1:1)  L-G(2:5)  L-G(7:4)                        
+     DISPLAY "It's OK if above 2 lines are same".                
+     *>ACCEPT OMIT-WK.                                           
 *>                                                                 
 P-130.                                                           
 *>  ケース13.日本語/日本語編集 （EVALUATE/SEARCH WHEN）                         
@@ -132,7 +133,7 @@ P-130.
      MOVE 2 TO L.                                                
      EVALUATE L-G(P:L)                                           
        WHEN "えお"               DISPLAY CASE-ID "OK"              
-       WHEN OTHER                DISPLAY CASE-ID "NG"            
+       WHEN OTHER              DISPLAY CASE-ID "NG"              
      END-EVALUATE.                                               
 *>                                                                 
      MOVE "P-130-02"             TO CASE-ID.                     
@@ -161,7 +162,7 @@ P-140.
      MOVE "あいうえおかきくけこ" TO L-G.                                   
      MOVE 3 TO P.                                                
      MOVE 2 TO L.                                                
-     MOVE ALL "*" TO L-G(P:).                                    
+     MOVE ALL "＊" TO L-G(P:).                                    
                                                                  
      IF L-G = "あい＊＊＊＊＊＊＊＊"                                       
                                  DISPLAY CASE-ID "OK"            
@@ -170,7 +171,7 @@ P-140.
 *>                                                                 
      MOVE "P-140-02"             TO CASE-ID.                     
      MOVE "あいう" TO L-GE.                                         
-     MOVE ALL "*"  TO L-GE(3:).                                  
+     MOVE ALL "＊"  TO L-GE(3:).                                  
                                                                  
      IF L-GE = "あ／＊＊＊"                                           
                                  DISPLAY CASE-ID "OK"            
