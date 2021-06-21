@@ -1,16 +1,16 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
 *>source file name:  C:\ISTEST\Git\Jpn_test\source\EX4-4C.cbl
-*>date generated  :  Mon Jun 21 11:06:05 JST 2021
-*>compiler options:  -dx -cndbcs -eo=C:/ISTEST/Git/Jpn_test/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks -od=C:/ISTEST/Git/Jpn_test/output -jj
+*>date generated  :  Mon Jun 21 11:45:53 JST 2021
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/ISTEST/Git/Jpn_test/output -jj -eo=C:/ISTEST/Git/Jpn_test/errs -d -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks
 *>*****************************************************************
-*>    ƒeƒXƒgƒP[ƒXF4-4C                                                  
-*>    ƒvƒƒOƒ‰ƒ€–¼F“ú–{Œê‰»ƒeƒXƒg iƒf[ƒ^•”jVALUE‹å                                  
-*>    ˆ—ŠT—v@@FVALUE‹åŽw’è‚ªŒë‚Á‚Ä‚¢‚é‚Æ‚«AƒGƒ‰[•\Ž¦‚³‚ê‚é‚©                            
-*>                  ‚ðƒ`ƒFƒbƒN‚·‚éB                                       
+*>    ƒeƒXƒgƒP[ƒXF4-4C                                           
+*>    ƒvƒƒOƒ‰ƒ€–¼F“ú–{Œê‰»ƒeƒXƒg iƒf[ƒ^•”jVALUE‹å             
+*>    ˆ—ŠT—v@@FVALUE‹åŽw’è‚ªŒë‚Á‚Ä‚¢‚é‚Æ‚«AƒGƒ‰[•\Ž¦‚³‚ê‚é‚©
+*>                  ‚ðƒ`ƒFƒbƒN‚·‚éB                               
 *>  -------------------------------------------------------------- 
-*>   ƒeƒXƒgƒP[ƒX:‚W`‚X                                                    
-*>   ‚±‚ÌƒvƒƒOƒ‰ƒ€‚ÍƒGƒ‰[ƒ`ƒFƒbƒN‚Ì‚½‚ßAŽÀs‚Å‚«‚È‚¢                                     
+*>   ƒeƒXƒgƒP[ƒX:‚W`‚X                                           
+*>   ‚±‚ÌƒvƒƒOƒ‰ƒ€‚ÍƒGƒ‰[ƒ`ƒFƒbƒN‚Ì‚½‚ßAŽÀs‚Å‚«‚È‚¢            
 *>*****************************************************************
 IDENTIFICATION        DIVISION.                                  
 *>*****************************************************************
@@ -33,28 +33,28 @@ WORKING-STORAGE       SECTION.
 *>*****************************************************************
 01  OMIT-WK            PIC X.                                    
 01  CASE-ID            PIC X(10).                                
-01  G-08      PIC NNN    VALUE "‚P‚Q‚R‚S‚T".                          
+01  G-08      PIC NNN    VALUE "‚P‚Q‚R‚S‚T".                     
 01  G-09      PIC NNN    VALUE "ABC".                            
-01  GE-08     PIC N/N/N  VALUE "‚P^‚Q^‚R^‚S^‚T".                      
+01  GE-08     PIC N/N/N  VALUE "‚P^‚Q^‚R^‚S^‚T".             
 01  GE-09     PIC N/N/N  VALUE "ABC".                            
 01  ERR-01     PIC NNN    VALUE 123.                             
 01  ERR-02     PIC NNN    VALUE -123.5.                          
 01  ERR-03.                                                      
     05  ERR-03-1                                                 
-    VALUE "01@‚PŒŽ02@‚QŒŽ03@‚RŒŽ04@‚SŒŽ05@‚TŒŽ06@‚UŒŽ" &                     
-          "07@‚VŒŽ08@‚WŒŽ09@‚XŒŽ10‚P‚OŒŽ11‚P‚PŒŽ12‚P‚QŒŽ".                      
+    VALUE "01@‚PŒŽ02@‚QŒŽ03@‚RŒŽ04@‚SŒŽ05@‚TŒŽ06@‚UŒŽ" &   
+          "07@‚VŒŽ08@‚WŒŽ09@‚XŒŽ10‚P‚OŒŽ11‚P‚PŒŽ12‚P‚QŒŽ".    
      10  FILLER          OCCURS 10.                              
        15  ERR-03-11     PIC 99.                                 
        15  ERR-03-12     PIC NNN.                                
-01  A-01           PIC AAA            VALUE "‚P‚Q‚R‚S‚T".             
-01  X-01           PIC XXX            VALUE "‚`‚a‚b".               
-01  N-ZONE         PIC 9999           VALUE "‚P^‚Q^‚R^‚S^‚T".         
-01  N-ZONE-DEC     PIC 999V99         VALUE "‚ ‚¢‚¤".               
-01  N-PACK         PIC 9999   COMP-3  VALUE "‚P‚Q‚R".               
-01  N-PACK-DEC     PIC 99V999 COMP-3  VALUE "‚X‚W‚V".               
-01  N-BIN          PIC 9999   COMP    VALUE "‚P‚Q‚R".               
-01  N-BIN-DEC      PIC 99V999 COMP    VALUE "‚X‚W‚V".               
-01  NE-01          PIC --99.999       VALUE "‚X‚W‚V".               
+01  A-01           PIC AAA            VALUE "‚P‚Q‚R‚S‚T".        
+01  X-01           PIC XXX            VALUE "‚`‚a‚b".            
+01  N-ZONE         PIC 9999           VALUE "‚P^‚Q^‚R^‚S^‚T". 
+01  N-ZONE-DEC     PIC 999V99         VALUE "‚ ‚¢‚¤".            
+01  N-PACK         PIC 9999   COMP-3  VALUE "‚P‚Q‚R".            
+01  N-PACK-DEC     PIC 99V999 COMP-3  VALUE "‚X‚W‚V".            
+01  N-BIN          PIC 9999   COMP    VALUE "‚P‚Q‚R".            
+01  N-BIN-DEC      PIC 99V999 COMP    VALUE "‚X‚W‚V".            
+01  NE-01          PIC --99.999       VALUE "‚X‚W‚V".            
                                                                  
 *>*****************************************************************
 PROCEDURE             DIVISION.                                  
@@ -62,7 +62,7 @@ PROCEDURE             DIVISION.
 MAIN                  SECTION.                                   
 P-010.                                                           
      DISPLAY "TEST START (EX4-4C)".                              
-*>  ƒP[ƒX9.VALUE‹å‚ÌƒGƒ‰[ƒ`ƒFƒbƒN(‚»‚Ì‚Pj                                       
+*>  ƒP[ƒX9.VALUE‹å‚ÌƒGƒ‰[ƒ`ƒFƒbƒN(‚»‚Ì‚Pj                       
 *>                                                                 
      MOVE "P-010-01"             TO CASE-ID.                     
      DISPLAY  G-08.                                              
@@ -72,7 +72,7 @@ P-010.
      DISPLAY  ERR-01.                                            
      DISPLAY  ERR-02.                                            
      DISPLAY  ERR-03-1.                                          
-*>  ƒP[ƒX10.VALUE‹å‚ÌƒGƒ‰[ƒ`ƒFƒbƒN(‚»‚Ì‚Qj                                      
+*>  ƒP[ƒX10.VALUE‹å‚ÌƒGƒ‰[ƒ`ƒFƒbƒN(‚»‚Ì‚Qj                      
 *>                                                                 
      MOVE "P-010-02"             TO CASE-ID.                     
      DISPLAY  A-01.                                              

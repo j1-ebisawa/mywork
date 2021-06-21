@@ -1,15 +1,15 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
 *>source file name:  C:\ISTEST\Git\Jpn_test\source\EX3-5C.cbl
-*>date generated  :  Mon Jun 21 11:06:05 JST 2021
-*>compiler options:  -dx -cndbcs -eo=C:/ISTEST/Git/Jpn_test/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks -od=C:/ISTEST/Git/Jpn_test/output -jj
+*>date generated  :  Mon Jun 21 11:45:51 JST 2021
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/ISTEST/Git/Jpn_test/output -jj -eo=C:/ISTEST/Git/Jpn_test/errs -d -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks
 *>*****************************************************************
-*>    テストケース：3-5C                                                  
-*>    プログラム名：日本語化テスト （言語要素）行のつなぎ                                   
-*>    処理概要　　：行のつなぎが正しく実行されるかをチェックする。                               
+*>    テストケース：3-5C                                           
+*>    プログラム名：日本語化テスト （言語要素）行のつなぎ          
+*>    処理概要　　：行のつなぎが正しく実行されるかをチェックする。 
 *>  -------------------------------------------------------------- 
-*>     意図に反してエラーとなってしまった。                                          
-*>   テストケース:９                                                      
+*>     意図に反してエラーとなってしまった。                        
+*>   テストケース:９                                               
 *>*****************************************************************
 IDENTIFICATION        DIVISION.                                  
 *>*****************************************************************
@@ -35,9 +35,9 @@ WORKING-STORAGE       SECTION.
 01  W-I                PIC 999.                                  
 01  P                  PIC 999.                                  
 01  L                  PIC 999.                                  
-01  データ名１         PIC X(10).                                     
-01  データ名-abc       PIC X(10).                                    
-01  原価ＡＢＣ         PIC X(10).                                     
+01  データ名１         PIC X(10).                                
+01  データ名-abc       PIC X(10).                                
+01  原価ＡＢＣ         PIC X(10).                                
 01  G-01               PIC N(5).                                 
 01  G-02               PIC N(5).                                 
 01  G-03               PIC N(5).                                 
@@ -49,28 +49,28 @@ MAIN                  SECTION.
 P-010.                                                           
      DISPLAY "TEST START (EX3-5C)".                              
 *>                                                                 
-*>  ケース9.日本語利用者語の継続（インラインコメントとの組み合わせ）                              
+*>  ケース9.日本語利用者語の継続（インラインコメントとの組み合わせ?
 *>                                                                 
      MOVE "P-090-01"             TO CASE-ID.                     
-     MOVE "ABC" TO   データ                    *>comment            
-                          名１.                                    
-     IF データ名１ = "ABC"                                            
+     MOVE "ABC" TO   データ                                      
+                          名１.                                  
+     IF データ名１ = "ABC"                                       
                                  DISPLAY CASE-ID "OK"            
         ELSE                     DISPLAY CASE-ID "NG"            
      END-IF.                                                     
 *>                                                                 
      MOVE "P-090-02"             TO CASE-ID.                     
-     MOVE "ABC" TO   データ名-a                  *>コメント              
+     MOVE "ABC" TO   データ名-a                                  
                               bc.                                
-     IF データ名-abc = "ABC"                                         
+     IF データ名-abc = "ABC"                                     
                                  DISPLAY CASE-ID "OK"            
         ELSE                     DISPLAY CASE-ID "NG"            
      END-IF.                                                     
 *>                                                                 
      MOVE "P-090-03"             TO CASE-ID.                     
-     MOVE "ABC" TO            原価                  *>コメント         
-                                  ＡＢＣ.                           
-     IF 原価ＡＢＣ = "ABC"                                            
+     MOVE "ABC" TO            原価                               
+                                  ＡＢＣ.                        
+     IF 原価ＡＢＣ = "ABC"                                       
                                  DISPLAY CASE-ID "OK"            
         ELSE                     DISPLAY CASE-ID "NG"            
      END-IF.                                                     
@@ -81,6 +81,3 @@ P-010.
      GOBACK                                                      
      .                                                           
                                                                  
-*> --S: #35 Undefined data item データ; file = EX3-5C.cbl, line = 50, col 21
-*> --S: #35 Undefined data item データ名-A; file = EX3-5C.cbl, line = 58, col 21
-*> --S: #35 Undefined data item 原価; file = EX3-5C.cbl, line = 66, col 30

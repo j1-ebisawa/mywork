@@ -1,14 +1,14 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
 *>source file name:  C:\ISTEST\Git\Jpn_test\source\EX3-3-6B.cbl
-*>date generated  :  Mon Jun 21 11:03:12 JST 2021
-*>compiler options:  -cndbcs -eo=C:/ISTEST/Git/Jpn_test/errs -sp=cpy -esme=100 -d -smat -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks -od=C:/ISTEST/Git/Jpn_test/output -jj
+*>date generated  :  Mon Jun 21 11:19:33 JST 2021
+*>compiler options:  -cndbcs -eo=C:/ISTEST/Git/Jpn_test/errs -sp=cpy -esme=100 -d -smat -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks -ccbas -od=C:/ISTEST/Git/Jpn_test/output -jj
 *>*****************************************************************
-*>    テストケース：3-3-6B                                                
-*>    プログラム名：日本語化テスト （言語要素）部分参照                                    
-*>    処理概要　　：部分参照が正しく実行されるかをチェックする。                                
+*>    テストケース：3-3-6B                                         
+*>    プログラム名：日本語化テスト （言語要素）部分参照            
+*>    処理概要　　：部分参照が正しく実行されるかをチェックする。   
 *>  -------------------------------------------------------------- 
-*>   テストケース:１２～１４                                                  
+*>   テストケース:１２～１４                                       
 *>*****************************************************************
 IDENTIFICATION        DIVISION.                                  
 *>*****************************************************************
@@ -105,77 +105,77 @@ PROCEDURE             DIVISION.
 MAIN                  SECTION.                                   
 P-010.                                                           
      DISPLAY "TEST START (EX3-3-6B)".                            
-*>  ケース12.日本語/日本語編集 (ACCEPT/DISPLAY)                               
+*>  ケース12.日本語/日本語編集 (ACCEPT/DISPLAY)                    
 *>                                                                 
      MOVE "P-120-01"             TO CASE-ID.                     
-     MOVE ALL "＊" TO L-G.                                        
-     DISPLAY "KEY-IN=あいうえお".                                     
+     MOVE ALL "＊" TO L-G.                                       
+     DISPLAY "KEY-IN=あいうえお".                                
      *>ACCEPT L-G(2:5).                                          
-     move "あいうえお" to L-G(2:5).                                   
+     move "あいうえお" to L-G(2:5).                              
                                                                  
-     IF L-G = "＊あいうえお＊＊＊＊"                                       
+     IF L-G = "＊あいうえお＊＊＊＊"                             
                                  DISPLAY CASE-ID "OK"            
         ELSE                     DISPLAY CASE-ID "NG:" L-G       
-                                 display "＊あいうえお＊＊＊＊"            
+                                 display "＊あいうえお＊＊＊＊"  
                                  display L-G                     
      END-IF.                                                     
 *>                                                                 
      MOVE "P-120-02"             TO CASE-ID.                     
      DISPLAY L-G.                                                
      DISPLAY L-G(1:1)  L-G(2:5)  L-G(7:4)                        
-     DISPLAY "同じならばOK".                                          
+     DISPLAY "同じならばOK".                                     
      *>ACCEPT OMIT-WK.                                           
 *>                                                                 
 P-130.                                                           
-*>  ケース13.日本語/日本語編集 （EVALUATE/SEARCH WHEN）                         
+*>  ケース13.日本語/日本語編集 （EVALUATE/SEARCH WHEN）            
 *>                                                                 
      MOVE "P-130-01"             TO CASE-ID.                     
-     MOVE "あいうえおかきくけこ" TO L-G.                                   
+     MOVE "あいうえおかきくけこ" TO L-G.                         
      MOVE 4 TO P.                                                
      MOVE 2 TO L.                                                
      EVALUATE L-G(P:L)                                           
-       WHEN "えお"               DISPLAY CASE-ID "OK"              
+       WHEN "えお"               DISPLAY CASE-ID "OK"            
        WHEN OTHER              DISPLAY CASE-ID "NG"              
      END-EVALUATE.                                               
 *>                                                                 
      MOVE "P-130-02"             TO CASE-ID.                     
-     MOVE "あああああ"      TO W-OCC-G(1).                            
+     MOVE "あああああ"      TO W-OCC-G(1).                       
      MOVE "aaaaa"           TO W-OCC-X(1).                       
-     MOVE "わわわわわ"      TO W-OCC-G(2).                            
+     MOVE "わわわわわ"      TO W-OCC-G(2).                       
      MOVE "wwwww"           TO W-OCC-X(2).                       
-     MOVE "かかかかか"      TO W-OCC-G(3).                            
+     MOVE "かかかかか"      TO W-OCC-G(3).                       
      MOVE "kkkkk"           TO W-OCC-X(3).                       
-     MOVE "ぱぱぱぱぱ"      TO W-OCC-G(4).                            
+     MOVE "ぱぱぱぱぱ"      TO W-OCC-G(4).                       
      MOVE "ppppp"           TO W-OCC-X(4).                       
      MOVE LOW-VALUE         TO W-OCC-G(5).                       
      MOVE "xxxxx"           TO W-OCC-X(5).                       
      SET IDX-01 TO 1.                                            
      SEARCH W-OCC VARYING IDX-01                                 
             AT END     DISPLAY CASE-ID "NG"                      
-            WHEN W-OCC-G(IDX-01)(1:3) = "かかか"                    
+            WHEN W-OCC-G(IDX-01)(1:3) = "かかか"                 
                        DISPLAY CASE-ID "OK"                      
      END-SEARCH.                                                 
 *>                                                                 
 *>                                                                 
 P-140.                                                           
-*>  ケース14.長さ省略                                                     
+*>  ケース14.長さ省略                                              
 *>                                                                 
      MOVE "P-140-01"             TO CASE-ID.                     
-     MOVE "あいうえおかきくけこ" TO L-G.                                   
+     MOVE "あいうえおかきくけこ" TO L-G.                         
      MOVE 3 TO P.                                                
      MOVE 2 TO L.                                                
-     MOVE ALL "＊" TO L-G(P:).                                    
+     MOVE ALL "＊" TO L-G(P:).                                   
                                                                  
-     IF L-G = "あい＊＊＊＊＊＊＊＊"                                       
+     IF L-G = "あい＊＊＊＊＊＊＊＊"                             
                                  DISPLAY CASE-ID "OK"            
        ELSE                      DISPLAY CASE-ID "NG"            
      END-IF.                                                     
 *>                                                                 
      MOVE "P-140-02"             TO CASE-ID.                     
-     MOVE "あいう" TO L-GE.                                         
-     MOVE ALL "＊"  TO L-GE(3:).                                  
+     MOVE "あいう" TO L-GE.                                      
+     MOVE ALL "＊"  TO L-GE(3:).                                 
                                                                  
-     IF L-GE = "あ／＊＊＊"                                           
+     IF L-GE = "あ／＊＊＊"                                      
                                  DISPLAY CASE-ID "OK"            
        ELSE                      DISPLAY CASE-ID "NG"            
      END-IF.                                                     
