@@ -1,1 +1,1 @@
-iscrun -d AJ_ISRUN -c run.cfg EX3-4
+iscrun -d AJ_ISRUN -c run.cfg EX3-4 
