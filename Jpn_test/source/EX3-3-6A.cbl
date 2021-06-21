@@ -293,7 +293,7 @@
                ELSE                  DISPLAY CASE-ID "NG:" R-GE
             END-IF.
       *
-            *>ACCEPT OMIT-WK.   
+            *>ACCEPT OMIT-W K.   
       *
        P-060. 
       *  ケース6.日本語/日本語編集 日本語転記（表意定数、ALL 定数）

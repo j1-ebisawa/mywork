@@ -106,7 +106,7 @@
             MOVE ALL "Åñ" TO L-G.
             DISPLAY "KEY-IN=Ç†Ç¢Ç§Ç¶Ç®".
             *>ACCEPT L-G(2:5).
-            move "Ç†Ç¢Ç§Ç¶Ç®" to L-G(2:5).
+            move "Ç†Ç¢Ç§Ç¶Ç®" to L-G(2:5). 
             
             IF L-G = "ÅñÇ†Ç¢Ç§Ç¶Ç®ÅñÅñÅñÅñ"
                                         DISPLAY CASE-ID "OK"
