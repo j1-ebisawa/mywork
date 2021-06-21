@@ -135,7 +135,7 @@
             MOVE "P-040-03"        TO CASE-ID.
             MOVE "‚ " & X"20" & "‚¢" TO AN-03.
             MOVE AN-03 TO G-03.
-            IF G-03 = "‚ " & X"8140" & "‚¢"   
+            IF G-03 = "‚ " & X"8140" & "‚¢"     
                                      DISPLAY CASE-ID "OK"
                ELSE                  DISPLAY CASE-ID "NG:" G-03
             END-IF.
