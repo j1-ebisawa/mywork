@@ -111,12 +111,15 @@
             IF L-G = "–‚ ‚¢‚¤‚¦‚¨––––"
                                         DISPLAY CASE-ID "OK"
                ELSE                     DISPLAY CASE-ID "NG:" L-G                                                
+                                        display "–‚ ‚¢‚¤‚¦‚¨––––"
+                                        display L-G
             END-IF.
       *
             MOVE "P-120-02"             TO CASE-ID.
             DISPLAY L-G.
             DISPLAY L-G(1:1)  L-G(2:5)  L-G(7:4)
             DISPLAY "It's OK if above 2 lines are same".
+            DISPLAY "“¯‚¶‚È‚ç‚ÎOK".
             *>ACCEPT OMIT-WK.
       *
        P-130. 

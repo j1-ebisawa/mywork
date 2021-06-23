@@ -102,6 +102,10 @@
       <string>-cndbcs</string>
       <string>___iscobol.option.true</string>
      </void>
+     <void method="put">
+      <string>-ccbas</string>
+      <string>___iscobol.option.true</string>
+     </void>
     </void>
     <void property="properties">
      <object idref="LinkedHashMap2"/>
@@ -164,6 +168,10 @@
      </void>
      <void method="put">
       <string>-cndbcs</string>
+      <string>___iscobol.option.true</string>
+     </void>
+     <void method="put">
+      <string>-ccbas</string>
       <string>___iscobol.option.true</string>
      </void>
     </void>

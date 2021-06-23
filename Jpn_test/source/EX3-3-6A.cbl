@@ -12,7 +12,7 @@
        DATE-WRITTEN.         2011-08-18.
        DATE-COMPILED.        2011-08-18.
       ******************************************************************
-       ENVIRONMENT           DIVISION.
+       ENVIRONMENT          DIVISION.
       ******************************************************************
        CONFIGURATION         SECTION.
        SOURCE-COMPUTER.      PC.
@@ -500,7 +500,7 @@
       *
       *
              DISPLAY "TEST END   (EX3-3-6A)".
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
             GOBACK
             .
 

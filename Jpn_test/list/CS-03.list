@@ -1,19 +1,19 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
 *>source file name:  C:\isTEST\Git\Jpn_test\source\CS-03.cbl
-*>date generated  :  Mon Jun 21 10:38:38 JST 2021
-*>compiler options:  -dx -cndbcs -eo=C:/isTEST/Git/Jpn_test/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/isTEST/Git/Jpn_test/list -tasks -od=C:/isTEST/Git/Jpn_test/output -jj
+*>date generated  :  Wed Jun 23 15:41:36 JST 2021
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/isTEST/Git/Jpn_test/output -jj -eo=C:/isTEST/Git/Jpn_test/errs -d -g -lo=C:/isTEST/Git/Jpn_test/list -tasks
 *>*****************************************************************
-*>    テストケース：CS-03                                                 
-*>    プログラム名：通貨記号テスト                                               
-*>    処理概要　　：通貨記号「￥」および、                                           
-*>                  CURRENCY-SIGN句が使えるかチェックする。                     
+*>    テストケース：CS-03                                          
+*>    プログラム名：通貨記号テスト                                 
+*>    処理概要　　：通貨記号「￥」および、                         
+*>                  CURRENCY-SIGN句が使えるかチェックする。        
 *>  -------------------------------------------------------------- 
-*>   テストケース:CURRENCY SIGN句の指定なしで、                                  
-*>                MF =「$」はエラー。                                     
-*>                ACU=PIC文字列に現れた「\」または「$」が指摘されたと                   
-*>                    解釈されて、それのみが以降使える。                            
-*>                    ただし、両方は使えない。                                 
+*>   テストケース:CURRENCY SIGN句の指定なしで、                    
+*>                MF =「$」はエラー。                              
+*>                ACU=PIC文字列に現れた「\」または「$」が指摘された
+*>                    解釈されて、それのみが以降使える。           
+*>                    ただし、両方は使えない。                     
 *>*****************************************************************
 IDENTIFICATION        DIVISION.                                  
 *>*****************************************************************
@@ -54,7 +54,7 @@ PROCEDURE             DIVISION.
 MAIN                  SECTION.                                   
 P-010.                                                           
      DISPLAY "TEST START (CS-03)".                               
-*>ケース1.                                                            
+*>ケース1.                                                         
      MOVE "P-010-01"        TO CASE-ID.                          
      MOVE      1 TO NUM-01.                                      
      MOVE NUM-01 TO NEDIT-01.                                    
@@ -79,7 +79,7 @@ P-010.
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG:" NUM-02       
      END-IF.                                                     
-*>ケース1.                                                            
+*>ケース1.                                                         
      MOVE "P-010-04"        TO CASE-ID.                          
      MOVE      1 TO NUM-01.                                      
      MOVE NUM-01 TO NEDIT-02.                                    

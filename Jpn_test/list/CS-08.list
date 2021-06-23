@@ -1,8 +1,8 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
 *>source file name:  C:\isTEST\Git\Jpn_test\source\CS-08.cbl
-*>date generated  :  Sun Jun 20 15:23:44 JST 2021
-*>compiler options:  -dx -eo=C:/isTEST/Git/Jpn_test/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/isTEST/Git/Jpn_test/list -tasks -od=C:/isTEST/Git/Jpn_test/output -jj
+*>date generated  :  Mon Jun 21 14:51:03 JST 2021
+*>compiler options:  -dx -cndbcs -eo=C:/isTEST/Git/Jpn_test/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/isTEST/Git/Jpn_test/list -tasks -od=C:/isTEST/Git/Jpn_test/output -jj
 *>*****************************************************************
 *>    テストケース：CS-08                                                 
 *>    プログラム名：通貨記号テスト                                               
@@ -196,7 +196,7 @@ P-010.
 *>                                                                 
 *>                                                                 
      DISPLAY "TEST END   (CS-08)".                               
-     ACCEPT OMIT-WK.                                             
+     *>ACCEPT OMIT-WK.                                           
      GOBACK                                                      
      .                                                           
                                                                  

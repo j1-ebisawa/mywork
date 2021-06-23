@@ -1,15 +1,15 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
 *>source file name:  C:\isTEST\Git\Jpn_test\source\EX5-6B-5.cbl
-*>date generated  :  Mon Jun 21 10:38:39 JST 2021
-*>compiler options:  -dx -cndbcs -eo=C:/isTEST/Git/Jpn_test/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/isTEST/Git/Jpn_test/list -tasks -od=C:/isTEST/Git/Jpn_test/output -jj
+*>date generated  :  Wed Jun 23 15:41:39 JST 2021
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/isTEST/Git/Jpn_test/output -jj -eo=C:/isTEST/Git/Jpn_test/errs -d -g -lo=C:/isTEST/Git/Jpn_test/list -tasks
 *>*****************************************************************
-*>    テストケース：EX5-6B-4                                              
-*>    プログラム名：日本語化テスト （手続き部）STRING命令                                
-*>    処理概要　　：STRING命令の構文チェックでエラーとなるかを                              
-*>    　　　　　　　チェックする。                                               
+*>    テストケース：EX5-6B-4                                       
+*>    プログラム名：日本語化テスト （手続き部）STRING命令          
+*>    処理概要　　：STRING命令の構文チェックでエラーとなるかを     
+*>    　　　　　　　チェックする。                                 
 *>  -------------------------------------------------------------- 
-*>   テストケース:1  このプログラムは実行できない。                                     
+*>   テストケース:1  このプログラムは実行できない。                
 *>*****************************************************************
 IDENTIFICATION        DIVISION.                                  
 *>*****************************************************************
@@ -44,12 +44,12 @@ PROCEDURE             DIVISION.
 *>*****************************************************************
 MAIN                  SECTION.                                   
 P-010.                                                           
-*> ケース1.WITH POINTER 一意名４が数字項目でない場合                                
-    MOVE "あいうえお" TO G-01.                                        
-    MOVE "かきくけこ" TO G-02.                                        
+*> ケース1.WITH POINTER 一意名４が数字項目でない場合               
+    MOVE "あいうえお" TO G-01.                                   
+    MOVE "かきくけこ" TO G-02.                                   
     MOVE 1 TO W-PTR.                                             
-*> コンパイルエラー                                                        
-    STRING G-01 DELIMITED BY "え"                                 
+*> コンパイルエラー                                                
+    STRING G-01 DELIMITED BY "え"                                
                 INTO G-02                                        
                 WITH POINTER W-PTR                               
            ON OVERFLOW MOVE 1 TO OVER-SW                         

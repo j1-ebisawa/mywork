@@ -1,8 +1,8 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
 *>source file name:  C:\isTEST\Git\Jpn_test\source\EX3-5A.cbl
-*>date generated  :  Sun Jun 20 15:23:44 JST 2021
-*>compiler options:  -dx -eo=C:/isTEST/Git/Jpn_test/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/isTEST/Git/Jpn_test/list -tasks -od=C:/isTEST/Git/Jpn_test/output -jj
+*>date generated  :  Mon Jun 21 14:51:05 JST 2021
+*>compiler options:  -dx -cndbcs -eo=C:/isTEST/Git/Jpn_test/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/isTEST/Git/Jpn_test/list -tasks -od=C:/isTEST/Git/Jpn_test/output -jj
 *>*****************************************************************
 *>    テストケース：3-5A                                                  
 *>    プログラム名：日本語化テスト （言語要素）行のつなぎ                                   
@@ -85,11 +85,11 @@ P-020.
      END-IF.                                                     
 *>                                                                 
      MOVE "P-020-02"             TO CASE-ID.                     
-     MOVE                                                "日本語"   
-     ""ＡＢ"   TO G-01                                             
+     MOVE                                              "日本語”"    
+     & "Ａ"   TO G-01                                             
      IF G-01 = "日本語”Ａ"                                           
                                  DISPLAY CASE-ID "OK"            
-        ELSE                     DISPLAY CASE-ID "NG"            
+        ELSE                     DISPLAY CASE-ID "NG:"  G-01     
      END-IF.                                                     
 *>                                                                 
 P-030.                                                           
@@ -151,7 +151,7 @@ P-040.
      END-IF.                                                     
 *>                                                                 
      DISPLAY "TEST END   (EX3-5A)".                              
-     ACCEPT OMIT-WK.                                             
+     *>ACCEPT OMIT-WK.                                           
 *>                                                                 
      GOBACK                                                      
      .                                                           

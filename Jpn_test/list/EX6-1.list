@@ -1,14 +1,14 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
 *>source file name:  C:\isTEST\Git\Jpn_test\source\EX6-1.cbl
-*>date generated  :  Mon Jun 21 10:38:39 JST 2021
-*>compiler options:  -dx -cndbcs -eo=C:/isTEST/Git/Jpn_test/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/isTEST/Git/Jpn_test/list -tasks -od=C:/isTEST/Git/Jpn_test/output -jj
+*>date generated  :  Wed Jun 23 15:41:39 JST 2021
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/isTEST/Git/Jpn_test/output -jj -eo=C:/isTEST/Git/Jpn_test/errs -d -g -lo=C:/isTEST/Git/Jpn_test/list -tasks
 *>*****************************************************************
-*>    テストケース：6-1                                                   
-*>    プログラム名：日本語化テスト （関数）LENGTH                                    
-*>    処理概要　　：LENGTH関数が正しく実行されるかをチェックする。                            
+*>    テストケース：6-1                                            
+*>    プログラム名：日本語化テスト （関数）LENGTH                  
+*>    処理概要　　：LENGTH関数が正しく実行されるかをチェックする。 
 *>  -------------------------------------------------------------- 
-*>   テストケース:１～７                                                    
+*>   テストケース:１～７                                           
 *>*****************************************************************
 IDENTIFICATION        DIVISION.                                  
 *>*****************************************************************
@@ -89,7 +89,7 @@ PROCEDURE             DIVISION.
 MAIN                  SECTION.                                   
 P-010.                                                           
      DISPLAY "TEST START (EX6-1)".                               
-*>ケース1.基本データ項目                                                     
+*>ケース1.基本データ項目                                           
      MOVE "P-010-01"        TO CASE-ID.                          
      MOVE FUNCTION LENGTH(X-01)     TO W-LENG.                   
      IF W-LENG = 10           DISPLAY CASE-ID "OK"               
@@ -132,7 +132,7 @@ P-010.
         ELSE                  DISPLAY CASE-ID "NG:W-LENG=" W-LENG
      END-IF.                                                     
                                                                  
-*>ケース2：定数                                                          
+*>ケース2：定数                                                    
      MOVE "P-020-01"        TO CASE-ID.                          
      MOVE FUNCTION LENGTH("ABC")     TO W-LENG.                  
      IF W-LENG = 3            DISPLAY CASE-ID "OK"               
@@ -140,13 +140,13 @@ P-010.
      END-IF.                                                     
 *>                                                                 
      MOVE "P-020-02"        TO CASE-ID.                          
-     MOVE FUNCTION LENGTH("あいうえお")     TO W-LENG.                
+     MOVE FUNCTION LENGTH("あいうえお")     TO W-LENG.           
      IF W-LENG = 5            DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG:W-LENG=" W-LENG
      END-IF.                                                     
 *>                                                                 
      MOVE "P-020-03"        TO CASE-ID.                          
-     MOVE FUNCTION LENGTH("あいうXYお")     TO W-LENG.               
+     MOVE FUNCTION LENGTH("あいうXYお")     TO W-LENG.           
      IF W-LENG = 10           DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG:W-LENG=" W-LENG
      END-IF.                                                     
@@ -164,24 +164,24 @@ P-010.
      END-IF.                                                     
 *>                                                                 
      MOVE "P-020-06"        TO CASE-ID.                          
-     MOVE FUNCTION LENGTH("ABC" & "あいう")     TO W-LENG.          
+     MOVE FUNCTION LENGTH("ABC" & "あいう")     TO W-LENG.       
      IF W-LENG = 9            DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG:W-LENG=" W-LENG
      END-IF.                                                     
                                                                  
-*>ケース3：集団項目                                                        
+*>ケース3：集団項目                                                
      MOVE "P-030-01"        TO CASE-ID.                          
      MOVE FUNCTION LENGTH(GRP-01)     TO W-LENG.                 
      IF W-LENG = 30           DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG:W-LENG=" W-LENG
      END-IF.                                                     
-*>ケース4：FILLER                                                      
+*>ケース4：FILLER                                                  
      MOVE "P-040-01"        TO CASE-ID.                          
      MOVE FUNCTION LENGTH(GRP-01)     TO W-LENG.                 
      IF W-LENG = 30           DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG:W-LENG=" W-LENG
      END-IF.                                                     
-*>ケース5：可変繰り返し集団                                                    
+*>ケース5：可変繰り返し集団                                        
      MOVE "P-050-01"        TO CASE-ID.                          
      MOVE 3 TO GRP-03-3.                                         
      MOVE FUNCTION LENGTH(GRP-03) TO W-LENG.                     
@@ -202,7 +202,7 @@ P-010.
      IF W-LENG = 65           DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG:W-LENG=" W-LENG
      END-IF.                                                     
-*>ケース6：SYNC                                                        
+*>ケース6：SYNC                                                    
      MOVE "P-060-01"        TO CASE-ID.                          
      MOVE FUNCTION LENGTH(GRP-04) TO W-LENG.                     
      IF W-LENG = 20           DISPLAY CASE-ID "OK"               
@@ -214,7 +214,7 @@ P-010.
      IF W-LENG = 24           DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG:W-LENG=" W-LENG
      END-IF.                                                     
-*>ケース7：エラーチェック                                                     
+*>ケース7：エラーチェック                                          
      MOVE "P-070-01"        TO CASE-ID.                          
      MOVE 0 TO GRP-03-3.                                         
      MOVE FUNCTION LENGTH(GRP-03) TO W-LENG.                     

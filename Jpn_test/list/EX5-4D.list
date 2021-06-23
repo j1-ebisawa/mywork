@@ -1,15 +1,15 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
 *>source file name:  C:\isTEST\Git\Jpn_test\source\EX5-4D.cbl
-*>date generated  :  Mon Jun 21 10:38:39 JST 2021
-*>compiler options:  -dx -cndbcs -eo=C:/isTEST/Git/Jpn_test/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/isTEST/Git/Jpn_test/list -tasks -od=C:/isTEST/Git/Jpn_test/output -jj
+*>date generated  :  Wed Jun 23 15:41:38 JST 2021
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/isTEST/Git/Jpn_test/output -jj -eo=C:/isTEST/Git/Jpn_test/errs -d -g -lo=C:/isTEST/Git/Jpn_test/list -tasks
 *>*****************************************************************
-*>    テストケース：5-4D                                                  
-*>    プログラム名：日本語化テスト （手続き部）INSPECT命令                               
-*>    処理概要    ：INSPECT命令で正しくエラーチェックされるか。                           
+*>    テストケース：5-4D                                           
+*>    プログラム名：日本語化テスト （手続き部）INSPECT命令         
+*>    処理概要    ：INSPECT命令で正しくエラーチェックされるか。    
 *>  -------------------------------------------------------------- 
-*>  コンパイルエラーのチェックのため、実行できない。                                       
-*>   テストケース:６２～６５                                                  
+*>  コンパイルエラーのチェックのため、実行できない。               
+*>   テストケース:６２～６５                                       
 *>*****************************************************************
 IDENTIFICATION        DIVISION.                                  
 *>*****************************************************************
@@ -51,32 +51,32 @@ PROCEDURE             DIVISION.
 *>*****************************************************************
 MAIN                  SECTION.                                   
 P-010.                                                           
-*>ケース62.エラー1（日本語項類以外との組み合わせ）                                       
+*>ケース62.エラー1（日本語項類以外との組み合わせ）                 
      MOVE "P-620-01"        TO CASE-ID.                          
-     MOVE "あいうえおかきくけこ" TO G-01.                                  
+     MOVE "あいうえおかきくけこ" TO G-01.                        
                                                                  
-     INSPECT G-01 REPLACING ALL "０" BY "a".                      
-*>     コンパイルエラー                                                    
+     INSPECT G-01 REPLACING ALL "０" BY "a".                     
+*>     コンパイルエラー                                            
 *>                                                                 
-*>ケース63.エラー２（日本語項類以外との組み合わせ）                                       
+*>ケース63.エラー２（日本語項類以外との組み合わせ）                
      MOVE "P-630-01"        TO CASE-ID.                          
-     MOVE "あいうえおかきくけこ" TO G-01.                                  
+     MOVE "あいうえおかきくけこ" TO G-01.                        
                                                                  
-     INSPECT G-01 REPLACING ALL "かきく" BY AN-06.                  
-*>     コンパイルエラー                                                    
-*>ケース64.エラー２（サイズ不一致）                                               
+     INSPECT G-01 REPLACING ALL "かきく" BY AN-06.               
+*>     コンパイルエラー                                            
+*>ケース64.エラー２（サイズ不一致）                                
      MOVE "P-640-01"        TO CASE-ID.                          
-     MOVE "あいうえおかきくけこ" TO G-01.                                  
+     MOVE "あいうえおかきくけこ" TO G-01.                        
                                                                  
-     INSPECT G-01 REPLACING ALL "かきく" BY "さ".                    
-*>     コンパイルエラー                                                    
+     INSPECT G-01 REPLACING ALL "かきく" BY "さ".                
+*>     コンパイルエラー                                            
 *>                                                                 
-*>ケース65.エラー３（CHARACTERS）                                           
+*>ケース65.エラー３（CHARACTERS）                                  
      MOVE "P-650-01"        TO CASE-ID.                          
-     MOVE "あいうえおかきくけこ" TO G-01.                                  
+     MOVE "あいうえおかきくけこ" TO G-01.                        
                                                                  
-     INSPECT G-01 REPLACING CHARACTERS BY "かきく".                 
-*>     コンパイルエラー                                                    
+     INSPECT G-01 REPLACING CHARACTERS BY "かきく".              
+*>     コンパイルエラー                                            
 *>                                                                 
      DISPLAY "EX5-4D NG".                                        
      ACCEPT OMIT-WK.                                             
