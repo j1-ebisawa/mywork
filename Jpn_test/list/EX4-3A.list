@@ -1,7 +1,7 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
 *>source file name:  C:\ISTEST\Git\Jpn_test\source\EX4-3A.cbl
-*>date generated  :  Mon Jun 21 16:43:42 JST 2021
+*>date generated  :  Thu Jun 24 15:43:48 JST 2021
 *>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/ISTEST/Git/Jpn_test/output -jj -eo=C:/ISTEST/Git/Jpn_test/errs -d -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks
 *>*****************************************************************
 *>    テストケース：4-3A                                           
@@ -41,7 +41,6 @@ WORKING-STORAGE       SECTION.
 01  GE-02              PIC N/N          USAGE NATIONAL.          
 01  GE-03              PIC N0N          USAGE NATIONAL.          
 01  GE-04              PIC N/NBN0N      USAGE NATIONAL.          
-01  wk-len             pic 999.                                  
                                                                  
 *>*****************************************************************
 PROCEDURE             DIVISION.                                  
@@ -127,3 +126,5 @@ P-020.
      GOBACK                                                      
      .                                                           
                                                                  
+*> --S: #35 Undefined data item WK-LEN; file = EX4-3A.cbl, line = 85, col 41
+*> --S: #35 Undefined data item WK-LEN; file = EX4-3A.cbl, line = 90, col 57
