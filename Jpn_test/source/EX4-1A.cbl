@@ -53,7 +53,7 @@
             MOVE "Ç†Ç¢Ç§"               TO G-01.
             IF G-01 = "Ç†Ç¢Ç§Å@Å@"
                                         DISPLAY CASE-ID "OK"
-               ELSE                     DISPLAY CASE-ID "NG:" G-01
+               ELSE                     DISPLAY CASE-ID "NG"
             END-IF.
       *
             MOVE "P-010-03"             TO CASE-ID.

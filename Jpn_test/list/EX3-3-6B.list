@@ -1,7 +1,7 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
 *>source file name:  C:\ISTEST\Git\Jpn_test\source\EX3-3-6B.cbl
-*>date generated  :  Mon Jun 21 11:19:33 JST 2021
+*>date generated  :  Thu Jun 24 15:48:29 JST 2021
 *>compiler options:  -cndbcs -eo=C:/ISTEST/Git/Jpn_test/errs -sp=cpy -esme=100 -d -smat -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks -ccbas -od=C:/ISTEST/Git/Jpn_test/output -jj
 *>*****************************************************************
 *>    テストケース：3-3-6B                                         
@@ -26,6 +26,7 @@ SPECIAL-NAMES.
 *>*****************************************************************
 DATA                  DIVISION.                                  
 *>*****************************************************************
+*>>my comment                                                      
 *>*****************************************************************
 WORKING-STORAGE       SECTION.                                   
 *>*****************************************************************
@@ -123,6 +124,7 @@ P-010.
      MOVE "P-120-02"             TO CASE-ID.                     
      DISPLAY L-G.                                                
      DISPLAY L-G(1:1)  L-G(2:5)  L-G(7:4)                        
+     DISPLAY "It's OK if above 2 lines are same".                
      DISPLAY "同じならばOK".                                     
      *>ACCEPT OMIT-WK.                                           
 *>                                                                 
