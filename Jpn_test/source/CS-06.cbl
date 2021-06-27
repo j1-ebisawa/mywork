@@ -72,7 +72,7 @@
             END-IF.
       *
             DISPLAY "TEST END   (CS-06)".
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
             GOBACK
             .
 
