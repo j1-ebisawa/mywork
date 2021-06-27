@@ -1,7 +1,7 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL-BETA release 2021 R1 build#1041.1-20210329-31547
 *>source file name:  C:\isTEST\GIT\Jpn_test\source\CS-011.cbl
-*>date generated  :  Sun Jun 27 15:30:23 GMT+09:00 2021
+*>date generated  :  Sun Jun 27 15:40:14 GMT+09:00 2021
 *>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/isTEST/GIT/Jpn_test/output -jj -eo=C:/isTEST/GIT/Jpn_test/errs -d -g -lo=C:/isTEST/GIT/Jpn_test/list -tasks
 *>*****************************************************************
 *>    テストケース：CS-011                                         
