@@ -1,14 +1,14 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
-*>source file name:  C:\ISTEST\Git\Jpn_test\source\EX4-4A.cbl
-*>date generated  :  Sun Jun 20 14:59:30 JST 2021
-*>compiler options:  -dx -eo=C:/ISTEST/Git/Jpn_test/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks -od=C:/ISTEST/Git/Jpn_test/output -jj
+*>source file name:  C:\isTEST\Git\Jpn_test\source\EX4-4A.cbl
+*>date generated  :  Wed Jun 23 15:58:24 JST 2021
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/isTEST/Git/Jpn_test/output -jj -eo=C:/isTEST/Git/Jpn_test/errs -d -g -lo=C:/isTEST/Git/Jpn_test/list -tasks
 *>*****************************************************************
-*>    ƒeƒXƒgƒP[ƒXF4-4A                                                  
-*>    ƒvƒƒOƒ‰ƒ€–¼F“ú–{Œê‰»ƒeƒXƒg iƒf[ƒ^•”jVALUE‹å                                  
-*>    ˆ—ŠT—v@@FVALUE‹åŽw’è‚ª³‚µ‚­ŽÀs‚Å‚«‚é‚©‚ðƒ`ƒFƒbƒN‚·‚éB                            
+*>    ƒeƒXƒgƒP[ƒXF4-4A                                           
+*>    ƒvƒƒOƒ‰ƒ€–¼F“ú–{Œê‰»ƒeƒXƒg iƒf[ƒ^•”jVALUE‹å             
+*>    ˆ—ŠT—v@@FVALUE‹åŽw’è‚ª³‚µ‚­ŽÀs‚Å‚«‚é‚©‚ðƒ`ƒFƒbƒN‚·‚éB
 *>  -------------------------------------------------------------- 
-*>   ƒeƒXƒgƒP[ƒX:‚P                                                      
+*>   ƒeƒXƒgƒP[ƒX:‚P                                               
 *>*****************************************************************
 IDENTIFICATION        DIVISION.                                  
 *>*****************************************************************
@@ -31,13 +31,13 @@ WORKING-STORAGE       SECTION.
 *>*****************************************************************
 01  OMIT-WK            PIC X.                                    
 01  CASE-ID            PIC X(10).                                
-78  C-01      VALUE "‚ ‚¢‚¤".                                       
-78  C-02      VALUE "‚P‚Q‚R".                                       
-78  C-03      VALUE "‚P^‚Q^‚R".                                     
-78  C-04      VALUE "‚`‚a‚b123".                                    
+78  C-01      VALUE "‚ ‚¢‚¤".                                    
+78  C-02      VALUE "‚P‚Q‚R".                                    
+78  C-03      VALUE "‚P^‚Q^‚R".                                
+78  C-04      VALUE "‚`‚a‚b123".                                 
                                                                  
 01  G-01      PIC NNN    VALUE C-02.                             
-01  GE-01     PIC N/N/N  VALUE "‚`^‚a^‚b".                          
+01  GE-01     PIC N/N/N  VALUE "‚`^‚a^‚b".                     
 01  X-03      PIC X(9).                                          
                                                                  
 *>*****************************************************************
@@ -46,11 +46,11 @@ PROCEDURE             DIVISION.
 MAIN                  SECTION.                                   
 P-010.                                                           
      DISPLAY "TEST START (EX4-4A)".                              
-*>  ƒP[ƒX1.78’è”–¼Žw’è‚ÌVALUE‹å                                            
+*>  ƒP[ƒX1.78’è”–¼Žw’è‚ÌVALUE‹å                                  
 *>                                                                 
      MOVE "P-010-01"             TO CASE-ID.                     
      MOVE C-01 TO G-01.                                          
-     IF G-01 = "‚ ‚¢‚¤"                                             
+     IF G-01 = "‚ ‚¢‚¤"                                          
                                  DISPLAY CASE-ID "OK"            
         ELSE                     DISPLAY CASE-ID "NG"            
      END-IF.                                                     
@@ -64,7 +64,7 @@ P-010.
 *>                                                                 
      MOVE "P-010-03"             TO CASE-ID.                     
      MOVE C-04 TO X-03.                                          
-     IF X-03 = "‚`‚a‚b123"                                          
+     IF X-03 = "‚`‚a‚b123"                                       
                                  DISPLAY CASE-ID "OK"            
         ELSE                     DISPLAY CASE-ID "NG"            
      END-IF.                                                     

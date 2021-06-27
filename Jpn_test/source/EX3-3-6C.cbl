@@ -161,7 +161,7 @@
       *
             IF L-BIN-DEC  = R-G(1:4) DISPLAY "NG".
       *
-            IF 123.5      = R-G(1:4) DISPLAY "NG"..
+            IF 123.5       = R-G(1:4) DISPLAY "NG"..
       *
             IF L-A        = R-GE(1:4) DISPLAY "NG".
       *

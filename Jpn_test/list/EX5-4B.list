@@ -1,14 +1,14 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
-*>source file name:  C:\ISTEST\Git\Jpn_test\source\EX5-4B.cbl
-*>date generated  :  Sun Jun 20 14:59:32 JST 2021
-*>compiler options:  -dx -eo=C:/ISTEST/Git/Jpn_test/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks -od=C:/ISTEST/Git/Jpn_test/output -jj
+*>source file name:  C:\isTEST\Git\Jpn_test\source\EX5-4B.cbl
+*>date generated  :  Wed Jun 23 15:58:26 JST 2021
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/isTEST/Git/Jpn_test/output -jj -eo=C:/isTEST/Git/Jpn_test/errs -d -g -lo=C:/isTEST/Git/Jpn_test/list -tasks
 *>*****************************************************************
-*>    テストケース：5-4B                                                  
-*>    プログラム名：日本語化テスト （手続き部）INSPECT命令                               
-*>    処理概要    ：INSPECT命令が正しく実行されるかをチェックする。                         
+*>    テストケース：5-4B                                           
+*>    プログラム名：日本語化テスト （手続き部）INSPECT命令         
+*>    処理概要    ：INSPECT命令が正しく実行されるかをチェックする。
 *>  -------------------------------------------------------------- 
-*>   テストケース:２２～４７                                                  
+*>   テストケース:２２～４７                                       
 *>*****************************************************************
 IDENTIFICATION        DIVISION.                                  
 *>*****************************************************************
@@ -50,381 +50,381 @@ PROCEDURE             DIVISION.
 *>*****************************************************************
 MAIN                  SECTION.                                   
 P-010.                                                           
-*>ケース22.一意名１、定数4（REPLACING,CHARACTERS指定）                           
+*>ケース22.一意名１、定数4（REPLACING,CHARACTERS指定）             
      MOVE "P-220-01"        TO CASE-ID.                          
-     MOVE "あいうえおかきくけこ" TO G-01.                                  
-     MOVE "あいうえおかきく" TO GE-01.                                   
+     MOVE "あいうえおかきくけこ" TO G-01.                        
+     MOVE "あいうえおかきく" TO GE-01.                           
                                                                  
-     INSPECT G-01 REPLACING CHARACTERS BY "＊".                   
-     IF G-01 = "＊＊＊＊＊＊＊＊＊＊"                                      
+     INSPECT G-01 REPLACING CHARACTERS BY "＊".                  
+     IF G-01 = "＊＊＊＊＊＊＊＊＊＊"                            
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" G-01                            
      END-IF.                                                     
 *>                                                                 
      MOVE "P-220-02"        TO CASE-ID.                          
-     INSPECT GE-01 REPLACING CHARACTERS BY "＊".                  
-     IF GE-01 = "＊＊＊＊＊＊＊＊＊＊"                                     
+     INSPECT GE-01 REPLACING CHARACTERS BY "＊".                 
+     IF GE-01 = "＊＊＊＊＊＊＊＊＊＊"                           
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" GE-01                           
      END-IF.                                                     
-*>ケース23.一意名１、定数3、定数4（REPLACING,ALL指定）                              
+*>ケース23.一意名１、定数3、定数4（REPLACING,ALL指定）             
      MOVE "P-230-01"        TO CASE-ID.                          
-     MOVE "あい＊え＊かき＊＊こ" TO G-01.                                  
-     MOVE "あい＊＊おかきく" TO GE-01.                                   
-     INSPECT G-01 REPLACING ALL "＊" BY "＠".                      
-     IF G-01 = "あい＠え＠かき＠＠こ"                                      
+     MOVE "あい＊え＊かき＊＊こ" TO G-01.                        
+     MOVE "あい＊＊おかきく" TO GE-01.                           
+     INSPECT G-01 REPLACING ALL "＊" BY "＠".                    
+     IF G-01 = "あい＠え＠かき＠＠こ"                            
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" G-01                            
      END-IF.                                                     
 *>                                                                 
      MOVE "P-230-02"        TO CASE-ID.                          
-     INSPECT GE-01 REPLACING ALL "＊" BY "＠".                     
-     IF GE-01 = "あい／＠＠おか／きく"                                     
+     INSPECT GE-01 REPLACING ALL "＊" BY "＠".                   
+     IF GE-01 = "あい／＠＠おか／きく"                           
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" GE-01                           
      END-IF.                                                     
-*>ケース24：一意名１、定数3、定数4（REPLACING,LEADING指定）                          
+*>ケース24：一意名１、定数3、定数4（REPLACING,LEADING指定）        
      MOVE "P-240-01"        TO CASE-ID.                          
-     MOVE "ああああああいああう" TO G-01.                                  
-     MOVE "あああいうえかき" TO GE-01.                                   
-     INSPECT G-01 REPLACING LEADING "あ" BY "＠".                  
-     IF G-01 = "＠＠＠＠＠＠いああう"                                      
+     MOVE "ああああああいああう" TO G-01.                        
+     MOVE "あああいうえかき" TO GE-01.                           
+     INSPECT G-01 REPLACING LEADING "あ" BY "＠".                
+     IF G-01 = "＠＠＠＠＠＠いああう"                            
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" G-01                            
      END-IF.                                                     
 *>                                                                 
      MOVE "P-240-02"        TO CASE-ID.                          
-     INSPECT GE-01 REPLACING LEADING "あ" BY "＠".                 
-     IF GE-01 = "＠＠／あいうえ／かき"                                     
+     INSPECT GE-01 REPLACING LEADING "あ" BY "＠".               
+     IF GE-01 = "＠＠／あいうえ／かき"                           
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" GE-01                           
      END-IF.                                                     
-*>ケース25：一意名１、定数3、定数4（REPLACING,TRAILING指定）                         
+*>ケース25：一意名１、定数3、定数4（REPLACING,TRAILING指定）       
      MOVE "P-250-01"        TO CASE-ID.                          
-     MOVE "あい＊＊おかき＊＊＊" TO G-01.                                  
-     MOVE "あああい＊＊＊＊" TO GE-01.                                   
-     INSPECT G-01 REPLACING TRAILING "＊" BY "＠".                 
-     IF G-01 = "あい＊＊おかき＠＠＠"                                      
+     MOVE "あい＊＊おかき＊＊＊" TO G-01.                        
+     MOVE "あああい＊＊＊＊" TO GE-01.                           
+     INSPECT G-01 REPLACING TRAILING "＊" BY "＠".               
+     IF G-01 = "あい＊＊おかき＠＠＠"                            
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" G-01                            
      END-IF.                                                     
 *>                                                                 
      MOVE "P-250-02"        TO CASE-ID.                          
-     INSPECT GE-01 REPLACING TRAILING "＊" BY "＠".                
-     IF GE-01 = "ああ／あい＊＊／＠＠"                                     
+     INSPECT GE-01 REPLACING TRAILING "＊" BY "＠".              
+     IF GE-01 = "ああ／あい＊＊／＠＠"                           
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" GE-01                           
      END-IF.                                                     
-*>ケース26：一意名１、定数3、定数4（REPLACING,FIRST指定）                            
+*>ケース26：一意名１、定数3、定数4（REPLACING,FIRST指定）          
      MOVE "P-260-01"        TO CASE-ID.                          
-     MOVE "あい＊＊おかき＊＊＊" TO G-01.                                  
-     MOVE "あ＊＊い＊＊＊＊" TO GE-01.                                   
-     INSPECT G-01 REPLACING FIRST "＊" BY "＠".                    
-     IF G-01 = "あい＠＊おかき＊＊＊"                                      
+     MOVE "あい＊＊おかき＊＊＊" TO G-01.                        
+     MOVE "あ＊＊い＊＊＊＊" TO GE-01.                           
+     INSPECT G-01 REPLACING FIRST "＊" BY "＠".                  
+     IF G-01 = "あい＠＊おかき＊＊＊"                            
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" G-01                            
      END-IF.                                                     
 *>                                                                 
      MOVE "P-260-02"        TO CASE-ID.                          
-     INSPECT GE-01 REPLACING FIRST "＊" BY "＠".                   
-     IF GE-01 = "あ＠／＊い＊＊／＊＊"                                     
+     INSPECT GE-01 REPLACING FIRST "＊" BY "＠".                 
+     IF GE-01 = "あ＠／＊い＊＊／＊＊"                           
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" GE-01                           
      END-IF.                                                     
-*>ケース27：一意名１、定数3、定数4（REPLACING,ALL,2文字指定）                          
+*>ケース27：一意名１、定数3、定数4（REPLACING,ALL,2文字指定）      
      MOVE "P-270-01"        TO CASE-ID.                          
-     MOVE "あい＊＊おかき＊＊＊" TO G-01.                                  
-     MOVE "あ＊＊い＊＊＊＊" TO GE-01.                                   
-     INSPECT G-01 REPLACING ALL "＊＊" BY "＠＠".                    
-     IF G-01 = "あい＠＠おかき＠＠＊"                                      
+     MOVE "あい＊＊おかき＊＊＊" TO G-01.                        
+     MOVE "あ＊＊い＊＊＊＊" TO GE-01.                           
+     INSPECT G-01 REPLACING ALL "＊＊" BY "＠＠".                
+     IF G-01 = "あい＠＠おかき＠＠＊"                            
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" G-01                            
      END-IF.                                                     
 *>                                                                 
      MOVE "P-270-02"        TO CASE-ID.                          
-     INSPECT GE-01 REPLACING ALL "＊＊" BY "＠＠".                   
-     IF GE-01 = "あ＊／＊い＠＠／＠＠"                                     
+     INSPECT GE-01 REPLACING ALL "＊＊" BY "＠＠".               
+     IF GE-01 = "あ＊／＊い＠＠／＠＠"                           
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" GE-01                           
      END-IF.                                                     
-*>ケース28：一意名１、定数3、定数4（REPLACING,CHARACTERS,BEFORE指定）                
+*>ケース28：一意名１、定数3、定数4（REPLACING,CHARACTERS,BEFORE指定
      MOVE "P-280-01"        TO CASE-ID.                          
-     MOVE "あいうえおかきくけこ" TO G-01.                                  
-     MOVE "あいうえおかきく" TO GE-01.                                   
-     INSPECT G-01 REPLACING CHARACTERS BY "＠" BEFORE "え".        
-     IF G-01 = "＠＠＠えおかきくけこ"                                      
+     MOVE "あいうえおかきくけこ" TO G-01.                        
+     MOVE "あいうえおかきく" TO GE-01.                           
+     INSPECT G-01 REPLACING CHARACTERS BY "＠" BEFORE "え".      
+     IF G-01 = "＠＠＠えおかきくけこ"                            
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" G-01                            
      END-IF.                                                     
 *>                                                                 
      MOVE "P-280-02"        TO CASE-ID.                          
-     INSPECT GE-01 REPLACING CHARACTERS BY "＠" BEFORE "え".       
-     IF GE-01 = "＠＠＠＠えおか／きく"                                     
+     INSPECT GE-01 REPLACING CHARACTERS BY "＠" BEFORE "え".     
+     IF GE-01 = "＠＠＠＠えおか／きく"                           
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" GE-01                           
      END-IF.                                                     
-*>ケース29：一意名１、定数3、定数4、定数７（REPLACING,ALL,AFTER指定）                    
+*>ケース29：一意名１、定数3、定数4、定数７（REPLACING,ALL,AFTER指定
      MOVE "P-290-01"        TO CASE-ID.                          
-     MOVE "あい＊え＊かき＊＊こ" TO G-01.                                  
-     MOVE "あい＊＊おか＊き" TO GE-01.                                   
-     INSPECT G-01 REPLACING ALL "＊" BY "＠" AFTER "か".            
-     IF G-01 = "あい＊え＊かき＠＠こ"                                      
+     MOVE "あい＊え＊かき＊＊こ" TO G-01.                        
+     MOVE "あい＊＊おか＊き" TO GE-01.                           
+     INSPECT G-01 REPLACING ALL "＊" BY "＠" AFTER "か".         
+     IF G-01 = "あい＊え＊かき＠＠こ"                            
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" G-01                            
      END-IF.                                                     
 *>                                                                 
      MOVE "P-290-02"        TO CASE-ID.                          
-     INSPECT GE-01 REPLACING ALL "＊" BY "＠"  AFTER "か".          
-     IF GE-01 = "あい／＊＊おか／＠き"                                     
+     INSPECT GE-01 REPLACING ALL "＊" BY "＠"  AFTER "か".       
+     IF GE-01 = "あい／＊＊おか／＠き"                           
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" GE-01                           
      END-IF.                                                     
                                                                  
-*>ケース30：一意名１、定数3、定数4、定数７（REPLACING,LEADING,AFTER指定）                
+*>ケース30：一意名１、定数3、定数4、定数７（REPLACING,LEADING,AFTER
      MOVE "P-300-01"        TO CASE-ID.                          
-     MOVE "あああああいああうあ" TO G-01.                                  
-     MOVE "あああいあああき" TO GE-01.                                   
+     MOVE "あああああいああうあ" TO G-01.                        
+     MOVE "あああいあああき" TO GE-01.                           
                                                                  
-     INSPECT G-01 REPLACING LEADING "あ" BY "＠" AFTER "い".        
-     IF G-01 = "あああああい＠＠うあ"                                      
+     INSPECT G-01 REPLACING LEADING "あ" BY "＠" AFTER "い".     
+     IF G-01 = "あああああい＠＠うあ"                            
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" G-01                            
      END-IF.                                                     
 *>                                                                 
      MOVE "P-300-02"        TO CASE-ID.                          
-     INSPECT GE-01 REPLACING LEADING "あ" BY "＠" AFTER "い".       
-     IF GE-01 = "ああ／あい＠＠／あき"                                     
+     INSPECT GE-01 REPLACING LEADING "あ" BY "＠" AFTER "い".    
+     IF GE-01 = "ああ／あい＠＠／あき"                           
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" GE-01                           
      END-IF.                                                     
-*>ケース31：一意名１、定数3、定数4、定数７（REPLACING,TRAILING,BEFORE指定）              
+*>ケース31：一意名１、定数3、定数4、定数７（REPLACING,TRAILING,BEFO
      MOVE "P-310-01"        TO CASE-ID.                          
-     MOVE "あい＊＊おかき＊＊え" TO G-01.                                  
-     MOVE "あ＊い＊う＊＊え" TO GE-01.                                   
-     INSPECT G-01 REPLACING TRAILING "＊" BY "＠"  BEFORE "え".     
-     IF G-01 ="あい＊＊おかき＠＠え"                                       
+     MOVE "あい＊＊おかき＊＊え" TO G-01.                        
+     MOVE "あ＊い＊う＊＊え" TO GE-01.                           
+     INSPECT G-01 REPLACING TRAILING "＊" BY "＠"  BEFORE "え".  
+     IF G-01 ="あい＊＊おかき＠＠え"                             
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" G-01                            
      END-IF.                                                     
 *>                                                                 
      MOVE "P-310-02"        TO CASE-ID.                          
-     INSPECT GE-01 REPLACING TRAILING "＊" BY "＠" BEFORE "え".     
-     IF GE-01 = "あ＊／い＊う＊／＠え"                                     
+     INSPECT GE-01 REPLACING TRAILING "＊" BY "＠" BEFORE "え".  
+     IF GE-01 = "あ＊／い＊う＊／＠え"                           
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" GE-01                           
      END-IF.                                                     
-*>ケース32：一意名１、定数3、定数4、定数７（REPLACING,FIRST,AFTER指定）                  
+*>ケース32：一意名１、定数3、定数4、定数７（REPLACING,FIRST,AFTER指
      MOVE "P-320-01"        TO CASE-ID.                          
-     MOVE "あい＊＊おかき＊＊え" TO G-01.                                  
-     MOVE "あ＊＊いお＊＊＊" TO GE-01.                                   
-     INSPECT G-01 REPLACING FIRST "＊" BY "＠"  AFTER "お".         
-     IF G-01 ="あい＊＊おかき＠＊え"                                       
+     MOVE "あい＊＊おかき＊＊え" TO G-01.                        
+     MOVE "あ＊＊いお＊＊＊" TO GE-01.                           
+     INSPECT G-01 REPLACING FIRST "＊" BY "＠"  AFTER "お".      
+     IF G-01 ="あい＊＊おかき＠＊え"                             
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" G-01                            
      END-IF.                                                     
 *>                                                                 
      MOVE "P-320-02"        TO CASE-ID.                          
-     INSPECT GE-01 REPLACING FIRST "＊" BY "＠" AFTER "お".         
-     IF GE-01 = "あ＊／＊いお＠／＊＊"                                     
+     INSPECT GE-01 REPLACING FIRST "＊" BY "＠" AFTER "お".      
+     IF GE-01 = "あ＊／＊いお＠／＊＊"                           
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" GE-01                           
      END-IF.                                                     
-*>ケース33：一意名１、定数3、定数4、定数７（REPLACING,ALL,2文字指定,BEFORE）               
+*>ケース33：一意名１、定数3、定数4、定数７（REPLACING,ALL,2文字指定
      MOVE "P-330-01"        TO CASE-ID.                          
-     MOVE "あい＊＊おかき＊＊＊" TO G-01.                                  
-     MOVE "＊＊＊い＊＊き＊" TO GE-01.                                   
-     INSPECT G-01 REPLACING ALL "＊＊" BY "＠＠" BEFORE "き＊".        
-     IF G-01 = "あい＠＠おかき＊＊＊"                                      
+     MOVE "あい＊＊おかき＊＊＊" TO G-01.                        
+     MOVE "＊＊＊い＊＊き＊" TO GE-01.                           
+     INSPECT G-01 REPLACING ALL "＊＊" BY "＠＠" BEFORE "き＊".  
+     IF G-01 = "あい＠＠おかき＊＊＊"                            
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" G-01                            
      END-IF.                                                     
 *>                                                                 
      MOVE "P-330-02"        TO CASE-ID.                          
-     INSPECT GE-01 REPLACING ALL "＊＊" BY "＠＠"  BEFORE "き＊".      
-     IF GE-01 = "＠＠／＊い＠＠／き＊"                                     
+     INSPECT GE-01 REPLACING ALL "＊＊" BY "＠＠"  BEFORE "き＊". 
+     IF GE-01 = "＠＠／＊い＠＠／き＊"                           
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" GE-01                           
      END-IF.                                                     
-*>ケース34：一意名１、定数3、定数4、定数７（REPLACING,ALL,2文字指定,AFTER）                
+*>ケース34：一意名１、定数3、定数4、定数７（REPLACING,ALL,2文字指定
      MOVE "P-340-01"        TO CASE-ID.                          
-     MOVE "あい＊＊おかき＊＊＊" TO G-01.                                  
-     MOVE "あき＊＊き＊＊＊" TO GE-01.                                   
-     INSPECT G-01 REPLACING ALL "＊＊" BY "＠＠" AFTER "き＊".         
-     IF G-01 = "あい＊＊おかき＊＠＠"                                      
+     MOVE "あい＊＊おかき＊＊＊" TO G-01.                        
+     MOVE "あき＊＊き＊＊＊" TO GE-01.                           
+     INSPECT G-01 REPLACING ALL "＊＊" BY "＠＠" AFTER "き＊".   
+     IF G-01 = "あい＊＊おかき＊＠＠"                            
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" G-01                            
      END-IF.                                                     
 *>                                                                 
      MOVE "P-340-02"        TO CASE-ID.                          
-     INSPECT GE-01 REPLACING ALL "＊＊" BY "＠＠"  AFTER "き＊".       
-     IF GE-01 = "あき／＊＊き＊／＠＠"                                     
+     INSPECT GE-01 REPLACING ALL "＊＊" BY "＠＠"  AFTER "き＊". 
+     IF GE-01 = "あき／＊＊き＊／＠＠"                           
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" GE-01                           
      END-IF.                                                     
                                                                  
-*>ケース35.一意名１、一意名5（REPLACING,CHARACTERS指定）                          
+*>ケース35.一意名１、一意名5（REPLACING,CHARACTERS指定）           
      MOVE "P-350-01"        TO CASE-ID.                          
-     MOVE "あいうえおかきくけこ" TO G-01.                                  
-     MOVE "あいうえおかきく" TO GE-01.                                   
-     MOVE "＊" TO G-05-1.                                         
+     MOVE "あいうえおかきくけこ" TO G-01.                        
+     MOVE "あいうえおかきく" TO GE-01.                           
+     MOVE "＊" TO G-05-1.                                        
                                                                  
      INSPECT G-01 REPLACING CHARACTERS BY G-05-1.                
-     IF G-01 = "＊＊＊＊＊＊＊＊＊＊"                                      
+     IF G-01 = "＊＊＊＊＊＊＊＊＊＊"                            
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" G-01                            
      END-IF.                                                     
                                                                  
      MOVE "P-350-02"        TO CASE-ID.                          
      INSPECT GE-01 REPLACING CHARACTERS BY G-05-1.               
-     IF G-01 = "＊＊＊＊＊＊＊＊＊＊"                                      
+     IF G-01 = "＊＊＊＊＊＊＊＊＊＊"                            
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" GE-01                           
      END-IF.                                                     
-*>ケース36.一意名１、一意名4、一意名5（REPLACING,ALL指定）                            
+*>ケース36.一意名１、一意名4、一意名5（REPLACING,ALL指定）         
      MOVE "P-360-01"        TO CASE-ID.                          
-     MOVE "あい＊え＊かき＊＊こ" TO G-01.                                  
-     MOVE "あい＊＊おかきく" TO GE-01.                                   
-     MOVE "＊" TO G-04-1.                                         
-     MOVE "＠" TO G-05-1.                                         
+     MOVE "あい＊え＊かき＊＊こ" TO G-01.                        
+     MOVE "あい＊＊おかきく" TO GE-01.                           
+     MOVE "＊" TO G-04-1.                                        
+     MOVE "＠" TO G-05-1.                                        
                                                                  
      INSPECT G-01 REPLACING ALL G-04-1 BY G-05-1.                
-     IF G-01 = "あい＠え＠かき＠＠こ"                                      
+     IF G-01 = "あい＠え＠かき＠＠こ"                            
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" G-01                            
      END-IF.                                                     
 *>                                                                 
      MOVE "P-360-02"        TO CASE-ID.                          
      INSPECT GE-01 REPLACING ALL G-04-1 BY G-05-1.               
-     IF GE-01 = "あい／＠＠おか／きく"                                     
+     IF GE-01 = "あい／＠＠おか／きく"                           
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" GE-01                           
      END-IF.                                                     
-*>ケース37：一意名１、一意名4、一意名5（REPLACING,LEADING指定）                        
+*>ケース37：一意名１、一意名4、一意名5（REPLACING,LEADING指定）    
      MOVE "P-370-01"        TO CASE-ID.                          
-     MOVE "ああああああいああう" TO G-01.                                  
-     MOVE "あああいうえかき" TO GE-01.                                   
-     MOVE "あ" TO G-04-1.                                         
-     MOVE "＠" TO G-05-1.                                         
+     MOVE "ああああああいああう" TO G-01.                        
+     MOVE "あああいうえかき" TO GE-01.                           
+     MOVE "あ" TO G-04-1.                                        
+     MOVE "＠" TO G-05-1.                                        
                                                                  
      INSPECT G-01 REPLACING LEADING G-04-1 BY G-05-1.            
-     IF G-01 = "＠＠＠＠＠＠いああう"                                      
+     IF G-01 = "＠＠＠＠＠＠いああう"                            
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" G-01                            
      END-IF.                                                     
 *>                                                                 
      MOVE "P-370-02"        TO CASE-ID.                          
      INSPECT GE-01 REPLACING LEADING G-04-1 BY G-05-1.           
-     IF GE-01 = "＠＠／あいうえ／かき"                                     
+     IF GE-01 = "＠＠／あいうえ／かき"                           
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" GE-01                           
      END-IF.                                                     
-*>ケース38：一意名１、一意名4、一意名5（REPLACING,TRAILING指定）                       
+*>ケース38：一意名１、一意名4、一意名5（REPLACING,TRAILING指定）   
      MOVE "P-380-01"        TO CASE-ID.                          
-     MOVE "あい＊＊おかき＊＊＊" TO G-01.                                  
-     MOVE "あああい＊＊＊＊" TO GE-01.                                   
-     MOVE "＊" TO G-04-1.                                         
-     MOVE "＠" TO G-05-1.                                         
+     MOVE "あい＊＊おかき＊＊＊" TO G-01.                        
+     MOVE "あああい＊＊＊＊" TO GE-01.                           
+     MOVE "＊" TO G-04-1.                                        
+     MOVE "＠" TO G-05-1.                                        
                                                                  
      INSPECT G-01 REPLACING TRAILING G-04-1 BY G-05-1.           
-     IF G-01 = "あい＊＊おかき＠＠＠"                                      
+     IF G-01 = "あい＊＊おかき＠＠＠"                            
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" G-01                            
      END-IF.                                                     
 *>                                                                 
      MOVE "P-380-02"        TO CASE-ID.                          
      INSPECT GE-01 REPLACING TRAILING G-04-1 BY G-05-1.          
-     IF GE-01 = "ああ／あい＊＊／＠＠"                                     
+     IF GE-01 = "ああ／あい＊＊／＠＠"                           
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" GE-01                           
      END-IF.                                                     
-*>ケース39：一意名１、一意名4、一意名5（REPLACING,FIRST指定）                          
+*>ケース39：一意名１、一意名4、一意名5（REPLACING,FIRST指定）      
      MOVE "P-390-01"        TO CASE-ID.                          
-     MOVE "あい＊＊おかき＊＊＊" TO G-01.                                  
-     MOVE "あ＊＊い＊＊＊＊" TO GE-01.                                   
-     MOVE "＊" TO G-04-1.                                         
-     MOVE "＠" TO G-05-1.                                         
+     MOVE "あい＊＊おかき＊＊＊" TO G-01.                        
+     MOVE "あ＊＊い＊＊＊＊" TO GE-01.                           
+     MOVE "＊" TO G-04-1.                                        
+     MOVE "＠" TO G-05-1.                                        
                                                                  
      INSPECT G-01 REPLACING FIRST G-04-1 BY G-05-1.              
-     IF G-01 = "あい＠＊おかき＊＊＊"                                      
+     IF G-01 = "あい＠＊おかき＊＊＊"                            
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" G-01                            
      END-IF.                                                     
 *>                                                                 
      MOVE "P-390-02"        TO CASE-ID.                          
      INSPECT GE-01 REPLACING FIRST G-04-1 BY G-05-1.             
-     IF GE-01 = "あ＠／＊い＊＊／＊＊"                                     
+     IF GE-01 = "あ＠／＊い＊＊／＊＊"                           
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" GE-01                           
      END-IF.                                                     
-*>ケース40：一意名１、一意名4、一意名5(REPLACING,ALL,2文字指定）                        
+*>ケース40：一意名１、一意名4、一意名5(REPLACING,ALL,2文字指定）   
      MOVE "P-400-01"        TO CASE-ID.                          
-     MOVE "あい＊＊おかき＊＊＊" TO G-01.                                  
-     MOVE "あ＊＊い＊＊＊＊" TO GE-01.                                   
-     MOVE "＊＊" TO G-04-2.                                        
-     MOVE "＠＠" TO G-05-2.                                        
+     MOVE "あい＊＊おかき＊＊＊" TO G-01.                        
+     MOVE "あ＊＊い＊＊＊＊" TO GE-01.                           
+     MOVE "＊＊" TO G-04-2.                                      
+     MOVE "＠＠" TO G-05-2.                                      
                                                                  
      INSPECT G-01 REPLACING ALL G-04-2 BY G-05-2.                
-     IF G-01 = "あい＠＠おかき＠＠＊"                                      
+     IF G-01 = "あい＠＠おかき＠＠＊"                            
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" G-01                            
      END-IF.                                                     
 *>                                                                 
      MOVE "P-400-02"        TO CASE-ID.                          
      INSPECT GE-01 REPLACING ALL G-04-2 BY G-05-2.               
-     IF GE-01 = "あ＊／＊い＠＠／＠＠"                                     
+     IF GE-01 = "あ＊／＊い＠＠／＠＠"                           
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" GE-01                           
      END-IF.                                                     
-*>ケース41：一意名１、一意名5、一意名8（REPLACING,CHARACTERS,BEFORE指定）              
+*>ケース41：一意名１、一意名5、一意名8（REPLACING,CHARACTERS,BEFORE
      MOVE "P-410-01"        TO CASE-ID.                          
-     MOVE "あいうえおかきくけこ" TO G-01.                                  
-     MOVE "あいうえおかきく" TO GE-01.                                   
-     MOVE "＠" TO G-05-1.                                         
-     MOVE "え" TO G-08-1.                                         
+     MOVE "あいうえおかきくけこ" TO G-01.                        
+     MOVE "あいうえおかきく" TO GE-01.                           
+     MOVE "＠" TO G-05-1.                                        
+     MOVE "え" TO G-08-1.                                        
                                                                  
      INSPECT G-01 REPLACING CHARACTERS BY G-05-1 BEFORE G-08-1.  
-     IF G-01 = "＠＠＠えおかきくけこ"                                      
+     IF G-01 = "＠＠＠えおかきくけこ"                            
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" G-01                            
      END-IF.                                                     
 *>                                                                 
      MOVE "P-410-02"        TO CASE-ID.                          
      INSPECT GE-01 REPLACING CHARACTERS BY G-05-1 BEFORE G-08-1. 
-     IF GE-01 = "＠＠＠＠えおか／きく"                                     
+     IF GE-01 = "＠＠＠＠えおか／きく"                           
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" GE-01                           
      END-IF.                                                     
-*>ケース42：一意名１、一意名4、一意名5、一意名8（REPLACING,ALL,AFTER指定）                 
+*>ケース42：一意名１、一意名4、一意名5、一意名8（REPLACING,ALL,AFTE
      MOVE "P-420-01"        TO CASE-ID.                          
-     MOVE "あい＊え＊かき＊＊こ" TO G-01.                                  
-     MOVE "あい＊＊おか＊き" TO GE-01.                                   
-     MOVE "＊" TO G-04-1.                                         
-     MOVE "＠" TO G-05-1.                                         
-     MOVE "か" TO G-08-1.                                         
+     MOVE "あい＊え＊かき＊＊こ" TO G-01.                        
+     MOVE "あい＊＊おか＊き" TO GE-01.                           
+     MOVE "＊" TO G-04-1.                                        
+     MOVE "＠" TO G-05-1.                                        
+     MOVE "か" TO G-08-1.                                        
                                                                  
      INSPECT G-01 REPLACING ALL G-04-1 BY G-05-1 AFTER G-08-1.   
-     IF G-01 = "あい＊え＊かき＠＠こ"                                      
+     IF G-01 = "あい＊え＊かき＠＠こ"                            
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" G-01                            
      END-IF.                                                     
 *>                                                                 
      MOVE "P-420-02"        TO CASE-ID.                          
      INSPECT GE-01 REPLACING ALL G-04-1 BY G-05-1 AFTER G-08-1.  
-     IF GE-01 = "あい／＊＊おか／＠き"                                     
+     IF GE-01 = "あい／＊＊おか／＠き"                           
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" GE-01                           
      END-IF.                                                     
-*>ケース43：一意名１、一意名4、一意名5、一意名8（REPLACING,LEADING,AFTER指定）             
+*>ケース43：一意名１、一意名4、一意名5、一意名8（REPLACING,LEADING,
      MOVE "P-430-01"        TO CASE-ID.                          
-     MOVE "あああああいああうあ" TO G-01.                                  
-     MOVE "あああいあああき" TO GE-01.                                   
-     MOVE "あ" TO G-04-1.                                         
-     MOVE "＠" TO G-05-1.                                         
-     MOVE "い" TO G-08-1.                                         
+     MOVE "あああああいああうあ" TO G-01.                        
+     MOVE "あああいあああき" TO GE-01.                           
+     MOVE "あ" TO G-04-1.                                        
+     MOVE "＠" TO G-05-1.                                        
+     MOVE "い" TO G-08-1.                                        
                                                                  
      INSPECT G-01 REPLACING                                      
                   LEADING G-04-1 BY G-05-1 AFTER G-08-1.         
-     IF G-01 = "あああああい＠＠うあ"                                      
+     IF G-01 = "あああああい＠＠うあ"                            
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" G-01                            
      END-IF.                                                     
@@ -432,21 +432,21 @@ P-010.
      MOVE "P-430-02"        TO CASE-ID.                          
      INSPECT GE-01 REPLACING                                     
                    LEADING G-04-1 BY G-05-1 AFTER G-08-1.        
-     IF GE-01 = "ああ／あい＠＠／あき"                                     
+     IF GE-01 = "ああ／あい＠＠／あき"                           
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" GE-01                           
      END-IF.                                                     
-*>ケース44：一意名１、一意名4、一意名5、一意名8（REPLACING,TRAILING,BEFORE指定）           
+*>ケース44：一意名１、一意名4、一意名5、一意名8（REPLACING,TRAILING
      MOVE "P-440-01"        TO CASE-ID.                          
-     MOVE "あい＊＊おかき＊＊え" TO G-01.                                  
-     MOVE "あ＊い＊う＊＊え" TO GE-01.                                   
-     MOVE "＊" TO G-04-1.                                         
-     MOVE "＠" TO G-05-1.                                         
-     MOVE "え" TO G-08-1.                                         
+     MOVE "あい＊＊おかき＊＊え" TO G-01.                        
+     MOVE "あ＊い＊う＊＊え" TO GE-01.                           
+     MOVE "＊" TO G-04-1.                                        
+     MOVE "＠" TO G-05-1.                                        
+     MOVE "え" TO G-08-1.                                        
                                                                  
      INSPECT G-01 REPLACING                                      
                   TRAILING G-04-1 BY G-05-1  BEFORE G-08-1.      
-     IF G-01 = "あい＊＊おかき＠＠え"                                      
+     IF G-01 = "あい＊＊おかき＠＠え"                            
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" G-01                            
      END-IF.                                                     
@@ -454,21 +454,21 @@ P-010.
      MOVE "P-440-02"        TO CASE-ID.                          
      INSPECT GE-01 REPLACING                                     
                    TRAILING G-04-1 BY G-05-1  BEFORE G-08-1      
-     IF GE-01 = "あ＊／い＊う＊／＠え"                                     
+     IF GE-01 = "あ＊／い＊う＊／＠え"                           
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" GE-01                           
      END-IF.                                                     
-*>ケース45：一意名１、一意名4、一意名5、一意名8（REPLACING,FIRST,AFTER指定）               
+*>ケース45：一意名１、一意名4、一意名5、一意名8（REPLACING,FIRST,AF
      MOVE "P-450-01"        TO CASE-ID.                          
-     MOVE "あい＊＊おかき＊＊＊" TO G-01.                                  
-     MOVE "あ＊＊いお＊＊＊" TO GE-01.                                   
-     MOVE "＊" TO G-04-1.                                         
-     MOVE "＠" TO G-05-1.                                         
-     MOVE "お" TO G-08-1.                                         
+     MOVE "あい＊＊おかき＊＊＊" TO G-01.                        
+     MOVE "あ＊＊いお＊＊＊" TO GE-01.                           
+     MOVE "＊" TO G-04-1.                                        
+     MOVE "＠" TO G-05-1.                                        
+     MOVE "お" TO G-08-1.                                        
                                                                  
      INSPECT G-01 REPLACING                                      
                   FIRST G-04-1 BY G-05-1  AFTER G-08-1.          
-     IF G-01 = "あい＊＊おかき＠＊＊"                                      
+     IF G-01 = "あい＊＊おかき＠＊＊"                            
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" G-01                            
      END-IF.                                                     
@@ -476,20 +476,20 @@ P-010.
      MOVE "P-450-02"        TO CASE-ID.                          
      INSPECT GE-01 REPLACING                                     
                    FIRST G-04-1 BY G-05-1  AFTER G-08-1          
-     IF GE-01 = "あ＊／＊いお＠／＊＊"                                     
+     IF GE-01 = "あ＊／＊いお＠／＊＊"                           
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" GE-01                           
      END-IF.                                                     
-*>ケース46：一意名１、一意名4、一意名5、一意名8（（REPLACING,ALL,2文字指定,BEFORE）           
+*>ケース46：一意名１、一意名4、一意名5、一意名8（（REPLACING,ALL,2?
      MOVE "P-460-01"        TO CASE-ID.                          
-     MOVE "あい＊＊おかき＊＊＊" TO G-01.                                  
-     MOVE "＊＊＊い＊＊き＊" TO GE-01.                                   
-     MOVE "＊＊" TO G-04-2.                                        
-     MOVE "＠＠" TO G-05-2.                                        
-     MOVE "き＊" TO G-08-2.                                        
+     MOVE "あい＊＊おかき＊＊＊" TO G-01.                        
+     MOVE "＊＊＊い＊＊き＊" TO GE-01.                           
+     MOVE "＊＊" TO G-04-2.                                      
+     MOVE "＠＠" TO G-05-2.                                      
+     MOVE "き＊" TO G-08-2.                                      
                                                                  
      INSPECT G-01 REPLACING ALL G-04-2 BY G-05-2 BEFORE G-08-2.  
-     IF G-01 = "あい＠＠おかき＊＊＊"                                      
+     IF G-01 = "あい＠＠おかき＊＊＊"                            
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" G-01                            
      END-IF.                                                     
@@ -497,49 +497,49 @@ P-010.
      MOVE "P-460-02"        TO CASE-ID.                          
      MOVE 0 TO W-TALLY.                                          
      INSPECT GE-01 REPLACING ALL G-04-2 BY G-05-2 BEFORE G-08-2. 
-     IF GE-01 = "＠＠／＊い＠＠／き＊"                                     
+     IF GE-01 = "＠＠／＊い＠＠／き＊"                           
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" GE-01                           
      END-IF.                                                     
-*>ケース47：一意名１、一意名4、一意名5、一意名8（REPLACING,ALL,2文字指定,AFTER）             
+*>ケース47：一意名１、一意名4、一意名5、一意名8（REPLACING,ALL,2文?
      MOVE "P-470-01"        TO CASE-ID.                          
-     MOVE "あい＊＊おかき＊＊＊" TO G-01.                                  
-     MOVE "あき＊＊き＊＊＊" TO GE-01.                                   
-     MOVE "＊＊" TO G-04-2.                                        
-     MOVE "＠＠" TO G-05-2.                                        
-     MOVE "き＊" TO G-08-2.                                        
+     MOVE "あい＊＊おかき＊＊＊" TO G-01.                        
+     MOVE "あき＊＊き＊＊＊" TO GE-01.                           
+     MOVE "＊＊" TO G-04-2.                                      
+     MOVE "＠＠" TO G-05-2.                                      
+     MOVE "き＊" TO G-08-2.                                      
                                                                  
      INSPECT G-01 REPLACING ALL G-04-2 BY G-05-2 AFTER G-08-2.   
-     IF G-01 = "あい＊＊おかき＊＠＠"                                      
+     IF G-01 = "あい＊＊おかき＊＠＠"                            
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" G-01                            
      END-IF.                                                     
 *>                                                                 
      MOVE "P-470-02"        TO CASE-ID.                          
      INSPECT GE-01 REPLACING ALL G-04-2 BY G-05-2 AFTER G-08-2.  
-     IF GE-01 = "あき／＊＊き＊／＠＠"                                     
+     IF GE-01 = "あき／＊＊き＊／＠＠"                           
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" GE-01                           
      END-IF.                                                     
-*>ケース47追加.：一意名１、一意名4、一意名5、一意名8                                     
-*>    （AFTERで一意名8が見つからないとき）                                        
-*>    （BEFOREで一意名8が見つからないとき）                                       
+*>ケース47追加.：一意名１、一意名4、一意名5、一意名8               
+*>    （AFTERで一意名8が見つからないとき）                         
+*>    （BEFOREで一意名8が見つからないとき）                        
      MOVE "P-470-03"        TO CASE-ID.                          
-     MOVE "あい＊＊おか／＊＊＊" TO G-01.                                  
-     MOVE "あ＊＊い＊＊＊＊" TO GE-01.                                   
-     MOVE "／＊" TO G-04-2.                                        
-     MOVE "＠＠" TO G-05-2                                         
-     MOVE "ＡＢ" TO G-08-2.                                        
+     MOVE "あい＊＊おか／＊＊＊" TO G-01.                        
+     MOVE "あ＊＊い＊＊＊＊" TO GE-01.                           
+     MOVE "／＊" TO G-04-2.                                      
+     MOVE "＠＠" TO G-05-2                                       
+     MOVE "ＡＢ" TO G-08-2.                                      
                                                                  
      INSPECT G-01 REPLACING ALL G-04-2 BY G-05-2 AFTER G-08-2.   
-     IF G-01 = "あい＊＊おか／＊＊＊"                                      
+     IF G-01 = "あい＊＊おか／＊＊＊"                            
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" G-01                            
      END-IF.                                                     
 *>                                                                 
      MOVE "P-470-04"        TO CASE-ID.                          
      INSPECT GE-01 REPLACING ALL G-04-2 BY G-05-2 BEFORE G-08-2. 
-     IF GE-01 = "あ＊＠＠い＊＊＠＠＊"                                     
+     IF GE-01 = "あ＊＠＠い＊＊＠＠＊"                           
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" GE-01                           
      END-IF.                                                     

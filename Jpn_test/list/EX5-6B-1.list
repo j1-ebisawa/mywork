@@ -1,15 +1,15 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
-*>source file name:  C:\ISTEST\Git\Jpn_test\source\EX5-6B-1.cbl
-*>date generated  :  Sun Jun 20 14:59:32 JST 2021
-*>compiler options:  -dx -eo=C:/ISTEST/Git/Jpn_test/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks -od=C:/ISTEST/Git/Jpn_test/output -jj
+*>source file name:  C:\isTEST\Git\Jpn_test\source\EX5-6B-1.cbl
+*>date generated  :  Wed Jun 23 15:58:26 JST 2021
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/isTEST/Git/Jpn_test/output -jj -eo=C:/isTEST/Git/Jpn_test/errs -d -g -lo=C:/isTEST/Git/Jpn_test/list -tasks
 *>*****************************************************************
-*>    テストケース：EX5-6B-1                                              
-*>    プログラム名：日本語化テスト （手続き部）STRING命令                                
-*>    処理概要　　：STRING命令の構文チェックでエラーとなるかを                              
-*>    　　　　　　　チェックする。                                               
+*>    テストケース：EX5-6B-1                                       
+*>    プログラム名：日本語化テスト （手続き部）STRING命令          
+*>    処理概要　　：STRING命令の構文チェックでエラーとなるかを     
+*>    　　　　　　　チェックする。                                 
 *>  -------------------------------------------------------------- 
-*>   テストケース:1  このプログラムは実行できない。                                     
+*>   テストケース:1  このプログラムは実行できない。                
 *>*****************************************************************
 IDENTIFICATION        DIVISION.                                  
 *>*****************************************************************
@@ -50,14 +50,14 @@ PROCEDURE             DIVISION.
 *>*****************************************************************
 MAIN                  SECTION.                                   
 P-010.                                                           
-*> ケース1.一意名１一意名２と一意名３が                                             
-*> すべて日本語ではない場合、タイプ不一致                                             
+*> ケース1.一意名１一意名２と一意名３が                            
+*> すべて日本語ではない場合、タイプ不一致                          
     MOVE "ABCDE" TO X-01.                                        
-    MOVE ALL "＊"   TO W-INTO.                                    
-    MOVE "あいうえお" TO G-01.                                        
+    MOVE ALL "＊"   TO W-INTO.                                   
+    MOVE "あいうえお" TO G-01.                                   
     MOVE 1 TO W-PTR                                              
                                                                  
-*> コンパイルエラー                                                        
+*> コンパイルエラー                                                
     STRING G-01 DELIMITED BY "A"                                 
                 INTO W-INTO                                      
                 WITH POINTER W-PTR                               
@@ -65,7 +65,7 @@ P-010.
     END-STRING.                                                  
     DISPLAY W-INTO.                                              
                                                                  
-*> コンパイルエラー                                                        
+*> コンパイルエラー                                                
     STRING G-01 DELIMITED BY X-01                                
                 INTO W-INTO                                      
                 WITH POINTER W-PTR                               

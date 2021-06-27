@@ -1,11 +1,11 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
-*>source file name:  C:\ISTEST\Git\Jpn_test\source\QA-41.cbl
-*>date generated  :  Sun Jun 20 14:59:33 JST 2021
-*>compiler options:  -dx -eo=C:/ISTEST/Git/Jpn_test/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks -od=C:/ISTEST/Git/Jpn_test/output -jj
+*>source file name:  C:\isTEST\Git\Jpn_test\source\QA-41.cbl
+*>date generated  :  Wed Jun 23 15:58:27 JST 2021
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/isTEST/Git/Jpn_test/output -jj -eo=C:/isTEST/Git/Jpn_test/errs -d -g -lo=C:/isTEST/Git/Jpn_test/list -tasks
 *>*****************************************************************
-*>    テストケース：QA-33                                                 
-*>    プログラム名：日本語化テスト QA                                            
+*>    テストケース：QA-33                                          
+*>    プログラム名：日本語化テスト QA                              
 *>*****************************************************************
 IDENTIFICATION        DIVISION.                                  
 *>*****************************************************************
@@ -30,8 +30,8 @@ WORKING-STORAGE       SECTION.
 01  G-01               PIC N(10).                                
 01  X-01               PIC X(20).                                
 *>                                                                 
-01  X-02               PIC X(2) VALUE "あ".                       
-01  X-03               PIC X(2) VALUE "＊".                       
+01  X-02               PIC X(2) VALUE "あ".                      
+01  X-03               PIC X(2) VALUE "＊".                      
 01  WK-TALLY           PIC 999.                                  
 *>                                                                 
 *>****************************************************             
@@ -42,60 +42,60 @@ P-010.
      DISPLAY "QA-41 test start".                                 
 *>                                                                 
      MOVE "QA41-01"        TO CASE-ID.                           
-     MOVE "あいうえおあいうえお" TO G-01.                                  
-     INSPECT G-01 REPLACING ALL "あ" BY "＊".                      
-     IF G-01 = "＊いうえお＊いうえお"                                      
+     MOVE "あいうえおあいうえお" TO G-01.                        
+     INSPECT G-01 REPLACING ALL "あ" BY "＊".                    
+     IF G-01 = "＊いうえお＊いうえお"                            
                       DISPLAY CASE-ID "OK"                       
         ELSE          DISPLAY CASE-ID "NG:" G-01                 
      END-IF.                                                     
 *>                                                                 
      MOVE "QA41-02"        TO CASE-ID.                           
-     MOVE "あいうえおあいうえお" TO X-01.                                  
-     INSPECT X-01 REPLACING ALL "あ" BY "＊".                      
-     IF X-01 = "＊いうえお＊いうえお"                                      
+     MOVE "あいうえおあいうえお" TO X-01.                        
+     INSPECT X-01 REPLACING ALL "あ" BY "＊".                    
+     IF X-01 = "＊いうえお＊いうえお"                            
                        DISPLAY CASE-ID "OK"                      
         ELSE           DISPLAY CASE-ID "NG:" X-01                
      END-IF.                                                     
 *>                                                                 
      MOVE "QA41-03"        TO CASE-ID.                           
-     MOVE "aあいうえおあいうえb" TO X-01.                                 
-     INSPECT X-01 REPLACING ALL "あ" BY "＊".                      
-     IF X-01 = "a＊いうえお＊いうえb"                                     
+     MOVE "aあいうえおあいうえb" TO X-01.                        
+     INSPECT X-01 REPLACING ALL "あ" BY "＊".                    
+     IF X-01 = "a＊いうえお＊いうえb"                            
                        DISPLAY CASE-ID "OK"                      
         ELSE           DISPLAY CASE-ID "NG:" X-01                
      END-IF.                                                     
 *>                                                                 
      MOVE "QA41-04"        TO CASE-ID.                           
-     MOVE "あいうえおあいうえお" TO G-01.                                  
+     MOVE "あいうえおあいうえお" TO G-01.                        
      MOVE 0 TO WK-TALLY.                                         
-     INSPECT G-01 TALLYING WK-TALLY FOR ALL "あ".                 
+     INSPECT G-01 TALLYING WK-TALLY FOR ALL "あ".                
      IF WK-TALLY = 2                                             
                       DISPLAY CASE-ID "OK"                       
         ELSE          DISPLAY CASE-ID "NG:" WK-TALLY             
      END-IF.                                                     
 *>                                                                 
      MOVE "QA41-05"        TO CASE-ID.                           
-     MOVE "あいうえおあいうえお" TO X-01.                                  
+     MOVE "あいうえおあいうえお" TO X-01.                        
      MOVE 0 TO WK-TALLY.                                         
-     INSPECT X-01 TALLYING WK-TALLY FOR ALL "あ".                 
+     INSPECT X-01 TALLYING WK-TALLY FOR ALL "あ".                
      IF WK-TALLY = 2                                             
                        DISPLAY CASE-ID "OK"                      
         ELSE           DISPLAY CASE-ID "NG:" WK-TALLY            
      END-IF.                                                     
 *>                                                                 
      MOVE "QA41-06"        TO CASE-ID.                           
-     MOVE "aあいうえおあいうえb" TO X-01.                                 
+     MOVE "aあいうえおあいうえb" TO X-01.                        
      MOVE 0 TO WK-TALLY.                                         
-     INSPECT X-01 TALLYING WK-TALLY FOR ALL "あ".                 
+     INSPECT X-01 TALLYING WK-TALLY FOR ALL "あ".                
      IF WK-TALLY = 2                                             
                        DISPLAY CASE-ID "OK"                      
         ELSE           DISPLAY CASE-ID "NG:" WK-TALLY            
      END-IF.                                                     
 *>                                                                 
      MOVE "QA41-07"        TO CASE-ID.                           
-     MOVE "あいうえおあいうえお" TO G-01.                                  
+     MOVE "あいうえおあいうえお" TO G-01.                        
      INSPECT G-01 REPLACING ALL X-02 BY X-03.                    
-     IF G-01 = "＊いうえお＊いうえお"                                      
+     IF G-01 = "＊いうえお＊いうえお"                            
                       DISPLAY CASE-ID "OK"                       
         ELSE          DISPLAY CASE-ID "NG:" G-01                 
      END-IF.                                                     

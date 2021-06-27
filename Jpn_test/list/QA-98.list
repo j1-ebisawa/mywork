@@ -1,14 +1,14 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
-*>source file name:  C:\ISTEST\Git\Jpn_test\source\QA-98.cbl
-*>date generated  :  Sun Jun 20 14:59:33 JST 2021
-*>compiler options:  -dx -eo=C:/ISTEST/Git/Jpn_test/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks -od=C:/ISTEST/Git/Jpn_test/output -jj
+*>source file name:  C:\isTEST\Git\Jpn_test\source\QA-98.cbl
+*>date generated  :  Wed Jun 23 15:58:28 JST 2021
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/isTEST/Git/Jpn_test/output -jj -eo=C:/isTEST/Git/Jpn_test/errs -d -g -lo=C:/isTEST/Git/Jpn_test/list -tasks
 *>*****************************************************************
-*>    ƒeƒXƒgƒP[ƒXFQA98                                                  
-*>    ƒvƒƒOƒ‰ƒ€–¼F“ú–{Œê‰»ƒeƒXƒg i“Y‚¦ŽšŽQÆj                                       
-*>    ˆ—ŠT—v@@F“Y‚¦ŽšŽQÆ‚ª³‚µ‚­ŽÀs‚³‚ê‚é‚©‚ðƒ`ƒFƒbƒN‚·‚éB                               
+*>    ƒeƒXƒgƒP[ƒXFQA98                                           
+*>    ƒvƒƒOƒ‰ƒ€–¼F“ú–{Œê‰»ƒeƒXƒg i“Y‚¦ŽšŽQÆj                  
+*>    ˆ—ŠT—v@@F“Y‚¦ŽšŽQÆ‚ª³‚µ‚­ŽÀs‚³‚ê‚é‚©‚ðƒ`ƒFƒbƒN‚·‚éB 
 *>  -------------------------------------------------------------- 
-*>   ƒeƒXƒgƒP[ƒX:‚P`‚V                                                    
+*>   ƒeƒXƒgƒP[ƒX:‚P`‚V                                           
 *>*****************************************************************
 IDENTIFICATION        DIVISION.                                  
 *>*****************************************************************
@@ -47,10 +47,10 @@ WORKING-STORAGE       SECTION.
         10  FILLER    PIC X(10) VALUE "abcdefghij".              
         10  FILLER    PIC X(10) VALUE "klmnopqrst".              
         10  FILLER    PIC X(10) VALUE "uvwxyz    ".              
-        10  FILLER    PIC X(10) VALUE "‚ ‚¢‚¤‚¦‚¨".                   
-        10  FILLER    PIC X(10) VALUE "‚©‚«‚­‚¯‚±".                   
-        10  FILLER    PIC X(10) VALUE "‚`‚a‚b‚c‚d".                   
-        10  FILLER    PIC X(10) VALUE "‚e‚f‚g‚h‚i".                   
+        10  FILLER    PIC X(10) VALUE "‚ ‚¢‚¤‚¦‚¨".              
+        10  FILLER    PIC X(10) VALUE "‚©‚«‚­‚¯‚±".              
+        10  FILLER    PIC X(10) VALUE "‚`‚a‚b‚c‚d".              
+        10  FILLER    PIC X(10) VALUE "‚e‚f‚g‚h‚i".              
     05  GRP-01-RED-1  REDEFINES GRP-01-DEF.                      
         10  GRP-01-X  PIC X(10)  OCCURS 8.                       
     05  GRP-01-RED-2  REDEFINES GRP-01-DEF.                      
@@ -84,7 +84,7 @@ PROCEDURE             DIVISION.
 MAIN                  SECTION.                                   
 P-010.                                                           
      DISPLAY "TEST START (QA-98)".                               
-*>ƒP[ƒX1.Šî–{ƒf[ƒ^€–Ú                                                     
+*>ƒP[ƒX1.Šî–{ƒf[ƒ^€–Ú                                           
      MOVE "P-010-01"        TO CASE-ID.                          
      IF GRP-01-X(1) = "0123456789"                               
                               DISPLAY CASE-ID "OK"               
@@ -92,55 +92,55 @@ P-010.
      END-IF.                                                     
 *>                                                                 
      MOVE "P-010-02"        TO CASE-ID.                          
-     IF GRP-01-X(5) = "‚ ‚¢‚¤‚¦‚¨"                                    
+     IF GRP-01-X(5) = "‚ ‚¢‚¤‚¦‚¨"                               
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG:" GRP-01-X(5)  
      END-IF.                                                     
 *>                                                                 
      MOVE "P-010-03"        TO CASE-ID.                          
-     IF GRP-01-N2(5) = "‚ ‚¢‚¤‚¦‚¨"                                   
+     IF GRP-01-N2(5) = "‚ ‚¢‚¤‚¦‚¨"                              
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG:" GRP-01-N2(5) 
      END-IF.                                                     
 *>                                                                 
      MOVE "P-010-04"        TO CASE-ID.                          
-     IF GRP-01-N2(7) = "‚`‚a‚b‚c‚d"                                   
+     IF GRP-01-N2(7) = "‚`‚a‚b‚c‚d"                              
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG:" GRP-01-N2(7) 
      END-IF.                                                     
 *>                                                                 
      MOVE "P-010-05"        TO CASE-ID.                          
-     IF GRP-01-N3(3) = "‚ ‚¢‚¤‚¦‚¨‚©‚«‚­‚¯‚±"                              
+     IF GRP-01-N3(3) = "‚ ‚¢‚¤‚¦‚¨‚©‚«‚­‚¯‚±"                    
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG:" GRP-01-N3(3) 
      END-IF.                                                     
 *>                                                                 
      MOVE "P-010-06"        TO CASE-ID.                          
-     IF GRP-01-N3(4) = "‚`‚a‚b‚c‚d‚e‚f‚g‚h‚i"                              
+     IF GRP-01-N3(4) = "‚`‚a‚b‚c‚d‚e‚f‚g‚h‚i"                    
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG:" GRP-01-N3(4) 
      END-IF.                                                     
 *>                                                                 
      MOVE "P-010-07"        TO CASE-ID.                          
-     IF GRP-01-N4(2) = "‚ ‚¢‚¤‚¦‚¨‚©‚«‚­‚¯‚±‚`‚a‚b‚c‚d‚e‚f‚g‚h‚i"                    
+     IF GRP-01-N4(2) = "‚ ‚¢‚¤‚¦‚¨‚©‚«‚­‚¯‚±‚`‚a‚b‚c‚d‚e‚f‚g‚h‚i"
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG:" GRP-01-N4(2) 
      END-IF.                                                     
 *>                                                                 
      MOVE "P-010-08"        TO CASE-ID.                          
-     IF GRP-01-N5(11) = "‚ ‚¢"                                     
+     IF GRP-01-N5(11) = "‚ ‚¢"                                   
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG:" GRP-01-N5(11)
      END-IF.                                                     
 *>                                                                 
      MOVE "P-010-09"        TO CASE-ID.                          
-     IF GRP-01-N5(13) = "‚¨‚©"                                     
+     IF GRP-01-N5(13) = "‚¨‚©"                                   
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG:" GRP-01-N5(13)
      END-IF.                                                     
 *>                                                                 
      MOVE "P-010-10"        TO CASE-ID.                          
-     IF GRP-01-N5(20) = "‚h‚i"                                     
+     IF GRP-01-N5(20) = "‚h‚i"                                   
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG:" GRP-01-N5(20)
      END-IF.                                                     
@@ -148,21 +148,21 @@ P-010.
      MOVE "P-010-11"        TO CASE-ID.                          
      MOVE 2 to WK-I.                                             
      IF GRP-01-N4(WK-I) =                                        
-        "‚ ‚¢‚¤‚¦‚¨‚©‚«‚­‚¯‚±‚`‚a‚b‚c‚d‚e‚f‚g‚h‚i"                                   
+        "‚ ‚¢‚¤‚¦‚¨‚©‚«‚­‚¯‚±‚`‚a‚b‚c‚d‚e‚f‚g‚h‚i"               
                          DISPLAY CASE-ID "OK"                    
         ELSE             DISPLAY CASE-ID "NG:" GRP-01-N4(WK-I)   
      END-IF.                                                     
 *>                                                                 
      MOVE "P-010-12"        TO CASE-ID.                          
      MOVE 0 TO WK-I                                              
-     IF GRP-01-N5(WK-I) = "‚¨‚©"                                   
+     IF GRP-01-N5(WK-I) = "‚¨‚©"                                 
                          DISPLAY CASE-ID "OK"                    
         ELSE             DISPLAY CASE-ID "NG:" GRP-01-N5(WK-I)   
      END-IF.                                                     
 *>                                                                 
      MOVE "P-010-13"        TO CASE-ID.                          
      MOVE -1 TO WK-I                                             
-     IF GRP-01-N5(WK-I) = "‚¨‚©"                                   
+     IF GRP-01-N5(WK-I) = "‚¨‚©"                                 
                          DISPLAY CASE-ID "OK"                    
         ELSE             DISPLAY CASE-ID "NG:" GRP-01-N5(WK-I)   
      END-IF.                                                     

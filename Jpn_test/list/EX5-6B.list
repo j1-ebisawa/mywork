@@ -1,15 +1,15 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
-*>source file name:  C:\ISTEST\Git\Jpn_test\source\EX5-6B.cbl
-*>date generated  :  Sun Jun 20 14:59:33 JST 2021
-*>compiler options:  -dx -eo=C:/ISTEST/Git/Jpn_test/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks -od=C:/ISTEST/Git/Jpn_test/output -jj
+*>source file name:  C:\isTEST\Git\Jpn_test\source\EX5-6B.cbl
+*>date generated  :  Wed Jun 23 15:58:26 JST 2021
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/isTEST/Git/Jpn_test/output -jj -eo=C:/isTEST/Git/Jpn_test/errs -d -g -lo=C:/isTEST/Git/Jpn_test/list -tasks
 *>*****************************************************************
-*>    テストケース：5-6B                                                  
-*>    プログラム名：日本語化テスト （手続き部）STRING命令                                
-*>    処理概要　　：STRING命令の構文チェックでエラーとなるかを                              
-*>    　　　　　　　チェックする。ワーニングエラーとした。                                   
+*>    テストケース：5-6B                                           
+*>    プログラム名：日本語化テスト （手続き部）STRING命令          
+*>    処理概要　　：STRING命令の構文チェックでエラーとなるかを     
+*>    　　　　　　　チェックする。ワーニングエラーとした。         
 *>  -------------------------------------------------------------- 
-*>   テストケース:２６  このプログラムは実行できない。                                    
+*>   テストケース:２６  このプログラムは実行できない。             
 *>*****************************************************************
 IDENTIFICATION        DIVISION.                                  
 *>*****************************************************************
@@ -50,35 +50,35 @@ PROCEDURE             DIVISION.
 *>*****************************************************************
 MAIN                  SECTION.                                   
 P-010.                                                           
-*>ケース26.エラーチェック                                                    
+*>ケース26.エラーチェック                                          
     MOVE "ABCDE" TO X-01.                                        
     MOVE 12345 TO N-01.                                          
-    MOVE ALL "＊"   TO W-INTO-2.                                  
-    MOVE "あいうえお" TO G-01.                                        
+    MOVE ALL "＊"   TO W-INTO-2.                                 
+    MOVE "あいうえお" TO G-01.                                   
                                                                  
-*> コンパイルエラー                                                        
+*> コンパイルエラー                                                
     STRING G-01 DELIMITED BY "A"                                 
                 INTO W-INTO                                      
                 WITH POINTER W-PTR                               
            ON OVERFLOW MOVE 1 TO OVER-SW                         
     END-STRING.                                                  
                                                                  
-*> コンパイルエラー                                                        
+*> コンパイルエラー                                                
     STRING G-01 DELIMITED BY X-01                                
                 INTO W-INTO                                      
                 WITH POINTER W-PTR                               
            ON OVERFLOW MOVE 1 TO OVER-SW                         
     END-STRING.                                                  
                                                                  
-*> コンパイルエラー                                                        
+*> コンパイルエラー                                                
     STRING G-01 DELIMITED BY N-01                                
                 INTO W-INTO                                      
                 WITH POINTER W-PTR                               
            ON OVERFLOW MOVE 1 TO OVER-SW                         
     END-STRING.                                                  
                                                                  
-*> コンパイルエラー                                                        
-    STRING G-01 DELIMITED BY "あ"                                 
+*> コンパイルエラー                                                
+    STRING G-01 DELIMITED BY "あ"                                
                 INTO W-INTO-X                                    
                 WITH POINTER W-PTR                               
            ON OVERFLOW MOVE 1 TO OVER-SW                         

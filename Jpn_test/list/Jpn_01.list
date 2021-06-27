@@ -1,15 +1,15 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
-*>source file name:  C:\ISTEST\Git\Jpn_test\source\Jpn_01.cbl
-*>date generated  :  Sun Jun 20 14:59:33 JST 2021
-*>compiler options:  -dx -eo=C:/ISTEST/Git/Jpn_test/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks -od=C:/ISTEST/Git/Jpn_test/output -jj
+*>source file name:  C:\isTEST\Git\Jpn_test\source\Jpn_01.cbl
+*>date generated  :  Wed Jun 23 15:58:27 JST 2021
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/isTEST/Git/Jpn_test/output -jj -eo=C:/isTEST/Git/Jpn_test/errs -d -g -lo=C:/isTEST/Git/Jpn_test/list -tasks
 IDENTIFICATION             DIVISION.                             
 PROGRAM-ID. Jpn_01.                               
 DATA DIVISION.                                                   
 WORKING-STORAGE SECTION.                                         
-01  N-01    PIC N(10) VALUE ALL "‚ ".                             
-01  N-02    PIC N(4)  VALUE "‚¢".                                 
-01  NE-01   PIC NN/NN/NN VALUE "‚`‚`^‚a‚a^‚b‚b".                       
+01  N-01    PIC N(10) VALUE ALL "‚ ".                            
+01  N-02    PIC N(4)  VALUE "‚¢".                                
+01  NE-01   PIC NN/NN/NN VALUE "‚`‚`^‚a‚a^‚b‚b".               
 01  LENG    PIC 9(3).                                            
 01  omit-wk pic x.                                               
 PROCEDURE                  DIVISION.                             
@@ -29,15 +29,15 @@ PROCEDURE                  DIVISION.
     MOVE FUNCTION LENGTH(NE-01) TO LENG.                         
     DISPLAY LENG ":" NE-01.                                      
  P-02.                                                           
-    MOVE ALL "‚w" TO N-01.                                        
+    MOVE ALL "‚w" TO N-01.                                       
     MOVE FUNCTION LENGTH(N-01) TO LENG.                          
     DISPLAY LENG ":" N-01.                                       
 *>                                                                 
-    MOVE "‚¤‚¦"   TO N-02.                                         
+    MOVE "‚¤‚¦"   TO N-02.                                       
     MOVE FUNCTION LENGTH(N-02) TO LENG.                          
     DISPLAY LENG ":" N-02.                                       
 *>                                                                 
-    MOVE "‚P‚Q‚R‚S‚T‚U" TO NE-01.                                      
+    MOVE "‚P‚Q‚R‚S‚T‚U" TO NE-01.                                
     MOVE FUNCTION LENGTH(NE-01) TO LENG.                         
     DISPLAY LENG ":" NE-01.                                      
 *>                                                                 

@@ -6,3 +6,4 @@
 20210621 #006 EX3-4    move AN(1B)->N(2B) convert  when PIC N
 20210621 #007 EX4-1A   JUST dosen't work
 20210624 2 Facter Auth 
+20210627 test

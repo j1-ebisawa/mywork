@@ -1,14 +1,14 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
-*>source file name:  C:\ISTEST\Git\Jpn_test\source\EX5-2.cbl
-*>date generated  :  Sun Jun 20 14:59:32 JST 2021
-*>compiler options:  -dx -eo=C:/ISTEST/Git/Jpn_test/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks -od=C:/ISTEST/Git/Jpn_test/output -jj
+*>source file name:  C:\isTEST\Git\Jpn_test\source\EX5-2.cbl
+*>date generated  :  Wed Jun 23 15:58:25 JST 2021
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/isTEST/Git/Jpn_test/output -jj -eo=C:/isTEST/Git/Jpn_test/errs -d -g -lo=C:/isTEST/Git/Jpn_test/list -tasks
 *>*****************************************************************
-*>    テストケース：5-2                                                   
-*>    プログラム名：日本語化テスト （手続き部）ACCEPT命令                                
-*>    処理概要　　：ACCEPT命令が正しく実行されるかをチェックする。                            
+*>    テストケース：5-2                                            
+*>    プログラム名：日本語化テスト （手続き部）ACCEPT命令          
+*>    処理概要　　：ACCEPT命令が正しく実行されるかをチェックする。 
 *>  -------------------------------------------------------------- 
-*>   テストケース:１～７                                                    
+*>   テストケース:１～７                                           
 *>*****************************************************************
 IDENTIFICATION        DIVISION.                                  
 *>*****************************************************************
@@ -48,7 +48,7 @@ PROCEDURE             DIVISION.
 MAIN                  SECTION.                                   
 P-010.                                                           
      DISPLAY "TEST START (EX5-2)".                               
-*>ケース1.日本語を指定した場合、1バイト文字が入力できるか                                    
+*>ケース1.日本語を指定した場合、1バイト文字が入力できるか          
      MOVE "P-010-01"        TO CASE-ID.                          
      MOVE SPACE       TO A-01-1.                                 
      DISPLAY "INPUT:'ABCDEFGHIJ'".                               
@@ -56,67 +56,67 @@ P-010.
      IF A-01 = "ABCDEFGHIJ"   DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG" "A-01=" A-01  
      END-IF.                                                     
-*>ケース2：日本語を指定した場合、2バイト文字が入力できるか                                    
+*>ケース2：日本語を指定した場合、2バイト文字が入力できるか         
      MOVE "P-020-01"        TO CASE-ID.                          
      MOVE SPACE       TO A-02.                                   
-     DISPLAY "INPUT:'あいうえお'".                                    
+     DISPLAY "INPUT:'あいうえお'".                               
      ACCEPT A-02.                                                
-     IF A-02 = "あいうえお"   DISPLAY CASE-ID "OK"                    
+     IF A-02 = "あいうえお"   DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG" "A-02=" A-02  
      END-IF.                                                     
-*>ケース3：日本語を指定した場合、2バイト+1バイト文字混在が入力できるか                             
+*>ケース3：日本語を指定した場合、2バイト+1バイト文字混在が入力でき?
      MOVE "P-030-01"        TO CASE-ID.                          
      MOVE SPACE       TO A-03.                                   
-     DISPLAY "INPUT:'あい1234お'".                                  
+     DISPLAY "INPUT:'あい1234お'".                               
      ACCEPT A-03.                                                
-     IF A-03 = "あい1234お"   DISPLAY CASE-ID "OK"                  
+     IF A-03 = "あい1234お"   DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG" "A-03=" A-03  
      END-IF.                                                     
-*>ケース4：受け取り側項目より、長いデータを入力したとき、切り捨てられるか。                            
+*>ケース4：受け取り側項目より、長いデータを入力したとき、切り捨てら
      MOVE "P-040-01"        TO CASE-ID.                          
      MOVE SPACE       TO A-04.                                   
-     DISPLAY "INPUT:'あいうえおかき'".                                  
+     DISPLAY "INPUT:'あいうえおかき'".                           
      ACCEPT A-04.                                                
-     IF A-04 = "あいうえお"   DISPLAY CASE-ID "OK"                    
+     IF A-04 = "あいうえお"   DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG" "A-04=" A-04  
      END-IF.                                                     
-*>ケース5：受け取り側項目より、短い2バイト文字データを入力したとき、                               
-*>         サイズ分だけ送られて、以降は2バイト空白が埋められるか。  20110921修正                
+*>ケース5：受け取り側項目より、短い2バイト文字データを入力したとき?
+*>         サイズ分だけ送られて、以降は2バイト空白が埋められるか。 
      MOVE "P-050-01"        TO CASE-ID.                          
-     MOVE ALL "＊"       TO A-05.                                 
-     DISPLAY "INPUT:'あい'".                                       
+     MOVE ALL "＊"       TO A-05.                                
+     DISPLAY "INPUT:'あい'".                                     
      ACCEPT A-05.                                                
-     IF A-05 = "あい　　　"                                      *>201
+     IF A-05 = "あい　　　"                                      
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG" "A-05=" A-05  
      END-IF.                                                     
-*>ケース6：受け取り側項目より、短い1バイト文字データを入力したとき、                               
-*>         サイズ分だけ送られて、以降は2バイト空白が埋められるか。  20110921修正                
+*>ケース6：受け取り側項目より、短い1バイト文字データを入力したとき?
+*>         サイズ分だけ送られて、以降は2バイト空白が埋められるか。 
      MOVE "P-060-01"        TO CASE-ID.                          
-     MOVE ALL "＊"      TO A-06-1.                                
+     MOVE ALL "＊"      TO A-06-1.                               
      DISPLAY "INPUT:'ABCD'".                                     
      ACCEPT A-06-1.                                              
-     IF A-06 = "ABCD　　　"                                      *>2
+     IF A-06 = "ABCD　　　"                                      
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG" "A-06=" A-06  
      END-IF.                                                     
-*>ケース7：日本語編集項目が受け取り側のとき、編集はされないか。                                  
-*>         サイズ分だけ送られて、以降は2バイト空白が埋められるか。  20110921修正                
+*>ケース7：日本語編集項目が受け取り側のとき、編集はされないか。    
+*>         サイズ分だけ送られて、以降は2バイト空白が埋められるか。 
      MOVE "P-070-01"        TO CASE-ID.                          
-     MOVE ALL "＊"       TO A-07-1.                               
-     DISPLAY "INPUT:'あいう'".                                      
+     MOVE ALL "＊"       TO A-07-1.                              
+     DISPLAY "INPUT:'あいう'".                                   
      ACCEPT A-07-1.                                              
-     IF A-07 = "あいう　　"                                      *>201
+     IF A-07 = "あいう　　"                                      
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG" "A-07=" A-07  
      END-IF.                                                     
-*>ケース8：日本語項目以外が受け取り側のとき、短いデータを入力すると  20110921追加                    
-*>         サイズ分だけ送られて、以降は1バイト空白が埋められるか。   20110921追加               
+*>ケース8：日本語項目以外が受け取り側のとき、短いデータを入力すると
+*>         サイズ分だけ送られて、以降は1バイト空白が埋められるか。 
      MOVE "P-080-01"        TO CASE-ID.                          
      MOVE ALL "*"       TO A-06.                                 
-     DISPLAY "INPUT:'あいう12'". *>2
+     DISPLAY "INPUT:'あいう12'".                                 
      ACCEPT A-06.                                                
-     IF A-06 = "あいう12  "                                      *>2
+     IF A-06 = "あいう12  "                                      
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG" "A-06=" A-06  
      END-IF.                                                     

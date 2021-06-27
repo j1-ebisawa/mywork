@@ -1,14 +1,14 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
-*>source file name:  C:\ISTEST\Git\Jpn_test\source\EX5-4C.cbl
-*>date generated  :  Sun Jun 20 14:59:32 JST 2021
-*>compiler options:  -dx -eo=C:/ISTEST/Git/Jpn_test/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks -od=C:/ISTEST/Git/Jpn_test/output -jj
+*>source file name:  C:\isTEST\Git\Jpn_test\source\EX5-4C.cbl
+*>date generated  :  Wed Jun 23 15:58:26 JST 2021
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/isTEST/Git/Jpn_test/output -jj -eo=C:/isTEST/Git/Jpn_test/errs -d -g -lo=C:/isTEST/Git/Jpn_test/list -tasks
 *>*****************************************************************
-*>    ÉeÉXÉgÉPÅ[ÉXÅF5-4C                                                  
-*>    ÉvÉçÉOÉâÉÄñºÅFì˙ñ{åÍâªÉeÉXÉg ÅiéËë±Ç´ïîÅjINSPECTñΩóﬂ                               
-*>    èàóùäTóv    ÅFINSPECTñΩóﬂÇ™ê≥ÇµÇ≠é¿çsÇ≥ÇÍÇÈÇ©ÇÉ`ÉFÉbÉNÇ∑ÇÈÅB                         
+*>    ÉeÉXÉgÉPÅ[ÉXÅF5-4C                                           
+*>    ÉvÉçÉOÉâÉÄñºÅFì˙ñ{åÍâªÉeÉXÉg ÅiéËë±Ç´ïîÅjINSPECTñΩóﬂ         
+*>    èàóùäTóv    ÅFINSPECTñΩóﬂÇ™ê≥ÇµÇ≠é¿çsÇ≥ÇÍÇÈÇ©ÇÉ`ÉFÉbÉNÇ∑ÇÈÅB
 *>  -------------------------------------------------------------- 
-*>   ÉeÉXÉgÉPÅ[ÉX:ÇSÇWÅ`ÇUÇP                                                  
+*>   ÉeÉXÉgÉPÅ[ÉX:ÇSÇWÅ`ÇUÇP                                       
 *>*****************************************************************
 IDENTIFICATION        DIVISION.                                  
 *>*****************************************************************
@@ -52,205 +52,205 @@ PROCEDURE             DIVISION.
 *>*****************************************************************
 MAIN                  SECTION.                                   
 P-010.                                                           
-*>ÉPÅ[ÉX48.àÍà”ñºÇPÅAíËêî5ÅAíËêî6ÅiCONVERTING,ALLéwíËÅj                             
+*>ÉPÅ[ÉX48.àÍà”ñºÇPÅAíËêî5ÅAíËêî6ÅiCONVERTING,ALLéwíËÅj            
      MOVE "P-480-01"        TO CASE-ID.                          
-     MOVE "Ç†Ç¢ÅñÅñÇ®Ç©Ç´ÅñÅñÅñ" TO G-01.                                  
-     MOVE "Ç†Ç´ÅñÅñÇ´ÅñÅñÅñ" TO GE-01.                                   
-     INSPECT G-01 CONVERTING "Åñ" TO "Åó".                         
-     IF G-01 = "Ç†Ç¢ÅóÅóÇ®Ç©Ç´ÅóÅóÅó"                                      
+     MOVE "Ç†Ç¢ÅñÅñÇ®Ç©Ç´ÅñÅñÅñ" TO G-01.                        
+     MOVE "Ç†Ç´ÅñÅñÇ´ÅñÅñÅñ" TO GE-01.                           
+     INSPECT G-01 CONVERTING "Åñ" TO "Åó".                       
+     IF G-01 = "Ç†Ç¢ÅóÅóÇ®Ç©Ç´ÅóÅóÅó"                            
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" G-01                            
      END-IF.                                                     
 *>                                                                 
      MOVE "P-480-02"        TO CASE-ID.                          
-     INSPECT GE-01 CONVERTING "Åñ" TO "Åó".                        
-     IF GE-01 = "Ç†Ç´Å^ÅóÅóÇ´ÅóÅ^ÅóÅó"                                     
+     INSPECT GE-01 CONVERTING "Åñ" TO "Åó".                      
+     IF GE-01 = "Ç†Ç´Å^ÅóÅóÇ´ÅóÅ^ÅóÅó"                           
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" GE-01                           
      END-IF.                                                     
-*>ÉPÅ[ÉX49ÅFàÍà”ñºÇPÅAíËêî5ÅAíËêî6ÅAíËêî7ÅiCONVERTING,BEFOREéwíËÅj                      
+*>ÉPÅ[ÉX49ÅFàÍà”ñºÇPÅAíËêî5ÅAíËêî6ÅAíËêî7ÅiCONVERTING,BEFOREéwíËÅj 
      MOVE "P-490-01"        TO CASE-ID.                          
-     MOVE "Ç†Ç¢ÅñÅñÇ®Ç©Ç´ÅñÅñÅñ" TO G-01.                                  
-     MOVE "Ç†Ç´ÅñÅñÇ©ÅñÅñÅñ" TO GE-01.                                   
-     INSPECT G-01 CONVERTING "Åñ" TO "Åó" BEFORE "Ç©".              
-     IF G-01 = "Ç†Ç¢ÅóÅóÇ®Ç©Ç´ÅñÅñÅñ"                                      
+     MOVE "Ç†Ç¢ÅñÅñÇ®Ç©Ç´ÅñÅñÅñ" TO G-01.                        
+     MOVE "Ç†Ç´ÅñÅñÇ©ÅñÅñÅñ" TO GE-01.                           
+     INSPECT G-01 CONVERTING "Åñ" TO "Åó" BEFORE "Ç©".           
+     IF G-01 = "Ç†Ç¢ÅóÅóÇ®Ç©Ç´ÅñÅñÅñ"                            
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" G-01                            
      END-IF.                                                     
 *>                                                                 
      MOVE "P-490-02"        TO CASE-ID.                          
-     INSPECT GE-01 CONVERTING "Åñ" TO "Åó" BEFORE "Ç©".             
-     IF GE-01 = "Ç†Ç´Å^ÅóÅóÇ©ÅñÅ^ÅñÅñ"                                     
+     INSPECT GE-01 CONVERTING "Åñ" TO "Åó" BEFORE "Ç©".          
+     IF GE-01 = "Ç†Ç´Å^ÅóÅóÇ©ÅñÅ^ÅñÅñ"                           
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" GE-01                           
      END-IF.                                                     
-*>ÉPÅ[ÉX50ÅFàÍà”ñºÇPÅAíËêî5ÅAíËêî6ÅAíËêîÇVÅiCONVERTING,AFTERéwíËÅj                       
+*>ÉPÅ[ÉX50ÅFàÍà”ñºÇPÅAíËêî5ÅAíËêî6ÅAíËêîÇVÅiCONVERTING,AFTERéwíËÅj 
      MOVE "P-500-01"        TO CASE-ID.                          
-     MOVE "Ç†Ç¢ÅñÅñÇ®Ç©Ç´ÅñÅñÅñ" TO G-01.                                  
-     MOVE "Ç†Ç´ÅñÅñÇ©ÅñÅñÅñ" TO GE-01.                                   
-     INSPECT G-01 CONVERTING "Åñ" TO "Åó" AFTER "Ç©".               
-     IF G-01 = "Ç†Ç¢ÅñÅñÇ®Ç©Ç´ÅóÅóÅó"                                      
+     MOVE "Ç†Ç¢ÅñÅñÇ®Ç©Ç´ÅñÅñÅñ" TO G-01.                        
+     MOVE "Ç†Ç´ÅñÅñÇ©ÅñÅñÅñ" TO GE-01.                           
+     INSPECT G-01 CONVERTING "Åñ" TO "Åó" AFTER "Ç©".            
+     IF G-01 = "Ç†Ç¢ÅñÅñÇ®Ç©Ç´ÅóÅóÅó"                            
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" G-01                            
      END-IF.                                                     
 *>                                                                 
      MOVE "P-500-02"        TO CASE-ID.                          
-     INSPECT GE-01 CONVERTING "Åñ" TO "Åó"  AFTER "Ç©".             
-     IF GE-01 = "Ç†Ç´Å^ÅñÅñÇ©ÅóÅ^ÅóÅó"                                     
+     INSPECT GE-01 CONVERTING "Åñ" TO "Åó"  AFTER "Ç©".          
+     IF GE-01 = "Ç†Ç´Å^ÅñÅñÇ©ÅóÅ^ÅóÅó"                           
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" GE-01                           
      END-IF.                                                     
-*>ÉPÅ[ÉX51ÅFàÍà”ñºÇPÅAàÍà”ñº6ÅAàÍà”ñºÇVÅiCONVERTINGÅj                                 
+*>ÉPÅ[ÉX51ÅFàÍà”ñºÇPÅAàÍà”ñº6ÅAàÍà”ñºÇVÅiCONVERTINGÅj              
      MOVE "P-510-01"        TO CASE-ID.                          
-     MOVE "Ç†Ç¢ÅñÅñÇ®Ç©Ç´ÅñÅñÅñ" TO G-01.                                  
-     MOVE "Ç†Ç´ÅñÅñÇ´ÅñÅñÅñ" TO GE-01.                                   
-     MOVE "Åñ" TO G-06-1.                                         
-     MOVE "Åó" TO G-07-1.                                         
+     MOVE "Ç†Ç¢ÅñÅñÇ®Ç©Ç´ÅñÅñÅñ" TO G-01.                        
+     MOVE "Ç†Ç´ÅñÅñÇ´ÅñÅñÅñ" TO GE-01.                           
+     MOVE "Åñ" TO G-06-1.                                        
+     MOVE "Åó" TO G-07-1.                                        
                                                                  
      INSPECT G-01 CONVERTING G-06-1 TO G-07-1.                   
-     IF G-01 = "Ç†Ç¢ÅóÅóÇ®Ç©Ç´ÅóÅóÅó"                                      
+     IF G-01 = "Ç†Ç¢ÅóÅóÇ®Ç©Ç´ÅóÅóÅó"                            
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" G-01                            
      END-IF.                                                     
                                                                  
      MOVE "P-510-02"        TO CASE-ID.                          
      INSPECT GE-01 CONVERTING G-06-1 TO G-07-1.                  
-     IF GE-01 = "Ç†Ç´Å^ÅóÅóÇ´ÅóÅ^ÅóÅó"                                     
+     IF GE-01 = "Ç†Ç´Å^ÅóÅóÇ´ÅóÅ^ÅóÅó"                           
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" GE-01                           
      END-IF.                                                     
-*>ÉPÅ[ÉX52ÅFàÍà”ñºÇPÅAàÍà”ñº6ÅAàÍà”ñº7ÅAàÍà”ñº8ÅiCONVERTING,BEFOREéwíËÅj                   
+*>ÉPÅ[ÉX52ÅFàÍà”ñºÇPÅAàÍà”ñº6ÅAàÍà”ñº7ÅAàÍà”ñº8ÅiCONVERTING,BEFORE?
      MOVE "P-520-01"        TO CASE-ID.                          
-     MOVE "Ç†Ç¢ÅñÅñÇ®Ç©Ç´ÅñÅñÅñ" TO G-01.                                  
-     MOVE "Ç†Ç´ÅñÅñÇ©ÅñÅñÅñ" TO GE-01.                                   
-     MOVE "Åñ" TO G-06-1.                                         
-     MOVE "Åó" TO G-07-1                                          
-     MOVE "Ç©" TO G-08-1.                                         
+     MOVE "Ç†Ç¢ÅñÅñÇ®Ç©Ç´ÅñÅñÅñ" TO G-01.                        
+     MOVE "Ç†Ç´ÅñÅñÇ©ÅñÅñÅñ" TO GE-01.                           
+     MOVE "Åñ" TO G-06-1.                                        
+     MOVE "Åó" TO G-07-1                                         
+     MOVE "Ç©" TO G-08-1.                                        
                                                                  
      INSPECT G-01 CONVERTING G-06-1 TO G-07-1 BEFORE G-08-1.     
-     IF G-01 = "Ç†Ç¢ÅóÅóÇ®Ç©Ç´ÅñÅñÅñ"                                      
+     IF G-01 = "Ç†Ç¢ÅóÅóÇ®Ç©Ç´ÅñÅñÅñ"                            
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" G-01                            
      END-IF.                                                     
 *>                                                                 
      MOVE "P-520-02"        TO CASE-ID.                          
      INSPECT GE-01 CONVERTING G-06-1 TO G-07-1 BEFORE G-08-1.    
-     IF GE-01 = "Ç†Ç´Å^ÅóÅóÇ©ÅñÅ^ÅñÅñ"                                     
+     IF GE-01 = "Ç†Ç´Å^ÅóÅóÇ©ÅñÅ^ÅñÅñ"                           
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" GE-01                           
      END-IF.                                                     
-*>ÉPÅ[ÉX53ÅFàÍà”ñºÇPÅAàÍà”ñº6ÅAàÍà”ñº7ÅAàÍà”ñº8ÅiCONVERTING,AFTERéwíËÅj                    
+*>ÉPÅ[ÉX53ÅFàÍà”ñºÇPÅAàÍà”ñº6ÅAàÍà”ñº7ÅAàÍà”ñº8ÅiCONVERTING,AFTERéw
      MOVE "P-530-01"        TO CASE-ID.                          
-     MOVE "Ç†Ç¢ÅñÅñÇ®Ç©Ç´ÅñÅñÅñ" TO G-01.                                  
-     MOVE "Ç†Ç´ÅñÅñÇ©ÅñÅñÅñ" TO GE-01.                                   
-     MOVE "Åñ" TO G-06-1.                                         
-     MOVE "Åó" TO G-07-1                                          
-     MOVE "Ç©" TO G-08-1.                                         
+     MOVE "Ç†Ç¢ÅñÅñÇ®Ç©Ç´ÅñÅñÅñ" TO G-01.                        
+     MOVE "Ç†Ç´ÅñÅñÇ©ÅñÅñÅñ" TO GE-01.                           
+     MOVE "Åñ" TO G-06-1.                                        
+     MOVE "Åó" TO G-07-1                                         
+     MOVE "Ç©" TO G-08-1.                                        
                                                                  
      INSPECT G-01 CONVERTING G-06-1 TO G-07-1 AFTER G-08-1.      
-     IF G-01 = "Ç†Ç¢ÅñÅñÇ®Ç©Ç´ÅóÅóÅó"                                      
+     IF G-01 = "Ç†Ç¢ÅñÅñÇ®Ç©Ç´ÅóÅóÅó"                            
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" G-01                            
      END-IF.                                                     
 *>                                                                 
      MOVE "P-530-02"        TO CASE-ID.                          
      INSPECT GE-01 CONVERTING G-06-1 TO G-07-1 AFTER G-08-1.     
-     IF GE-01 = "Ç†Ç´Å^ÅñÅñÇ©ÅóÅ^ÅóÅó"                                     
+     IF GE-01 = "Ç†Ç´Å^ÅñÅñÇ©ÅóÅ^ÅóÅó"                           
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" GE-01                           
      END-IF.                                                     
-*>ÉPÅ[ÉX54ÅFàÍà”ñºÇPÅAíËêî3ÅAíËêî4ÅAíËêî7ÅiCONVERTING,2ï∂éöéwíË,BEFOREéwíËÅj                
+*>ÉPÅ[ÉX54ÅFàÍà”ñºÇPÅAíËêî3ÅAíËêî4ÅAíËêî7ÅiCONVERTING,2ï∂éöéwíË,BEF
      MOVE "P-540-01"        TO CASE-ID.                          
-     MOVE "Ç†Ç¢ÅñÅñÇ®Ç©Ç´ÅñÅñÅñ" TO G-01.                                  
-     MOVE "ÅñÅñÅñÇ¢ÅñÅñÇ´Åñ" TO GE-01.                                   
+     MOVE "Ç†Ç¢ÅñÅñÇ®Ç©Ç´ÅñÅñÅñ" TO G-01.                        
+     MOVE "ÅñÅñÅñÇ¢ÅñÅñÇ´Åñ" TO GE-01.                           
                                                                  
-     INSPECT G-01 CONVERTING "ÅñÇ®" TO "ÅóÅó" BEFORE "Ç´Åñ".           
-     IF G-01 = "Ç†Ç¢ÅóÅóÅóÇ©Ç´ÅñÅñÅñ"                              *>201111
+     INSPECT G-01 CONVERTING "ÅñÇ®" TO "ÅóÅó" BEFORE "Ç´Åñ".     
+     IF G-01 = "Ç†Ç¢ÅóÅóÅóÇ©Ç´ÅñÅñÅñ"                            
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" G-01                            
      END-IF.                                                     
 *>                                                                 
      MOVE "P-540-02"        TO CASE-ID.                          
-     INSPECT GE-01 CONVERTING  "Ç¢Åñ" TO "ÅóÅó" BEFORE "Ç´Åñ".         
-     IF GE-01 = "ÅóÅóÅ^ÅóÅóÅóÅóÅ^Ç´Åñ"                             *>201111
+     INSPECT GE-01 CONVERTING  "Ç¢Åñ" TO "ÅóÅó" BEFORE "Ç´Åñ".   
+     IF GE-01 = "ÅóÅóÅ^ÅóÅóÅóÅóÅ^Ç´Åñ"                           
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" GE-01                           
      END-IF.                                                     
-*>ÉPÅ[ÉX55ÅFàÍà”ñºÇPÅAàÍà”ñº4ÅAàÍà”ñº5ÅAàÍà”ñº8ÅiCONVERTING,2ï∂éöéwíË,AFTERéwíËÅj              
+*>ÉPÅ[ÉX55ÅFàÍà”ñºÇPÅAàÍà”ñº4ÅAàÍà”ñº5ÅAàÍà”ñº8ÅiCONVERTING,2ï∂éöéw
      MOVE "P-550-01"        TO CASE-ID.                          
-     MOVE "Ç†Ç¢ÅñÅñÇ®Ç©Ç´ÅñÅñÅñ" TO G-01.                                  
-     MOVE "Ç†Ç´ÅñÅñÇ´ÅñÅñÅñ" TO GE-01.                                   
-     MOVE "ÅñÅñ" TO G-04-2.                                        
-     MOVE "ÅóÅó" TO G-05-2                                         
-     MOVE "Ç´Åñ" TO G-08-2.                                        
+     MOVE "Ç†Ç¢ÅñÅñÇ®Ç©Ç´ÅñÅñÅñ" TO G-01.                        
+     MOVE "Ç†Ç´ÅñÅñÇ´ÅñÅñÅñ" TO GE-01.                           
+     MOVE "ÅñÅñ" TO G-04-2.                                      
+     MOVE "ÅóÅó" TO G-05-2                                       
+     MOVE "Ç´Åñ" TO G-08-2.                                      
                                                                  
      INSPECT G-01 CONVERTING G-04-2 TO G-05-2 AFTER G-08-2.      
-     IF G-01 = "Ç†Ç¢ÅñÅñÇ®Ç©Ç´ÅñÅóÅó"                                      
+     IF G-01 = "Ç†Ç¢ÅñÅñÇ®Ç©Ç´ÅñÅóÅó"                            
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" G-01                            
      END-IF.                                                     
 *>                                                                 
      MOVE "P-540-02"        TO CASE-ID.                          
      INSPECT GE-01 CONVERTING G-04-2 TO G-05-2 AFTER G-08-2.     
-     IF GE-01 = "Ç†Ç´Å^ÅñÅñÇ´ÅñÅ^ÅóÅó"                                     
+     IF GE-01 = "Ç†Ç´Å^ÅñÅñÇ´ÅñÅ^ÅóÅó"                           
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" GE-01                           
      END-IF.                                                     
                                                                  
-*>ÉPÅ[ÉX56ÅFåJÇËï‘Çµç\ï∂1                                                    
+*>ÉPÅ[ÉX56ÅFåJÇËï‘Çµç\ï∂1                                          
      MOVE "P-560-01"        TO CASE-ID.                          
-     MOVE "Ç†Ç¢ÅñÅñÇ®Ç©Ç´ÅñÅñÇ¶" TO G-01.                                  
+     MOVE "Ç†Ç¢ÅñÅñÇ®Ç©Ç´ÅñÅñÇ¶" TO G-01.                        
                                                                  
-     INSPECT G-01 REPLACING ALL "Ç†" BY "Ç©"                       
-                            ALL "Ç¢" BY "Ç´".                      
-     IF G-01 = "Ç©Ç´ÅñÅñÇ®Ç©Ç´ÅñÅñÇ¶"                                      
+     INSPECT G-01 REPLACING ALL "Ç†" BY "Ç©"                     
+                            ALL "Ç¢" BY "Ç´".                    
+     IF G-01 = "Ç©Ç´ÅñÅñÇ®Ç©Ç´ÅñÅñÇ¶"                            
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" G-01                            
      END-IF.                                                     
-*>ÉPÅ[ÉX57ÅFåJÇËï‘Çµç\ï∂2                                                    
+*>ÉPÅ[ÉX57ÅFåJÇËï‘Çµç\ï∂2                                          
      MOVE "P-570-01"        TO CASE-ID.                          
-     MOVE "Ç†ÅñÇ¢ÅñÅñÇ©Ç´ÅñÅñÅñ" TO G-01.                                  
+     MOVE "Ç†ÅñÇ¢ÅñÅñÇ©Ç´ÅñÅñÅñ" TO G-01.                        
                                                                  
-     INSPECT G-01 REPLACING ALL "Åñ" BY "Åó"                       
-                            AFTER "Ç¢" BEFORE "Ç©".                
-     IF G-01 = "Ç†ÅñÇ¢ÅóÅóÇ©Ç´ÅñÅñÅñ"                                      
+     INSPECT G-01 REPLACING ALL "Åñ" BY "Åó"                     
+                            AFTER "Ç¢" BEFORE "Ç©".              
+     IF G-01 = "Ç†ÅñÇ¢ÅóÅóÇ©Ç´ÅñÅñÅñ"                            
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" G-01                            
      END-IF.                                                     
-*>ÉPÅ[ÉX58ÅFåJÇËï‘Çµç\ï∂ÇR                                                    
+*>ÉPÅ[ÉX58ÅFåJÇËï‘Çµç\ï∂ÇR                                         
      MOVE "P-580-01"        TO CASE-ID.                          
-     MOVE "ÅñÇ¢ÅñÇ©Ç´ÅñÅñÇ©Ç´Åñ" TO G-01.                                  
+     MOVE "ÅñÇ¢ÅñÇ©Ç´ÅñÅñÇ©Ç´Åñ" TO G-01.                        
                                                                  
-     INSPECT G-01 TALLYING W-TALLY FOR ALL "Åñ" AFTER "Ç¢"         
-                  REPLACING ALL "Ç©Ç´" BY "Ç≥Çµ" BEFORE "ÅñÅñ".        
-     IF G-01 = "ÅñÇ¢ÅñÇ≥ÇµÅñÅñÇ©Ç´Åñ"                                      
+     INSPECT G-01 TALLYING W-TALLY FOR ALL "Åñ" AFTER "Ç¢"       
+                  REPLACING ALL "Ç©Ç´" BY "Ç≥Çµ" BEFORE "ÅñÅñ".  
+     IF G-01 = "ÅñÇ¢ÅñÇ≥ÇµÅñÅñÇ©Ç´Åñ"                            
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" G-01                            
      END-IF.                                                     
-*>ÉPÅ[ÉX59ÅFÇªÇÃëºÇP                                                       
+*>ÉPÅ[ÉX59ÅFÇªÇÃëºÇP                                               
      MOVE "P-590-01"        TO CASE-ID.                          
-     MOVE "ÅñÅóÅñÅñÅñÅñÅñÅñÅñÅñ" TO G-01.                                  
+     MOVE "ÅñÅóÅñÅñÅñÅñÅñÅñÅñÅñ" TO G-01.                        
                                                                  
-     INSPECT G-01 REPLACING ALL "ÅñÅñÅñ" BY "ÅîÅîÅî"                   
-     IF G-01 = "ÅñÅóÅîÅîÅîÅîÅîÅîÅñÅñ"                                      
+     INSPECT G-01 REPLACING ALL "ÅñÅñÅñ" BY "ÅîÅîÅî"             
+     IF G-01 = "ÅñÅóÅîÅîÅîÅîÅîÅîÅñÅñ"                            
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" G-01                            
      END-IF.                                                     
-*>ÉPÅ[ÉX60ÅFÇªÇÃëºÇQÅiï\à”íËêîÅj                                                 
+*>ÉPÅ[ÉX60ÅFÇªÇÃëºÇQÅiï\à”íËêîÅj                                   
      MOVE "P-600-01"        TO CASE-ID.                          
-     MOVE "ÇPÇQÇRÇSÇTÇUÇVÇWÇXÇO" TO G-01.                                  
+     MOVE "ÇPÇQÇRÇSÇTÇUÇVÇWÇXÇO" TO G-01.                        
                                                                  
-     INSPECT G-01 REPLACING ALL "ÇTÇU" BY SPACE                    
-     IF G-01 = "ÇPÇQÇRÇSÅ@Å@ÇVÇWÇXÇO"                                      
+     INSPECT G-01 REPLACING ALL "ÇTÇU" BY SPACE                  
+     IF G-01 = "ÇPÇQÇRÇSÅ@Å@ÇVÇWÇXÇO"                            
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" G-01                            
      END-IF.                                                     
-*>ÉPÅ[ÉX61ÅFÇªÇÃëºÇRÅiï\à”íËêîÅj                                                 
+*>ÉPÅ[ÉX61ÅFÇªÇÃëºÇRÅiï\à”íËêîÅj                                   
      MOVE "P-610-01"        TO CASE-ID.                          
-     MOVE "ÇPÇQÇRÇSÇTÇUÇVÇWÇXÇO" TO G-01.                                  
+     MOVE "ÇPÇQÇRÇSÇTÇUÇVÇWÇXÇO" TO G-01.                        
                                                                  
-     INSPECT G-01 REPLACING ALL "ÇT" BY QUOTE                     
-     IF G-01 = "ÇPÇQÇRÇSÅhÇUÇVÇWÇXÇO"                                      
+     INSPECT G-01 REPLACING ALL "ÇT" BY QUOTE                    
+     IF G-01 = "ÇPÇQÇRÇSÅhÇUÇVÇWÇXÇO"                            
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" G-01                            
      END-IF.                                                     

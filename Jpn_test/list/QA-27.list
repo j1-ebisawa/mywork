@@ -1,11 +1,11 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
-*>source file name:  C:\ISTEST\Git\Jpn_test\source\QA-27.cbl
-*>date generated  :  Sun Jun 20 14:59:33 JST 2021
-*>compiler options:  -dx -eo=C:/ISTEST/Git/Jpn_test/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks -od=C:/ISTEST/Git/Jpn_test/output -jj
+*>source file name:  C:\isTEST\Git\Jpn_test\source\QA-27.cbl
+*>date generated  :  Wed Jun 23 15:58:27 JST 2021
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/isTEST/Git/Jpn_test/output -jj -eo=C:/isTEST/Git/Jpn_test/errs -d -g -lo=C:/isTEST/Git/Jpn_test/list -tasks
 *>*****************************************************************
-*>    ÉeÉXÉgÉPÅ[ÉXÅFQA-27                                                 
-*>    ÉvÉçÉOÉâÉÄñºÅFì˙ñ{åÍâªÉeÉXÉg QA                                            
+*>    ÉeÉXÉgÉPÅ[ÉXÅFQA-27                                          
+*>    ÉvÉçÉOÉâÉÄñºÅFì˙ñ{åÍâªÉeÉXÉg QA                              
 *>*****************************************************************
 IDENTIFICATION        DIVISION.                                  
 *>*****************************************************************
@@ -46,7 +46,7 @@ PROCEDURE             DIVISION.
 MAIN                  SECTION.                                   
 P-010.                                                           
      DISPLAY "QA-27 test start".                                 
-*>ÉPÅ[ÉX1:                                                            
+*>ÉPÅ[ÉX1:                                                         
      MOVE "PIC X string <= 30"  TO CASE-ID.                      
      MOVE "123451234512345" TO A                                 
      IF A = ALL "1/2/3/4/5 "                                     
@@ -55,16 +55,16 @@ P-010.
         DISPLAY CASE-ID "NG"                                     
         display "A=" A                                           
      END-IF.                                                     
-*>ÉPÅ[ÉX2:                                                            
+*>ÉPÅ[ÉX2:                                                         
      MOVE "PIC N string <= 30"  TO CASE-ID.                      
-     MOVE "ÇPÇQÇRÇSÇTÇPÇQÇRÇSÇTÇPÇQÇRÇSÇT" TO B                                 
-     IF B = ALL "ÇPÅ^ÇQÅ^ÇRÅ^ÇSÅ^ÇTÅ@"                                     
+     MOVE "ÇPÇQÇRÇSÇTÇPÇQÇRÇSÇTÇPÇQÇRÇSÇT" TO B                  
+     IF B = ALL "ÇPÅ^ÇQÅ^ÇRÅ^ÇSÅ^ÇTÅ@"                           
         DISPLAY CASE-ID "OK"                                     
      ELSE                                                        
         DISPLAY CASE-ID "NG"                                     
         display "B=" B                                           
      END-IF.                                                     
-*>ÉPÅ[ÉX3:                                                            
+*>ÉPÅ[ÉX3:                                                         
      MOVE "PIC X string > 30"  TO CASE-ID.                       
      MOVE "1234512345123451234512345" TO C                       
      IF C = ALL "1/2/3/4/5 "                                     
@@ -73,18 +73,18 @@ P-010.
         DISPLAY CASE-ID "NG"                                     
         display "C=" C                                           
      END-IF.                                                     
-*>ÉPÅ[ÉX4:                                                            
+*>ÉPÅ[ÉX4:                                                         
      MOVE "PIC N string > 30"  TO CASE-ID.                       
-     MOVE "ÇPÇQÇRÇSÇTÇPÇQÇRÇSÇTÇPÇQÇRÇSÇTÇPÇQÇRÇSÇTÇPÇQÇRÇSÇT"                            
+     MOVE "ÇPÇQÇRÇSÇTÇPÇQÇRÇSÇTÇPÇQÇRÇSÇTÇPÇQÇRÇSÇTÇPÇQÇRÇSÇT"   
                                TO D                              
-     IF D = ALL "ÇPÅ^ÇQÅ^ÇRÅ^ÇSÅ^ÇTÅ@"                                     
+     IF D = ALL "ÇPÅ^ÇQÅ^ÇRÅ^ÇSÅ^ÇTÅ@"                           
         DISPLAY CASE-ID "OK"                                     
      ELSE                                                        
         DISPLAY CASE-ID "NG"                                     
         display "D=" D                                           
      END-IF.                                                     
 *>                                                                 
-*>ÉPÅ[ÉX5:                                                            
+*>ÉPÅ[ÉX5:                                                         
      MOVE "PIC X string <= 30"  TO CASE-ID.                      
      MOVE ALL "12345" TO A                                       
      IF A = ALL "1/2/3/4/5 "                                     
@@ -93,10 +93,10 @@ P-010.
         DISPLAY CASE-ID "NG"                                     
         display "A=" A                                           
      END-IF.                                                     
-*>ÉPÅ[ÉX6:                                                            
+*>ÉPÅ[ÉX6:                                                         
      MOVE "PIC N string <= 30"  TO CASE-ID.                      
-     MOVE ALL "ÇPÇQÇRÇSÇT" TO B                                       
-     IF B = ALL "ÇPÅ^ÇQÅ^ÇRÅ^ÇSÅ^ÇTÅ@"                                     
+     MOVE ALL "ÇPÇQÇRÇSÇT" TO B                                  
+     IF B = ALL "ÇPÅ^ÇQÅ^ÇRÅ^ÇSÅ^ÇTÅ@"                           
         DISPLAY CASE-ID "OK"                                     
      ELSE                                                        
         DISPLAY CASE-ID "NG"                                     
