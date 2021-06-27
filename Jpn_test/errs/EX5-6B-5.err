@@ -1,4 +1,4 @@
-I --> C:\ISTEST\Git\Jpn_test\source\EX5-6B-5.cbl
+I --> C:\isTEST\GIT\Jpn_test\source\EX5-6B-5.cbl
 --S: #46 Integer variable expected: W-PTR; file = EX5-6B-5.cbl, line = 49, col 29
 --S: #45 Unmatched <END-STRING>; file = EX5-6B-5.cbl, line = 51, col 4
 --S: #35 Undefined data item N-04; file = EX5-6B-5.cbl, line = 52, col 12

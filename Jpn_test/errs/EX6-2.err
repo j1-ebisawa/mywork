@@ -1,4 +1,4 @@
-I --> C:\ISTEST\Git\Jpn_test\source\EX6-2.cbl
+I --> C:\isTEST\GIT\Jpn_test\source\EX6-2.cbl
 --E: #188 Period missing. Period Assumed. '.'; file = EX6-2.cbl, line = 63
 --E: #152 Variable has zero length: GRP-04-2; file = EX6-2.cbl, line = 63, col 8
 --S: #31 Expected/found token mismatch: PROCEDURE/BINARY-SHORT; file = EX6-2.cbl, line = 63, col 24
