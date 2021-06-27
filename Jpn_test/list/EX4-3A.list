@@ -1,7 +1,7 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
 *>source file name:  C:\isTEST\Git\Jpn_test\source\EX4-3A.cbl
-*>date generated  :  Wed Jun 23 15:58:24 JST 2021
+*>date generated  :  Sun Jun 27 11:24:14 JST 2021
 *>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/isTEST/Git/Jpn_test/output -jj -eo=C:/isTEST/Git/Jpn_test/errs -d -g -lo=C:/isTEST/Git/Jpn_test/list -tasks
 *>*****************************************************************
 *>    ƒeƒXƒgƒP[ƒXF4-3A                                           
@@ -87,10 +87,12 @@ P-020.
 *>                                                                 
      MOVE "P-020-01"             TO CASE-ID.                     
      MOVE "‚ ‚¢" TO GE-01                                        
+     move FUNCTION BYTE-LENGTH(GE-01) to wk-len                  
      IF GE-01 = "‚ @‚¢"                                         
         AND FUNCTION BYTE-LENGTH(GE-01) = 6                      
                                  DISPLAY CASE-ID "OK"            
-        ELSE                     DISPLAY CASE-ID "NG"            
+        ELSE                     DISPLAY CASE-ID "NG:" GE-01     
+                                                 "WK-L=" wk-len  
      END-IF.                                                     
 *>                                                                 
      MOVE "P-020-02"             TO CASE-ID.                     
@@ -98,7 +100,7 @@ P-020.
      IF GE-02 = "‚ ^‚¢"                                         
         AND FUNCTION BYTE-LENGTH(GE-02) = 6                      
                                  DISPLAY CASE-ID "OK"            
-        ELSE                     DISPLAY CASE-ID "NG"            
+        ELSE                     DISPLAY CASE-ID "NG:" GE-02     
      END-IF.                                                     
 *>                                                                 
      MOVE "P-020-03"             TO CASE-ID.                     
@@ -106,7 +108,7 @@ P-020.
      IF GE-03 = "‚ ‚O‚¢"                                         
         AND FUNCTION BYTE-LENGTH(GE-03) = 6                      
                                  DISPLAY CASE-ID "OK"            
-        ELSE                     DISPLAY CASE-ID "NG"            
+        ELSE                     DISPLAY CASE-ID "NG:" GE-03     
      END-IF.                                                     
 *>                                                                 
      MOVE "P-020-04"             TO CASE-ID.                     
@@ -114,7 +116,7 @@ P-020.
      IF GE-04 = "‚P^‚Q@‚R‚O‚S"                                 
         AND FUNCTION BYTE-LENGTH(GE-04) = 14                     
                                  DISPLAY CASE-ID "OK"            
-        ELSE                     DISPLAY CASE-ID "NG"            
+        ELSE                     DISPLAY CASE-ID "NG:" GE-04     
      END-IF.                                                     
 *>                                                                 
 *>                                                                 
@@ -124,3 +126,5 @@ P-020.
      GOBACK                                                      
      .                                                           
                                                                  
+*> --S: #35 Undefined data item WK-LEN; file = EX4-3A.cbl, line = 85, col 41
+*> --S: #35 Undefined data item WK-LEN; file = EX4-3A.cbl, line = 90, col 57
