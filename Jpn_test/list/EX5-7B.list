@@ -1,22 +1,16 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
-<<<<<<< HEAD
 *>source file name:  C:\isTEST\Git\Jpn_test\source\EX5-7B.cbl
-*>date generated  :  Sun Jun 20 15:23:48 JST 2021
-*>compiler options:  -dx -eo=C:/isTEST/Git/Jpn_test/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/isTEST/Git/Jpn_test/list -tasks -od=C:/isTEST/Git/Jpn_test/output -jj
-=======
-*>source file name:  C:\ISTEST\Git\Jpn_test\source\EX5-7B.cbl
-*>date generated  :  Sun Jun 20 14:59:33 JST 2021
-*>compiler options:  -dx -eo=C:/ISTEST/Git/Jpn_test/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks -od=C:/ISTEST/Git/Jpn_test/output -jj
->>>>>>> branch 'master' of https://github.com/j1-ebisawa/mywork
+*>date generated  :  Wed Jun 23 15:58:27 JST 2021
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/isTEST/Git/Jpn_test/output -jj -eo=C:/isTEST/Git/Jpn_test/errs -d -g -lo=C:/isTEST/Git/Jpn_test/list -tasks
 *>*****************************************************************
-*>    テストケース：5-7B                                                  
-*>    プログラム名：日本語化テスト （手続き部）UNSTRING命令                              
-*>    処理概要　　：UNSTRING命令が正しく構文エラーチェックされるか                           
-*>    ワーニングエラーとし実行できる                                              
+*>    テストケース：5-7B                                           
+*>    プログラム名：日本語化テスト （手続き部）UNSTRING命令        
+*>    処理概要　　：UNSTRING命令が正しく構文エラーチェックされるか 
+*>    ワーニングエラーとし実行できる                               
 *>  -------------------------------------------------------------- 
-*>   テストケース:２０                                                     
-*>                 エラーチェックのため、実行できない。                              
+*>   テストケース:２０                                             
+*>                 エラーチェックのため、実行できない。            
 *>*****************************************************************
 IDENTIFICATION        DIVISION.                                  
 *>*****************************************************************
@@ -67,9 +61,9 @@ PROCEDURE             DIVISION.
 *>*****************************************************************
 MAIN                  SECTION.                                   
 P-010.                                                           
-*>ケース20.エラーチェック                                                    
-    MOVE "あいうえおかきくけこ" TO G-01.                                   
-    MOVE ALL "＊" TO W-INTO.                                      
+*>ケース20.エラーチェック                                          
+    MOVE "あいうえおかきくけこ" TO G-01.                         
+    MOVE ALL "＊" TO W-INTO.                                     
     MOVE 1 TO W-PTR.                                             
     MOVE 0 TO W-TALLY.                                           
                                                                  
@@ -86,14 +80,14 @@ P-010.
          NOT ON OVERFLOW MOVE 0 TO OVER-SW                       
     END-UNSTRING.                                                
                                                                  
-    UNSTRING G-01 DELIMITED BY "あ"                               
+    UNSTRING G-01 DELIMITED BY "あ"                              
          INTO X-01 DELIMITER IN W-DELIN-1                        
                    COUNT IN W-CNT-1                              
          ON OVERFLOW MOVE 1 TO OVER-SW                           
          NOT ON OVERFLOW MOVE 0 TO OVER-SW                       
     END-UNSTRING.                                                
                                                                  
-    UNSTRING G-01 DELIMITED BY "か"                               
+    UNSTRING G-01 DELIMITED BY "か"                              
          INTO W-INTO-1 DELIMITER IN X-01                         
                        COUNT IN W-CNT-1                          
          ON OVERFLOW MOVE 1 TO OVER-SW                           

@@ -1,20 +1,14 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
-<<<<<<< HEAD
 *>source file name:  C:\isTEST\Git\Jpn_test\source\EX5-1-1F.cbl
-*>date generated  :  Sun Jun 20 15:23:46 JST 2021
-*>compiler options:  -dx -eo=C:/isTEST/Git/Jpn_test/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/isTEST/Git/Jpn_test/list -tasks -od=C:/isTEST/Git/Jpn_test/output -jj
-=======
-*>source file name:  C:\ISTEST\Git\Jpn_test\source\EX5-1-1F.cbl
-*>date generated  :  Sun Jun 20 14:59:31 JST 2021
-*>compiler options:  -dx -eo=C:/ISTEST/Git/Jpn_test/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks -od=C:/ISTEST/Git/Jpn_test/output -jj
->>>>>>> branch 'master' of https://github.com/j1-ebisawa/mywork
+*>date generated  :  Wed Jun 23 15:58:25 JST 2021
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/isTEST/Git/Jpn_test/output -jj -eo=C:/isTEST/Git/Jpn_test/errs -d -g -lo=C:/isTEST/Git/Jpn_test/list -tasks
 *>*****************************************************************
-*>    テストケース：5-1-1F                                                
-*>    プログラム名：日本語化テスト （手続き部）条件 比較条件                                 
-*>    処理概要　　：日本語比較が正しく実行されるかをチェックする。                               
+*>    テストケース：5-1-1F                                         
+*>    プログラム名：日本語化テスト （手続き部）条件 比較条件       
+*>    処理概要　　：日本語比較が正しく実行されるかをチェックする。 
 *>  -------------------------------------------------------------- 
-*>   テストケース:４９～５０                                                  
+*>   テストケース:４９～５０                                       
 *>*****************************************************************
 IDENTIFICATION        DIVISION.                                  
 *>*****************************************************************
@@ -84,8 +78,8 @@ PROCEDURE             DIVISION.
 MAIN                  SECTION.                                   
 P-490.                                                           
      DISPLAY "TEST START (EX5-1-1F)".                            
-*>  ケース49.比較表の日本語関係以外の欄                                            
-*>  数字＋英数字                                                         
+*>  ケース49.比較表の日本語関係以外の欄                            
+*>  数字＋英数字                                                   
      MOVE 12345             TO L-ZONE.                           
      MOVE "12345"           TO R-AN.                             
 *>                                                                 
@@ -93,14 +87,14 @@ P-490.
      IF L-ZONE = R-AN         DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
-*>  英数字＋文字定数                                                       
+*>  英数字＋文字定数                                               
      MOVE "ABCDE"           TO L-AN.                             
 *>                                                                 
      MOVE "P-490-02"        TO CASE-ID.                          
      IF L-AN = "ABCDE"        DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
-*>  数字＋数字定数                                                        
+*>  数字＋数字定数                                                 
      MOVE 123               TO L-ZONE.                           
      MOVE 123.45            TO L-ZONE-DEC.                       
      MOVE 321               TO L-PACK.                           
@@ -139,9 +133,9 @@ P-490.
      END-IF.                                                     
 *>                                                                 
 P-500.                                                           
-*>  ケース50.（左辺）表意定数＋（右辺）日本語編集                                       
-     MOVE "あああああ"         TO L-G.                                
-     MOVE "０００００"         TO R-G.                                
+*>  ケース50.（左辺）表意定数＋（右辺）日本語編集                  
+     MOVE "あああああ"         TO L-G.                           
+     MOVE "０００００"         TO R-G.                           
 *>                                                                 
      MOVE "P-500-01"        TO CASE-ID.                          
      IF L-G = R-G             DISPLAY CASE-ID "NG"               

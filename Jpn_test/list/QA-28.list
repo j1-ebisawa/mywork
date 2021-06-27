@@ -1,17 +1,11 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
-<<<<<<< HEAD
 *>source file name:  C:\isTEST\Git\Jpn_test\source\QA-28.cbl
-*>date generated  :  Sun Jun 20 15:23:49 JST 2021
-*>compiler options:  -dx -eo=C:/isTEST/Git/Jpn_test/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/isTEST/Git/Jpn_test/list -tasks -od=C:/isTEST/Git/Jpn_test/output -jj
-=======
-*>source file name:  C:\ISTEST\Git\Jpn_test\source\QA-28.cbl
-*>date generated  :  Sun Jun 20 14:59:33 JST 2021
-*>compiler options:  -dx -eo=C:/ISTEST/Git/Jpn_test/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks -od=C:/ISTEST/Git/Jpn_test/output -jj
->>>>>>> branch 'master' of https://github.com/j1-ebisawa/mywork
+*>date generated  :  Wed Jun 23 15:58:27 JST 2021
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/isTEST/Git/Jpn_test/output -jj -eo=C:/isTEST/Git/Jpn_test/errs -d -g -lo=C:/isTEST/Git/Jpn_test/list -tasks
 *>*****************************************************************
-*>    ÉeÉXÉgÉPÅ[ÉXÅFQA-27                                                 
-*>    ÉvÉçÉOÉâÉÄñºÅFì˙ñ{åÍâªÉeÉXÉg QA                                            
+*>    ÉeÉXÉgÉPÅ[ÉXÅFQA-27                                          
+*>    ÉvÉçÉOÉâÉÄñºÅFì˙ñ{åÍâªÉeÉXÉg QA                              
 *>*****************************************************************
 IDENTIFICATION        DIVISION.                                  
 *>*****************************************************************
@@ -82,7 +76,7 @@ P-010.
      ACCEPT OMIT-WK.                                             
      GOBACK                                                      
      .                                                           
-*>ÉPÅ[ÉX1:                                                            
+*>ÉPÅ[ÉX1:                                                         
 TEST-01.                                                         
      MOVE "Case1:X-data P>0 and L>0"  TO CASE-ID.                
      display CASE-ID.                                            
@@ -94,7 +88,7 @@ TEST-01.
         DISPLAY CASE-ID "NG"                                     
         display "X-GRP(11:10)" X-GRP(11:10)                      
      END-IF.                                                     
-*>ÉPÅ[ÉX2:                                                            
+*>ÉPÅ[ÉX2:                                                         
 TEST-02.                                                         
      MOVE "Case2:X-data P=0 and L>0"  TO CASE-ID.                
      display CASE-ID.                                            
@@ -107,7 +101,7 @@ TEST-02.
 *>        display "X-02(0:10)" X-02(0:10)                          
         display "X-02(0:10)" X-02(P:L)                           
      END-IF.                                                     
-*>ÉPÅ[ÉX3:                                                            
+*>ÉPÅ[ÉX3:                                                         
 TEST-03.                                                         
      MOVE "Case3:X-data P<0 and L>10"  TO CASE-ID.               
      display CASE-ID.                                            
@@ -120,7 +114,7 @@ TEST-03.
 *>        display "X-02(-4:10)=" X-02(-4:10)                       
         display "X-02(-4:10)=" X-02(P:L)                         
      END-IF.                                                     
-*>ÉPÅ[ÉX4:                                                            
+*>ÉPÅ[ÉX4:                                                         
 TEST-04.                                                         
      MOVE "Case4:X-data P=1 and L=0"  TO CASE-ID.                
      display CASE-ID.                                            
@@ -133,58 +127,58 @@ TEST-04.
 *>        display "X-02(1:0)=" X-02(1:0)                           
         display "X-02(1:0)=" X-02(P:L)                           
      END-IF.                                                     
-*>ÉPÅ[ÉX5:                                                            
+*>ÉPÅ[ÉX5:                                                         
 TEST-05.                                                         
      MOVE "Case5:N-data P>0 and L>0"  TO CASE-ID.                
      display CASE-ID.                                            
      MOVE 11 TO P.                                               
      MOVE 10 TO L.                                               
-     IF N-GRP(P:L) = ALL "Ça"                                     
+     IF N-GRP(P:L) = ALL "Ça"                                    
         DISPLAY CASE-ID "OK"                                     
      ELSE                                                        
         DISPLAY CASE-ID "NG"                                     
         display "N-GRP(11:10)" N-GRP(11:10)                      
      END-IF.                                                     
-*>ÉPÅ[ÉX6:                                                            
+*>ÉPÅ[ÉX6:                                                         
 TEST-06.                                                         
      MOVE "Case6:N-data P=0 and L>0"  TO CASE-ID.                
      display CASE-ID.                                            
      MOVE 0  TO P.                                               
      MOVE 10 TO L.                                               
-     IF N-02(P:L) = "Ç`ÇaÇaÇaÇaÇaÇaÇaÇaÇa"                                 
+     IF N-02(P:L) = "Ç`ÇaÇaÇaÇaÇaÇaÇaÇaÇa"                       
         DISPLAY CASE-ID "OK"                                     
      ELSE                                                        
         DISPLAY CASE-ID "NG"                                     
 *>        display "N-02(0:10)" N-02(0:10)                          
         display "N-02(0:10)" N-02(P:L)                           
      END-IF.                                                     
-*>ÉPÅ[ÉX7:                                                            
+*>ÉPÅ[ÉX7:                                                         
 TEST-07.                                                         
      MOVE "Case7:N-data P<0 and L>10"  TO CASE-ID.               
      display CASE-ID.                                            
      MOVE -4  TO P.                                              
      MOVE 10  TO L.                                              
-     IF N-02(P:L) = "Ç`Ç`Ç`Ç`Ç`ÇaÇaÇaÇaÇa"                                 
+     IF N-02(P:L) = "Ç`Ç`Ç`Ç`Ç`ÇaÇaÇaÇaÇa"                       
         DISPLAY CASE-ID "OK"                                     
      ELSE                                                        
         DISPLAY CASE-ID "NG"                                     
 *>        display "N-02(-4:10)=" N-02(-4:10)                       
         display "N-02(-4:10)=" N-02(P:L)                         
      END-IF.                                                     
-*>ÉPÅ[ÉX8:                                                            
+*>ÉPÅ[ÉX8:                                                         
 TEST-08.                                                         
      MOVE "Case8:N-data P=1 and L=0"  TO CASE-ID.                
      display CASE-ID.                                            
      MOVE  1  TO P.                                              
      MOVE  0  TO L.                                              
-     IF N-02(P:L) = "Å@"                                          
+     IF N-02(P:L) = "Å@"                                         
         DISPLAY CASE-ID "OK"                                     
      ELSE                                                        
         DISPLAY CASE-ID "NG"                                     
 *>        display "N-02(1:0)=" N-02(1:0)                           
         display "N-02(1:0)=" N-02(P:L)                           
      END-IF.                                                     
-*>ÉPÅ[ÉX9:                                                            
+*>ÉPÅ[ÉX9:                                                         
 TEST-09.                                                         
      MOVE "Case9:X-data P=1 and L<0"  TO CASE-ID.                
      display CASE-ID.                                            
@@ -195,7 +189,7 @@ TEST-09.
      ELSE                                                        
         DISPLAY CASE-ID "NG"                                     
         display "X-02(1:-10)=" X-02(P:L)                         
-        display "X-02(1:-10)= X-02(P:L) âÊñ Ç™âÛÇÍÇÈ"                  
+        display "X-02(1:-10)= X-02(P:L) âÊñ Ç™âÛÇÍÇÈ"            
      END-IF.                                                     
 *>                                                                 
 TEST-OWARI.                                                      

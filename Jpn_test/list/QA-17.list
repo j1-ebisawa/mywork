@@ -1,17 +1,11 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
-<<<<<<< HEAD
 *>source file name:  C:\isTEST\Git\Jpn_test\source\QA-17.cbl
-*>date generated  :  Sun Jun 20 15:23:49 JST 2021
-*>compiler options:  -dx -eo=C:/isTEST/Git/Jpn_test/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/isTEST/Git/Jpn_test/list -tasks -od=C:/isTEST/Git/Jpn_test/output -jj
-=======
-*>source file name:  C:\ISTEST\Git\Jpn_test\source\QA-17.cbl
-*>date generated  :  Sun Jun 20 14:59:33 JST 2021
-*>compiler options:  -dx -eo=C:/ISTEST/Git/Jpn_test/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks -od=C:/ISTEST/Git/Jpn_test/output -jj
->>>>>>> branch 'master' of https://github.com/j1-ebisawa/mywork
+*>date generated  :  Wed Jun 23 15:58:27 JST 2021
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/isTEST/Git/Jpn_test/output -jj -eo=C:/isTEST/Git/Jpn_test/errs -d -g -lo=C:/isTEST/Git/Jpn_test/list -tasks
 *>*****************************************************************
-*>    ÉeÉXÉgÉPÅ[ÉXÅFQA-17                                                 
-*>    ÉvÉçÉOÉâÉÄñºÅFì˙ñ{åÍâªÉeÉXÉg QA                                            
+*>    ÉeÉXÉgÉPÅ[ÉXÅFQA-17                                          
+*>    ÉvÉçÉOÉâÉÄñºÅFì˙ñ{åÍâªÉeÉXÉg QA                              
 *>*****************************************************************
 IDENTIFICATION        DIVISION.                                  
 *>*****************************************************************
@@ -34,30 +28,30 @@ WORKING-STORAGE       SECTION.
 *>*****************************************************************
 01  OMIT-WK            PIC X.                                    
 01  CASE-ID            PIC X(10).                                
-01  A        PIC X(30) VALUE "Ç`ÇaÇbÇcÇd".                            
-01  B        PIC N(05) VALUE "Ç`ÇaÇbÇcÇd".                            
-01  C        PIC N(10) VALUE "Ç`ÇaÇbÇcÇd".                            
+01  A        PIC X(30) VALUE "Ç`ÇaÇbÇcÇd".                       
+01  B        PIC N(05) VALUE "Ç`ÇaÇbÇcÇd".                       
+01  C        PIC N(10) VALUE "Ç`ÇaÇbÇcÇd".                       
 *>*****************************************************************
 PROCEDURE             DIVISION.                                  
 *>*****************************************************************
 MAIN                  SECTION.                                   
 P-010.                                                           
      DISPLAY "QA-17 test start".                                 
-*>ÉPÅ[ÉX1:                                                            
+*>ÉPÅ[ÉX1:                                                         
      MOVE "A = B"  TO CASE-ID.                                   
      IF A = B                                                    
         DISPLAY CASE-ID "TRUE:OK"                                
      ELSE                                                        
         DISPLAY CASE-ID "FALSE:NG"                               
      END-IF.                                                     
-*>ÉPÅ[ÉX2:                                                            
+*>ÉPÅ[ÉX2:                                                         
      MOVE "A = C"        TO CASE-ID.                             
      IF A = C                                                    
         DISPLAY CASE-ID "TRUE:NG"                                
      ELSE                                                        
         DISPLAY CASE-ID "FALSE:OK"                               
      END-IF.                                                     
-*>ÉPÅ[ÉX3:                                                            
+*>ÉPÅ[ÉX3:                                                         
      MOVE "B = C"        TO CASE-ID.                             
      IF B = C                                                    
         DISPLAY CASE-ID "TRUE:OK"                                

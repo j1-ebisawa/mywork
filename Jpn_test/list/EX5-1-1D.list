@@ -1,22 +1,16 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
-<<<<<<< HEAD
 *>source file name:  C:\isTEST\Git\Jpn_test\source\EX5-1-1D.cbl
-*>date generated  :  Sun Jun 20 15:23:46 JST 2021
-*>compiler options:  -dx -eo=C:/isTEST/Git/Jpn_test/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/isTEST/Git/Jpn_test/list -tasks -od=C:/isTEST/Git/Jpn_test/output -jj
-=======
-*>source file name:  C:\ISTEST\Git\Jpn_test\source\EX5-1-1D.cbl
-*>date generated  :  Sun Jun 20 14:59:31 JST 2021
-*>compiler options:  -dx -eo=C:/ISTEST/Git/Jpn_test/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks -od=C:/ISTEST/Git/Jpn_test/output -jj
->>>>>>> branch 'master' of https://github.com/j1-ebisawa/mywork
+*>date generated  :  Wed Jun 23 15:58:25 JST 2021
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/isTEST/Git/Jpn_test/output -jj -eo=C:/isTEST/Git/Jpn_test/errs -d -g -lo=C:/isTEST/Git/Jpn_test/list -tasks
 *>*****************************************************************
-*>    テストケース：5-1-1D                                                
-*>    プログラム名：日本語化テスト （手続き部）条件 比較条件                                 
-*>    処理概要　　：日本語比較が正しく実行されるかをチェックする。                               
+*>    テストケース：5-1-1D                                         
+*>    プログラム名：日本語化テスト （手続き部）条件 比較条件       
+*>    処理概要　　：日本語比較が正しく実行されるかをチェックする。 
 *>  -------------------------------------------------------------- 
-*>   テストケース:３３～４４                                                  
-*>   　　　　　　　ケース４１～４４はコンパイルエラーとしたい。                                 
-*>   　　　　　　　確認後、コメント化して、実行テストする。                                   
+*>   テストケース:３３～４４                                       
+*>   　　　　　　　ケース４１～４４はコンパイルエラーとしたい。    
+*>   　　　　　　　確認後、コメント化して、実行テストする。        
 *>*****************************************************************
 IDENTIFICATION        DIVISION.                                  
 *>*****************************************************************
@@ -92,9 +86,9 @@ PROCEDURE             DIVISION.
 MAIN                  SECTION.                                   
 P-330.                                                           
      DISPLAY "TEST START (EX5-1-1D)".                            
-*>  ケース33.（左辺）集団項目＋（右辺）日本語                                         
-     MOVE "あいうえお"        TO W-L-GRP.                             
-     MOVE "あいうえお"        TO R-G.                                 
+*>  ケース33.（左辺）集団項目＋（右辺）日本語                      
+     MOVE "あいうえお"        TO W-L-GRP.                        
+     MOVE "あいうえお"        TO R-G.                            
 *>                                                                 
      MOVE "P-330-01"        TO CASE-ID.                          
      IF W-L-GRP-10 = R-G      DISPLAY CASE-ID "OK"               
@@ -112,9 +106,9 @@ P-330.
      END-IF.                                                     
 *>                                                                 
 P-340.                                                           
-*>  ケース34.（左辺）集団＋（右辺）日本語編集                                         
-     MOVE "あ／い／う"        TO W-L-GRP.                             
-     MOVE "あいう"            TO R-GE.                              
+*>  ケース34.（左辺）集団＋（右辺）日本語編集                      
+     MOVE "あ／い／う"        TO W-L-GRP.                        
+     MOVE "あいう"            TO R-GE.                           
 *>                                                                 
      MOVE "P-340-01"        TO CASE-ID.                          
      IF W-L-GRP = R-GE        DISPLAY CASE-ID "OK"     *>20110912
@@ -132,55 +126,55 @@ P-340.
      END-IF.                                                     
 *>                                                                 
 P-350.                                                           
-*>  ケース35.（左辺）集団＋（右辺）日本語定数                                         
-     MOVE "あいうえお"        TO W-L-GRP.                             
+*>  ケース35.（左辺）集団＋（右辺）日本語定数                      
+     MOVE "あいうえお"        TO W-L-GRP.                        
                                                                  
      MOVE "P-350-01"        TO CASE-ID.                          
-     IF W-L-GRP-10 = "あいうえお"                                     
+     IF W-L-GRP-10 = "あいうえお"                                
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
 *>                                                                 
      MOVE "P-350-02"        TO CASE-ID.                          
-     IF W-L-GRP-4 >  "あいうえお"                                     
+     IF W-L-GRP-4 >  "あいうえお"                                
                               DISPLAY CASE-ID "NG"               
         ELSE                  DISPLAY CASE-ID "OK"               
      END-IF.                                                     
 *>                                                                 
      MOVE "P-350-03"        TO CASE-ID.                          
-     IF W-L-GRP  > "あいうえお"                                       
+     IF W-L-GRP  > "あいうえお"                                  
                               DISPLAY CASE-ID "NG"               
         ELSE                  DISPLAY CASE-ID "OK"               
      END-IF.                                                     
 *>                                                                 
 P-360.                                                           
-*>  ケース36.（左辺）集団＋（右辺）ALL 日本語定数                                     
-     MOVE "あいう"          TO W-L-GRP.                             
+*>  ケース36.（左辺）集団＋（右辺）ALL 日本語定数                  
+     MOVE "あいう"          TO W-L-GRP.                          
                                                                  
      MOVE "P-360-01"        TO CASE-ID.                          
-     IF W-L-GRP = ALL "あいう"                                      
+     IF W-L-GRP = ALL "あいう"                                   
                               DISPLAY CASE-ID "NG"               
         ELSE                  DISPLAY CASE-ID "OK"               
      END-IF.                                                     
 *>                                                                 
      MOVE "P-360-02"        TO CASE-ID.                          
-     IF W-L-GRP >  ALL "あい"                                      
+     IF W-L-GRP >  ALL "あい"                                    
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
 *>                                                                 
      MOVE "P-360-03"        TO CASE-ID.                          
-     IF W-L-GRP > ALL "うえお"                                      
+     IF W-L-GRP > ALL "うえお"                                   
                               DISPLAY CASE-ID "NG"               
         ELSE                  DISPLAY CASE-ID "OK"               
      END-IF.                                                     
 *>                                                                 
 P-370.                                                           
-*>  ケース37.（左辺）英数字・英数字編集・数字編集＋（右辺）日本語                               
-     MOVE "あいうえお"        TO L-AN.                                
+*>  ケース37.（左辺）英数字・英数字編集・数字編集＋（右辺）日本語  
+     MOVE "あいうえお"        TO L-AN.                           
      MOVE "ABCDE"             TO L-ANE.                          
      MOVE 12345               TO L-NE.                           
-     MOVE "あいうえお"        TO R-G.                                 
+     MOVE "あいうえお"        TO R-G.                            
 *>                                                                 
      MOVE "P-370-01"        TO CASE-ID.                          
      IF L-AN = R-G            DISPLAY CASE-ID "OK"               
@@ -200,11 +194,11 @@ P-370.
      ACCEPT OMIT-WK.                                             
 *>                                                                 
 P-380.                                                           
-*>  ケース38.（左辺）英数字・英数字編集・数字編集＋（右辺）日本語                               
-     MOVE "あ／い／う"        TO L-AN.                                
+*>  ケース38.（左辺）英数字・英数字編集・数字編集＋（右辺）日本語  
+     MOVE "あ／い／う"        TO L-AN.                           
      MOVE "ABCDE"             TO L-ANE.                          
      MOVE 12345               TO L-NE.                           
-     MOVE "あいう"            TO R-GE.                              
+     MOVE "あいう"            TO R-GE.                           
 *>                                                                 
      MOVE "P-380-01"        TO CASE-ID.                          
      IF L-AN = R-GE           DISPLAY CASE-ID "OK"               
@@ -222,53 +216,53 @@ P-380.
      END-IF.                                                     
 *>                                                                 
 P-390.                                                           
-*>  ケース39.（左辺）英数字・英数字編集・数字編集＋（右辺）日本語定数                             
-     MOVE "あ／い／う"        TO L-AN.                                
+*>  ケース39.（左辺）英数字・英数字編集・数字編集＋（右辺）日本語定
+     MOVE "あ／い／う"        TO L-AN.                           
      MOVE "ABCDE"             TO L-ANE.                          
      MOVE 12345               TO L-NE.                           
 *>                                                                 
      MOVE "P-390-01"        TO CASE-ID.                          
-     IF L-AN = "あ／い／う"   DISPLAY CASE-ID "OK"                    
+     IF L-AN = "あ／い／う"   DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
 *>                                                                 
      MOVE "P-390-02"        TO CASE-ID.                          
-     IF L-ANE > "あ／い／う"  DISPLAY CASE-ID "NG"                    
+     IF L-ANE > "あ／い／う"  DISPLAY CASE-ID "NG"               
         ELSE                  DISPLAY CASE-ID "OK"               
      END-IF.                                                     
 *>                                                                 
      MOVE "P-390-03"        TO CASE-ID.                          
-     IF L-NE < "あ／い／う"   DISPLAY CASE-ID "OK"                    
+     IF L-NE < "あ／い／う"   DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
 *>                                                                 
 P40-0.                                                           
-*>  ケース40.（左辺）英数字・英数字編集・数字編集＋（右辺）ALL 日本語定数                         
-     MOVE ALL "あいう"        TO L-AN.                              
+*>  ケース40.（左辺）英数字・英数字編集・数字編集＋（右辺）ALL 日本
+     MOVE ALL "あいう"        TO L-AN.                           
      MOVE "ABCDE"             TO L-ANE.                          
      MOVE 12345               TO L-NE.                           
 *>                                                                 
      MOVE "P-400-01"        TO CASE-ID.                          
-     IF L-AN = ALL "あいう"   DISPLAY CASE-ID "OK"                  
+     IF L-AN = ALL "あいう"   DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
 *>                                                                 
      MOVE "P-400-02"        TO CASE-ID.                          
-     IF L-ANE > ALL "あいう"  DISPLAY CASE-ID "NG"                  
+     IF L-ANE > ALL "あいう"  DISPLAY CASE-ID "NG"               
         ELSE                  DISPLAY CASE-ID "OK"               
      END-IF.                                                     
 *>                                                                 
      MOVE "P-400-03"        TO CASE-ID.                          
-     IF L-NE < ALL "あいう"   DISPLAY CASE-ID "OK"                  
+     IF L-NE < ALL "あいう"   DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
 *>                                                                 
 P-410.                                                           
-*>  ケース41.（左辺）英字・数字＋（右辺）日本語                                        
-*>  コンパイルエラー                                                       
+*>  ケース41.（左辺）英字・数字＋（右辺）日本語                    
+*>  コンパイルエラー                                               
 *>     MOVE "ABCDE"             TO L-A.                            
 *>     MOVE 12345               TO L-ZONE.                         
-*>     MOVE "あいうえお"        TO R-G.                                 
+*>     MOVE "あいうえお"        TO R-G.                            
 *>                                                                 
 *>     MOVE "P-410-01"        TO CASE-ID.                          
 *>     IF L-A = R-G             DISPLAY CASE-ID "NG"               
@@ -296,11 +290,11 @@ P-410.
 *>     END-IF.                                                     
 *>                                                                 
 P-420.                                                           
-*>  ケース42.（左辺）英字・数字＋（右辺）日本語編集                                      
-*>  コンパイルエラー                                                       
+*>  ケース42.（左辺）英字・数字＋（右辺）日本語編集                
+*>  コンパイルエラー                                               
 *>     MOVE "ABCDE"             TO L-A.                            
 *>     MOVE 12345               TO L-ZONE.                         
-*>     MOVE "あいう"            TO R-GE.                              
+*>     MOVE "あいう"            TO R-GE.                           
 *>                                                                 
 *>     MOVE "P-420-01"        TO CASE-ID.                          
 *>     IF L-A = R-GE            DISPLAY CASE-ID "NG"               
@@ -328,45 +322,45 @@ P-420.
 *>     END-IF.                                                     
 *>                                                                 
 P-430.                                                           
-*>  ケース43.（左辺）英字・数字＋（右辺）日本語定数                                      
-*>  コンパイルエラー                                                       
+*>  ケース43.（左辺）英字・数字＋（右辺）日本語定数                
+*>  コンパイルエラー                                               
 *>     MOVE "ABCDE"             TO L-A.                            
 *>     MOVE 12345               TO L-ZONE.                         
 *>                                                                 
 *>     MOVE "P-430-01"        TO CASE-ID.                          
-*>     IF L-A = "あいう"        DISPLAY CASE-ID "NG"                  
+*>     IF L-A = "あいう"        DISPLAY CASE-ID "NG"               
 *>        ELSE                  DISPLAY CASE-ID "NG"               
 *>     END-IF.                                                     
 *>                                                                 
 *>     MOVE "P-430-02"        TO CASE-ID.                          
-*>     IF L-ZONE-DEC > "あいう" DISPLAY CASE-ID "NG"                  
+*>     IF L-ZONE-DEC > "あいう" DISPLAY CASE-ID "NG"               
 *>        ELSE                  DISPLAY CASE-ID "NG"               
 *>     END-IF.                                                     
 *>                                                                 
 *>     MOVE "P-430-03"        TO CASE-ID.                          
-*>     IF L-PACK-DEC < "あいう" DISPLAY CASE-ID "NG"                  
+*>     IF L-PACK-DEC < "あいう" DISPLAY CASE-ID "NG"               
 *>        ELSE                  DISPLAY CASE-ID "NG"               
 *>     END-IF.                                                     
 *>                                                                 
 P-440.                                                           
-*>  ケース44.（左辺）英字・数字＋（右辺）ALL 日本語定数                                  
-*>  コンパイルエラー                                                       
+*>  ケース44.（左辺）英字・数字＋（右辺）ALL 日本語定数            
+*>  コンパイルエラー                                               
 *>     MOVE "ABCDE"             TO L-A.                            
 *>     MOVE 12345               TO L-ZONE.                         
 *>                                                                 
 *>     MOVE "P-440-01"        TO CASE-ID.                          
-*>     IF L-A = ALL "あいう"    DISPLAY CASE-ID "NG"                  
+*>     IF L-A = ALL "あいう"    DISPLAY CASE-ID "NG"               
 *>        ELSE                  DISPLAY CASE-ID "NG"               
 *>     END-IF.                                                     
 *>                                                                 
 *>     MOVE "P-440-02"        TO CASE-ID.                          
-*>     IF L-ZONE-DEC > ALL "あいう"                                   
+*>     IF L-ZONE-DEC > ALL "あいう"                                
 *>                              DISPLAY CASE-ID "NG"               
 *>        ELSE                  DISPLAY CASE-ID "NG"               
 *>     END-IF.                                                     
 *>                                                                 
 *>     MOVE "P-440-03"        TO CASE-ID.                          
-*>     IF L-PACK-DEC < ALL "あいう"                                   
+*>     IF L-PACK-DEC < ALL "あいう"                                
 *>                              DISPLAY CASE-ID "NG"               
 *>        ELSE                  DISPLAY CASE-ID "NG"               
 *>     END-IF.                                                     

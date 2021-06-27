@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 I --> C:\isTEST\Git\Jpn_test\source\IF_TEST.cbl
-=======
-I --> C:\ISTEST\Git\Jpn_test\source\IF_TEST.cbl
->>>>>>> branch 'master' of https://github.com/j1-ebisawa/mywork
 --E: #43 Illegal condition W-L-GRP & R-ZONE-DEC; file = IF_TEST.cbl, line = 80, col 5
 --E: #43 Illegal condition W-L-GRP & R-PACK; file = IF_TEST.cbl, line = 84, col 5
 --E: #43 Illegal condition W-L-GRP & R-PACK-DEC; file = IF_TEST.cbl, line = 88, col 5

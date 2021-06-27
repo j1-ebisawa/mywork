@@ -1,22 +1,16 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
-<<<<<<< HEAD
 *>source file name:  C:\isTEST\Git\Jpn_test\source\EX5-5A.cbl
-*>date generated  :  Sun Jun 20 15:23:47 JST 2021
-*>compiler options:  -dx -eo=C:/isTEST/Git/Jpn_test/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/isTEST/Git/Jpn_test/list -tasks -od=C:/isTEST/Git/Jpn_test/output -jj
-=======
-*>source file name:  C:\ISTEST\Git\Jpn_test\source\EX5-5A.cbl
-*>date generated  :  Sun Jun 20 14:59:32 JST 2021
-*>compiler options:  -dx -eo=C:/ISTEST/Git/Jpn_test/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks -od=C:/ISTEST/Git/Jpn_test/output -jj
->>>>>>> branch 'master' of https://github.com/j1-ebisawa/mywork
+*>date generated  :  Wed Jun 23 15:58:26 JST 2021
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/isTEST/Git/Jpn_test/output -jj -eo=C:/isTEST/Git/Jpn_test/errs -d -g -lo=C:/isTEST/Git/Jpn_test/list -tasks
 *>*****************************************************************
-*>    テストケース：5-5A                                                  
-*>    プログラム名：日本語化テスト （手続き部）MOVE命令                                  
-*>    処理概要　　：日本語転記が正しく実行されるかをチェックする。                               
+*>    テストケース：5-5A                                           
+*>    プログラム名：日本語化テスト （手続き部）MOVE命令            
+*>    処理概要　　：日本語転記が正しく実行されるかをチェックする。 
 *>  -------------------------------------------------------------- 
-*>   テストケース:１～１０                                                   
-*>   　　　　　　　ケース３，８はコンパイルエラーとしたい。                                   
-*>   　　　　　　　確認後、コメント化して、実行テストする。                                   
+*>   テストケース:１～１０                                         
+*>   　　　　　　　ケース３，８はコンパイルエラーとしたい。        
+*>   　　　　　　　確認後、コメント化して、実行テストする。        
 *>*****************************************************************
 IDENTIFICATION        DIVISION.                                  
 *>*****************************************************************
@@ -104,14 +98,14 @@ PROCEDURE             DIVISION.
 MAIN                  SECTION.                                   
 P-010.                                                           
      DISPLAY "TEST START (EX5-5A)".                              
-*>  ケース1.日本語→集団項目                                                  
-     MOVE "あいうえおかきくけこ" TO L-G.                                   
+*>  ケース1.日本語→集団項目                                       
+     MOVE "あいうえおかきくけこ" TO L-G.                         
 *>                                                                 
      MOVE "P-010-01"             TO CASE-ID.                     
      MOVE ALL "*"                TO W-R-GRP.                     
      MOVE L-G-5 TO R-GRP-10.                                     
                                                                  
-     IF R-GRP-10 = "あいうえお"                                       
+     IF R-GRP-10 = "あいうえお"                                  
                                  DISPLAY CASE-ID "OK"            
         ELSE                     DISPLAY CASE-ID "NG"            
      END-IF.                                                     
@@ -120,7 +114,7 @@ P-010.
      MOVE ALL "*"                TO W-R-GRP.                     
      MOVE L-G  TO R-GRP-4.                                       
                                                                  
-     IF R-GRP-4 = "あい"                                           
+     IF R-GRP-4 = "あい"                                         
                                  DISPLAY CASE-ID "OK"            
         ELSE                     DISPLAY CASE-ID "NG"            
      END-IF.                                                     
@@ -129,20 +123,20 @@ P-010.
      MOVE ALL "*"                TO W-R-GRP.                     
      MOVE L-G-3 TO R-GRP-10.                                     
                                                                  
-     IF R-GRP-10 = "かきく    "                                     
+     IF R-GRP-10 = "かきく    "                                  
                                  DISPLAY CASE-ID "OK"            
         ELSE                     DISPLAY CASE-ID "NG"            
      END-IF.                                                     
 *>                                                                 
 P-020.                                                           
-*>  ケース2.日本語→英数字・英数字編集                                             
-     MOVE "あいうえおかきくけこ" TO L-G.                                   
+*>  ケース2.日本語→英数字・英数字編集                             
+     MOVE "あいうえおかきくけこ" TO L-G.                         
 *>                                                                 
      MOVE "P-020-01"             TO CASE-ID.                     
      MOVE ALL "*" TO R-AN.                                       
      MOVE L-G-5   TO R-AN.                                       
                                                                  
-     IF R-AN = "あいうえお"      DISPLAY CASE-ID "OK"                 
+     IF R-AN = "あいうえお"      DISPLAY CASE-ID "OK"            
         ELSE                     DISPLAY CASE-ID "NG"            
      END-IF.                                                     
 *>                                                                 
@@ -150,21 +144,21 @@ P-020.
      MOVE ALL "*" TO R-ANE.                                      
      MOVE L-G-5   TO R-ANE.                                      
                                                                  
-     IF R-ANE = "あ/い/う"    DISPLAY CASE-ID "OK"                  
+     IF R-ANE = "あ/い/う"    DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
 *>                                                                 
      MOVE "P-020-03"        TO CASE-ID.                          
      MOVE ALL "*" TO R-AN.                                       
      MOVE L-G-2   TO R-AN.                                       
-     IF R-AN = "けこ      "   DISPLAY CASE-ID "OK"                 
+     IF R-AN = "けこ      "   DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
 *>                                                                 
 P-030.                                                           
-*>  ケース3.日本語→英字・数字・数字編集                                            
-*>           コンパイルエラーとなるか                                          
-*>      MOVE "あいうえおかきくけこ" TO L-G.                                  
+*>  ケース3.日本語→英字・数字・数字編集                           
+*>           コンパイルエラーとなるか                              
+*>      MOVE "あいうえおかきくけこ" TO L-G.                        
 *>                                                                 
 *>     MOVE "P-030-01"        TO CASE-ID.                          
 *>     MOVE L-G-5 TO R-A.                                          
@@ -185,84 +179,84 @@ P-030.
 *>     MOVE L-G-5 TO R-NE.                                         
 *>                                                                 
 P-040.                                                           
-*>  ケース4.日本語→日本語                                                   
-     MOVE "あいうえおかきくけこ" TO L-G.                                   
+*>  ケース4.日本語→日本語                                         
+     MOVE "あいうえおかきくけこ" TO L-G.                         
 *>                                                                 
      MOVE "P-040-01"        TO CASE-ID.                          
-     MOVE ALL "＊"          TO R-G.                               
+     MOVE ALL "＊"          TO R-G.                              
      MOVE L-G TO R-G.                                            
-     IF R-G = "あいうえおかきくけこ"                                       
+     IF R-G = "あいうえおかきくけこ"                             
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
 *>                                                                 
      MOVE "P-040-02"        TO CASE-ID.                          
-     MOVE ALL "＊"          TO R-G.                               
+     MOVE ALL "＊"          TO R-G.                              
      MOVE L-G TO R-G-5.                                          
                                                                  
-     IF R-G-5 = "あいうえお"  DISPLAY CASE-ID "OK"                    
+     IF R-G-5 = "あいうえお"  DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
 *>                                                                 
      MOVE "P-040-03"        TO CASE-ID.                          
-     MOVE ALL "＊"          TO R-G.                               
+     MOVE ALL "＊"          TO R-G.                              
      MOVE L-G-3 TO R-G-5.                                        
-     IF R-G-5 = "かきく　　"  DISPLAY CASE-ID "OK"                    
+     IF R-G-5 = "かきく　　"  DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
 *>                                                                 
      MOVE "P-040-04"        TO CASE-ID.                          
-     MOVE ALL "＊"          TO R-GJ.                              
+     MOVE ALL "＊"          TO R-GJ.                             
      MOVE L-G TO R-GJ-5.                                         
                                                                  
-     IF R-GJ-5 = "かきくけこ"  DISPLAY CASE-ID "OK"                   
+     IF R-GJ-5 = "かきくけこ"  DISPLAY CASE-ID "OK"              
         ELSE                   DISPLAY CASE-ID "NG"              
      END-IF.                                                     
 *>                                                                 
      MOVE "P-040-05"        TO CASE-ID.                          
-     MOVE ALL "＊"          TO R-G.                               
+     MOVE ALL "＊"          TO R-G.                              
      MOVE L-G-3 TO R-GJ-5.                                       
-     IF R-GJ-5 = "　　かきく"  DISPLAY CASE-ID "OK"                   
+     IF R-GJ-5 = "　　かきく"  DISPLAY CASE-ID "OK"              
         ELSE                   DISPLAY CASE-ID "NG"              
      END-IF.                                                     
 *>                                                                 
 P-050.                                                           
-*>  ケース5.日本語→日本語編集                                                 
-     MOVE "あいうえおかきくけこ" TO L-G.                                   
+*>  ケース5.日本語→日本語編集                                     
+     MOVE "あいうえおかきくけこ" TO L-G.                         
 *>                                                                 
      MOVE "P-050-01"        TO CASE-ID.                          
-     MOVE ALL "＊" TO R-GE.                                       
+     MOVE ALL "＊" TO R-GE.                                      
      MOVE L-G-3    TO R-GE.                                      
-     IF R-GE = "か／き／く"   DISPLAY CASE-ID "OK"                    
+     IF R-GE = "か／き／く"   DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG:"              
      END-IF.                                                     
 *>                                                                 
      MOVE "P-050-02"        TO CASE-ID.                          
-     MOVE ALL "＊" TO R-GE.                                       
+     MOVE ALL "＊" TO R-GE.                                      
      MOVE L-G   TO R-GE.                                         
-     IF R-GE = "あ／い／う"   DISPLAY CASE-ID "OK"                    
+     IF R-GE = "あ／い／う"   DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG:"              
      END-IF.                                                     
 *>                                                                 
      MOVE "P-050-03"        TO CASE-ID.                          
-     MOVE ALL "＊" TO R-GE.                                       
+     MOVE ALL "＊" TO R-GE.                                      
      MOVE L-G-2    TO R-GE.                                      
-     IF R-GE = "け／こ／　"   DISPLAY CASE-ID "OK"                    
+     IF R-GE = "け／こ／　"   DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG:"              
      END-IF.                                                     
 *>                                                                 
      MOVE "P-050-04"        TO CASE-ID.                          
-     MOVE ALL "＊" TO R-GE-NB.                                    
+     MOVE ALL "＊" TO R-GE-NB.                                   
      MOVE L-G-5    TO R-GE-NB.                                   
-     IF R-GE-NB = "あいう／え　お／" DISPLAY CASE-ID "OK"                
+     IF R-GE-NB = "あいう／え　お／" DISPLAY CASE-ID "OK"        
         ELSE                         DISPLAY CASE-ID "NG:"       
                                                                  
      END-IF.                                                     
 *>                                                                 
      MOVE "P-050-05"        TO CASE-ID.                          
-     MOVE ALL "＊" TO R-GE-NBZ.                                   
+     MOVE ALL "＊" TO R-GE-NBZ.                                  
      MOVE L-G-5    TO R-GE-NBZ.                                  
-     IF R-GE-NBZ = "あいう／え０　お" DISPLAY CASE-ID "OK"        *>20111
+     IF R-GE-NBZ = "あいう／え０　お" DISPLAY CASE-ID "OK"       
         ELSE                                                     
             DISPLAY CASE-ID "NG:"R-GE-NBZ                        
      END-IF.                                                     
@@ -270,59 +264,59 @@ P-050.
      ACCEPT OMIT-WK.                                             
 *>                                                                 
 P-060.                                                           
-*>  ケース6.日本語編集→集団項目                                                
-     MOVE "あいう"            TO L-GE.                              
+*>  ケース6.日本語編集→集団項目                                   
+     MOVE "あいう"            TO L-GE.                           
 *>                                                                 
      MOVE "P-060-01"        TO CASE-ID.                          
      MOVE ALL "*"           TO W-R-GRP.                          
      MOVE L-GE TO R-GRP-10.                                      
-     IF R-GRP-10 = "あ／い／う" DISPLAY CASE-ID "OK"                  
+     IF R-GRP-10 = "あ／い／う" DISPLAY CASE-ID "OK"             
         ELSE                    DISPLAY CASE-ID "NG"             
      END-IF.                                                     
 *>                                                                 
      MOVE "P-060-02"        TO CASE-ID.                          
      MOVE ALL "*"           TO W-R-GRP.                          
      MOVE L-GE TO R-GRP-4.                                       
-     IF R-GRP-4 = "あ／"      DISPLAY CASE-ID "OK"                 
+     IF R-GRP-4 = "あ／"      DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
 *>                                                                 
      MOVE "P-060-03"        TO CASE-ID.                          
      MOVE ALL "*"           TO W-R-GRP.                          
      MOVE L-GE TO W-R-GRP.                                       
-     IF W-R-GRP = "あ／い／う" DISPLAY CASE-ID "OK"                   
+     IF W-R-GRP = "あ／い／う" DISPLAY CASE-ID "OK"              
         ELSE                   DISPLAY CASE-ID "NG"              
      END-IF.                                                     
 *>                                                                 
 P-070.                                                           
-*>  ケース7.日本語編集→英数字・英数字編集                                           
-     MOVE "あいう"            TO L-GE.                              
+*>  ケース7.日本語編集→英数字・英数字編集                         
+     MOVE "あいう"            TO L-GE.                           
 *>                                                                 
      MOVE "P-070-01"        TO CASE-ID.                          
      MOVE ALL "*"           TO R-AN.                             
      MOVE L-GE TO R-AN.                                          
-     IF R-AN = "あ／い／う" DISPLAY CASE-ID "OK"                      
+     IF R-AN = "あ／い／う" DISPLAY CASE-ID "OK"                 
         ELSE                DISPLAY CASE-ID "NG"                 
      END-IF.                                                     
 *>                                                                 
      MOVE "P-070-02"        TO CASE-ID.                          
      MOVE ALL "*"           TO R-ANE-3.                          
      MOVE L-GE TO R-ANE-3.                                       
-     IF R-ANE-3 = "あ/／/"  DISPLAY CASE-ID "OK"                   
+     IF R-ANE-3 = "あ/／/"  DISPLAY CASE-ID "OK"                 
         ELSE                DISPLAY CASE-ID "NG"                 
      END-IF.                                                     
 *>                                                                 
      MOVE "P-070-03"        TO CASE-ID.                          
      MOVE ALL "*"           TO R-AN.                             
      MOVE L-GE-3 TO R-AN.                                        
-     IF R-AN = "あ／い    " DISPLAY CASE-ID "OK"                    
+     IF R-AN = "あ／い    " DISPLAY CASE-ID "OK"                 
         ELSE                DISPLAY CASE-ID "NG"                 
      END-IF.                                                     
 *>                                                                 
 P-080.                                                           
-*>  ケース8.日本語編集→英字・数字・数字編集                                          
-*>           コンパイルエラーとなるか                                          
-*>     MOVE "あいう"            TO L-GE.                              
+*>  ケース8.日本語編集→英字・数字・数字編集                       
+*>           コンパイルエラーとなるか                              
+*>     MOVE "あいう"            TO L-GE.                           
 *>     MOVE "P-080-01"        TO CASE-ID.                          
 *>     MOVE L-GE TO R-A.                                           
 *>                                                                 
@@ -341,53 +335,53 @@ P-080.
 *>     MOVE "P-080-05"        TO CASE-ID.                          
 *>     MOVE L-GE TO R-NE.                                          
 P-090.                                                           
-*>  ケース09.日本語編集→日本語                                                
-     MOVE "あいう"            TO L-GE.                              
+*>  ケース09.日本語編集→日本語                                    
+     MOVE "あいう"            TO L-GE.                           
 *>                                                                 
      MOVE "P-090-01"        TO CASE-ID.                          
-     MOVE ALL "＊" TO R-G.                                        
+     MOVE ALL "＊" TO R-G.                                       
      MOVE L-GE TO R-G.                                           
-     IF R-G = "あ／い／う"    DISPLAY CASE-ID "OK"                    
+     IF R-G = "あ／い／う"    DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
 *>                                                                 
      MOVE "P-090-02"        TO CASE-ID.                          
-     MOVE ALL "＊" TO R-G-3.                                      
+     MOVE ALL "＊" TO R-G-3.                                     
      MOVE L-GE TO R-G-3.                                         
-     IF R-G-3 = "あ／い"      DISPLAY CASE-ID "OK"                  
+     IF R-G-3 = "あ／い"      DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
 *>                                                                 
      MOVE "P-090-03"        TO CASE-ID.                          
-     MOVE ALL "＊" TO R-G.                                        
+     MOVE ALL "＊" TO R-G.                                       
      MOVE L-GE-3 TO R-G.                                         
-     IF R-G = "あ／い　　"    DISPLAY CASE-ID "OK"                    
+     IF R-G = "あ／い　　"    DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
 *>                                                                 
 P-100.                                                           
-*>  ケース10.日本語編集→日本語編集                                              
-     MOVE "あいう"            TO L-GE.                              
-     MOVE ALL "＊"            TO R-GE.                            
+*>  ケース10.日本語編集→日本語編集                                
+     MOVE "あいう"            TO L-GE.                           
+     MOVE ALL "＊"            TO R-GE.                           
                                                                  
 *>                                                                 
      MOVE "P-100-01"        TO CASE-ID.                          
      MOVE L-GE TO R-GE.                                          
-     IF R-GE = "あ／／／い"   DISPLAY CASE-ID "OK"                    
+     IF R-GE = "あ／／／い"   DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG:"              
      END-IF.                                                     
 *>                                                                 
      MOVE "P-100-02"        TO CASE-ID.                          
-     MOVE ALL "＊"            TO R-GE.                            
+     MOVE ALL "＊"            TO R-GE.                           
      MOVE L-GE TO R-GE-3.                                        
-     IF R-GE-3 = "あ／／"     DISPLAY CASE-ID "OK"                  
+     IF R-GE-3 = "あ／／"     DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG:"              
      END-IF.                                                     
 *>                                                                 
      MOVE "P-100-03"        TO CASE-ID.                          
-     MOVE ALL "＊"            TO R-GE.                            
+     MOVE ALL "＊"            TO R-GE.                           
      MOVE L-GE-2 TO R-GE.                                        
-     IF R-GE = "／／う／　"   DISPLAY CASE-ID "OK"                    
+     IF R-GE = "／／う／　"   DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG:"              
      END-IF.                                                     
 *>                                                                 

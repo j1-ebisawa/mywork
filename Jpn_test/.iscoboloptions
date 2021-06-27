@@ -2,6 +2,17 @@
 <java version="11.0.11" class="java.beans.XMLDecoder">
  <object class="com.iscobol.plugins.editor.util.ProjectSettingList" id="ProjectSettingList0">
   <null/>
+  <void property="fileSettings">
+   <void method="put">
+    <string>/Jpn_test/source/CS-01.cbl</string>
+    <object class="com.iscobol.plugins.editor.util.SettingList">
+     <string>/Jpn_test/source/CS-01.cbl</string>
+     <void property="currentMode">
+      <string>Debug</string>
+     </void>
+    </object>
+   </void>
+  </void>
   <void id="LinkedHashMap0" property="modes">
    <void id="SettingMode0" method="get">
     <string>Default</string>
@@ -104,6 +115,10 @@
      </void>
      <void method="put">
       <string>-ccbas</string>
+      <string>___iscobol.option.true</string>
+     </void>
+     <void method="put">
+      <string>-d</string>
       <string>___iscobol.option.true</string>
      </void>
     </void>

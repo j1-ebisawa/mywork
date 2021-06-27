@@ -1,14 +1,8 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
-<<<<<<< HEAD
 *>source file name:  C:\isTEST\Git\Jpn_test\source\QA-99.cbl
-*>date generated  :  Sun Jun 20 15:23:49 JST 2021
-*>compiler options:  -dx -eo=C:/isTEST/Git/Jpn_test/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/isTEST/Git/Jpn_test/list -tasks -od=C:/isTEST/Git/Jpn_test/output -jj
-=======
-*>source file name:  C:\ISTEST\Git\Jpn_test\source\QA-99.cbl
-*>date generated  :  Sun Jun 20 14:59:33 JST 2021
-*>compiler options:  -dx -eo=C:/ISTEST/Git/Jpn_test/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks -od=C:/ISTEST/Git/Jpn_test/output -jj
->>>>>>> branch 'master' of https://github.com/j1-ebisawa/mywork
+*>date generated  :  Wed Jun 23 15:58:28 JST 2021
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/isTEST/Git/Jpn_test/output -jj -eo=C:/isTEST/Git/Jpn_test/errs -d -g -lo=C:/isTEST/Git/Jpn_test/list -tasks
 IDENTIFICATION    DIVISION.                                      
 PROGRAM-ID. QA-99.                                         
 *>                                                                 
@@ -26,7 +20,7 @@ WORKING-STORAGE        SECTION.
 01  RS2-RECORD.                                                  
    03  RS2-MNT-DATA              PIC  N(52).                     
 *>*****************************************                        
-*>   スタンダード　コーディング　ワーク   *                                         
+*>   スタンダード　コーディング　ワーク   *                        
 *>*****************************************                        
 *>                                                                 
 *>                                                                 

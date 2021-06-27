@@ -1,20 +1,14 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
-<<<<<<< HEAD
 *>source file name:  C:\isTEST\Git\Jpn_test\source\EX5-4A.cbl
-*>date generated  :  Sun Jun 20 15:23:47 JST 2021
-*>compiler options:  -dx -eo=C:/isTEST/Git/Jpn_test/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/isTEST/Git/Jpn_test/list -tasks -od=C:/isTEST/Git/Jpn_test/output -jj
-=======
-*>source file name:  C:\ISTEST\Git\Jpn_test\source\EX5-4A.cbl
-*>date generated  :  Sun Jun 20 14:59:32 JST 2021
-*>compiler options:  -dx -eo=C:/ISTEST/Git/Jpn_test/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks -od=C:/ISTEST/Git/Jpn_test/output -jj
->>>>>>> branch 'master' of https://github.com/j1-ebisawa/mywork
+*>date generated  :  Wed Jun 23 15:58:25 JST 2021
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/isTEST/Git/Jpn_test/output -jj -eo=C:/isTEST/Git/Jpn_test/errs -d -g -lo=C:/isTEST/Git/Jpn_test/list -tasks
 *>*****************************************************************
-*>    テストケース：5-4A                                                  
-*>    プログラム名：日本語化テスト （手続き部）INSPECT命令                               
-*>    処理概要    ：INSPECT命令が正しく実行されるかをチェックする。                         
+*>    テストケース：5-4A                                           
+*>    プログラム名：日本語化テスト （手続き部）INSPECT命令         
+*>    処理概要    ：INSPECT命令が正しく実行されるかをチェックする。
 *>  -------------------------------------------------------------- 
-*>   テストケース:１～２１                                                   
+*>   テストケース:１～２１                                         
 *>*****************************************************************
 IDENTIFICATION        DIVISION.                                  
 *>*****************************************************************
@@ -56,10 +50,10 @@ PROCEDURE             DIVISION.
 *>*****************************************************************
 MAIN                  SECTION.                                   
 P-010.                                                           
-*>ケース1.一意名１（TALLYING,CHARACTERS指定）                                 
+*>ケース1.一意名１（TALLYING,CHARACTERS指定）                      
      MOVE "P-010-01"        TO CASE-ID.                          
-     MOVE "あいうえおかきくけこ" TO G-01.                                  
-     MOVE "あいうえおかきく" TO GE-01.                                   
+     MOVE "あいうえおかきくけこ" TO G-01.                        
+     MOVE "あいうえおかきく" TO GE-01.                           
      MOVE 0 TO W-TALLY.                                          
      INSPECT G-01 TALLYING W-TALLY FOR CHARACTERS.               
      IF W-TALLY = 10                                             
@@ -74,12 +68,12 @@ P-010.
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" W-TALLY                         
      END-IF.                                                     
-*>ケース2.一意名１、定数２（TALLYING,ALL指定）                                    
+*>ケース2.一意名１、定数２（TALLYING,ALL指定）                     
      MOVE "P-020-01"        TO CASE-ID.                          
-     MOVE "あい＊え＊かき＊＊こ" TO G-01.                                  
-     MOVE "あい＊＊おかき" TO GE-01.                                    
+     MOVE "あい＊え＊かき＊＊こ" TO G-01.                        
+     MOVE "あい＊＊おかき" TO GE-01.                             
      MOVE 0 TO W-TALLY.                                          
-     INSPECT G-01 TALLYING W-TALLY FOR ALL "＊".                  
+     INSPECT G-01 TALLYING W-TALLY FOR ALL "＊".                 
      IF W-TALLY = 4                                              
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" W-TALLY                         
@@ -87,17 +81,17 @@ P-010.
 *>                                                                 
      MOVE "P-020-02"        TO CASE-ID.                          
      MOVE 0 TO W-TALLY.                                          
-     INSPECT GE-01 TALLYING W-TALLY FOR ALL "＊".                 
+     INSPECT GE-01 TALLYING W-TALLY FOR ALL "＊".                
      IF W-TALLY = 2                                              
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" W-TALLY                         
      END-IF.                                                     
-*>ケース3：一意名１、定数２（TALLYING,LEADING指定）                                
+*>ケース3：一意名１、定数２（TALLYING,LEADING指定）                
      MOVE "P-030-01"        TO CASE-ID.                          
-     MOVE "ああああああいああう" TO G-01.                                  
-     MOVE "あああいうえかき" TO GE-01.                                   
+     MOVE "ああああああいああう" TO G-01.                        
+     MOVE "あああいうえかき" TO GE-01.                           
      MOVE 0 TO W-TALLY.                                          
-     INSPECT G-01 TALLYING W-TALLY FOR LEADING "あ".              
+     INSPECT G-01 TALLYING W-TALLY FOR LEADING "あ".             
      IF W-TALLY = 6                                              
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" W-TALLY                         
@@ -105,17 +99,17 @@ P-010.
 *>                                                                 
      MOVE "P-030-02"        TO CASE-ID.                          
      MOVE 0 TO W-TALLY.                                          
-     INSPECT GE-01 TALLYING W-TALLY FOR LEADING "あ".             
+     INSPECT GE-01 TALLYING W-TALLY FOR LEADING "あ".            
      IF W-TALLY = 2                                              
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" W-TALLY                         
      END-IF.                                                     
-*>ケース4：一意名１、定数２（TALLYING,TRAILING指定）                               
+*>ケース4：一意名１、定数２（TALLYING,TRAILING指定）               
      MOVE "P-040-01"        TO CASE-ID.                          
-     MOVE "あい＊＊おかき＊＊＊" TO G-01.                                  
-     MOVE "あああい＊＊＊＊" TO GE-01.                                   
+     MOVE "あい＊＊おかき＊＊＊" TO G-01.                        
+     MOVE "あああい＊＊＊＊" TO GE-01.                           
      MOVE 0 TO W-TALLY.                                          
-     INSPECT G-01 TALLYING W-TALLY FOR TRAILING "＊".             
+     INSPECT G-01 TALLYING W-TALLY FOR TRAILING "＊".            
      IF W-TALLY = 3                                              
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" W-TALLY                         
@@ -123,17 +117,17 @@ P-010.
 *>                                                                 
      MOVE "P-040-02"        TO CASE-ID.                          
      MOVE 0 TO W-TALLY.                                          
-     INSPECT GE-01 TALLYING W-TALLY FOR TRAILING "＊".            
+     INSPECT GE-01 TALLYING W-TALLY FOR TRAILING "＊".           
      IF W-TALLY = 2                                              
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" W-TALLY                         
      END-IF.                                                     
-*>ケース5：一意名１、定数２（TALLYING,ALL,2文字指定）                                
+*>ケース5：一意名１、定数２（TALLYING,ALL,2文字指定）              
      MOVE "P-050-01"        TO CASE-ID.                          
-     MOVE "あい＊＊おかき＊＊＊" TO G-01.                                  
-     MOVE "あ＊＊い＊＊＊＊" TO GE-01.                                   
+     MOVE "あい＊＊おかき＊＊＊" TO G-01.                        
+     MOVE "あ＊＊い＊＊＊＊" TO GE-01.                           
      MOVE 0 TO W-TALLY.                                          
-     INSPECT G-01 TALLYING W-TALLY FOR ALL "＊＊".                 
+     INSPECT G-01 TALLYING W-TALLY FOR ALL "＊＊".               
      IF W-TALLY = 2                                              
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" W-TALLY                         
@@ -141,17 +135,17 @@ P-010.
 *>                                                                 
      MOVE "P-050-02"        TO CASE-ID.                          
      MOVE 0 TO W-TALLY.                                          
-     INSPECT GE-01 TALLYING W-TALLY FOR ALL "＊＊".                
+     INSPECT GE-01 TALLYING W-TALLY FOR ALL "＊＊".              
      IF W-TALLY = 2                                              
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" W-TALLY                         
      END-IF.                                                     
-*>ケース6：一意名１、定数７（TALLYING,CHARACTERS,BEFORE指定）                      
+*>ケース6：一意名１、定数７（TALLYING,CHARACTERS,BEFORE指定）      
      MOVE "P-060-01"        TO CASE-ID.                          
-     MOVE "あいうえおかきくけこ" TO G-01.                                  
-     MOVE "あいうえおかきく" TO GE-01.                                   
+     MOVE "あいうえおかきくけこ" TO G-01.                        
+     MOVE "あいうえおかきく" TO GE-01.                           
      MOVE 0 TO W-TALLY.                                          
-     INSPECT G-01 TALLYING W-TALLY FOR CHARACTERS BEFORE "え".    
+     INSPECT G-01 TALLYING W-TALLY FOR CHARACTERS BEFORE "え".   
      IF W-TALLY = 3                                              
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" W-TALLY                         
@@ -159,17 +153,17 @@ P-010.
 *>                                                                 
      MOVE "P-060-02"        TO CASE-ID.                          
      MOVE 0 TO W-TALLY.                                          
-     INSPECT GE-01 TALLYING W-TALLY FOR CHARACTERS BEFORE "か".   
+     INSPECT GE-01 TALLYING W-TALLY FOR CHARACTERS BEFORE "か".  
      IF W-TALLY = 6                                              
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" W-TALLY                         
      END-IF.                                                     
-*>ケース7：一意名１、定数２、定数７（TALLYING,ALL,AFTER指定）                          
+*>ケース7：一意名１、定数２、定数７（TALLYING,ALL,AFTER指定）      
      MOVE "P-070-01"        TO CASE-ID.                          
-     MOVE "あい＊え＊かき＊＊こ" TO G-01.                                  
-     MOVE "あい＊＊おか＊き" TO GE-01.                                   
+     MOVE "あい＊え＊かき＊＊こ" TO G-01.                        
+     MOVE "あい＊＊おか＊き" TO GE-01.                           
      MOVE 0 TO W-TALLY.                                          
-     INSPECT G-01 TALLYING W-TALLY FOR ALL "＊" AFTER "か".        
+     INSPECT G-01 TALLYING W-TALLY FOR ALL "＊" AFTER "か".      
      IF W-TALLY = 2                                              
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" W-TALLY                         
@@ -177,18 +171,18 @@ P-010.
 *>                                                                 
      MOVE "P-070-02"        TO CASE-ID.                          
      MOVE 0 TO W-TALLY.                                          
-     INSPECT GE-01 TALLYING W-TALLY FOR ALL "＊" AFTER "お".       
+     INSPECT GE-01 TALLYING W-TALLY FOR ALL "＊" AFTER "お".     
      IF W-TALLY = 1                                              
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" W-TALLY                         
      END-IF.                                                     
-*>ケース8：一意名１、定数２、定数７（TALLYING,LEADING,AFTER指定）                      
+*>ケース8：一意名１、定数２、定数７（TALLYING,LEADING,AFTER指定）  
      MOVE "P-080-01"        TO CASE-ID.                          
-     MOVE "ああああああいああう" TO G-01.                                  
-     MOVE "あああいあああき" TO GE-01.                                   
+     MOVE "ああああああいああう" TO G-01.                        
+     MOVE "あああいあああき" TO GE-01.                           
                                                                  
      MOVE 0 TO W-TALLY.                                          
-     INSPECT G-01 TALLYING W-TALLY FOR LEADING "あ" AFTER "い".    
+     INSPECT G-01 TALLYING W-TALLY FOR LEADING "あ" AFTER "い".  
      IF W-TALLY = 2                                              
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" W-TALLY                         
@@ -196,17 +190,17 @@ P-010.
 *>                                                                 
      MOVE "P-080-02"        TO CASE-ID.                          
      MOVE 0 TO W-TALLY.                                          
-     INSPECT GE-01 TALLYING W-TALLY FOR LEADING "あ" AFTER "い".   
+     INSPECT GE-01 TALLYING W-TALLY FOR LEADING "あ" AFTER "い". 
      IF W-TALLY = 2                                              
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" W-TALLY                         
      END-IF.                                                     
-*>ケース9：一意名１、定数２、定数７（TALLYING,TRAILING,BEFORE指定）                    
+*>ケース9：一意名１、定数２、定数７（TALLYING,TRAILING,BEFORE指定）
      MOVE "P-090-01"        TO CASE-ID.                          
-     MOVE "あい＊＊おかき＊＊え" TO G-01.                                  
-     MOVE "あ＊い＊う＊＊え" TO GE-01.                                   
+     MOVE "あい＊＊おかき＊＊え" TO G-01.                        
+     MOVE "あ＊い＊う＊＊え" TO GE-01.                           
      MOVE 0 TO W-TALLY.                                          
-     INSPECT G-01 TALLYING W-TALLY FOR TRAILING "＊" BEFORE "え".  
+     INSPECT G-01 TALLYING W-TALLY FOR TRAILING "＊" BEFORE "え". 
      IF W-TALLY = 2                                              
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" W-TALLY                         
@@ -215,17 +209,17 @@ P-010.
      MOVE "P-090-02"        TO CASE-ID.                          
      MOVE 0 TO W-TALLY.                                          
      INSPECT GE-01 TALLYING W-TALLY FOR                          
-                                    TRAILING "＊" BEFORE "え".     
+                                    TRAILING "＊" BEFORE "え".   
      IF W-TALLY = 1                                              
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" W-TALLY                         
      END-IF.                                                     
-*>ケース10：一意名１、定数２、定数７（TALLYING,ALL,2文字指定,BEFORE）                    
+*>ケース10：一意名１、定数２、定数７（TALLYING,ALL,2文字指定,BEFORE
      MOVE "P-100-01"        TO CASE-ID.                          
-     MOVE "あい＊＊おかき＊＊＊" TO G-01.                                  
-     MOVE "あ＊＊い＊＊＊＊" TO GE-01.                                   
+     MOVE "あい＊＊おかき＊＊＊" TO G-01.                        
+     MOVE "あ＊＊い＊＊＊＊" TO GE-01.                           
      MOVE 0 TO W-TALLY.                                          
-     INSPECT G-01 TALLYING W-TALLY FOR ALL "＊＊" BEFORE "き＊".     
+     INSPECT G-01 TALLYING W-TALLY FOR ALL "＊＊" BEFORE "き＊". 
      IF W-TALLY = 1                                              
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" W-TALLY                         
@@ -233,18 +227,18 @@ P-010.
 *>                                                                 
      MOVE "P-100-02"        TO CASE-ID.                          
      MOVE 0 TO W-TALLY.                                          
-     INSPECT GE-01 TALLYING W-TALLY FOR ALL "＊＊" BEFORE "／＊".    
+     INSPECT GE-01 TALLYING W-TALLY FOR ALL "＊＊" BEFORE "／＊". 
      IF W-TALLY = 0                                              
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" W-TALLY                         
      END-IF.                                                     
-*>ケース11：一意名１、定数２、定数７（TALLYING,ALL,2文字指定,AFTER）                     
+*>ケース11：一意名１、定数２、定数７（TALLYING,ALL,2文字指定,AFTER?
      MOVE "P-110-01"        TO CASE-ID.                          
-     MOVE "あい＊＊おかき＊＊＊" TO G-01.                                  
-     MOVE "あ＊＊い＊＊＊＊" TO GE-01.                                   
+     MOVE "あい＊＊おかき＊＊＊" TO G-01.                        
+     MOVE "あ＊＊い＊＊＊＊" TO GE-01.                           
                                                                  
      MOVE 0 TO W-TALLY.                                          
-     INSPECT G-01 TALLYING W-TALLY FOR ALL "＊＊" AFTER "き＊".      
+     INSPECT G-01 TALLYING W-TALLY FOR ALL "＊＊" AFTER "き＊".  
      IF W-TALLY = 1                                              
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" W-TALLY                         
@@ -252,16 +246,16 @@ P-010.
 *>                                                                 
      MOVE "P-110-02"        TO CASE-ID.                          
      MOVE 0 TO W-TALLY.                                          
-     INSPECT GE-01 TALLYING W-TALLY FOR ALL "＊＊" AFTER "／＊".     
+     INSPECT GE-01 TALLYING W-TALLY FOR ALL "＊＊" AFTER "／＊". 
      IF W-TALLY = 2                                              
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" W-TALLY                         
      END-IF.                                                     
-*>ケース12.一意名１、一意名３（TALLYING,ALL指定）                                  
+*>ケース12.一意名１、一意名３（TALLYING,ALL指定）                  
      MOVE "P-120-01"        TO CASE-ID.                          
-     MOVE "あい＊え＊かき＊＊こ" TO G-01.                                  
-     MOVE "あい＊＊おかき" TO GE-01.                                    
-     MOVE "＊" TO G-03-1.                                         
+     MOVE "あい＊え＊かき＊＊こ" TO G-01.                        
+     MOVE "あい＊＊おかき" TO GE-01.                             
+     MOVE "＊" TO G-03-1.                                        
                                                                  
      MOVE 0 TO W-TALLY.                                          
      INSPECT G-01 TALLYING W-TALLY FOR ALL G-03-1.               
@@ -277,11 +271,11 @@ P-010.
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" W-TALLY                         
      END-IF.                                                     
-*>ケース13：一意名１、一意名3（TALLYING,LEADING指定）                              
+*>ケース13：一意名１、一意名3（TALLYING,LEADING指定）              
      MOVE "P-130-01"        TO CASE-ID.                          
-     MOVE "ああああああいああう" TO G-01.                                  
-     MOVE "あああいうえかき" TO GE-01.                                   
-     MOVE "あ" TO G-03-1.                                         
+     MOVE "ああああああいああう" TO G-01.                        
+     MOVE "あああいうえかき" TO GE-01.                           
+     MOVE "あ" TO G-03-1.                                        
                                                                  
      MOVE 0 TO W-TALLY.                                          
      INSPECT G-01 TALLYING W-TALLY FOR LEADING G-03-1.           
@@ -297,11 +291,11 @@ P-010.
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" W-TALLY                         
      END-IF.                                                     
-*>ケース14：一意名１、一意名3（TALLYING,TRAILING指定）                             
+*>ケース14：一意名１、一意名3（TALLYING,TRAILING指定）             
      MOVE "P-140-01"        TO CASE-ID.                          
-     MOVE "あい＊＊おかき＊＊＊" TO G-01.                                  
-     MOVE "あああい＊＊＊＊" TO GE-01.                                   
-     MOVE "＊" TO G-03-1.                                         
+     MOVE "あい＊＊おかき＊＊＊" TO G-01.                        
+     MOVE "あああい＊＊＊＊" TO GE-01.                           
+     MOVE "＊" TO G-03-1.                                        
                                                                  
      MOVE 0 TO W-TALLY.                                          
      INSPECT G-01 TALLYING W-TALLY FOR TRAILING G-03-1.          
@@ -317,11 +311,11 @@ P-010.
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" W-TALLY                         
      END-IF.                                                     
-*>ケース15：一意名１、一意名3（TALLYING,ALL,2文字指定）                              
+*>ケース15：一意名１、一意名3（TALLYING,ALL,2文字指定）            
      MOVE "P-150-01"        TO CASE-ID.                          
-     MOVE "あい＊＊おかき＊＊＊" TO G-01.                                  
-     MOVE "あ＊＊い＊＊＊＊" TO GE-01.                                   
-     MOVE "＊＊" TO G-03-2.                                        
+     MOVE "あい＊＊おかき＊＊＊" TO G-01.                        
+     MOVE "あ＊＊い＊＊＊＊" TO GE-01.                           
+     MOVE "＊＊" TO G-03-2.                                      
                                                                  
      MOVE 0 TO W-TALLY.                                          
      INSPECT G-01 TALLYING W-TALLY FOR ALL G-03-2.               
@@ -337,11 +331,11 @@ P-010.
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" W-TALLY                         
      END-IF.                                                     
-*>ケース16：一意名１、一意名8（TALLYING,CHARACTERS,BEFORE指定）                    
+*>ケース16：一意名１、一意名8（TALLYING,CHARACTERS,BEFORE指定）    
      MOVE "P-160-01"        TO CASE-ID.                          
-     MOVE "あいうえおかきくけこ" TO G-01.                                  
-     MOVE "あいうえおかきく" TO GE-01.                                   
-     MOVE "え" TO G-08-1.                                         
+     MOVE "あいうえおかきくけこ" TO G-01.                        
+     MOVE "あいうえおかきく" TO GE-01.                           
+     MOVE "え" TO G-08-1.                                        
                                                                  
      MOVE 0 TO W-TALLY.                                          
      INSPECT G-01 TALLYING W-TALLY FOR CHARACTERS BEFORE G-08-1. 
@@ -357,12 +351,12 @@ P-010.
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" W-TALLY                         
      END-IF.                                                     
-*>ケース17：一意名１、一意名3、一意名8（TALLYING,ALL,AFTER指定）                       
+*>ケース17：一意名１、一意名3、一意名8（TALLYING,ALL,AFTER指定）   
      MOVE "P-170-01"        TO CASE-ID.                          
-     MOVE "あい＊え＊かき＊＊こ" TO G-01.                                  
-     MOVE "あい＊＊おか＊き" TO GE-01.                                   
-     MOVE "＊" TO G-03-1.                                         
-     MOVE "か" TO G-08-1.                                         
+     MOVE "あい＊え＊かき＊＊こ" TO G-01.                        
+     MOVE "あい＊＊おか＊き" TO GE-01.                           
+     MOVE "＊" TO G-03-1.                                        
+     MOVE "か" TO G-08-1.                                        
                                                                  
      MOVE 0 TO W-TALLY.                                          
      INSPECT G-01 TALLYING W-TALLY FOR ALL G-03-1 AFTER G-08-1.  
@@ -378,12 +372,12 @@ P-010.
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" W-TALLY                         
      END-IF.                                                     
-*>ケース18：一意名１、一意名3、一意名8（TALLYING,LEADING,AFTER指定）                   
+*>ケース18：一意名１、一意名3、一意名8（TALLYING,LEADING,AFTER指定?
      MOVE "P-180-01"        TO CASE-ID.                          
-     MOVE "ああああああいああう" TO G-01.                                  
-     MOVE "あああいあああき" TO GE-01.                                   
-     MOVE "あ" TO G-03-1.                                         
-     MOVE "い" TO G-08-1.                                         
+     MOVE "ああああああいああう" TO G-01.                        
+     MOVE "あああいあああき" TO GE-01.                           
+     MOVE "あ" TO G-03-1.                                        
+     MOVE "い" TO G-08-1.                                        
                                                                  
      MOVE 0 TO W-TALLY.                                          
      INSPECT G-01 TALLYING W-TALLY FOR                           
@@ -401,12 +395,12 @@ P-010.
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" W-TALLY                         
      END-IF.                                                     
-*>ケース19：一意名１、一意名3、一意名8（TALLYING,TRAILING,BEFORE指定）                 
+*>ケース19：一意名１、一意名3、一意名8（TALLYING,TRAILING,BEFORE指?
      MOVE "P-190-01"        TO CASE-ID.                          
-     MOVE "あい＊＊おかき＊＊え" TO G-01.                                  
-     MOVE "あ＊い＊う＊＊え" TO GE-01.                                   
-     MOVE "＊" TO G-03-1.                                         
-     MOVE "え" TO G-08-1.                                         
+     MOVE "あい＊＊おかき＊＊え" TO G-01.                        
+     MOVE "あ＊い＊う＊＊え" TO GE-01.                           
+     MOVE "＊" TO G-03-1.                                        
+     MOVE "え" TO G-08-1.                                        
                                                                  
      MOVE 0 TO W-TALLY.                                          
      INSPECT G-01 TALLYING W-TALLY FOR                           
@@ -424,12 +418,12 @@ P-010.
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" W-TALLY                         
      END-IF.                                                     
-*>ケース20：一意名１、一意名3、一意名8（（TALLYING,ALL,2文字指定,BEFORE）                 
+*>ケース20：一意名１、一意名3、一意名8（（TALLYING,ALL,2文字指定,BE
      MOVE "P-200-01"        TO CASE-ID.                          
-     MOVE "あい＊＊おかきき＊＊" TO G-01.                                  
-     MOVE "＊＊＊＊きき＊＊" TO GE-01.                                   
-     MOVE "＊＊" TO G-03-2.                                        
-     MOVE "きき" TO G-08-2.                                        
+     MOVE "あい＊＊おかきき＊＊" TO G-01.                        
+     MOVE "＊＊＊＊きき＊＊" TO GE-01.                           
+     MOVE "＊＊" TO G-03-2.                                      
+     MOVE "きき" TO G-08-2.                                      
                                                                  
      MOVE 0 TO W-TALLY.                                          
      INSPECT G-01 TALLYING W-TALLY FOR ALL G-03-2 BEFORE G-08-2. 
@@ -445,12 +439,12 @@ P-010.
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" W-TALLY                         
      END-IF.                                                     
-*>ケース21：一意名１、一意名3、一意名8（TALLYING,ALL,2文字指定,AFTER）                   
+*>ケース21：一意名１、一意名3、一意名8（TALLYING,ALL,2文字指定,AFTE
      MOVE "P-210-01"        TO CASE-ID.                          
-     MOVE "あい＊＊おか／＊＊＊" TO G-01.                                  
-     MOVE "あ＊＊い＊＊＊＊" TO GE-01.                                   
-     MOVE "／＊" TO G-03-2.                                        
-     MOVE "＊＊" TO G-08-2.                                        
+     MOVE "あい＊＊おか／＊＊＊" TO G-01.                        
+     MOVE "あ＊＊い＊＊＊＊" TO GE-01.                           
+     MOVE "／＊" TO G-03-2.                                      
+     MOVE "＊＊" TO G-08-2.                                      
                                                                  
                                                                  
      MOVE 0 TO W-TALLY.                                          
@@ -467,14 +461,14 @@ P-010.
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" W-TALLY                         
      END-IF.                                                     
-*>ケース21追加.：一意名１、一意名3、一意名8                                          
-*>    （AFTERで一意名8が見つからないとき）                                        
-*>    （BEFOREで一意名8が見つからないとき）                                       
+*>ケース21追加.：一意名１、一意名3、一意名8                        
+*>    （AFTERで一意名8が見つからないとき）                         
+*>    （BEFOREで一意名8が見つからないとき）                        
      MOVE "P-210-03"        TO CASE-ID.                          
-     MOVE "あい＊＊おか／＊＊＊" TO G-01.                                  
-     MOVE "あ＊＊い＊＊＊＊" TO GE-01.                                   
-     MOVE "／＊" TO G-03-2.                                        
-     MOVE "ＡＢ" TO G-08-2.                                        
+     MOVE "あい＊＊おか／＊＊＊" TO G-01.                        
+     MOVE "あ＊＊い＊＊＊＊" TO GE-01.                           
+     MOVE "／＊" TO G-03-2.                                      
+     MOVE "ＡＢ" TO G-08-2.                                      
                                                                  
                                                                  
      MOVE 0 TO W-TALLY.                                          

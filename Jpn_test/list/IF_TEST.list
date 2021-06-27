@@ -1,21 +1,15 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
-<<<<<<< HEAD
 *>source file name:  C:\isTEST\Git\Jpn_test\source\IF_TEST.cbl
-*>date generated  :  Sun Jun 20 15:23:49 JST 2021
-*>compiler options:  -dx -eo=C:/isTEST/Git/Jpn_test/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/isTEST/Git/Jpn_test/list -tasks -od=C:/isTEST/Git/Jpn_test/output -jj
-=======
-*>source file name:  C:\ISTEST\Git\Jpn_test\source\IF_TEST.cbl
-*>date generated  :  Sun Jun 20 14:59:33 JST 2021
-*>compiler options:  -dx -eo=C:/ISTEST/Git/Jpn_test/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks -od=C:/ISTEST/Git/Jpn_test/output -jj
->>>>>>> branch 'master' of https://github.com/j1-ebisawa/mywork
+*>date generated  :  Wed Jun 23 15:58:27 JST 2021
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/isTEST/Git/Jpn_test/output -jj -eo=C:/isTEST/Git/Jpn_test/errs -d -g -lo=C:/isTEST/Git/Jpn_test/list -tasks
 *>*****************************************************************
 *>    ¥Æ¥¹¥È¥±¡¼¥¹¡§5-1-1A                                         
-*>    ¥×¥úÁ°¥é¥àÌ¾¡§Æ?ËÜ¸?²½¥Æ¥¹¥È ¡Ê¼?Â³¤­Éô¡Ë¾ò·? Èæ³Ó¾ò·?              
-*>    ½èÍ?³µÍ×¡¡¡¡¡§Æ?ËÜ¸?Èæ³Ó¤¬Àµ¤·¤¯Èæ³ÓÉ½¤Ë¤·¤¿¤¬¤Ã¤Æ              
-*>                  Àµ¤·¤¯¥¨¥é¡¼¥Á¥§¥Ã¥¯¤µ¤?¤?¤«¤ò¥Á¥§¥Ã¥¯¤¹¤?¡£     
+*>    ¥×¥úÁ°¥é¥àÌ¾¡§Æ?ËÜ¸?²½¥Æ¥¹¥È ¡Ê¼?Â³¤­Éô¡Ë¾ò·? Èæ³Ó¾ò·?       
+*>    ½èÍ?³µÍ×¡¡¡¡¡§Æ?ËÜ¸?Èæ³Ó¤¬Àµ¤·¤¯Èæ³ÓÉ½¤Ë¤·¤¿¤¬¤Ã¤Æ           
+*>                  Àµ¤·¤¯¥¨¥é¡¼¥Á¥§¥Ã¥¯¤µ¤?¤?¤«¤ò¥Á¥§¥Ã¥¯¤¹¤?¡£   
 *>  -------------------------------------------------------------- 
-*>    ¤³¤Î¥×¥úÁ°¥é¥à¤Ï¥¨¥é¡¼¥Á¥§¥Ã¥¯¤òÄ´¤Ù¤?¤Î¤Ç¡¢¼Â¹Ô¤Ç¤­¤Ê¤¤¡£        
+*>    ¤³¤Î¥×¥úÁ°¥é¥à¤Ï¥¨¥é¡¼¥Á¥§¥Ã¥¯¤òÄ´¤Ù¤?¤Î¤Ç¡¢¼Â¹Ô¤Ç¤­¤Ê¤¤¡£   
 *>*****************************************************************
 IDENTIFICATION        DIVISION.                                  
 *>*****************************************************************
@@ -79,35 +73,35 @@ P-010.
      IF W-L-GRP = R-A                                            
         CONTINUE                                                 
      END-IF.                                                     
-*>     +±Ñ¿ô»?                                                      
+*>     +±Ñ¿ô»?                                                     
      IF W-L-GRP = R-AN                                           
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(ZONEÀ°¿?)                                              
+*>     +¿ô»?(ZONEÀ°¿?)                                             
      IF W-L-GRP = R-ZONE                                         
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(ZONEÈóÀ°¿ô¡Ë                                             
+*>     +¿ô»?(ZONEÈóÀ°¿ô¡Ë                                          
      IF W-L-GRP = R-ZONE-DEC                                     
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(PACKÀ°¿?)                                              
+*>     +¿ô»?(PACKÀ°¿?)                                             
      IF W-L-GRP = R-PACK                                         
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(PACKÈóÀ°¿ô¡Ë                                             
+*>     +¿ô»?(PACKÈóÀ°¿ô¡Ë                                          
      IF W-L-GRP =  R-PACK-DEC                                    
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(BINÀ°¿?)                                               
+*>     +¿ô»?(BINÀ°¿?)                                              
      IF W-L-GRP = R-BIN                                          
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(BINÈóÀ°¿ô¡Ë                                              
+*>     +¿ô»?(BINÈóÀ°¿ô¡Ë                                           
      IF W-L-GRP = R-BIN-DEC                                      
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(¿ô»úÊÔ½¸¡Ë                                               
+*>     +¿ô»?(¿ô»úÊÔ½¸¡Ë                                            
      IF W-L-GRP =  R-NE                                          
         CONTINUE                                                 
      END-IF.                                                     
@@ -142,35 +136,35 @@ P-020.
      IF L-A =  R-A                                               
         CONTINUE                                                 
      END-IF.                                                     
-*>     +±Ñ¿ô»?                                                      
+*>     +±Ñ¿ô»?                                                     
      IF L-A =  R-AN                                              
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(ZONEÀ°¿?)                                              
+*>     +¿ô»?(ZONEÀ°¿?)                                             
      IF L-A = R-ZONE                                             
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(ZONEÈóÀ°¿ô¡Ë                                             
+*>     +¿ô»?(ZONEÈóÀ°¿ô¡Ë                                          
      IF L-A = R-ZONE-DEC                                         
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(PACKÀ°¿?)                                              
+*>     +¿ô»?(PACKÀ°¿?)                                             
      IF L-A = R-PACK                                             
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(PACKÈóÀ°¿ô¡Ë                                             
+*>     +¿ô»?(PACKÈóÀ°¿ô¡Ë                                          
      IF L-A = R-PACK-DEC                                         
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(BINÀ°¿?)                                               
+*>     +¿ô»?(BINÀ°¿?)                                              
      IF L-A =  R-BIN                                             
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(BINÈóÀ°¿ô¡Ë                                              
+*>     +¿ô»?(BINÈóÀ°¿ô¡Ë                                           
      IF L-A =  R-BIN-DEC                                         
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(¿ô»úÊÔ½¸¡Ë                                               
+*>     +¿ô»?(¿ô»úÊÔ½¸¡Ë                                            
      IF L-A =  R-NE                                              
         CONTINUE                                                 
      END-IF.                                                     
@@ -197,7 +191,7 @@ P-020.
 *>                                                                 
 *>                                                                 
 P-030.                                                           
-*>   ±Ñ¿ô»?                                                         
+*>   ±Ñ¿ô»?                                                        
 *>     +½¸ÃÄ                                                       
      IF L-AN =  W-R-GRP                                          
         CONTINUE                                                 
@@ -206,35 +200,35 @@ P-030.
      IF L-AN =  R-A                                              
         CONTINUE                                                 
      END-IF.                                                     
-*>     +±Ñ¿ô»?                                                      
+*>     +±Ñ¿ô»?                                                     
      IF L-AN =  R-AN                                             
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(ZONEÀ°¿?)                                              
+*>     +¿ô»?(ZONEÀ°¿?)                                             
      IF L-AN =  R-ZONE                                           
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(ZONEÈóÀ°¿ô¡Ë                                             
+*>     +¿ô»?(ZONEÈóÀ°¿ô¡Ë                                          
      IF L-AN =  R-ZONE-DEC                                       
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(PACKÀ°¿?)                                              
+*>     +¿ô»?(PACKÀ°¿?)                                             
      IF L-AN =  R-PACK                                           
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(PACKÈóÀ°¿ô¡Ë                                             
+*>     +¿ô»?(PACKÈóÀ°¿ô¡Ë                                          
      IF L-AN =  R-PACK-DEC                                       
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(BINÀ°¿?)                                               
+*>     +¿ô»?(BINÀ°¿?)                                              
      IF L-AN =  R-BIN                                            
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(BINÈóÀ°¿ô¡Ë                                              
+*>     +¿ô»?(BINÈóÀ°¿ô¡Ë                                           
      IF L-AN =  R-BIN-DEC                                        
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(¿ô»úÊÔ½¸¡Ë                                               
+*>     +¿ô»?(¿ô»úÊÔ½¸¡Ë                                            
      IF L-AN = R-NE                                              
         CONTINUE                                                 
      END-IF.                                                     
@@ -261,7 +255,7 @@ P-030.
 *>                                                                 
 *>                                                                 
 P-040.                                                           
-*>   ±Ñ¿ô»úÊÔ½¸                                                      
+*>   ±Ñ¿ô»úÊÔ½¸                                                    
 *>     +½¸ÃÄ                                                       
      IF L-ANE =  W-R-GRP                                         
         CONTINUE                                                 
@@ -270,35 +264,35 @@ P-040.
      IF L-ANE =  R-A                                             
         CONTINUE                                                 
      END-IF.                                                     
-*>     +±Ñ¿ô»?                                                      
+*>     +±Ñ¿ô»?                                                     
      IF L-ANE =  R-AN                                            
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(ZONEÀ°¿?)                                              
+*>     +¿ô»?(ZONEÀ°¿?)                                             
      IF L-ANE =  R-ZONE                                          
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(ZONEÈóÀ°¿ô¡Ë                                             
+*>     +¿ô»?(ZONEÈóÀ°¿ô¡Ë                                          
      IF L-ANE =  R-ZONE-DEC                                      
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(PACKÀ°¿?)                                              
+*>     +¿ô»?(PACKÀ°¿?)                                             
      IF L-ANE =  R-PACK                                          
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(PACKÈóÀ°¿ô¡Ë                                             
+*>     +¿ô»?(PACKÈóÀ°¿ô¡Ë                                          
      IF L-ANE =  R-PACK-DEC                                      
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(BINÀ°¿?)                                               
+*>     +¿ô»?(BINÀ°¿?)                                              
      IF L-ANE =  R-BIN                                           
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(BINÈóÀ°¿ô¡Ë                                              
+*>     +¿ô»?(BINÈóÀ°¿ô¡Ë                                           
      IF L-ANE =  R-BIN-DEC                                       
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(¿ô»úÊÔ½¸¡Ë                                               
+*>     +¿ô»?(¿ô»úÊÔ½¸¡Ë                                            
      IF L-ANE =  R-NE                                            
         CONTINUE                                                 
      END-IF.                                                     
@@ -324,7 +318,7 @@ P-040.
      END-IF.                                                     
 *>                                                                 
 P-050.                                                           
-*>   ¿ô»úÊÔ½¸                                                        
+*>   ¿ô»úÊÔ½¸                                                      
 *>     +½¸ÃÄ                                                       
      IF L-NE =  W-R-GRP                                          
         CONTINUE                                                 
@@ -333,35 +327,35 @@ P-050.
      IF L-NE =  R-A                                              
         CONTINUE                                                 
      END-IF.                                                     
-*>     +±Ñ¿ô»?                                                      
+*>     +±Ñ¿ô»?                                                     
      IF L-NE =  R-AN                                             
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(ZONEÀ°¿?)                                              
+*>     +¿ô»?(ZONEÀ°¿?)                                             
      IF L-NE =  R-ZONE                                           
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(ZONEÈóÀ°¿ô¡Ë                                             
+*>     +¿ô»?(ZONEÈóÀ°¿ô¡Ë                                          
      IF L-NE = R-ZONE-DEC                                        
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(PACKÀ°¿?)                                              
+*>     +¿ô»?(PACKÀ°¿?)                                             
      IF L-NE = R-PACK                                            
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(PACKÈóÀ°¿ô¡Ë                                             
+*>     +¿ô»?(PACKÈóÀ°¿ô¡Ë                                          
      IF L-NE =  R-PACK-DEC                                       
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(BINÀ°¿?)                                               
+*>     +¿ô»?(BINÀ°¿?)                                              
      IF L-NE =  R-BIN                                            
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(BINÈóÀ°¿ô¡Ë                                              
+*>     +¿ô»?(BINÈóÀ°¿ô¡Ë                                           
      IF L-NE =  R-BIN-DEC                                        
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(¿ô»úÊÔ½¸¡Ë                                               
+*>     +¿ô»?(¿ô»úÊÔ½¸¡Ë                                            
      IF L-NE =  R-NE                                             
         CONTINUE                                                 
      END-IF.                                                     
@@ -397,35 +391,35 @@ P-060.
      IF L-A =  R-A                                               
         CONTINUE                                                 
      END-IF.                                                     
-*>     +±Ñ¿ô»?                                                      
+*>     +±Ñ¿ô»?                                                     
      IF L-A =  R-AN                                              
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(ZONEÀ°¿?)                                              
+*>     +¿ô»?(ZONEÀ°¿?)                                             
      IF L-A =  R-ZONE                                            
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(ZONEÈóÀ°¿ô¡Ë                                             
+*>     +¿ô»?(ZONEÈóÀ°¿ô¡Ë                                          
      IF L-A = R-ZONE-DEC                                         
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(PACKÀ°¿?)                                              
+*>     +¿ô»?(PACKÀ°¿?)                                             
      IF L-A =  R-PACK                                            
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(PACKÈóÀ°¿ô¡Ë                                             
+*>     +¿ô»?(PACKÈóÀ°¿ô¡Ë                                          
      IF L-A = R-PACK-DEC                                         
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(BINÀ°¿?)                                               
+*>     +¿ô»?(BINÀ°¿?)                                              
      IF L-A = R-BIN                                              
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(BINÈóÀ°¿ô¡Ë                                              
+*>     +¿ô»?(BINÈóÀ°¿ô¡Ë                                           
      IF L-A =  R-BIN-DEC                                         
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(¿ô»úÊÔ½¸¡Ë                                               
+*>     +¿ô»?(¿ô»úÊÔ½¸¡Ë                                            
      IF L-A =  R-NE                                              
         CONTINUE                                                 
      END-IF.                                                     
@@ -461,35 +455,35 @@ P-070.
      IF L-ZONE =  R-A                                            
         CONTINUE                                                 
      END-IF.                                                     
-*>     +±Ñ¿ô»?                                                      
+*>     +±Ñ¿ô»?                                                     
      IF L-ZONE =  R-AN                                           
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(ZONEÀ°¿?)                                              
+*>     +¿ô»?(ZONEÀ°¿?)                                             
      IF L-ZONE =  R-ZONE                                         
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(ZONEÈóÀ°¿ô¡Ë                                             
+*>     +¿ô»?(ZONEÈóÀ°¿ô¡Ë                                          
      IF L-ZONE =  R-ZONE-DEC                                     
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(PACKÀ°¿?)                                              
+*>     +¿ô»?(PACKÀ°¿?)                                             
      IF L-ZONE =  R-PACK                                         
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(PACKÈóÀ°¿ô¡Ë                                             
+*>     +¿ô»?(PACKÈóÀ°¿ô¡Ë                                          
      IF L-ZONE =  R-PACK-DEC                                     
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(BINÀ°¿?)                                               
+*>     +¿ô»?(BINÀ°¿?)                                              
      IF L-ZONE =  R-BIN                                          
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(BINÈóÀ°¿ô¡Ë                                              
+*>     +¿ô»?(BINÈóÀ°¿ô¡Ë                                           
      IF L-ZONE = R-BIN-DEC                                       
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(¿ô»úÊÔ½¸¡Ë                                               
+*>     +¿ô»?(¿ô»úÊÔ½¸¡Ë                                            
      IF L-ZONE =  R-NE                                           
         CONTINUE                                                 
      END-IF.                                                     
@@ -516,7 +510,7 @@ P-070.
 *>                                                                 
 *>                                                                 
 P-080.                                                           
-*>   ZONEÈóÀ°¿?                                                     
+*>   ZONEÈóÀ°¿?                                                    
 *>     +½¸ÃÄ                                                       
      IF L-ZONE-DEC =  W-R-GRP                                    
         CONTINUE                                                 
@@ -525,35 +519,35 @@ P-080.
      IF L-ZONE-DEC =  R-A                                        
         CONTINUE                                                 
      END-IF.                                                     
-*>     +±Ñ¿ô»?                                                      
+*>     +±Ñ¿ô»?                                                     
      IF L-ZONE-DEC =  R-AN                                       
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(ZONEÀ°¿?)                                              
+*>     +¿ô»?(ZONEÀ°¿?)                                             
      IF L-ZONE-DEC =  R-ZONE                                     
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(ZONEÈóÀ°¿ô¡Ë                                             
+*>     +¿ô»?(ZONEÈóÀ°¿ô¡Ë                                          
      IF L-ZONE-DEC =  R-ZONE-DEC                                 
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(PACKÀ°¿?)                                              
+*>     +¿ô»?(PACKÀ°¿?)                                             
      IF L-ZONE-DEC =  R-PACK                                     
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(PACKÈóÀ°¿ô¡Ë                                             
+*>     +¿ô»?(PACKÈóÀ°¿ô¡Ë                                          
      IF L-ZONE-DEC = R-PACK-DEC                                  
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(BINÀ°¿?)                                               
+*>     +¿ô»?(BINÀ°¿?)                                              
      IF L-ZONE-DEC =  R-BIN                                      
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(BINÈóÀ°¿ô¡Ë                                              
+*>     +¿ô»?(BINÈóÀ°¿ô¡Ë                                           
      IF L-ZONE-DEC =  R-BIN-DEC                                  
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(¿ô»úÊÔ½¸¡Ë                                               
+*>     +¿ô»?(¿ô»úÊÔ½¸¡Ë                                            
      IF L-ZONE-DEC =  R-NE                                       
         CONTINUE                                                 
      END-IF.                                                     
@@ -588,35 +582,35 @@ P-090.
      IF L-PACK =  R-A                                            
         CONTINUE                                                 
      END-IF.                                                     
-*>     +±Ñ¿ô»?                                                      
+*>     +±Ñ¿ô»?                                                     
      IF L-PACK =  R-AN                                           
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(ZONEÀ°¿?)                                              
+*>     +¿ô»?(ZONEÀ°¿?)                                             
      IF L-PACK =  R-ZONE                                         
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(ZONEÈóÀ°¿ô¡Ë                                             
+*>     +¿ô»?(ZONEÈóÀ°¿ô¡Ë                                          
      IF L-PACK =  R-ZONE-DEC                                     
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(PACKÀ°¿?)                                              
+*>     +¿ô»?(PACKÀ°¿?)                                             
      IF L-PACK =  R-PACK                                         
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(PACKÈóÀ°¿ô¡Ë                                             
+*>     +¿ô»?(PACKÈóÀ°¿ô¡Ë                                          
      IF L-PACK =  R-PACK-DEC                                     
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(BINÀ°¿?)                                               
+*>     +¿ô»?(BINÀ°¿?)                                              
      IF L-PACK =  R-BIN                                          
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(BINÈóÀ°¿ô¡Ë                                              
+*>     +¿ô»?(BINÈóÀ°¿ô¡Ë                                           
      IF L-PACK =  R-BIN-DEC                                      
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(¿ô»úÊÔ½¸¡Ë                                               
+*>     +¿ô»?(¿ô»úÊÔ½¸¡Ë                                            
      IF L-PACK =  R-NE                                           
         CONTINUE                                                 
      END-IF.                                                     
@@ -643,7 +637,7 @@ P-090.
 *>                                                                 
 *>                                                                 
 P-100.                                                           
-*>   PACKÈóÀ°¿?                                                     
+*>   PACKÈóÀ°¿?                                                    
 *>     +½¸ÃÄ                                                       
      IF L-PACK-DEC =  W-R-GRP                                    
         CONTINUE                                                 
@@ -652,35 +646,35 @@ P-100.
      IF L-PACK-DEC =  R-A                                        
         CONTINUE                                                 
      END-IF.                                                     
-*>     +±Ñ¿ô»?                                                      
+*>     +±Ñ¿ô»?                                                     
      IF L-PACK-DEC =  R-AN                                       
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(ZONEÀ°¿?)                                              
+*>     +¿ô»?(ZONEÀ°¿?)                                             
      IF L-PACK-DEC =  R-ZONE                                     
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(ZONEÈóÀ°¿ô¡Ë                                             
+*>     +¿ô»?(ZONEÈóÀ°¿ô¡Ë                                          
      IF L-PACK-DEC =  R-ZONE-DEC                                 
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(PACKÀ°¿?)                                              
+*>     +¿ô»?(PACKÀ°¿?)                                             
      IF L-PACK-DEC =  R-PACK                                     
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(PACKÈóÀ°¿ô¡Ë                                             
+*>     +¿ô»?(PACKÈóÀ°¿ô¡Ë                                          
      IF L-PACK-DEC =  R-PACK-DEC                                 
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(BINÀ°¿?)                                               
+*>     +¿ô»?(BINÀ°¿?)                                              
      IF L-PACK-DEC =  R-BIN                                      
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(BINÈóÀ°¿ô¡Ë                                              
+*>     +¿ô»?(BINÈóÀ°¿ô¡Ë                                           
      IF L-PACK-DEC =  R-BIN-DEC                                  
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(¿ô»úÊÔ½¸¡Ë                                               
+*>     +¿ô»?(¿ô»úÊÔ½¸¡Ë                                            
      IF L-PACK-DEC =  R-NE                                       
         CONTINUE                                                 
      END-IF.                                                     
@@ -716,35 +710,35 @@ P-110.
      IF L-BIN =  R-A                                             
         CONTINUE                                                 
      END-IF.                                                     
-*>     +±Ñ¿ô»?                                                      
+*>     +±Ñ¿ô»?                                                     
      IF L-BIN =  R-AN                                            
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(ZONEÀ°¿?)                                              
+*>     +¿ô»?(ZONEÀ°¿?)                                             
      IF L-BIN =  R-ZONE                                          
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(ZONEÈóÀ°¿ô¡Ë                                             
+*>     +¿ô»?(ZONEÈóÀ°¿ô¡Ë                                          
      IF L-BIN =  R-ZONE-DEC                                      
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(PACKÀ°¿?)                                              
+*>     +¿ô»?(PACKÀ°¿?)                                             
      IF L-BIN =  R-PACK                                          
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(PACKÈóÀ°¿ô¡Ë                                             
+*>     +¿ô»?(PACKÈóÀ°¿ô¡Ë                                          
      IF L-BIN =  R-PACK-DEC                                      
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(BINÀ°¿?)                                               
+*>     +¿ô»?(BINÀ°¿?)                                              
      IF L-BIN =  R-BIN                                           
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(BINÈóÀ°¿ô¡Ë                                              
+*>     +¿ô»?(BINÈóÀ°¿ô¡Ë                                           
      IF L-BIN =  R-BIN-DEC                                       
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(¿ô»úÊÔ½¸¡Ë                                               
+*>     +¿ô»?(¿ô»úÊÔ½¸¡Ë                                            
      IF L-BIN =  R-NE                                            
         CONTINUE                                                 
      END-IF.                                                     
@@ -771,7 +765,7 @@ P-110.
 *>                                                                 
 *>                                                                 
 P-120.                                                           
-*>   BINÈóÀ°¿?                                                      
+*>   BINÈóÀ°¿?                                                     
 *>     +½¸ÃÄ                                                       
      IF L-BIN-DEC =  W-R-GRP                                     
         CONTINUE                                                 
@@ -780,35 +774,35 @@ P-120.
      IF L-BIN-DEC =  R-A                                         
         CONTINUE                                                 
      END-IF.                                                     
-*>     +±Ñ¿ô»?                                                      
+*>     +±Ñ¿ô»?                                                     
      IF L-BIN-DEC =  R-AN                                        
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(ZONEÀ°¿?)                                              
+*>     +¿ô»?(ZONEÀ°¿?)                                             
      IF L-BIN-DEC =  R-ZONE                                      
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(ZONEÈóÀ°¿ô¡Ë                                             
+*>     +¿ô»?(ZONEÈóÀ°¿ô¡Ë                                          
      IF L-BIN-DEC =  R-ZONE-DEC                                  
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(PACKÀ°¿?)                                              
+*>     +¿ô»?(PACKÀ°¿?)                                             
      IF L-BIN-DEC =  R-PACK                                      
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(PACKÈóÀ°¿ô¡Ë                                             
+*>     +¿ô»?(PACKÈóÀ°¿ô¡Ë                                          
      IF L-BIN-DEC =  R-PACK-DEC                                  
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(BINÀ°¿?)                                               
+*>     +¿ô»?(BINÀ°¿?)                                              
      IF L-BIN-DEC =  R-BIN                                       
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(BINÈóÀ°¿ô¡Ë                                              
+*>     +¿ô»?(BINÈóÀ°¿ô¡Ë                                           
      IF L-BIN-DEC =  R-BIN-DEC                                   
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(¿ô»úÊÔ½¸¡Ë                                               
+*>     +¿ô»?(¿ô»úÊÔ½¸¡Ë                                            
      IF L-BIN-DEC =  R-NE                                        
         CONTINUE                                                 
      END-IF.                                                     
@@ -835,7 +829,7 @@ P-120.
 *>                                                                 
 *>                                                                 
 P-130.                                                           
-*>   ¿ô»úÊÔ½¸                                                        
+*>   ¿ô»úÊÔ½¸                                                      
 *>     +½¸ÃÄ                                                       
      IF L-NE =  W-R-GRP                                          
         CONTINUE                                                 
@@ -844,35 +838,35 @@ P-130.
      IF L-NE =  R-A                                              
         CONTINUE                                                 
      END-IF.                                                     
-*>     +±Ñ¿ô»?                                                      
+*>     +±Ñ¿ô»?                                                     
      IF L-NE =  R-AN                                             
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(ZONEÀ°¿?)                                              
+*>     +¿ô»?(ZONEÀ°¿?)                                             
      IF L-NE =  R-ZONE                                           
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(ZONEÈóÀ°¿ô¡Ë                                             
+*>     +¿ô»?(ZONEÈóÀ°¿ô¡Ë                                          
      IF L-NE =  R-ZONE-DEC                                       
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(PACKÀ°¿?)                                              
+*>     +¿ô»?(PACKÀ°¿?)                                             
      IF L-NE =  R-PACK                                           
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(PACKÈóÀ°¿ô¡Ë                                             
+*>     +¿ô»?(PACKÈóÀ°¿ô¡Ë                                          
      IF L-NE =  R-PACK-DEC                                       
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(BINÀ°¿?)                                               
+*>     +¿ô»?(BINÀ°¿?)                                              
      IF L-NE =  R-BIN                                            
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(BINÈóÀ°¿ô¡Ë                                              
+*>     +¿ô»?(BINÈóÀ°¿ô¡Ë                                           
      IF L-NE =  R-BIN-DEC                                        
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(¿ô»úÊÔ½¸¡Ë                                               
+*>     +¿ô»?(¿ô»úÊÔ½¸¡Ë                                            
      IF L-NE =  R-NE                                             
         CONTINUE                                                 
      END-IF.                                                     
@@ -908,35 +902,35 @@ P-140.
      IF L-G =  R-A                                               
         CONTINUE                                                 
      END-IF.                                                     
-*>     +±Ñ¿ô»?                                                      
+*>     +±Ñ¿ô»?                                                     
      IF L-G =  R-AN                                              
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(ZONEÀ°¿?)                                              
+*>     +¿ô»?(ZONEÀ°¿?)                                             
      IF L-G =  R-ZONE                                            
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(ZONEÈóÀ°¿ô¡Ë                                             
+*>     +¿ô»?(ZONEÈóÀ°¿ô¡Ë                                          
      IF L-G =  R-ZONE-DEC                                        
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(PACKÀ°¿?)                                              
+*>     +¿ô»?(PACKÀ°¿?)                                             
      IF L-G =  R-PACK                                            
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(PACKÈóÀ°¿ô¡Ë                                             
+*>     +¿ô»?(PACKÈóÀ°¿ô¡Ë                                          
      IF L-G =  R-PACK-DEC                                        
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(BINÀ°¿?)                                               
+*>     +¿ô»?(BINÀ°¿?)                                              
      IF L-G =  R-BIN                                             
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(BINÈóÀ°¿ô¡Ë                                              
+*>     +¿ô»?(BINÈóÀ°¿ô¡Ë                                           
      IF L-G =  R-BIN-DEC                                         
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(¿ô»úÊÔ½¸¡Ë                                               
+*>     +¿ô»?(¿ô»úÊÔ½¸¡Ë                                            
      IF L-G =  R-NE                                              
         CONTINUE                                                 
      END-IF.                                                     
@@ -971,35 +965,35 @@ P-150.
      IF L-GE =  R-A                                              
         CONTINUE                                                 
      END-IF.                                                     
-*>     +±Ñ¿ô»?                                                      
+*>     +±Ñ¿ô»?                                                     
      IF L-GE =  R-AN                                             
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(ZONEÀ°¿?)                                              
+*>     +¿ô»?(ZONEÀ°¿?)                                             
      IF L-GE =  R-ZONE                                           
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(ZONEÈóÀ°¿ô¡Ë                                             
+*>     +¿ô»?(ZONEÈóÀ°¿ô¡Ë                                          
      IF L-GE =  R-ZONE-DEC                                       
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(PACKÀ°¿?)                                              
+*>     +¿ô»?(PACKÀ°¿?)                                             
      IF L-GE =  R-PACK                                           
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(PACKÈóÀ°¿ô¡Ë                                             
+*>     +¿ô»?(PACKÈóÀ°¿ô¡Ë                                          
      IF L-GE =  R-PACK-DEC                                       
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(BINÀ°¿?)                                               
+*>     +¿ô»?(BINÀ°¿?)                                              
      IF L-GE =  R-BIN                                            
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(BINÈóÀ°¿ô¡Ë                                              
+*>     +¿ô»?(BINÈóÀ°¿ô¡Ë                                           
      IF L-GE =  R-BIN-DEC                                        
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(¿ô»úÊÔ½¸¡Ë                                               
+*>     +¿ô»?(¿ô»úÊÔ½¸¡Ë                                            
      IF L-GE =  R-NE                                             
         CONTINUE                                                 
      END-IF.                                                     
@@ -1035,35 +1029,35 @@ P-160.
      IF "Æ?ËÜ¸?" =  R-A                                          
         CONTINUE                                                 
      END-IF.                                                     
-*>     +±Ñ¿ô»?                                                      
+*>     +±Ñ¿ô»?                                                     
      IF "Æ?ËÜ¸?" =  R-AN                                         
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(ZONEÀ°¿?)                                              
+*>     +¿ô»?(ZONEÀ°¿?)                                             
      IF "Æ?ËÜ¸?" =  R-ZONE                                       
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(ZONEÈóÀ°¿ô¡Ë                                             
+*>     +¿ô»?(ZONEÈóÀ°¿ô¡Ë                                          
      IF "Æ?ËÜ¸?" =  R-ZONE-DEC                                   
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(PACKÀ°¿?)                                              
+*>     +¿ô»?(PACKÀ°¿?)                                             
      IF "Æ?ËÜ¸?" =  R-PACK                                       
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(PACKÈóÀ°¿ô¡Ë                                             
+*>     +¿ô»?(PACKÈóÀ°¿ô¡Ë                                          
      IF "Æ?ËÜ¸?" =  R-PACK-DEC                                   
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(BINÀ°¿?)                                               
+*>     +¿ô»?(BINÀ°¿?)                                              
      IF "Æ?ËÜ¸?" =  R-BIN                                        
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(BINÈóÀ°¿ô¡Ë                                              
+*>     +¿ô»?(BINÈóÀ°¿ô¡Ë                                           
      IF "Æ?ËÜ¸?" =  R-BIN-DEC                                    
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(¿ô»úÊÔ½¸¡Ë                                               
+*>     +¿ô»?(¿ô»úÊÔ½¸¡Ë                                            
      IF "Æ?ËÜ¸?" =  R-NE                                         
         CONTINUE                                                 
      END-IF.                                                     
@@ -1098,35 +1092,35 @@ P-170.
      IF ALL "Æ?ËÜ¸?" =  R-A                                      
         CONTINUE                                                 
      END-IF.                                                     
-*>     +±Ñ¿ô»?                                                      
+*>     +±Ñ¿ô»?                                                     
      IF ALL "Æ?ËÜ¸?" =  R-AN                                     
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(ZONEÀ°¿?)                                              
+*>     +¿ô»?(ZONEÀ°¿?)                                             
      IF ALL "Æ?ËÜ¸?" =  R-ZONE                                   
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(ZONEÈóÀ°¿ô¡Ë                                             
+*>     +¿ô»?(ZONEÈóÀ°¿ô¡Ë                                          
      IF ALL "Æ?ËÜ¸?" =  R-ZONE-DEC                               
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(PACKÀ°¿?)                                              
+*>     +¿ô»?(PACKÀ°¿?)                                             
      IF ALL "Æ?ËÜ¸?" =  R-PACK                                   
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(PACKÈóÀ°¿ô¡Ë                                             
+*>     +¿ô»?(PACKÈóÀ°¿ô¡Ë                                          
      IF ALL "Æ?ËÜ¸?" =  R-PACK-DEC                               
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(BINÀ°¿?)                                               
+*>     +¿ô»?(BINÀ°¿?)                                              
      IF ALL "Æ?ËÜ¸?" =  R-BIN                                    
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(BINÈóÀ°¿ô¡Ë                                              
+*>     +¿ô»?(BINÈóÀ°¿ô¡Ë                                           
      IF ALL "Æ?ËÜ¸?" =  R-BIN-DEC                                
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(¿ô»úÊÔ½¸¡Ë                                               
+*>     +¿ô»?(¿ô»úÊÔ½¸¡Ë                                            
      IF ALL "Æ?ËÜ¸?" =  R-NE                                     
         CONTINUE                                                 
      END-IF.                                                     
@@ -1162,35 +1156,35 @@ P-170.
      IF SPACES =  R-A                                            
         CONTINUE                                                 
      END-IF.                                                     
-*>     +±Ñ¿ô»?                                                      
+*>     +±Ñ¿ô»?                                                     
      IF SPACES =  R-AN                                           
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(ZONEÀ°¿?)                                              
+*>     +¿ô»?(ZONEÀ°¿?)                                             
      IF SPACES =  R-ZONE                                         
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(ZONEÈóÀ°¿ô¡Ë                                             
+*>     +¿ô»?(ZONEÈóÀ°¿ô¡Ë                                          
      IF SPACES =  R-ZONE-DEC                                     
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(PACKÀ°¿?)                                              
+*>     +¿ô»?(PACKÀ°¿?)                                             
      IF SPACES =  R-PACK                                         
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(PACKÈóÀ°¿ô¡Ë                                             
+*>     +¿ô»?(PACKÈóÀ°¿ô¡Ë                                          
      IF SPACES =  R-PACK-DEC                                     
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(BINÀ°¿?)                                               
+*>     +¿ô»?(BINÀ°¿?)                                              
      IF SPACES =  R-BIN                                          
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(BINÈóÀ°¿ô¡Ë                                              
+*>     +¿ô»?(BINÈóÀ°¿ô¡Ë                                           
      IF SPACES =  R-BIN-DEC                                      
         CONTINUE                                                 
      END-IF.                                                     
-*>     +¿ô»?(¿ô»úÊÔ½¸¡Ë                                               
+*>     +¿ô»?(¿ô»úÊÔ½¸¡Ë                                            
      IF SPACES =  R-NE                                           
         CONTINUE                                                 
      END-IF.                                                     

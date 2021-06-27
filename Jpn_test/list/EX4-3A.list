@@ -1,20 +1,14 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
-<<<<<<< HEAD
 *>source file name:  C:\isTEST\Git\Jpn_test\source\EX4-3A.cbl
-*>date generated  :  Sun Jun 20 15:23:45 JST 2021
-*>compiler options:  -dx -eo=C:/isTEST/Git/Jpn_test/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/isTEST/Git/Jpn_test/list -tasks -od=C:/isTEST/Git/Jpn_test/output -jj
-=======
-*>source file name:  C:\ISTEST\Git\Jpn_test\source\EX4-3A.cbl
-*>date generated  :  Sun Jun 20 14:59:30 JST 2021
-*>compiler options:  -dx -eo=C:/ISTEST/Git/Jpn_test/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks -od=C:/ISTEST/Git/Jpn_test/output -jj
->>>>>>> branch 'master' of https://github.com/j1-ebisawa/mywork
+*>date generated  :  Wed Jun 23 15:58:24 JST 2021
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/isTEST/Git/Jpn_test/output -jj -eo=C:/isTEST/Git/Jpn_test/errs -d -g -lo=C:/isTEST/Git/Jpn_test/list -tasks
 *>*****************************************************************
-*>    ÉeÉXÉgÉPÅ[ÉXÅF4-3A                                                  
-*>    ÉvÉçÉOÉâÉÄñºÅFì˙ñ{åÍâªÉeÉXÉg ÅiÉfÅ[É^ïîÅjUSAGEãÂ                                  
-*>    èàóùäTóvÅ@Å@ÅFUSAGEãÂÇéwíËÇ≈Ç´ÇÈÇ©ÇÉ`ÉFÉbÉNÇ∑ÇÈÅB                                 
+*>    ÉeÉXÉgÉPÅ[ÉXÅF4-3A                                           
+*>    ÉvÉçÉOÉâÉÄñºÅFì˙ñ{åÍâªÉeÉXÉg ÅiÉfÅ[É^ïîÅjUSAGEãÂ             
+*>    èàóùäTóvÅ@Å@ÅFUSAGEãÂÇéwíËÇ≈Ç´ÇÈÇ©ÇÉ`ÉFÉbÉNÇ∑ÇÈÅB          
 *>  -------------------------------------------------------------- 
-*>   ÉeÉXÉgÉPÅ[ÉX:ÇPÅ`ÇQ                                                    
+*>   ÉeÉXÉgÉPÅ[ÉX:ÇPÅ`ÇQ                                           
 *>*****************************************************************
 *> REPLACE ==BYTE-LENGTH== BY ==LENGTH-AN==.                       
 IDENTIFICATION        DIVISION.                                  
@@ -54,70 +48,70 @@ PROCEDURE             DIVISION.
 MAIN                  SECTION.                                   
 P-010.                                                           
      DISPLAY "TEST START (EX4-3A)".                              
-*>  ÉPÅ[ÉX1.ì˙ñ{åÍÉfÅ[É^ÅiNÅj                                                 
+*>  ÉPÅ[ÉX1.ì˙ñ{åÍÉfÅ[É^ÅiNÅj                                      
 *>                                                                 
      MOVE "P-010-01"             TO CASE-ID.                     
-     MOVE "Ç†" TO G-01.                                           
-     IF G-01 = "Ç†"                                               
+     MOVE "Ç†" TO G-01.                                          
+     IF G-01 = "Ç†"                                              
         AND FUNCTION BYTE-LENGTH(G-01) = 2                       
                                  DISPLAY CASE-ID "OK"            
         ELSE                     DISPLAY CASE-ID "NG"            
      END-IF.                                                     
 *>                                                                 
      MOVE "P-010-02"             TO CASE-ID.                     
-     MOVE "Ç†Ç¢Ç§"               TO G-02.                           
-     IF G-02 = "Ç†Ç¢Ç§"                                             
+     MOVE "Ç†Ç¢Ç§"               TO G-02.                        
+     IF G-02 = "Ç†Ç¢Ç§"                                          
         AND FUNCTION BYTE-LENGTH(G-02) = 6                       
                                  DISPLAY CASE-ID "OK"            
         ELSE                     DISPLAY CASE-ID "NG"            
      END-IF.                                                     
 *>                                                                 
      MOVE "P-010-03"             TO CASE-ID.                     
-     MOVE "Ç†Ç¢Ç§Ç¶Ç®Ç©Ç´Ç≠ÇØÇ±" TO G-03.                                  
-     IF G-03 = "Ç†Ç¢Ç§Ç¶Ç®Ç©Ç´Ç≠ÇØÇ±"                                      
+     MOVE "Ç†Ç¢Ç§Ç¶Ç®Ç©Ç´Ç≠ÇØÇ±" TO G-03.                        
+     IF G-03 = "Ç†Ç¢Ç§Ç¶Ç®Ç©Ç´Ç≠ÇØÇ±"                            
         AND FUNCTION BYTE-LENGTH(G-03) = 20                      
                                  DISPLAY CASE-ID "OK"            
         ELSE                     DISPLAY CASE-ID "NG"            
      END-IF.                                                     
 *>                                                                 
      MOVE "P-010-04"             TO CASE-ID.                     
-     MOVE "ÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQ" TO G-04.                                
-     IF G-04 = "ÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQ"                                    
+     MOVE "ÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQ" TO G-04.                    
+     IF G-04 = "ÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQ"                        
         AND FUNCTION BYTE-LENGTH(G-04) = 24                      
                                  DISPLAY CASE-ID "OK"            
         ELSE                     DISPLAY CASE-ID "NG"            
      END-IF.                                                     
 *>                                                                 
 P-020.                                                           
-*>  ÉPÅ[ÉX2.ì˙ñ{åÍï“èWÉfÅ[É^(N,B,/,0)                                         
+*>  ÉPÅ[ÉX2.ì˙ñ{åÍï“èWÉfÅ[É^(N,B,/,0)                              
 *>                                                                 
      MOVE "P-020-01"             TO CASE-ID.                     
-     MOVE "Ç†Ç¢" TO GE-01                                          
-     IF GE-01 = "Ç†Å@Ç¢"                                            
+     MOVE "Ç†Ç¢" TO GE-01                                        
+     IF GE-01 = "Ç†Å@Ç¢"                                         
         AND FUNCTION BYTE-LENGTH(GE-01) = 6                      
                                  DISPLAY CASE-ID "OK"            
         ELSE                     DISPLAY CASE-ID "NG"            
      END-IF.                                                     
 *>                                                                 
      MOVE "P-020-02"             TO CASE-ID.                     
-     MOVE "Ç†Ç¢"  TO GE-02.                                        
-     IF GE-02 = "Ç†Å^Ç¢"                                            
+     MOVE "Ç†Ç¢"  TO GE-02.                                      
+     IF GE-02 = "Ç†Å^Ç¢"                                         
         AND FUNCTION BYTE-LENGTH(GE-02) = 6                      
                                  DISPLAY CASE-ID "OK"            
         ELSE                     DISPLAY CASE-ID "NG"            
      END-IF.                                                     
 *>                                                                 
      MOVE "P-020-03"             TO CASE-ID.                     
-     MOVE "Ç†Ç¢"  TO GE-03.                                        
-     IF GE-03 = "Ç†ÇOÇ¢"                                            
+     MOVE "Ç†Ç¢"  TO GE-03.                                      
+     IF GE-03 = "Ç†ÇOÇ¢"                                         
         AND FUNCTION BYTE-LENGTH(GE-03) = 6                      
                                  DISPLAY CASE-ID "OK"            
         ELSE                     DISPLAY CASE-ID "NG"            
      END-IF.                                                     
 *>                                                                 
      MOVE "P-020-04"             TO CASE-ID.                     
-     MOVE "ÇPÇQÇRÇS"  TO GE-04.                                      
-     IF GE-04 = "ÇPÅ^ÇQÅ@ÇRÇOÇS"                                        
+     MOVE "ÇPÇQÇRÇS"  TO GE-04.                                  
+     IF GE-04 = "ÇPÅ^ÇQÅ@ÇRÇOÇS"                                 
         AND FUNCTION BYTE-LENGTH(GE-04) = 14                     
                                  DISPLAY CASE-ID "OK"            
         ELSE                     DISPLAY CASE-ID "NG"            

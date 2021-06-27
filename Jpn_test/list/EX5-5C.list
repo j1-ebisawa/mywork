@@ -1,22 +1,16 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
-<<<<<<< HEAD
 *>source file name:  C:\isTEST\Git\Jpn_test\source\EX5-5C.cbl
-*>date generated  :  Sun Jun 20 15:23:48 JST 2021
-*>compiler options:  -dx -eo=C:/isTEST/Git/Jpn_test/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/isTEST/Git/Jpn_test/list -tasks -od=C:/isTEST/Git/Jpn_test/output -jj
-=======
-*>source file name:  C:\ISTEST\Git\Jpn_test\source\EX5-5C.cbl
-*>date generated  :  Sun Jun 20 14:59:32 JST 2021
-*>compiler options:  -dx -eo=C:/ISTEST/Git/Jpn_test/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks -od=C:/ISTEST/Git/Jpn_test/output -jj
->>>>>>> branch 'master' of https://github.com/j1-ebisawa/mywork
+*>date generated  :  Wed Jun 23 15:58:26 JST 2021
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/isTEST/Git/Jpn_test/output -jj -eo=C:/isTEST/Git/Jpn_test/errs -d -g -lo=C:/isTEST/Git/Jpn_test/list -tasks
 *>*****************************************************************
-*>    ÉeÉXÉgÉPÅ[ÉXÅF5-5C                                                  
-*>    ÉvÉçÉOÉâÉÄñºÅFì˙ñ{åÍâªÉeÉXÉg ÅiéËë±Ç´ïîÅjMOVEñΩóﬂ                                  
-*>    èàóùäTóvÅ@Å@ÅFì˙ñ{åÍì]ãLÇ™ê≥ÇµÇ≠é¿çsÇ≥ÇÍÇÈÇ©ÇÉ`ÉFÉbÉNÇ∑ÇÈÅB                               
+*>    ÉeÉXÉgÉPÅ[ÉXÅF5-5C                                           
+*>    ÉvÉçÉOÉâÉÄñºÅFì˙ñ{åÍâªÉeÉXÉg ÅiéËë±Ç´ïîÅjMOVEñΩóﬂ            
+*>    èàóùäTóvÅ@Å@ÅFì˙ñ{åÍì]ãLÇ™ê≥ÇµÇ≠é¿çsÇ≥ÇÍÇÈÇ©ÇÉ`ÉFÉbÉNÇ∑ÇÈÅB 
 *>  -------------------------------------------------------------- 
-*>   ÉeÉXÉgÉPÅ[ÉX:ÇQÇPÅ`ÇRÇP                                                  
-*>   Å@Å@Å@Å@Å@Å@Å@ÉPÅ[ÉXÇQÇVÅAÇQÇWÇÕÉRÉìÉpÉCÉãÉGÉâÅ[Ç∆ÇµÇΩÇ¢ÅB                                 
-*>   Å@Å@Å@Å@Å@Å@Å@ämîFå„ÅAÉRÉÅÉìÉgâªÇµÇƒÅAé¿çsÉeÉXÉgÇ∑ÇÈÅB                                   
+*>   ÉeÉXÉgÉPÅ[ÉX:ÇQÇPÅ`ÇRÇP                                       
+*>   Å@Å@Å@Å@Å@Å@Å@ÉPÅ[ÉXÇQÇVÅAÇQÇWÇÕÉRÉìÉpÉCÉãÉGÉâÅ[Ç∆ÇµÇΩÇ¢ÅB    
+*>   Å@Å@Å@Å@Å@Å@Å@ämîFå„ÅAÉRÉÅÉìÉgâªÇµÇƒÅAé¿çsÉeÉXÉgÇ∑ÇÈÅB        
 *>*****************************************************************
 IDENTIFICATION        DIVISION.                                  
 *>*****************************************************************
@@ -113,20 +107,20 @@ MAIN                  SECTION.
 MAIN-00.                                                         
      DISPLAY "TEST START (EX5-5C)".                              
 P-210.                                                           
-*>  ÉPÅ[ÉX21.èWícçÄñ⁄Å®ì˙ñ{åÍ                                                 
+*>  ÉPÅ[ÉX21.èWícçÄñ⁄Å®ì˙ñ{åÍ                                      
 *>                                                                 
      MOVE "P-210-01"        TO CASE-ID.                          
      MOVE ALL "*"             TO W-R-GRP.                        
-     MOVE "ab12±≤Ç†$&"        TO L-GRP-10.                        
+     MOVE "ab12±≤Ç†$&"        TO L-GRP-10.                       
      MOVE L-GRP-10 TO R-G                                        
-     IF  R-G = "ab12±≤Ç†$&"                                       
+     IF  R-G = "ab12±≤Ç†$&"                                      
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
 *>                                                                 
      MOVE "P-210-02"        TO CASE-ID.                          
      MOVE ALL "*"             TO W-R-GRP.                        
-     MOVE "ab12±≤Ç†$&"        TO L-GRP-10.                        
+     MOVE "ab12±≤Ç†$&"        TO L-GRP-10.                       
      MOVE L-GRP-10 TO R-G-3                                      
      IF  R-G-3 = "ab12±≤"                                        
                               DISPLAY CASE-ID "OK"               
@@ -143,19 +137,19 @@ P-210.
      END-IF.                                                     
 *>                                                                 
 P-220.                                                           
-*>  ÉPÅ[ÉX22.èWícÅ®ì˙ñ{åÍï“èW                                                 
+*>  ÉPÅ[ÉX22.èWícÅ®ì˙ñ{åÍï“èW                                      
 *>                                                                 
      MOVE "P-220-01"        TO CASE-ID.                          
      MOVE ALL "*"             TO W-R-GRP.                        
-     MOVE "ab12±≤Ç†$&"        TO L-GRP-10.                        
+     MOVE "ab12±≤Ç†$&"        TO L-GRP-10.                       
      MOVE L-GRP-10 TO R-GE                                       
-     IF  R-GE = "ab12±≤Ç†$&"  DISPLAY CASE-ID "OK"                
+     IF  R-GE = "ab12±≤Ç†$&"  DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
 *>                                                                 
      MOVE "P-220-02"        TO CASE-ID.                          
      MOVE ALL "*"             TO W-R-GRP.                        
-     MOVE "ab12±≤Ç†$&"        TO L-GRP-10.                        
+     MOVE "ab12±≤Ç†$&"        TO L-GRP-10.                       
      MOVE L-GRP-10 TO R-GE-3                                     
      IF R-GE-3 = "ab12±≤"     DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG"               
@@ -170,13 +164,13 @@ P-220.
      END-IF.                                                     
 *>                                                                 
 P-230.                                                           
-*>  ÉPÅ[ÉX23.âpêîéöÅEâpêîéöï“èWÅEêîéöï“èWÅ®ì˙ñ{åÍ                                       
-*>           ì˙ñ{åÍì]ãLÅi1B->ÇQB)Ç∆Ç»ÇÈÇ©                                     
+*>  ÉPÅ[ÉX23.âpêîéöÅEâpêîéöï“èWÅEêîéöï“èWÅ®ì˙ñ{åÍ                  
+*>           ì˙ñ{åÍì]ãLÅi1B->ÇQB)Ç∆Ç»ÇÈÇ©                          
      MOVE "P-230-01"        TO CASE-ID.                          
      MOVE ALL "*"             TO W-R-GRP.                        
      MOVE "ab12±≤$&+="        TO L-AN.                           
      MOVE L-AN TO R-G                                            
-     IF  R-G = "ÇÅÇÇÇPÇQÉAÉCÅêÅïÅ{ÅÅ"                                      
+     IF  R-G = "ÇÅÇÇÇPÇQÉAÉCÅêÅïÅ{ÅÅ"                            
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
@@ -185,7 +179,7 @@ P-230.
      MOVE ALL "*"             TO W-R-GRP.                        
      MOVE "ab12±≤$&+="        TO L-AN.                           
      MOVE L-AN-5 TO R-G                                          
-     IF  R-G = "ÇÅÇÇÇPÇQÉAÅ@Å@Å@Å@Å@"                                      
+     IF  R-G = "ÇÅÇÇÇPÇQÉAÅ@Å@Å@Å@Å@"                            
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
@@ -194,7 +188,7 @@ P-230.
      MOVE ALL "*"             TO W-R-GRP.                        
      MOVE "ab12±≤$&+="        TO L-AN.                           
      MOVE L-AN-5 TO R-G-3                                        
-     IF  R-G-3 = "ÇÅÇÇÇP"                                           
+     IF  R-G-3 = "ÇÅÇÇÇP"                                        
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
@@ -203,7 +197,7 @@ P-230.
      MOVE ALL "*"             TO W-R-GRP.                        
      MOVE "ab12±≤"          TO L-ANE.                            
      MOVE L-ANE TO R-G-3                                         
-     IF  R-G-3 = "ÇÅÇÇÅ^"                                           
+     IF  R-G-3 = "ÇÅÇÇÅ^"                                        
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
@@ -212,7 +206,7 @@ P-230.
      MOVE ALL "*"             TO W-R-GRP.                        
      MOVE -123               TO L-NE.                            
      MOVE L-NE TO R-G                                            
-     IF  R-G = "Å@Å|ÇPÇQÇRÅ@Å@Å@Å@Å@"                                      
+     IF  R-G = "Å@Å|ÇPÇQÇRÅ@Å@Å@Å@Å@"                            
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
@@ -221,7 +215,7 @@ P-230.
      MOVE ALL "*"             TO W-R-GRP.                        
      MOVE "ab12±≤$&+="        TO L-AN.                           
      MOVE L-AN TO R-GJ-3                                         
-     IF  R-GJ-3 = "ÅïÅ{ÅÅ"                                          
+     IF  R-GJ-3 = "ÅïÅ{ÅÅ"                                       
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
@@ -230,19 +224,19 @@ P-230.
      MOVE ALL "*"             TO W-R-GRP.                        
      MOVE "ab12±≤$&+="        TO L-AN.                           
      MOVE L-AN-3 TO R-GJ                                         
-     IF  R-GJ = "Å@Å@Å@Å@Å@Å@Å@ÉCÅêÅï"                                     
+     IF  R-GJ = "Å@Å@Å@Å@Å@Å@Å@ÉCÅêÅï"                           
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
 *>                                                                 
 P-240.                                                           
-*>  ÉPÅ[ÉX24.ì˙ñ{åÍíËêîÅ®ì˙ñ{åÍ                                                
-*>           ì˙ñ{åÍì]ãLÅi1B->ÇQB)Ç∆Ç»ÇÈÇ©                                     
+*>  ÉPÅ[ÉX24.ì˙ñ{åÍíËêîÅ®ì˙ñ{åÍ                                    
+*>           ì˙ñ{åÍì]ãLÅi1B->ÇQB)Ç∆Ç»ÇÈÇ©                          
      MOVE "P-240-01"        TO CASE-ID.                          
      MOVE ALL "*"             TO W-R-GRP.                        
      MOVE "ab12±≤$&+="        TO L-AN.                           
      MOVE L-AN-3 TO R-GE                                         
-     IF  R-GE = "ÉCÅ^ÅêÅ^Åï"                                          
+     IF  R-GE = "ÉCÅ^ÅêÅ^Åï"                                     
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
@@ -251,7 +245,7 @@ P-240.
      MOVE ALL "*"             TO W-R-GRP.                        
      MOVE "ab12±≤$&+="        TO L-AN.                           
      MOVE L-AN-5 TO R-GE                                         
-     IF  R-GE = "ÇÅÅ^ÇÇÅ^ÇP"                                          
+     IF  R-GE = "ÇÅÅ^ÇÇÅ^ÇP"                                     
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
@@ -260,7 +254,7 @@ P-240.
      MOVE ALL "*"             TO W-R-GRP.                        
      MOVE "ab12±≤$&+="        TO L-AN.                           
      MOVE L-AN-2 TO R-GE                                         
-     IF  R-GE = "Å{Å^ÅÅÅ^Å@"                                          
+     IF  R-GE = "Å{Å^ÅÅÅ^Å@"                                     
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
@@ -269,7 +263,7 @@ P-240.
      MOVE ALL "*"             TO W-R-GRP.                        
      MOVE "ab12±≤"          TO L-ANE.                            
      MOVE L-ANE TO R-GE                                          
-     IF  R-GE = "ÇÅÅ^ÇÇÅ^Å^"                                          
+     IF  R-GE = "ÇÅÅ^ÇÇÅ^Å^"                                     
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
@@ -278,7 +272,7 @@ P-240.
      MOVE ALL "*"             TO W-R-GRP.                        
      MOVE -123               TO L-NE.                            
      MOVE L-NE TO R-GE                                           
-     IF  R-GE = "Å@Å^Å|Å^ÇP"                                          
+     IF  R-GE = "Å@Å^Å|Å^ÇP"                                     
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
@@ -287,7 +281,7 @@ P-240.
      MOVE ALL "*"             TO W-R-GRP.                        
      MOVE "ab12±≤$&+="        TO L-AN.                           
      MOVE L-AN-5 TO R-GE-NB                                      
-     IF  R-GE-NB = "ÇÅÇÇÇPÅ^ÇQÅ@ÉAÅ^"                                    
+     IF  R-GE-NB = "ÇÅÇÇÇPÅ^ÇQÅ@ÉAÅ^"                            
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
@@ -296,7 +290,7 @@ P-240.
      MOVE ALL "*"             TO W-R-GRP.                        
      MOVE "ab12±≤$&+="        TO L-AN-5.                         
      MOVE L-AN-5 TO R-GE-NBZ                                     
-     IF  R-GE-NBZ = "ÇÅÇÇÇPÅ^ÇQÇOÅ@ÉA"                                   
+     IF  R-GE-NBZ = "ÇÅÇÇÇPÅ^ÇQÇOÅ@ÉA"                           
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
@@ -304,13 +298,13 @@ P-240.
      ACCEPT OMIT-WK.                                             
 *>                                                                 
 P-250.                                                           
-*>  ÉPÅ[ÉX25.âpéöÅAêîéö(êÆêîÅjÅAêîéöíËêîÅiêÆêîÅjÅ®ì˙ñ{åÍ                                   
+*>  ÉPÅ[ÉX25.âpéöÅAêîéö(êÆêîÅjÅAêîéöíËêîÅiêÆêîÅjÅ®ì˙ñ{åÍ           
 *>                                                                 
      MOVE "P-250-01"        TO CASE-ID.                          
      MOVE ALL "*"           TO W-R-GRP.                          
      MOVE "ABCDEabcde"      TO L-A.                              
      MOVE L-A TO R-G.                                            
-     IF R-G = "Ç`ÇaÇbÇcÇdÇÅÇÇÇÉÇÑÇÖ"                                       
+     IF R-G = "Ç`ÇaÇbÇcÇdÇÅÇÇÇÉÇÑÇÖ"                             
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
@@ -319,7 +313,7 @@ P-250.
      MOVE ALL "*"           TO W-R-GRP.                          
      MOVE 123          TO L-ZONE.                                
      MOVE L-ZONE TO R-G.                                         
-     IF R-G = "ÇOÇOÇPÇQÇRÅ@Å@Å@Å@Å@"                                       
+     IF R-G = "ÇOÇOÇPÇQÇRÅ@Å@Å@Å@Å@"                             
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
@@ -328,7 +322,7 @@ P-250.
      MOVE ALL "*"           TO W-R-GRP.                          
      MOVE 123          TO L-PACK.                                
      MOVE L-PACK TO R-G.                                         
-     IF R-G = "ÇOÇOÇPÇQÇRÅ@Å@Å@Å@Å@"                                       
+     IF R-G = "ÇOÇOÇPÇQÇRÅ@Å@Å@Å@Å@"                             
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
@@ -337,7 +331,7 @@ P-250.
      MOVE ALL "*"           TO W-R-GRP.                          
      MOVE 123          TO L-BIN.                                 
      MOVE L-BIN TO R-G.                                          
-     IF R-G = "ÇOÇOÇPÇQÇRÅ@Å@Å@Å@Å@"                                       
+     IF R-G = "ÇOÇOÇPÇQÇRÅ@Å@Å@Å@Å@"                             
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
@@ -345,7 +339,7 @@ P-250.
      MOVE "P-250-05"        TO CASE-ID.                          
      MOVE ALL "*"           TO W-R-GRP.                          
      MOVE 123 TO R-G.                                            
-     IF R-G = "ÇPÇQÇRÅ@Å@Å@Å@Å@Å@Å@"                                       
+     IF R-G = "ÇPÇQÇRÅ@Å@Å@Å@Å@Å@Å@"                             
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
@@ -354,7 +348,7 @@ P-250.
      MOVE ALL "*"           TO W-R-GRP.                          
      MOVE "ABCDEabcde"      TO L-A.                              
      MOVE L-A TO R-GJ-5.                                         
-     IF R-GJ-5 = "ÇÅÇÇÇÉÇÑÇÖ"                                         
+     IF R-GJ-5 = "ÇÅÇÇÇÉÇÑÇÖ"                                    
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
@@ -363,19 +357,19 @@ P-250.
      MOVE ALL "*"           TO W-R-GRP.                          
      MOVE "abc"      TO L-A-3.                                   
      MOVE L-A-3 TO R-GJ-5.                                       
-     IF R-GJ-5 = "Å@Å@ÇÅÇÇÇÉ"                                         
+     IF R-GJ-5 = "Å@Å@ÇÅÇÇÇÉ"                                    
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
 *>                                                                 
 P-260.                                                           
-*>  ÉPÅ[ÉX26.âpéöÅAêîéö(êÆêîÅjÅAêîéöíËêîÅiêÆêîÅjÅ®ì˙ñ{åÍï“èW                                 
+*>  ÉPÅ[ÉX26.âpéöÅAêîéö(êÆêîÅjÅAêîéöíËêîÅiêÆêîÅjÅ®ì˙ñ{åÍï“èW       
 *>                                                                 
      MOVE "P-260-01"        TO CASE-ID.                          
      MOVE ALL "*"           TO W-R-GRP.                          
      MOVE "abc"      TO L-A-3.                                   
      MOVE L-A-3 TO R-GE.                                         
-     IF R-GE = "ÇÅÅ^ÇÇÅ^ÇÉ"                                           
+     IF R-GE = "ÇÅÅ^ÇÇÅ^ÇÉ"                                      
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
@@ -384,7 +378,7 @@ P-260.
      MOVE ALL "*"           TO W-R-GRP.                          
      MOVE 123          TO L-ZONE.                                
      MOVE L-ZONE TO R-GE.                                        
-     IF R-GE = "ÇOÅ^ÇOÅ^ÇP"                                           
+     IF R-GE = "ÇOÅ^ÇOÅ^ÇP"                                      
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
@@ -393,7 +387,7 @@ P-260.
      MOVE ALL "*"           TO W-R-GRP.                          
      MOVE 123          TO L-PACK.                                
      MOVE L-PACK TO R-GE.                                        
-     IF R-GE = "ÇOÅ^ÇOÅ^ÇP"                                           
+     IF R-GE = "ÇOÅ^ÇOÅ^ÇP"                                      
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
@@ -402,7 +396,7 @@ P-260.
      MOVE ALL "*"           TO W-R-GRP.                          
      MOVE 123          TO L-BIN.                                 
      MOVE L-BIN TO R-GE.                                         
-     IF R-GE = "ÇOÅ^ÇOÅ^ÇP"                                           
+     IF R-GE = "ÇOÅ^ÇOÅ^ÇP"                                      
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
@@ -410,7 +404,7 @@ P-260.
      MOVE "P-260-05"        TO CASE-ID.                          
      MOVE ALL "*"           TO W-R-GRP.                          
      MOVE 123 TO R-GE.                                           
-     IF R-GE = "ÇPÅ^ÇQÅ^ÇR"                                           
+     IF R-GE = "ÇPÅ^ÇQÅ^ÇR"                                      
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
@@ -419,7 +413,7 @@ P-260.
      MOVE ALL "*"           TO W-R-GRP.                          
      MOVE "ABCDEabcde"      TO L-A.                              
      MOVE L-A-5 TO R-GE-NB.                                      
-     IF R-GE-NB = "Ç`ÇaÇbÅ^ÇcÅ@ÇdÅ^"                                     
+     IF R-GE-NB = "Ç`ÇaÇbÅ^ÇcÅ@ÇdÅ^"                             
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
@@ -428,14 +422,14 @@ P-260.
      MOVE ALL "*"           TO W-R-GRP.                          
      MOVE "ABCDEabcde"      TO L-A.                              
      MOVE L-A-5 TO R-GE-NBZ.                                     
-     IF R-GE-NBZ = "Ç`ÇaÇbÅ^ÇcÇOÅ@Çd"                                    
+     IF R-GE-NBZ = "Ç`ÇaÇbÅ^ÇcÇOÅ@Çd"                            
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
 *>                                                                 
 P-270.                                                           
-*>  ÉPÅ[ÉX27.êîéöÅiè¨êîÅjÅAêîéöíËêî(è¨êîÅjÅ®ì˙ñ{åÍ                                      
-*>           ÉRÉìÉpÉCÉãÉGÉâÅ[Ç∆Ç»ÇÈÇ©                                          
+*>  ÉPÅ[ÉX27.êîéöÅiè¨êîÅjÅAêîéöíËêî(è¨êîÅjÅ®ì˙ñ{åÍ                 
+*>           ÉRÉìÉpÉCÉãÉGÉâÅ[Ç∆Ç»ÇÈÇ©                              
 *>     MOVE "P-270-01"        TO CASE-ID.                          
 *>     MOVE 123.456 TO L-ZONE-DEC.                                 
 *>     MOVE 123.456 TO L-PACK-DEC.                                 
@@ -446,8 +440,8 @@ P-270.
 *>     MOVE L-BIN-DEC  TO R-G.                                     
                                                                  
 P-280.                                                           
-*>  ÉPÅ[ÉX28.êîéöÅiè¨êîÅjÅAêîéöíËêî(è¨êîÅjÅ®ì˙ñ{åÍï“èW                                    
-*>           ÉRÉìÉpÉCÉãÉGÉâÅ[Ç∆Ç»ÇÈÇ©                                          
+*>  ÉPÅ[ÉX28.êîéöÅiè¨êîÅjÅAêîéöíËêî(è¨êîÅjÅ®ì˙ñ{åÍï“èW             
+*>           ÉRÉìÉpÉCÉãÉGÉâÅ[Ç∆Ç»ÇÈÇ©                              
 *>     MOVE "P-280-01"        TO CASE-ID.                          
 *>     MOVE 123.456 TO L-ZONE-DEC.                                 
 *>     MOVE 123.456 TO L-PACK-DEC.                                 
@@ -457,54 +451,54 @@ P-280.
 *>     MOVE L-BIN-DEC  TO R-GE.                                    
 *>                                                                 
 P-290.                                                           
-*>  ÉPÅ[ÉX29.ï\à”íËêîÅ®ì˙ñ{åÍ                                                 
-*>           ì˙ñ{åÍì]ãLÇ∆Ç»ÇÈÇ©                                             
+*>  ÉPÅ[ÉX29.ï\à”íËêîÅ®ì˙ñ{åÍ                                      
+*>           ì˙ñ{åÍì]ãLÇ∆Ç»ÇÈÇ©                                    
      MOVE "P-290-01"        TO CASE-ID.                          
      MOVE SPACE TO R-G.                                          
-     IF R-G = "Å@Å@Å@Å@Å@Å@Å@Å@Å@Å@"                                       
+     IF R-G = "Å@Å@Å@Å@Å@Å@Å@Å@Å@Å@"                             
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
      MOVE "P-290-02"        TO CASE-ID.                          
      MOVE QUOTE TO R-G.                                          
-*>     IF R-G = "ÅçÅçÅçÅçÅçÅçÅçÅçÅçÅç"                             *>20111102
-     IF R-G = "ÅhÅhÅhÅhÅhÅhÅhÅhÅhÅh"                             *>20111102
+*>     IF R-G = "ÅçÅçÅçÅçÅçÅçÅçÅçÅçÅç"                             
+     IF R-G = "ÅhÅhÅhÅhÅhÅhÅhÅhÅhÅh"                             
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
      MOVE "P-290-03"        TO CASE-ID.                          
      MOVE ZERO TO R-G.                                           
-     IF R-G = "ÇOÇOÇOÇOÇOÇOÇOÇOÇOÇO"                                       
+     IF R-G = "ÇOÇOÇOÇOÇOÇOÇOÇOÇOÇO"                             
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
-*>  ÉPÅ[ÉX30.ALL ï∂éöíËêîÅ®ì˙ñ{åÍ                                             
-*>           ì˙ñ{åÍì]ãLÇ∆Ç»ÇÈÇ©                                             
+*>  ÉPÅ[ÉX30.ALL ï∂éöíËêîÅ®ì˙ñ{åÍ                                  
+*>           ì˙ñ{åÍì]ãLÇ∆Ç»ÇÈÇ©                                    
      MOVE "P-300-01"        TO CASE-ID.                          
      MOVE ALL "abc" TO R-G.                                      
-     IF R-G = "ÇÅÇÇÇÉÇÅÇÇÇÉÇÅÇÇÇÉÇÅ"                                       
+     IF R-G = "ÇÅÇÇÇÉÇÅÇÇÇÉÇÅÇÇÇÉÇÅ"                             
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
-*>  ÉPÅ[ÉX31.ALL ï∂éöíËêîÅ®ì˙ñ{åÍï“èW                                           
-*>           ì˙ñ{åÍì]ãLÇ∆Ç»ÇÈÇ©                                             
+*>  ÉPÅ[ÉX31.ALL ï∂éöíËêîÅ®ì˙ñ{åÍï“èW                              
+*>           ì˙ñ{åÍì]ãLÇ∆Ç»ÇÈÇ©                                    
      MOVE "P-310-01"        TO CASE-ID.                          
      MOVE ALL"a" TO R-GE.                                        
-     IF R-GE = "ÇÅÅ^ÇÅÅ^ÇÅ"                                           
+     IF R-GE = "ÇÅÅ^ÇÅÅ^ÇÅ"                                      
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
 *>                                                                 
      MOVE "P-310-02"        TO CASE-ID.                          
      MOVE ALL"a" TO R-GE-NB.                                     
-     IF R-GE-NB = "ÇÅÇÅÇÅÅ^ÇÅÅ@ÇÅÅ^"                                     
+     IF R-GE-NB = "ÇÅÇÅÇÅÅ^ÇÅÅ@ÇÅÅ^"                             
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
 *>                                                                 
      MOVE "P-310-03"        TO CASE-ID.                          
      MOVE ALL"a" TO R-GE-NBZ.                                    
-     IF R-GE-NBZ = "ÇÅÇÅÇÅÅ^ÇÅÇOÅ@ÇÅ"                                    
+     IF R-GE-NBZ = "ÇÅÇÅÇÅÅ^ÇÅÇOÅ@ÇÅ"                            
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
