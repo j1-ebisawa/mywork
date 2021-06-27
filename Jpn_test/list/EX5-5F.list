@@ -1,15 +1,15 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL-BETA release 2021 R1 build#1041.1-20210329-31547
 *>source file name:  C:\isTEST\JPN_TEST\Jpn_test\source\EX5-5F.cbl
-*>date generated  :  Sun Jun 27 10:35:19 GMT+09:00 2021
-*>compiler options:  -dx -eo=C:/isTEST/JPN_TEST/Jpn_test/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/isTEST/JPN_TEST/Jpn_test/list -tasks -od=C:/isTEST/JPN_TEST/Jpn_test/output -jj
+*>date generated  :  Sun Jun 27 10:43:50 GMT+09:00 2021
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/isTEST/JPN_TEST/Jpn_test/output -jj -eo=C:/isTEST/JPN_TEST/Jpn_test/errs -d -g -lo=C:/isTEST/JPN_TEST/Jpn_test/list -tasks
 *>*****************************************************************
-*>    テストケース：5-5F                                                  
-*>    プログラム名：日本語化テスト （手続き部）MOVE命令                                  
-*>    処理概要　　：日本語転記が正しく実行されるかをチェックする。                               
+*>    テストケース：5-5F                                           
+*>    プログラム名：日本語化テスト （手続き部）MOVE命令            
+*>    処理概要　　：日本語転記が正しく実行されるかをチェックする。 
 *>  -------------------------------------------------------------- 
-*>   テストケース:１－３１のなかのコンパイルエラーをここに集めた。                               
-*>   このプログラムはエラーチェックのため、実行できない。                                    
+*>   テストケース:１－３１のなかのコンパイルエラーをここに集めた。 
+*>   このプログラムはエラーチェックのため、実行できない。          
 *>*****************************************************************
 IDENTIFICATION        DIVISION.                                  
 *>*****************************************************************
@@ -107,9 +107,9 @@ MAIN                  SECTION.
 MAIN-00.                                                         
      DISPLAY "TEST START (EX5-5F)".                              
 P-030.                                                           
-*>  ケース3.日本語→英字・数字・数字編集                                            
-*>           コンパイルエラーとなるか                                          
-     MOVE "あいうえおかきくけこ" TO L-G.                                   
+*>  ケース3.日本語→英字・数字・数字編集                           
+*>           コンパイルエラーとなるか                              
+     MOVE "あいうえおかきくけこ" TO L-G.                         
 *>                                                                 
      MOVE "P-030-01"        TO CASE-ID.                          
      MOVE L-G-5 TO R-A.                                          
@@ -129,9 +129,9 @@ P-030.
      MOVE "P-030-05"        TO CASE-ID.                          
      MOVE L-G-5 TO R-NE.                                         
 P-080.                                                           
-*>  ケース8.日本語編集→英字・数字・数字編集                                          
-*>           コンパイルエラーとなるか                                          
-     MOVE "あいう"            TO L-GE.                              
+*>  ケース8.日本語編集→英字・数字・数字編集                       
+*>           コンパイルエラーとなるか                              
+     MOVE "あいう"            TO L-GE.                           
      MOVE "P-080-01"        TO CASE-ID.                          
      MOVE L-GE TO R-A.                                           
 *>                                                                 
@@ -151,33 +151,33 @@ P-080.
      MOVE L-GE TO R-NE.                                          
 *>                                                                 
 P-130.                                                           
-*>  ケース13.日本語定数→英字・数字・数字編集                                         
-*>           コンパイルエラーとなるか                                          
+*>  ケース13.日本語定数→英字・数字・数字編集                      
+*>           コンパイルエラーとなるか                              
      MOVE "P-130-01"        TO CASE-ID.                          
-     MOVE "あいうえお" TO R-A.                                        
-     MOVE "あいうえお" TO R-ZONE.                                     
-     MOVE "あいうえお" TO R-ZONE-DEC.                                 
-     MOVE "あいうえお" TO R-PACK.                                     
-     MOVE "あいうえお" TO R-PACK-DEC.                                 
-     MOVE "あいうえお" TO R-BIN.                                      
-     MOVE "あいうえお" TO R-BIN-DEC.                                  
-     MOVE "あいうえお" TO R-NE.                                       
+     MOVE "あいうえお" TO R-A.                                   
+     MOVE "あいうえお" TO R-ZONE.                                
+     MOVE "あいうえお" TO R-ZONE-DEC.                            
+     MOVE "あいうえお" TO R-PACK.                                
+     MOVE "あいうえお" TO R-PACK-DEC.                            
+     MOVE "あいうえお" TO R-BIN.                                 
+     MOVE "あいうえお" TO R-BIN-DEC.                             
+     MOVE "あいうえお" TO R-NE.                                  
 P-180.                                                           
-*>  ケース18.ALL 日本語定数→英字・数字・数字編集                                     
-*>           コンパイルエラーとなるか                                          
+*>  ケース18.ALL 日本語定数→英字・数字・数字編集                  
+*>           コンパイルエラーとなるか                              
      MOVE "P-180-01"        TO CASE-ID.                          
-     MOVE ALL "あいうえお" TO R-A.                                    
-     MOVE ALL "あいうえお" TO R-ZONE.                                 
-     MOVE ALL "あいうえお" TO R-ZONE-DEC.                             
-     MOVE ALL "あいうえお" TO R-PACK.                                 
-     MOVE ALL "あいうえお" TO R-PACK-DEC.                             
-     MOVE ALL "あいうえお" TO R-BIN.                                  
-     MOVE ALL "あいうえお" TO R-BIN-DEC.                              
-     MOVE ALL "あいうえお" TO R-NE.                                   
+     MOVE ALL "あいうえお" TO R-A.                               
+     MOVE ALL "あいうえお" TO R-ZONE.                            
+     MOVE ALL "あいうえお" TO R-ZONE-DEC.                        
+     MOVE ALL "あいうえお" TO R-PACK.                            
+     MOVE ALL "あいうえお" TO R-PACK-DEC.                        
+     MOVE ALL "あいうえお" TO R-BIN.                             
+     MOVE ALL "あいうえお" TO R-BIN-DEC.                         
+     MOVE ALL "あいうえお" TO R-NE.                              
 *>                                                                 
 P-270.                                                           
-*>  ケース27.数字（小数）、数字定数(小数）→日本語                                      
-*>           コンパイルエラーとなるか                                          
+*>  ケース27.数字（小数）、数字定数(小数）→日本語                 
+*>           コンパイルエラーとなるか                              
      MOVE "P-270-01"        TO CASE-ID.                          
      MOVE 123.456 TO L-ZONE-DEC.                                 
      MOVE 123.456 TO L-PACK-DEC.                                 
@@ -188,8 +188,8 @@ P-270.
      MOVE L-BIN-DEC  TO R-G.                                     
                                                                  
 P-280.                                                           
-*>  ケース28.数字（小数）、数字定数(小数）→日本語編集                                    
-*>           コンパイルエラーとなるか                                          
+*>  ケース28.数字（小数）、数字定数(小数）→日本語編集             
+*>           コンパイルエラーとなるか                              
      MOVE "P-280-01"        TO CASE-ID.                          
      MOVE 123.456 TO L-ZONE-DEC.                                 
      MOVE 123.456 TO L-PACK-DEC.                                 

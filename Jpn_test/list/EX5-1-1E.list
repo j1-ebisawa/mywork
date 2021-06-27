@@ -1,14 +1,14 @@
 *>(c) 2005 - 2021 Veryant
-*>compiler version: isCOBOL-BETA release 2021 R1 build#1041.1-20210329-31547
-*>source file name:  C:\isTEST\JPN_TEST\Jpn_test\source\EX5-1-1E.cbl
-*>date generated  :  Sun Jun 06 07:55:38 GMT+09:00 2021
-*>compiler options:  -dx -eo=C:/isTEST/JPN_TEST/Jpn_test/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/isTEST/JPN_TEST/Jpn_test/list -tasks -od=C:/isTEST/JPN_TEST/Jpn_test/output -jj
+*>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
+*>source file name:  C:\ISTEST\Git\Jpn_test\source\EX5-1-1E.cbl
+*>date generated  :  Thu Jun 24 16:11:21 JST 2021
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/ISTEST/Git/Jpn_test/output -jj -eo=C:/ISTEST/Git/Jpn_test/errs -d -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks
 *>*****************************************************************
-*>    テストケース：5-1-1E                                                
-*>    プログラム名：日本語化テスト （手続き部）条件 比較条件                                 
-*>    処理概要　　：日本語比較が正しく実行されるかをチェックする。                               
+*>    テストケース：5-1-1E                                         
+*>    プログラム名：日本語化テスト （手続き部）条件 比較条件       
+*>    処理概要　　：日本語比較が正しく実行されるかをチェックする。 
 *>  -------------------------------------------------------------- 
-*>   テストケース:４５～４８                                                  
+*>   テストケース:４５～４８                                       
 *>*****************************************************************
 IDENTIFICATION        DIVISION.                                  
 *>*****************************************************************
@@ -76,8 +76,8 @@ PROCEDURE             DIVISION.
 MAIN                  SECTION.                                   
 P-450.                                                           
      DISPLAY "TEST START (EX5-1-1E)".                            
-*>  ケース45.（左辺）表意定数＋（右辺）日本語                                         
-     MOVE ALL "”"          TO R-G.                               
+*>  ケース45.（左辺）表意定数＋（右辺）日本語                      
+     MOVE ALL "”"          TO R-G.                              
 *>                                                                 
      MOVE "P-450-01"        TO CASE-ID.                          
      IF QUOTES = R-G          DISPLAY CASE-ID "OK"               
@@ -95,7 +95,7 @@ P-450.
      END-IF.                                                     
 *>                                                                 
 P-460.                                                           
-*>  ケース46.（左辺）表意定数＋（右辺）日本語編集                                       
+*>  ケース46.（左辺）表意定数＋（右辺）日本語編集                  
      MOVE ALL SPACE         TO R-GE.                             
 *>                                                                 
      MOVE "P-460-01"        TO CASE-ID.                          
@@ -114,43 +114,43 @@ P-460.
      END-IF.                                                     
 *>                                                                 
 P-470.                                                           
-*>  ケース47.（左辺）表意定数＋（右辺）日本語定数                                       
+*>  ケース47.（左辺）表意定数＋（右辺）日本語定数                  
                                                                  
      MOVE "P-470-01"        TO CASE-ID.                          
-     IF SPACES = "　　　　　"                                         
+     IF SPACES = "　　　　　"                                    
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
 *>                                                                 
      MOVE "P-470-02"        TO CASE-ID.                          
-     IF QUOTES >  "あああああ"                                        
+     IF QUOTES >  "あああああ"                                   
                               DISPLAY CASE-ID "NG"               
         ELSE                  DISPLAY CASE-ID "OK"               
      END-IF.                                                     
 *>                                                                 
      MOVE "P-470-03"        TO CASE-ID.                          
-     IF ZEROES > "０００００"                                         
+     IF ZEROES > "０００００"                                    
                               DISPLAY CASE-ID "NG"               
         ELSE                  DISPLAY CASE-ID "OK"               
      END-IF.                                                     
 *>                                                                 
 P-480.                                                           
-*>  ケース47.（左辺）表意定数＋（右辺）日本語定数                                       
+*>  ケース47.（左辺）表意定数＋（右辺）日本語定数                  
                                                                  
      MOVE "P-480-01"        TO CASE-ID.                          
-     IF SPACES = ALL "　"                                         
+     IF SPACES = ALL "　"                                        
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
 *>                                                                 
      MOVE "P-480-02"        TO CASE-ID.                          
-     IF QUOTES >  ALL "あ"                                        
+     IF QUOTES >  ALL "あ"                                       
                               DISPLAY CASE-ID "NG"               
         ELSE                  DISPLAY CASE-ID "OK"               
      END-IF.                                                     
 *>                                                                 
      MOVE "P-480-03"        TO CASE-ID.                          
-     IF ZEROES > ALL "０"                                         
+     IF ZEROES > ALL "０"                                        
                               DISPLAY CASE-ID "NG"               
         ELSE                  DISPLAY CASE-ID "OK"               
      END-IF.                                                     

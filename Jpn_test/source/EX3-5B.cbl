@@ -84,9 +84,9 @@
             END-IF.
       *
             MOVE "P-060-02"             TO CASE-ID.
-            MOVE                                                "“ú–{Œê"
+            MOVE                                              "“ú–{Œêh"
 
-      -     ""‚`‚a"   TO G-01
+            & "‚`"   TO G-01
             IF G-01 = "“ú–{Œêh‚`"
                                         DISPLAY CASE-ID "OK"
                ELSE                     DISPLAY CASE-ID "NG"
@@ -158,7 +158,7 @@
       *
       *
             DISPLAY "TEST END   (EX3-5B)".
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
       *
             GOBACK
             .

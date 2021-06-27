@@ -102,6 +102,8 @@
        P-150. 
             DISPLAY "TEST START (EX3-3-6D)".
       *  ケース18.コンパイルエラー (左端位置、長さ)
+           set configuration "iscobol.array_check" to 1.
+           set configuration "iscobol.substring.check" to 1.
       *
             MOVE "P-180-01"             TO CASE-ID.
       *

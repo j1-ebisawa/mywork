@@ -12,7 +12,7 @@
        DATE-WRITTEN.         2011-08-18.
        DATE-COMPILED.        2011-08-18.
       ******************************************************************
-       ENVIRONMENT           DIVISION.
+       ENVIRONMENT          DIVISION.
       ******************************************************************
        CONFIGURATION         SECTION.
        SOURCE-COMPUTER.      PC.
@@ -293,7 +293,7 @@
                ELSE                  DISPLAY CASE-ID "NG:" R-GE
             END-IF.
       *
-            *>ACCEPT OMIT-WK. 
+            *>ACCEPT OMIT-W K.   
       *
        P-060. 
       *  ケース6.日本語/日本語編集 日本語転記（表意定数、ALL 定数）
@@ -302,12 +302,12 @@
             MOVE ALL "＊"   TO R-G-5.
             MOVE SPACE      TO R-G-5(3:3).
             IF R-G-5 = "＊＊　　　"    DISPLAY CASE-ID "OK"
-               ELSE                    DISPLAY CASE-ID "NG:" R-G-5
+               ELSE                DISPLAY CASE-ID "NG:" R-G-5
             END-IF.
       *
             MOVE "P-060-02"        TO CASE-ID.
-            MOVE ALL "＊" TO R-G-5.
-            MOVE ALL "?"  TO R-G-5(1:3).
+            MOVE ALL "＊"  TO R-G-5.
+            MOVE ALL "？"  TO R-G-5(1:3).
             IF R-G-5 = "？？？＊＊"   DISPLAY CASE-ID "OK"
                ELSE                   DISPLAY CASE-ID "NG:" R-G-5
             END-IF.
@@ -500,7 +500,7 @@
       *
       *
              DISPLAY "TEST END   (EX3-3-6A)".
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
             GOBACK
             .
 

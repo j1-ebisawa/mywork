@@ -1,15 +1,15 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL-BETA release 2021 R1 build#1041.1-20210329-31547
 *>source file name:  C:\isTEST\JPN_TEST\Jpn_test\source\EX3-3-6C.cbl
-*>date generated  :  Sun Jun 27 10:35:15 GMT+09:00 2021
-*>compiler options:  -dx -eo=C:/isTEST/JPN_TEST/Jpn_test/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/isTEST/JPN_TEST/Jpn_test/list -tasks -od=C:/isTEST/JPN_TEST/Jpn_test/output -jj
+*>date generated  :  Sun Jun 27 10:43:48 GMT+09:00 2021
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/isTEST/JPN_TEST/Jpn_test/output -jj -eo=C:/isTEST/JPN_TEST/Jpn_test/errs -d -g -lo=C:/isTEST/JPN_TEST/Jpn_test/list -tasks
 *>*****************************************************************
-*>    テストケース：3-3-6C                                                
-*>    プログラム名：日本語化テスト （言語要素）部分参照                                    
-*>    処理概要　　：部分参照が正しく構文チェックされるかを検査する。                              
+*>    テストケース：3-3-6C                                         
+*>    プログラム名：日本語化テスト （言語要素）部分参照            
+*>    処理概要　　：部分参照が正しく構文チェックされるかを検査する?
 *>  -------------------------------------------------------------- 
-*>   このプログラムはコンパイルエラーを確認するもので実行できない。                               
-*>   テストケース:１５～１７                                                  
+*>   このプログラムはコンパイルエラーを確認するもので実行できない。
+*>   テストケース:１５～１７                                       
 *>*****************************************************************
 IDENTIFICATION        DIVISION.                                  
 *>*****************************************************************
@@ -106,29 +106,29 @@ PROCEDURE             DIVISION.
 MAIN                  SECTION.                                   
 P-150.                                                           
      DISPLAY "TEST START (EX3-3-6C)".                            
-*>  ケース15.コンパイルエラー (左端位置、長さ)                                       
+*>  ケース15.コンパイルエラー (左端位置、長さ)                     
 *>                                                                 
      MOVE "P-150-01"             TO CASE-ID.                     
 *>                                                                 
-     MOVE "＊" TO L-G(R-ZONE-DEC:L).                              
+     MOVE "＊" TO L-G(R-ZONE-DEC:L).                             
 *>                                                                 
-     MOVE "＊" TO L-G(P:R-PACK-DEC).                              
+     MOVE "＊" TO L-G(P:R-PACK-DEC).                             
 *>                                                                 
-     MOVE "＊" TO L-G("A":R-PACK-DEC).                            
+     MOVE "＊" TO L-G("A":R-PACK-DEC).                           
 *>                                                                 
-     MOVE "＊" TO L-G(0:L).                                       
+     MOVE "＊" TO L-G(0:L).                                      
 *>                                                                 
-     MOVE "＊" TO L-G(1:20).                                      
+     MOVE "＊" TO L-G(1:20).                                     
 *>                                                                 
-     MOVE "＊" TO L-G(-3:5).                                      
+     MOVE "＊" TO L-G(-3:5).                                     
 *>                                                                 
-     MOVE "＊" TO L-G(3:-2).                                      
+     MOVE "＊" TO L-G(3:-2).                                     
 *>                                                                 
-     MOVE "＊" TO L-G(100:5).                                     
+     MOVE "＊" TO L-G(100:5).                                    
 *>                                                                 
-     MOVE "＊" TO L-G(7:5).                                       
+     MOVE "＊" TO L-G(7:5).                                      
                                                                  
-*>  ケース16.コンパイルエラー (転記の規則)                                         
+*>  ケース16.コンパイルエラー (転記の規則)                         
 *>                                                                 
 *>                                                                 
      MOVE "P-160-01"             TO CASE-ID.                     
@@ -153,7 +153,7 @@ P-150.
 *>                                                                 
      MOVE 123.5      TO R-GE(1:2).                               
                                                                  
-*>  ケース16.コンパイルエラー (転記の規則)                                         
+*>  ケース16.コンパイルエラー (転記の規則)                         
 *>                                                                 
 *>                                                                 
      MOVE "P-170-01"             TO CASE-ID.                     

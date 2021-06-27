@@ -1,15 +1,15 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL-BETA release 2021 R1 build#1041.1-20210329-31547
 *>source file name:  C:\isTEST\JPN_TEST\Jpn_test\source\EX5-6B-2.cbl
-*>date generated  :  Sun Jun 27 10:35:19 GMT+09:00 2021
-*>compiler options:  -dx -eo=C:/isTEST/JPN_TEST/Jpn_test/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/isTEST/JPN_TEST/Jpn_test/list -tasks -od=C:/isTEST/JPN_TEST/Jpn_test/output -jj
+*>date generated  :  Sun Jun 27 10:43:50 GMT+09:00 2021
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/isTEST/JPN_TEST/Jpn_test/output -jj -eo=C:/isTEST/JPN_TEST/Jpn_test/errs -d -g -lo=C:/isTEST/JPN_TEST/Jpn_test/list -tasks
 *>*****************************************************************
-*>    テストケース：EX5-6B-2                                              
-*>    プログラム名：日本語化テスト （手続き部）STRING命令                                
-*>    処理概要　　：STRING命令の構文チェックでエラーとなるかを                              
-*>    　　　　　　　チェックする。                                               
+*>    テストケース：EX5-6B-2                                       
+*>    プログラム名：日本語化テスト （手続き部）STRING命令          
+*>    処理概要　　：STRING命令の構文チェックでエラーとなるかを     
+*>    　　　　　　　チェックする。                                 
 *>  -------------------------------------------------------------- 
-*>   テストケース:1  このプログラムは実行できない。                                     
+*>   テストケース:1  このプログラムは実行できない。                
 *>*****************************************************************
 IDENTIFICATION        DIVISION.                                  
 *>*****************************************************************
@@ -52,15 +52,15 @@ PROCEDURE             DIVISION.
 *>*****************************************************************
 MAIN                  SECTION.                                   
 P-010.                                                           
-*> ケース1.一意名３が編集タイプの場合                                              
+*> ケース1.一意名３が編集タイプの場合                              
     MOVE "ABCDE" TO X-01.                                        
     MOVE "A" TO X-02.                                            
-    MOVE "あ" TO G-02-1.                                          
-    MOVE ALL "＊"   TO G-02-2.                                    
-    MOVE "あいうえお" TO G-01.                                        
+    MOVE "あ" TO G-02-1.                                         
+    MOVE ALL "＊"   TO G-02-2.                                   
+    MOVE "あいうえお" TO G-01.                                   
     MOVE 1 TO W-PTR                                              
                                                                  
-*> コンパイルエラー                                                        
+*> コンパイルエラー                                                
     STRING G-01 DELIMITED BY G-02-1                              
                 INTO G-02-2                                      
                 WITH POINTER W-PTR                               
@@ -68,7 +68,7 @@ P-010.
     END-STRING.                                                  
     DISPLAY G-02-2.                                              
                                                                  
-*> コンパイルエラー                                                        
+*> コンパイルエラー                                                
     STRING X-01 DELIMITED BY X-02                                
                 INTO X-03                                        
                 WITH POINTER W-PTR                               

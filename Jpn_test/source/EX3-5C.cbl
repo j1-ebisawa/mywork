@@ -47,7 +47,7 @@
       *  ケース9.日本語利用者語の継続（インラインコメントとの組み合わせ）
       *
             MOVE "P-090-01"             TO CASE-ID.
-            MOVE "ABC" TO   データ                    *>comment
+            MOVE "ABC" TO   データ                                      *>comment
       -                          名１.
             IF データ名１ = "ABC"
                                         DISPLAY CASE-ID "OK"
@@ -55,7 +55,7 @@
             END-IF.
       *
             MOVE "P-090-02"             TO CASE-ID.
-            MOVE "ABC" TO   データ名-a                  *>コメント
+            MOVE "ABC" TO   データ名-a                                  *>コメント
       -                              bc.
             IF データ名-abc = "ABC"
                                         DISPLAY CASE-ID "OK"
@@ -63,7 +63,7 @@
             END-IF.
       *
             MOVE "P-090-03"             TO CASE-ID.
-            MOVE "ABC" TO            原価                  *>コメント
+            MOVE "ABC" TO            原価                               *>コメント
       -                                  ＡＢＣ.
             IF 原価ＡＢＣ = "ABC"    
                                         DISPLAY CASE-ID "OK"

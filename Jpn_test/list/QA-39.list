@@ -1,11 +1,11 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL-BETA release 2021 R1 build#1041.1-20210329-31547
 *>source file name:  C:\isTEST\JPN_TEST\Jpn_test\source\QA-39.cbl
-*>date generated  :  Sun Jun 27 10:35:21 GMT+09:00 2021
-*>compiler options:  -dx -eo=C:/isTEST/JPN_TEST/Jpn_test/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/isTEST/JPN_TEST/Jpn_test/list -tasks -od=C:/isTEST/JPN_TEST/Jpn_test/output -jj
+*>date generated  :  Sun Jun 27 10:43:51 GMT+09:00 2021
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/isTEST/JPN_TEST/Jpn_test/output -jj -eo=C:/isTEST/JPN_TEST/Jpn_test/errs -d -g -lo=C:/isTEST/JPN_TEST/Jpn_test/list -tasks
 *>*****************************************************************
-*>    テストケース：QA-33                                                 
-*>    プログラム名：日本語化テスト QA                                            
+*>    テストケース：QA-33                                          
+*>    プログラム名：日本語化テスト QA                              
 *>*****************************************************************
 IDENTIFICATION        DIVISION.                                  
 *>*****************************************************************
@@ -36,20 +36,20 @@ PROCEDURE             DIVISION.
 MAIN                  SECTION.                                   
 P-010.                                                           
      DISPLAY "QA-39 test start".                                 
-*>  INSPECT G-01 REPLACING CHARACTERS BY "～".                      
+*>  INSPECT G-01 REPLACING CHARACTERS BY "～".                     
 *>                                                                 
      MOVE "QA39-01"        TO CASE-ID.                           
-     MOVE "あいうえおかきくけこ" TO G-01.                                  
-     INSPECT G-01 REPLACING CHARACTERS BY "＊".                   
-     IF G-01 = ALL "＊"                                           
+     MOVE "あいうえおかきくけこ" TO G-01.                        
+     INSPECT G-01 REPLACING CHARACTERS BY "＊".                  
+     IF G-01 = ALL "＊"                                          
                       DISPLAY CASE-ID "OK"                       
         ELSE          DISPLAY CASE-ID "NG:" G-01                 
      END-IF.                                                     
 *>                                                                 
      MOVE "QA39-02"        TO CASE-ID.                           
-     MOVE "あいうえおかきくけこ" TO G-01.                                  
-     INSPECT G-01 REPLACING CHARACTERS BY "＊１".                  
-     IF G-01 = ALL "＊１"                                          
+     MOVE "あいうえおかきくけこ" TO G-01.                        
+     INSPECT G-01 REPLACING CHARACTERS BY "＊１".                
+     IF G-01 = ALL "＊１"                                        
                        DISPLAY CASE-ID "NG1:" G-01               
         ELSE           DISPLAY CASE-ID "NG2:" G-01               
      END-IF.                                                     

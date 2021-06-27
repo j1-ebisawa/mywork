@@ -1,14 +1,14 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL-BETA release 2021 R1 build#1041.1-20210329-31547
 *>source file name:  C:\isTEST\JPN_TEST\Jpn_test\source\EX5-5D.cbl
-*>date generated  :  Sun Jun 27 10:35:18 GMT+09:00 2021
-*>compiler options:  -dx -eo=C:/isTEST/JPN_TEST/Jpn_test/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/isTEST/JPN_TEST/Jpn_test/list -tasks -od=C:/isTEST/JPN_TEST/Jpn_test/output -jj
+*>date generated  :  Sun Jun 27 10:43:50 GMT+09:00 2021
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/isTEST/JPN_TEST/Jpn_test/output -jj -eo=C:/isTEST/JPN_TEST/Jpn_test/errs -d -g -lo=C:/isTEST/JPN_TEST/Jpn_test/list -tasks
 *>*****************************************************************
-*>    テストケース：5-5D                                                  
-*>    プログラム名：日本語化テスト （手続き部）MOVE命令                                  
-*>    処理概要　　：日本語転記が正しく実行されるかをチェックする。                               
+*>    テストケース：5-5D                                           
+*>    プログラム名：日本語化テスト （手続き部）MOVE命令            
+*>    処理概要　　：日本語転記が正しく実行されるかをチェックする。 
 *>  -------------------------------------------------------------- 
-*>   テストケース:３２～３３（正常系）                                             
+*>   テストケース:３２～３３（正常系）                             
 *>                                                                 
 *>*****************************************************************
 IDENTIFICATION        DIVISION.                                  
@@ -140,10 +140,10 @@ MAIN                  SECTION.
 MAIN-00.                                                         
      DISPLAY "TEST START (EX5-5D)".                              
 P-320.                                                           
-*>  ケース32. MOVE 日本語 TO 英数字、 日本語、・・・                                
+*>  ケース32. MOVE 日本語 TO 英数字、 日本語、・・・               
 *>                                                                 
      MOVE ALL "*"             TO W-R-GRP.                        
-     MOVE "あいうえおかきくけこ"  TO L-G-10 of W-L-GRP.                    
+     MOVE "あいうえおかきくけこ"  TO L-G-10 of W-L-GRP.          
      MOVE L-G-10 OF W-L-GRP TO R-GRP-10,                         
                                R-AN,                             
                                R-ANE,                            
@@ -151,42 +151,42 @@ P-320.
                                R-GJ-5,                           
                                R-GE.                             
      MOVE "P-320-01"        TO CASE-ID.                          
-     IF  R-GRP-10 = "あいうえお"                                      
+     IF  R-GRP-10 = "あいうえお"                                 
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
 *>                                                                 
      MOVE "P-320-02"        TO CASE-ID.                          
-     IF  R-AN = "あいうえお"                                          
+     IF  R-AN = "あいうえお"                                     
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
 *>                                                                 
      MOVE "P-320-03"        TO CASE-ID.                          
-     IF  R-ANE = "あ/い/う"                                         
+     IF  R-ANE = "あ/い/う"                                      
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
 *>                                                                 
      MOVE "P-320-04"        TO CASE-ID.                          
-     IF  R-G = "あいうえおかきくけこ"                                      
+     IF  R-G = "あいうえおかきくけこ"                            
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
 *>                                                                 
      MOVE "P-320-05"        TO CASE-ID.                          
-     IF  R-GJ-5 = "かきくけこ"                                        
+     IF  R-GJ-5 = "かきくけこ"                                   
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
 *>                                                                 
      MOVE "P-320-06"        TO CASE-ID.                          
-     IF  R-GE = "あ／い／う"                                          
+     IF  R-GE = "あ／い／う"                                     
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
 *>                                                                 
-*>  ケース33. MOVE CORR 集団 TO 集団                                      
+*>  ケース33. MOVE CORR 集団 TO 集団                               
 *>                                                                 
      MOVE ALL "*" TO W-L-GRP.                                    
      MOVE ALL "*" TO W-CORR-GRP.                                 
@@ -196,8 +196,8 @@ P-320.
                    NUMERIC             BY 123                    
                    ALPHANUMERIC-EDITED BY "E"                    
                    NUMERIC-EDITED      BY 999                    
-                   NATIONAL            BY "あ"                    
-                   NATIONAL-EDITED     BY "か".                   
+                   NATIONAL            BY "あ"                   
+                   NATIONAL-EDITED     BY "か".                  
 *>                                                                 
      MOVE CORR W-L-GRP TO W-CORR-GRP.                            
 *>                                                                 
@@ -278,7 +278,7 @@ P-320.
      END-IF.                                                     
 *>                                                                 
      MOVE "P-330-12"        TO CASE-ID.                          
-     IF  L-GE          OF W-CORR-GRP = "か／／／　"                   
+     IF  L-GE          OF W-CORR-GRP = "か／／／　"              
                        DISPLAY CASE-ID "OK"                      
         ELSE           DISPLAY CASE-ID "NG"                      
      END-IF.                                                     

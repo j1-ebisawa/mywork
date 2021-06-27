@@ -60,14 +60,14 @@
             MOVE "あいうえお"           TO GE-01.
             IF GE-01 = "あ／い／う"    
                                         DISPLAY CASE-ID "OK"
-               ELSE                     DISPLAY CASE-ID "NG"
+               ELSE                     DISPLAY CASE-ID "NG:" GE-01
             END-IF.
       *
             MOVE "P-010-04"             TO CASE-ID.
             MOVE "あ"                   TO GE-01.
             IF GE-01 = "あ／　／　"    
                                         DISPLAY CASE-ID "OK"
-               ELSE                     DISPLAY CASE-ID "NG"
+               ELSE                     DISPLAY CASE-ID "NG:" GE-01
             END-IF.
       *
        P-020. 
@@ -112,7 +112,7 @@
             MOVE L-X-10 TO G-J-01.
             IF G-J-01 = "カキクケコ"
                                         DISPLAY CASE-ID "OK"
-               ELSE                     DISPLAY CASE-ID "NG"
+               ELSE                     DISPLAY CASE-ID "NG:" G-J-01
             END-IF.
       *
             MOVE "P-040-02"             TO CASE-ID.
@@ -120,7 +120,7 @@
             MOVE L-X-3 TO G-J-01
             IF G-J-01 = "　　アイウ"
                                         DISPLAY CASE-ID "OK"
-               ELSE                     DISPLAY CASE-ID "NG"
+               ELSE                     DISPLAY CASE-ID "NG:" G-J-01
             END-IF.
       *
       *

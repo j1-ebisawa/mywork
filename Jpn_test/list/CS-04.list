@@ -1,15 +1,15 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL-BETA release 2021 R1 build#1041.1-20210329-31547
 *>source file name:  C:\isTEST\JPN_TEST\Jpn_test\source\CS-04.cbl
-*>date generated  :  Sun Jun 27 10:35:15 GMT+09:00 2021
-*>compiler options:  -dx -eo=C:/isTEST/JPN_TEST/Jpn_test/errs -sp=cpy;screenpgm;fdsl -esme=100 -d -smat -g -lo=C:/isTEST/JPN_TEST/Jpn_test/list -tasks -od=C:/isTEST/JPN_TEST/Jpn_test/output -jj
+*>date generated  :  Sun Jun 27 10:43:46 GMT+09:00 2021
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/isTEST/JPN_TEST/Jpn_test/output -jj -eo=C:/isTEST/JPN_TEST/Jpn_test/errs -d -g -lo=C:/isTEST/JPN_TEST/Jpn_test/list -tasks
 *>*****************************************************************
-*>    テストケース：CS-04                                                 
-*>    プログラム名：通貨記号テスト                                               
-*>    処理概要　　：通貨記号「￥」および、                                           
-*>                  CURRENCY-SIGN句が使えるかチェックする。                     
+*>    テストケース：CS-04                                          
+*>    プログラム名：通貨記号テスト                                 
+*>    処理概要　　：通貨記号「￥」および、                         
+*>                  CURRENCY-SIGN句が使えるかチェックする。        
 *>  -------------------------------------------------------------- 
-*>   テストケース:CURRENCY SIGN句に「$」を指定すると「\」はエラー。                       
+*>   テストケース:CURRENCY SIGN句に「$」を指定すると「\」はエラー。
 *>*****************************************************************
 IDENTIFICATION        DIVISION.                                  
 *>*****************************************************************
@@ -49,7 +49,7 @@ PROCEDURE             DIVISION.
 MAIN                  SECTION.                                   
 P-010.                                                           
      DISPLAY "TEST START (CS-04)".                               
-*>ケース1.                                                            
+*>ケース1.                                                         
      MOVE "P-010-01"        TO CASE-ID.                          
      MOVE      1 TO NUM-01.                                      
      MOVE NUM-01 TO NEDIT-01.                                    
