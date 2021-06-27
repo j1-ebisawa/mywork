@@ -187,7 +187,7 @@
                                              L-G-3 ":" R-GE
             END-IF.
       *
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
       *
        P-060. 
       *  ケース6.（左辺）日本語＋（右辺）日本語定数
@@ -244,7 +244,11 @@
       *
             MOVE "P-080-03"        TO CASE-ID.
             IF L-G < ZEROES          DISPLAY CASE-ID "OK"
-               ELSE                  DISPLAY CASE-ID "NG"
+               ELSE                  DISPLAY CASE-ID "NG:" L-G
+            END-IF.
+            move ZEROES to R-G.
+            IF L-G < R-G             DISPLAY CASE-ID "OK"
+               ELSE                  DISPLAY CASE-ID "NG:" L-G
             END-IF.
       *
        P-090. 
@@ -290,7 +294,7 @@
                ELSE                  DISPLAY CASE-ID "OK"
             END-IF.
       *
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
       *
        P-110. 
       *  ケース11.（左辺）日本語編集＋（右辺）英字・数字
@@ -404,7 +408,7 @@
                ELSE                  DISPLAY CASE-ID "OK"
             END-IF.
       *
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
       *
        P-160. 
       *  ケース16.（左辺）日本語編集＋（右辺）表意定数
@@ -427,7 +431,7 @@
             END-IF.
       *
             DISPLAY "TEST END   (EX5-1-1B)".
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
             GOBACK
             .
 

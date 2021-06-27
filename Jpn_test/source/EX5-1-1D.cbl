@@ -186,7 +186,7 @@
                ELSE                  DISPLAY CASE-ID "NG"
             END-IF.
       *
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
       *
        P-380. 
       *  ケース38.（左辺）英数字・英数字編集・数字編集＋（右辺）日本語
@@ -362,7 +362,7 @@
       *
       *
             DISPLAY "TEST END   (EX5-1-1D)".
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
             GOBACK
             .
 
