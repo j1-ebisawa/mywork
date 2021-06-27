@@ -1,7 +1,7 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL-BETA release 2021 R1 build#1041.1-20210329-31547
 *>source file name:  C:\isTEST\GIT\Jpn_test\source\EX5-1-1C.cbl
-*>date generated  :  Sun Jun 27 11:53:46 GMT+09:00 2021
+*>date generated  :  Sun Jun 27 15:30:28 GMT+09:00 2021
 *>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/isTEST/GIT/Jpn_test/output -jj -eo=C:/isTEST/GIT/Jpn_test/errs -d -g -lo=C:/isTEST/GIT/Jpn_test/list -tasks
 *>*****************************************************************
 *>    テストケース：5-1-1C                                         
@@ -179,7 +179,7 @@ P-210.
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
 *>                                                                 
-     ACCEPT OMIT-WK.                                             
+     *>ACCEPT OMIT-WK.                                           
 *>                                                                 
 P-220.                                                           
 *>  ケース22.（左辺）日本語定数＋（右辺）日本語定数                
@@ -227,7 +227,7 @@ P-240.
 *>  ケース8.（左辺）日本語定数＋（右辺）表意定数                   
 *>                                                                 
      MOVE "P-240-01"        TO CASE-ID.                          
-     IF "”" =  QUOTES        DISPLAY CASE-ID "OK"               
+     IF "’" =  QUOTES        DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
 *>                                                                 
@@ -285,7 +285,7 @@ P-260.
         ELSE                  DISPLAY CASE-ID "OK"               
      END-IF.                                                     
 *>                                                                 
-     ACCEPT OMIT-WK.                                             
+     *>ACCEPT OMIT-WK.                                           
 *>                                                                 
 P-270.                                                           
 *>  ケース27.（左辺）ALL 日本語定数＋（右辺）英字・数字            
@@ -407,7 +407,7 @@ P-320.
      END-IF.                                                     
 *>                                                                 
      DISPLAY "TEST END   (EX5-1-1C)".                            
-     ACCEPT OMIT-WK.                                             
+     *>ACCEPT OMIT-WK.                                           
      GOBACK                                                      
      .                                                           
                                                                  

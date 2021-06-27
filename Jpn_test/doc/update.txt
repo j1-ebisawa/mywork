@@ -6,4 +6,8 @@
 20210621 #006 EX3-4    move AN(1B)->N(2B) convert  when PIC N
 20210621 #007 EX4-1A   JUST dosen't work
 20210624 2 Facter Auth 
-20210627 test
+20210627 #008 EX4-1B   JUST doesn't be checked
+20210627 #009 EX4-3A   PIC NBN N/N N0N 
+20210621 #010 EX4-4B   PIC N and value "1B"->"2B"
+20210621 #011 EX5-1-1B move quotes to L-G (L-G<zeroes)->NG 
+20210621 #012 EX5-1-1C "Åf" = quotes Å@< zeroes -> NG

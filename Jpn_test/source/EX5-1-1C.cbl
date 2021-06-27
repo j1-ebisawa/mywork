@@ -174,7 +174,7 @@
                ELSE                  DISPLAY CASE-ID "NG"
             END-IF.
       *
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
       *
        P-220. 
       *  ケース22.（左辺）日本語定数＋（右辺）日本語定数
@@ -222,7 +222,7 @@
       *  ケース8.（左辺）日本語定数＋（右辺）表意定数
       *
             MOVE "P-240-01"        TO CASE-ID.
-            IF "”" =  QUOTES        DISPLAY CASE-ID "OK"
+            IF "’" =  QUOTES        DISPLAY CASE-ID "OK"
                ELSE                  DISPLAY CASE-ID "NG"
             END-IF.
       *
@@ -280,7 +280,7 @@
                ELSE                  DISPLAY CASE-ID "OK"
             END-IF.
       *
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
       *
        P-270. 
       *  ケース27.（左辺）ALL 日本語定数＋（右辺）英字・数字
@@ -402,7 +402,7 @@
             END-IF.
       *
             DISPLAY "TEST END   (EX5-1-1C)".
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
             GOBACK
             .
 
