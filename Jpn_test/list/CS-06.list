@@ -1,7 +1,7 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
 *>source file name:  C:\isTEST\Git\Jpn_test\source\CS-06.cbl
-*>date generated  :  Sun Jun 27 11:44:31 JST 2021
+*>date generated  :  Mon Jun 28 09:12:57 JST 2021
 *>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/isTEST/Git/Jpn_test/output -jj -eo=C:/isTEST/Git/Jpn_test/errs -d -g -lo=C:/isTEST/Git/Jpn_test/list -tasks
 *>*****************************************************************
 *>    テストケース：CS-06                                          
@@ -41,7 +41,8 @@ WORKING-STORAGE       SECTION.
 01  NEDIT-01X.                                                   
     05 NEDIT-01   PIC ###,##9.                                   
 01  NEDIT-02X.                                                   
-    05  NEDIT-02  PIC \\\,\\9. *>#002 Only 1 CS is acceptable    
+*>>   05  NEDIT-02  PIC \\\,\\9. *>#002 Only 1 CS is acceptable    
+    05  NEDIT-02  PIC ###,##9. *>#002 Only 1 CS is acceptable    
 01  WK-I          PIC S9(3).                                     
 *>*****************************************************************
 PROCEDURE             DIVISION.                                  
@@ -76,8 +77,7 @@ P-010.
      END-IF.                                                     
 *>                                                                 
      DISPLAY "TEST END   (CS-06)".                               
-     ACCEPT OMIT-WK.                                             
+     *>ACCEPT OMIT-WK.                                           
      GOBACK                                                      
      .                                                           
                                                                  
-*> --S: #32 Illegal picture: \; file = CS-06.cbl, line = 39, col 8

@@ -36,7 +36,8 @@
        01  NEDIT-01X.
            05 NEDIT-01   PIC ###,##9.  
        01  NEDIT-02X.
-           05  NEDIT-02  PIC \\\,\\9. *>#002 Only 1 CS is acceptable
+      *>   05  NEDIT-02  PIC \\\,\\9. *>#002 Only 1 CS is acceptable
+           05  NEDIT-02  PIC ###,##9. *>#002 Only 1 CS is acceptable
        01  WK-I          PIC S9(3).
       ******************************************************************
        PROCEDURE             DIVISION.
@@ -71,7 +72,7 @@
             END-IF.
       *
             DISPLAY "TEST END   (CS-06)".
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
             GOBACK
             .
 

@@ -67,7 +67,7 @@
       *
             DISPLAY G-19.
       *
-            DISPLAY "TEST END   (EX4-1A)".
+            DISPLAY "TEST END   (EX4-2B)".
             ACCEPT OMIT-WK.
       *
             GOBACK

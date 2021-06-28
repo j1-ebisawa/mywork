@@ -1,14 +1,8 @@
 *>(c) 2005 - 2021 Veryant
-*>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
-<<<<<<< HEAD
-*>source file name:  C:\isTEST\Git\Jpn_test\source\EX5-1-1B.cbl
-*>date generated  :  Wed Jun 23 15:58:25 JST 2021
-*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/isTEST/Git/Jpn_test/output -jj -eo=C:/isTEST/Git/Jpn_test/errs -d -g -lo=C:/isTEST/Git/Jpn_test/list -tasks
-=======
-*>source file name:  C:\ISTEST\Git\Jpn_test\source\EX5-1-1B.cbl
-*>date generated  :  Thu Jun 24 16:09:56 JST 2021
-*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/ISTEST/Git/Jpn_test/output -jj -eo=C:/ISTEST/Git/Jpn_test/errs -d -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks
->>>>>>> branch 'master' of https://github.com/j1-ebisawa/mywork
+*>compiler version: isCOBOL-BETA release 2021 R1 build#1041.1-20210329-31547
+*>source file name:  C:\isTEST\GIT\Jpn_test\source\EX5-1-1B.cbl
+*>date generated  :  Sun Jun 27 15:30:27 GMT+09:00 2021
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/isTEST/GIT/Jpn_test/output -jj -eo=C:/isTEST/GIT/Jpn_test/errs -d -g -lo=C:/isTEST/GIT/Jpn_test/list -tasks
 *>*****************************************************************
 *>    テストケース：5-1-1B                                         
 *>    プログラム名：日本語化テスト （手続き部）条件 比較条件       
@@ -198,7 +192,7 @@ P-050.
                                       L-G-3 ":" R-GE             
      END-IF.                                                     
 *>                                                                 
-     ACCEPT OMIT-WK.                                             
+     *>ACCEPT OMIT-WK.                                           
 *>                                                                 
 P-060.                                                           
 *>  ケース6.（左辺）日本語＋（右辺）日本語定数                     
@@ -255,7 +249,11 @@ P-080.
 *>                                                                 
      MOVE "P-080-03"        TO CASE-ID.                          
      IF L-G < ZEROES          DISPLAY CASE-ID "OK"               
-        ELSE                  DISPLAY CASE-ID "NG"               
+        ELSE                  DISPLAY CASE-ID "NG:" L-G          
+     END-IF.                                                     
+     move ZEROES to R-G.                                         
+     IF L-G < R-G             DISPLAY CASE-ID "OK"               
+        ELSE                  DISPLAY CASE-ID "NG:" L-G          
      END-IF.                                                     
 *>                                                                 
 P-090.                                                           
@@ -301,7 +299,7 @@ P-100.
         ELSE                  DISPLAY CASE-ID "OK"               
      END-IF.                                                     
 *>                                                                 
-     ACCEPT OMIT-WK.                                             
+     *>ACCEPT OMIT-WK.                                           
 *>                                                                 
 P-110.                                                           
 *>  ケース11.（左辺）日本語編集＋（右辺）英字・数字                
@@ -415,7 +413,7 @@ P-150.
         ELSE                  DISPLAY CASE-ID "OK"               
      END-IF.                                                     
 *>                                                                 
-     ACCEPT OMIT-WK.                                             
+     *>ACCEPT OMIT-WK.                                           
 *>                                                                 
 P-160.                                                           
 *>  ケース16.（左辺）日本語編集＋（右辺）表意定数                  
@@ -438,7 +436,7 @@ P-160.
      END-IF.                                                     
 *>                                                                 
      DISPLAY "TEST END   (EX5-1-1B)".                            
-     ACCEPT OMIT-WK.                                             
+     *>ACCEPT OMIT-WK.                                           
      GOBACK                                                      
      .                                                           
                                                                  

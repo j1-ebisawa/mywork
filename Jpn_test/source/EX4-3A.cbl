@@ -36,7 +36,7 @@
        01  GE-02              PIC N/N          USAGE NATIONAL.
        01  GE-03              PIC N0N          USAGE NATIONAL.
        01  GE-04              PIC N/NBN0N      USAGE NATIONAL.
-       
+       01  wk-len             pic 999.
       ******************************************************************
        PROCEDURE             DIVISION.
       ******************************************************************
@@ -116,7 +116,7 @@
       *
       *
             DISPLAY "TEST END   (EX4-3A)".
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
       *
             GOBACK
             .
