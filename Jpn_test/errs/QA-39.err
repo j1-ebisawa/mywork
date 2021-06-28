@@ -1,4 +1,5 @@
 I --> C:\ISTEST\Git\Jpn_test\source\QA-39.cbl
+--W: #151 National with -b option may not work! G-01; file = QA-39.cbl, line = 25, col 4
 --S: #69 Must be size 1 in this context: "ÅñÇP"; file = QA-39.cbl, line = 46, col 42
 --S: #69 Must be size 1 in this context: "*1"; file = QA-39.cbl, line = 62, col 42
 --S: #70 Illegal size: "*1"; file = QA-39.cbl, line = 78, col 39

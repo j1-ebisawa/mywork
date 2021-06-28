@@ -45,6 +45,7 @@
       ******************************************************************
        MAIN                  SECTION.
        P-010. 
+            display "TEST START(EX5-4A)".
       *ケース1.一意名１（TALLYING,CHARACTERS指定）
             MOVE "P-010-01"        TO CASE-ID.
             MOVE "あいうえおかきくけこ" TO G-01.
@@ -104,7 +105,7 @@
             MOVE "あい＊＊おかき＊＊＊" TO G-01.
             MOVE "あああい＊＊＊＊" TO GE-01.
             MOVE 0 TO W-TALLY.
-            INSPECT G-01 TALLYING W-TALLY FOR TRAILING "＊".
+            *>INSPECT G-01 TALLYING W-TALLY FOR TRAILING "＊".
             IF W-TALLY = 3
                   DISPLAY CASE-ID "OK"
             ELSE  DISPLAY CASE-ID "NG:" W-TALLY
@@ -112,7 +113,7 @@
       *
             MOVE "P-040-02"        TO CASE-ID.
             MOVE 0 TO W-TALLY.
-            INSPECT GE-01 TALLYING W-TALLY FOR TRAILING "＊".
+            *>INSPECT GE-01 TALLYING W-TALLY FOR TRAILING "＊".
             IF W-TALLY = 2
                   DISPLAY CASE-ID "OK"
             ELSE  DISPLAY CASE-ID "NG:" W-TALLY
@@ -127,6 +128,7 @@
                   DISPLAY CASE-ID "OK"
             ELSE  DISPLAY CASE-ID "NG:" W-TALLY
             END-IF.
+       P-050-02.
       *
             MOVE "P-050-02"        TO CASE-ID.
             MOVE 0 TO W-TALLY.
@@ -195,7 +197,7 @@
             MOVE "あい＊＊おかき＊＊え" TO G-01.
             MOVE "あ＊い＊う＊＊え" TO GE-01.
             MOVE 0 TO W-TALLY.
-            INSPECT G-01 TALLYING W-TALLY FOR TRAILING "＊" BEFORE "え".
+            *>INSPECT G-01 TALLYING W-TALLY FOR TRAILING "＊" BEFORE "え".
             IF W-TALLY = 2
                   DISPLAY CASE-ID "OK"
             ELSE  DISPLAY CASE-ID "NG:" W-TALLY
@@ -203,8 +205,8 @@
       *
             MOVE "P-090-02"        TO CASE-ID.
             MOVE 0 TO W-TALLY.
-            INSPECT GE-01 TALLYING W-TALLY FOR
-                                           TRAILING "＊" BEFORE "え".
+            *>INSPECT GE-01 TALLYING W-TALLY FOR
+            *>                               TRAILING "＊" BEFORE "え".
             IF W-TALLY = 1
                   DISPLAY CASE-ID "OK"
             ELSE  DISPLAY CASE-ID "NG:" W-TALLY
@@ -293,7 +295,7 @@
             MOVE "＊" TO G-03-1.
             
             MOVE 0 TO W-TALLY.
-            INSPECT G-01 TALLYING W-TALLY FOR TRAILING G-03-1.
+            *>INSPECT G-01 TALLYING W-TALLY FOR TRAILING G-03-1.
             IF W-TALLY = 3
                   DISPLAY CASE-ID "OK"
             ELSE  DISPLAY CASE-ID "NG:" W-TALLY
@@ -301,7 +303,7 @@
       *
             MOVE "P-140-02"        TO CASE-ID.
             MOVE 0 TO W-TALLY.
-            INSPECT GE-01 TALLYING W-TALLY FOR TRAILING G-03-1.
+            *>INSPECT GE-01 TALLYING W-TALLY FOR TRAILING G-03-1.
             IF W-TALLY = 2
                   DISPLAY CASE-ID "OK"
             ELSE  DISPLAY CASE-ID "NG:" W-TALLY
@@ -398,8 +400,8 @@
             MOVE "え" TO G-08-1.
             
             MOVE 0 TO W-TALLY.
-            INSPECT G-01 TALLYING W-TALLY FOR
-                                          TRAILING G-03-1 BEFORE G-08-1.
+            *>INSPECT G-01 TALLYING W-TALLY FOR
+            *>                              TRAILING G-03-1 BEFORE G-08-1.
             IF W-TALLY = 2
                   DISPLAY CASE-ID "OK"
             ELSE  DISPLAY CASE-ID "NG:" W-TALLY
@@ -407,8 +409,8 @@
       *
             MOVE "P-190-02"        TO CASE-ID.
             MOVE 0 TO W-TALLY.
-            INSPECT GE-01 TALLYING W-TALLY FOR
-                                          TRAILING G-03-1 BEFORE G-08-1.
+            *>INSPECT GE-01 TALLYING W-TALLY FOR
+            *>                              TRAILING G-03-1 BEFORE G-08-1.
             IF W-TALLY = 1
                   DISPLAY CASE-ID "OK"
             ELSE  DISPLAY CASE-ID "NG:" W-TALLY
@@ -482,6 +484,7 @@
             END-IF.
       
       *
+            display "TEST END  (EX5-4A)".
             ACCEPT OMIT-WK.
             GOBACK
             .

@@ -1,8 +1,8 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
 *>source file name:  C:\ISTEST\Git\Jpn_test\source\EX5-5D.cbl
-*>date generated  :  Mon Jun 28 11:00:37 JST 2021
-*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/ISTEST/Git/Jpn_test/output -jj -eo=C:/ISTEST/Git/Jpn_test/errs -d -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks
+*>date generated  :  Mon Jun 28 12:11:38 JST 2021
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/ISTEST/Git/Jpn_test/output -jj -eo=C:/ISTEST/Git/Jpn_test/errs -b -d -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks
 *>*****************************************************************
 *>    テストケース：5-5D                                           
 *>    プログラム名：日本語化テスト （手続き部）MOVE命令            
@@ -288,6 +288,33 @@ P-320.
      GOBACK                                                      
      .                                                           
                                                                  
+*> --W: #151 National with -b option may not work! L-G-10; file = EX5-5D.cbl, line = 53, col 8
+*> --W: #151 National with -b option may not work! L-G-5; file = EX5-5D.cbl, line = 55, col 12
+*> --W: #151 National with -b option may not work! L-G-3; file = EX5-5D.cbl, line = 56, col 12
+*> --W: #151 National with -b option may not work! L-G-2; file = EX5-5D.cbl, line = 57, col 12
+*> --W: #151 National with -b option may not work! L-GE; file = EX5-5D.cbl, line = 58, col 8
+*> --W: #151 National with -b option may not work! L-GE-3; file = EX5-5D.cbl, line = 60, col 12
+*> --W: #151 National with -b option may not work! L-GE-2; file = EX5-5D.cbl, line = 61, col 12
+*> --W: #151 National with -b option may not work! R-G; file = EX5-5D.cbl, line = 81, col 8
+*> --W: #151 National with -b option may not work! R-G-5; file = EX5-5D.cbl, line = 83, col 12
+*> --W: #151 National with -b option may not work! R-G-3; file = EX5-5D.cbl, line = 84, col 12
+*> --W: #151 National with -b option may not work! R-G-2; file = EX5-5D.cbl, line = 85, col 12
+*> --W: #151 National with -b option may not work! R-GJ; file = EX5-5D.cbl, line = 86, col 8
+*> --W: #151 National with -b option may not work! R-GJ-5; file = EX5-5D.cbl, line = 88, col 12
+*> --W: #151 National with -b option may not work! R-GJ-3; file = EX5-5D.cbl, line = 89, col 12
+*> --W: #151 National with -b option may not work! R-GJ-2; file = EX5-5D.cbl, line = 90, col 12
+*> --W: #151 National with -b option may not work! R-GE; file = EX5-5D.cbl, line = 91, col 8
+*> --W: #151 National with -b option may not work! R-GE-3; file = EX5-5D.cbl, line = 93, col 12
+*> --W: #151 National with -b option may not work! R-GE-2; file = EX5-5D.cbl, line = 94, col 12
+*> --W: #151 National with -b option may not work! R-GE-NB; file = EX5-5D.cbl, line = 95, col 8
+*> --W: #151 National with -b option may not work! R-GE-NBZ; file = EX5-5D.cbl, line = 96, col 8
+*> --W: #151 National with -b option may not work! L-G-10; file = EX5-5D.cbl, line = 121, col 8
+*> --W: #151 National with -b option may not work! L-G-5; file = EX5-5D.cbl, line = 123, col 12
+*> --W: #151 National with -b option may not work! L-G-3; file = EX5-5D.cbl, line = 124, col 12
+*> --W: #151 National with -b option may not work! L-G-2; file = EX5-5D.cbl, line = 125, col 12
+*> --W: #151 National with -b option may not work! L-GE; file = EX5-5D.cbl, line = 126, col 8
+*> --W: #151 National with -b option may not work! L-GE-3; file = EX5-5D.cbl, line = 128, col 12
+*> --W: #151 National with -b option may not work! L-GE-2; file = EX5-5D.cbl, line = 129, col 12
 *> --S: #15 Unexpected token <NATIONAL>; file = EX5-5D.cbl, line = 194, col 19
 *> --S: #15 Unexpected token <BY>; file = EX5-5D.cbl, line = 194, col 39
 *> --S: #15 Unexpected token <"あ">; file = EX5-5D.cbl, line = 194, col 42

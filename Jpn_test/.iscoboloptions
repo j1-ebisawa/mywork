@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<java version="11.0.11" class="java.beans.XMLDecoder">
+<java version="1.8.0_201" class="java.beans.XMLDecoder">
  <object class="com.iscobol.plugins.editor.util.ProjectSettingList" id="ProjectSettingList0">
   <null/>
   <void property="fileSettings">
@@ -12,11 +12,43 @@
      </void>
     </object>
    </void>
+   <void method="put">
+    <string>/Jpn_test/source/EX5-4A.cbl</string>
+    <object class="com.iscobol.plugins.editor.util.SettingList" id="SettingList0">
+     <string>/Jpn_test/source/EX5-4A.cbl</string>
+     <void id="LinkedHashMap0" property="modes">
+      <void id="SettingMode0" method="get">
+       <string>Release</string>
+       <void id="LinkedHashMap1" property="properties">
+        <void method="put">
+         <string>-b</string>
+         <string>___iscobol.option.false</string>
+        </void>
+       </void>
+       <void property="properties">
+        <object idref="LinkedHashMap1"/>
+       </void>
+      </void>
+      <void id="SettingMode1" method="get">
+       <string>Debug</string>
+       <void id="LinkedHashMap2" property="properties">
+        <void method="put">
+         <string>-b</string>
+         <string>___iscobol.option.false</string>
+        </void>
+       </void>
+       <void property="properties">
+        <object idref="LinkedHashMap2"/>
+       </void>
+      </void>
+     </void>
+    </object>
+   </void>
   </void>
-  <void id="LinkedHashMap0" property="modes">
-   <void id="SettingMode0" method="get">
+  <void id="LinkedHashMap3" property="modes">
+   <void id="SettingMode2" method="get">
     <string>Default</string>
-    <void id="LinkedHashMap1" property="properties">
+    <void id="LinkedHashMap4" property="properties">
      <void method="put">
       <string>sourcedir</string>
       <string>source</string>
@@ -79,12 +111,12 @@
      </void>
     </void>
     <void property="properties">
-     <object idref="LinkedHashMap1"/>
+     <object idref="LinkedHashMap4"/>
     </void>
    </void>
-   <void id="SettingMode1" method="get">
+   <void id="SettingMode3" method="get">
     <string>Release</string>
-    <void id="LinkedHashMap2" property="properties">
+    <void id="LinkedHashMap5" property="properties">
      <void method="put">
       <string>-eo=</string>
       <string>errs</string>
@@ -121,14 +153,18 @@
       <string>-d</string>
       <string>___iscobol.option.true</string>
      </void>
+     <void method="put">
+      <string>-b</string>
+      <string>___iscobol.option.true</string>
+     </void>
     </void>
     <void property="properties">
-     <object idref="LinkedHashMap2"/>
+     <object idref="LinkedHashMap5"/>
     </void>
    </void>
-   <void id="SettingMode2" method="get">
+   <void id="SettingMode4" method="get">
     <string>Debug</string>
-    <void id="LinkedHashMap3" property="properties">
+    <void id="LinkedHashMap6" property="properties">
      <void method="put">
       <string>iscobol.prog.sysprops</string>
       <string>-XX:ErrorFile=../logs/java_error%p.log</string>
@@ -189,19 +225,23 @@
       <string>-ccbas</string>
       <string>___iscobol.option.true</string>
      </void>
+     <void method="put">
+      <string>-b</string>
+      <string>___iscobol.option.true</string>
+     </void>
     </void>
     <void property="properties">
-     <object idref="LinkedHashMap3"/>
+     <object idref="LinkedHashMap6"/>
     </void>
    </void>
   </void>
   <void property="runtimeCurrentMode">
    <string>Run</string>
   </void>
-  <void id="LinkedHashMap4" property="runtimeModes">
-   <void id="SettingMode3" method="get">
+  <void id="LinkedHashMap7" property="runtimeModes">
+   <void id="SettingMode5" method="get">
     <string>Run</string>
-    <void id="LinkedHashMap5" property="properties">
+    <void id="LinkedHashMap8" property="properties">
      <void method="put">
       <string>iscobol.prog.lafopt</string>
       <string></string>
@@ -224,7 +264,7 @@
      </void>
     </void>
     <void property="properties">
-     <object idref="LinkedHashMap5"/>
+     <object idref="LinkedHashMap8"/>
     </void>
    </void>
   </void>

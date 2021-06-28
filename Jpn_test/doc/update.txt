@@ -11,3 +11,6 @@
 20210621 #010 EX4-4B   PIC N and value "1B"->"2B"
 20210621 #011 EX5-1-1B move quotes to L-G (L-G<zeroes)->NG 
 20210621 #012 EX5-1-1C "Åf" = quotes Å@< zeroes -> NG
+20210628 #013 EX5-3    INITIALIZE replacing NATIONAL -> NG
+20210628 #014 EX5-4-1  INSPECT replacing NN by "nn"  ->NG
+20210628 #015 EX5-4-1  INSPECT TALLYING abend

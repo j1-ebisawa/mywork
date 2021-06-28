@@ -1,4 +1,24 @@
 I --> C:\ISTEST\Git\Jpn_test\source\EX5-5F.cbl
+--W: #151 National with -b option may not work! L-G; file = EX5-5F.cbl, line = 53, col 8
+--W: #151 National with -b option may not work! L-G-5; file = EX5-5F.cbl, line = 55, col 12
+--W: #151 National with -b option may not work! L-G-3; file = EX5-5F.cbl, line = 56, col 12
+--W: #151 National with -b option may not work! L-G-2; file = EX5-5F.cbl, line = 57, col 12
+--W: #151 National with -b option may not work! L-GE; file = EX5-5F.cbl, line = 58, col 8
+--W: #151 National with -b option may not work! L-GE-3; file = EX5-5F.cbl, line = 60, col 12
+--W: #151 National with -b option may not work! L-GE-2; file = EX5-5F.cbl, line = 61, col 12
+--W: #151 National with -b option may not work! R-G; file = EX5-5F.cbl, line = 81, col 8
+--W: #151 National with -b option may not work! R-G-5; file = EX5-5F.cbl, line = 83, col 12
+--W: #151 National with -b option may not work! R-G-3; file = EX5-5F.cbl, line = 84, col 12
+--W: #151 National with -b option may not work! R-G-2; file = EX5-5F.cbl, line = 85, col 12
+--W: #151 National with -b option may not work! R-GJ; file = EX5-5F.cbl, line = 86, col 8
+--W: #151 National with -b option may not work! R-GJ-5; file = EX5-5F.cbl, line = 88, col 12
+--W: #151 National with -b option may not work! R-GJ-3; file = EX5-5F.cbl, line = 89, col 12
+--W: #151 National with -b option may not work! R-GJ-2; file = EX5-5F.cbl, line = 90, col 12
+--W: #151 National with -b option may not work! R-GE; file = EX5-5F.cbl, line = 91, col 8
+--W: #151 National with -b option may not work! R-GE-3; file = EX5-5F.cbl, line = 93, col 12
+--W: #151 National with -b option may not work! R-GE-2; file = EX5-5F.cbl, line = 94, col 12
+--W: #151 National with -b option may not work! R-GE-NB; file = EX5-5F.cbl, line = 95, col 8
+--W: #151 National with -b option may not work! R-GE-NBZ; file = EX5-5F.cbl, line = 96, col 8
 --S: #59 Illegal receiver from source type: R-ZONE; file = EX5-5F.cbl, line = 134, col 18
 --S: #59 Illegal receiver from source type: R-ZONE-DEC; file = EX5-5F.cbl, line = 135, col 18
 --S: #59 Illegal receiver from source type: R-PACK; file = EX5-5F.cbl, line = 138, col 18

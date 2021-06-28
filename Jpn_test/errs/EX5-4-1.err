@@ -1,2 +1,3 @@
 I --> C:\ISTEST\Git\Jpn_test\source\EX5-4-1.cbl
+--W: #151 National with -b option may not work! G-01; file = EX5-4-1.cbl, line = 27, col 4
 --S: #70 Illegal size: "**"; file = EX5-4-1.cbl, line = 35, col 39

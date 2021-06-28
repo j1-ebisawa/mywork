@@ -1,8 +1,8 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
 *>source file name:  C:\ISTEST\Git\Jpn_test\source\EX6-1.cbl
-*>date generated  :  Mon Jun 28 11:00:38 JST 2021
-*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/ISTEST/Git/Jpn_test/output -jj -eo=C:/ISTEST/Git/Jpn_test/errs -d -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks
+*>date generated  :  Mon Jun 28 12:11:39 JST 2021
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/ISTEST/Git/Jpn_test/output -jj -eo=C:/ISTEST/Git/Jpn_test/errs -b -d -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks
 *>*****************************************************************
 *>    テストケース：6-1                                            
 *>    プログラム名：日本語化テスト （関数）LENGTH                  
@@ -227,6 +227,11 @@ P-010.
      GOBACK                                                      
      .                                                           
                                                                  
+*> --W: #151 National with -b option may not work! G-01; file = EX6-1.cbl, line = 36, col 4
+*> --W: #151 National with -b option may not work! GE-01; file = EX6-1.cbl, line = 37, col 4
+*> --W: #151 National with -b option may not work! GRP-01-4; file = EX6-1.cbl, line = 43, col 8
+*> --W: #151 National with -b option may not work! GRP-02-4; file = EX6-1.cbl, line = 50, col 8
+*> --W: #151 National with -b option may not work! GRP-03-4; file = EX6-1.cbl, line = 57, col 8
 *> --E: #188 Period missing. Period Assumed. '.'; file = EX6-1.cbl, line = 62
 *> --E: #152 Variable has zero length: GRP-04-2; file = EX6-1.cbl, line = 62, col 8
 *> --S: #31 Expected/found token mismatch: PROCEDURE/BINARY-SHORT; file = EX6-1.cbl, line = 62, col 24

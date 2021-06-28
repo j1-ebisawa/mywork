@@ -32,7 +32,8 @@
       * 
             MOVE "5-4-3"          TO CASE-ID.
             MOVE "‚ ‚¢‚¤‚¦‚¨"     TO G-01.
-            INSPECT G-01 REPLACING ALL "‚ " BY "A".            
+            INSPECT G-01 REPLACING ALL "‚ " BY "A".    
+            display CASE-ID " NG:" G-01        .
       *
             ACCEPT OMIT-WK.
             GOBACK

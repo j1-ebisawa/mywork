@@ -1,5 +1,12 @@
 I --> C:\ISTEST\Git\Jpn_test\source\EX4-4C.cbl
+--W: #151 National with -b option may not work! G-08; file = EX4-4C.cbl, line = 31, col 4
+--W: #151 National with -b option may not work! G-09; file = EX4-4C.cbl, line = 32, col 4
+--W: #151 National with -b option may not work! GE-08; file = EX4-4C.cbl, line = 33, col 4
+--W: #151 National with -b option may not work! GE-09; file = EX4-4C.cbl, line = 34, col 4
+--W: #151 National with -b option may not work! ERR-01; file = EX4-4C.cbl, line = 35, col 4
 --S: #30 Invalid value: ERR-01; file = EX4-4C.cbl, line = 35, col 32
+--W: #151 National with -b option may not work! ERR-02; file = EX4-4C.cbl, line = 36, col 4
+--W: #151 National with -b option may not work! ERR-03-12; file = EX4-4C.cbl, line = 43, col 11
 --W: #170 VALUE size error "‚P‚Q‚R‚S‚T"; file = EX4-4C.cbl, line = 44, col 44
 --S: #30 Invalid value: N-ZONE; file = EX4-4C.cbl, line = 46, col 44
 --S: #30 Invalid value: N-ZONE-DEC; file = EX4-4C.cbl, line = 47, col 44
