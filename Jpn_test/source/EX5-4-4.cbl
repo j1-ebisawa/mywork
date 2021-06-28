@@ -41,7 +41,7 @@
             END-IF.
       *
      
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
             GOBACK
             .
       

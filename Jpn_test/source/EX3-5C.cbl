@@ -71,7 +71,7 @@
             END-IF.
       *
             DISPLAY "TEST END   (EX3-5A)".
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
       *
             GOBACK
             .

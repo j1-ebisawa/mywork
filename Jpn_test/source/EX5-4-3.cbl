@@ -35,7 +35,7 @@
             INSPECT G-01 REPLACING ALL "‚ " BY "A".    
             display CASE-ID " NG:" G-01        .
       *
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
             GOBACK
             .
       

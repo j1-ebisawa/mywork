@@ -1,8 +1,8 @@
-<<<<<<< HEAD
-I --> C:\isTEST\GIT\Jpn_test\source\EX5-1-1A_old.cbl
-=======
 I --> C:\ISTEST\Git\Jpn_test\source\EX5-1-1A_old.cbl
->>>>>>> branch 'master' of https://github.com/j1-ebisawa/mywork
+--W: #151 National with -b option may not work! L-G; file = EX5-1-1A_old.cbl, line = 40, col 8
+--W: #151 National with -b option may not work! L-GE; file = EX5-1-1A_old.cbl, line = 41, col 8
+--W: #151 National with -b option may not work! R-G; file = EX5-1-1A_old.cbl, line = 54, col 8
+--W: #151 National with -b option may not work! R-GE; file = EX5-1-1A_old.cbl, line = 55, col 8
 --E: #43 Illegal condition W-L-GRP & R-ZONE-DEC; file = IF_CHECK.cpy, line = 1, col 11
 --E: #43 Illegal condition W-L-GRP & R-PACK; file = IF_CHECK.cpy, line = 1, col 11
 --E: #43 Illegal condition W-L-GRP & R-PACK-DEC; file = IF_CHECK.cpy, line = 1, col 11
@@ -108,4 +108,4 @@ I --> C:\ISTEST\Git\Jpn_test\source\EX5-1-1A_old.cbl
 --E: #43 Illegal condition ' ' & R-PACK-DEC; file = IF_CHECK.cpy, line = 1, col 11
 --E: #43 Illegal condition ' ' & R-BIN; file = IF_CHECK.cpy, line = 1, col 11
 --E: #43 Illegal condition ' ' & R-BIN-DEC; file = IF_CHECK.cpy, line = 1, col 11
---W: #42 Program id differs from source name: EX5_1_1A; file = EX5-1-1A_old.cbl, line = 11, col 12
+--W: #42 Program-Id differs from source name: EX5_1_1A; file = EX5-1-1A_old.cbl, line = 11, col 12

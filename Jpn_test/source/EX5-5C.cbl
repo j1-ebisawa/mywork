@@ -110,7 +110,7 @@
             MOVE L-GRP-10 TO R-G
             IF  R-G = "ab12ｱｲあ$&"
                                      DISPLAY CASE-ID "OK"
-               ELSE                  DISPLAY CASE-ID "NG"
+               ELSE                  DISPLAY CASE-ID "NG:" R-G
             END-IF.
       *
             MOVE "P-210-02"        TO CASE-ID.
@@ -128,7 +128,7 @@
             MOVE L-GRP-4 TO R-G
             IF R-G = "ab12      "
                                      DISPLAY CASE-ID "OK"
-               ELSE                  DISPLAY CASE-ID "NG"
+               ELSE                  DISPLAY CASE-ID "NG:" R-G
             END-IF.
       *
        P-220. 
@@ -167,7 +167,7 @@
             MOVE L-AN TO R-G
             IF  R-G = "ａｂ１２アイ＄＆＋＝"  
                                      DISPLAY CASE-ID "OK"
-               ELSE                  DISPLAY CASE-ID "NG"
+               ELSE                  DISPLAY CASE-ID "NG:" R-G
             END-IF.
       *
             MOVE "P-230-02"        TO CASE-ID.
@@ -290,7 +290,7 @@
                ELSE                  DISPLAY CASE-ID "NG"
             END-IF.
       *
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
       *
        P-250. 
       *  ケース25.英字、数字(整数）、数字定数（整数）→日本語
@@ -499,7 +499,7 @@
             END-IF.
       *
              DISPLAY "TEST END   (EX5-5C)".
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
             GOBACK
             .
 

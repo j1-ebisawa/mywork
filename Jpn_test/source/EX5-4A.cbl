@@ -485,7 +485,7 @@
       
       *
             display "TEST END  (EX5-4A)".
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
             GOBACK
             .
 

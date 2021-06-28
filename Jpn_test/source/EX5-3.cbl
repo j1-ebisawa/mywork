@@ -169,7 +169,7 @@
             END-IF.
       *
             DISPLAY "TEST END   (EX5-3)".
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
             GOBACK
             .
 

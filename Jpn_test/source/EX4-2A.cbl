@@ -212,7 +212,7 @@
             END-IF.
       *
             DISPLAY "TEST END   (EX4-2A)".
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
       *
             GOBACK
             .

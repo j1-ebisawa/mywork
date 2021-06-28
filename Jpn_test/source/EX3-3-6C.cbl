@@ -175,7 +175,7 @@
       *
       *
              DISPLAY "TEST END   (EX3-3-6C)".
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
             GOBACK
             .
 

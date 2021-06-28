@@ -194,7 +194,7 @@
             MOVE L-BIN-DEC  TO R-GE.
       *
              DISPLAY "TEST END   (EX5-5F)".
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
             GOBACK
             .
 

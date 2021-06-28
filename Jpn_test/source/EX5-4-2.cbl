@@ -39,7 +39,7 @@
             ELSE  DISPLAY CASE-ID "NG:" G-01
             END-IF.
       *
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
             GOBACK
             .
       

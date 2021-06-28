@@ -935,7 +935,7 @@
                                       R-ITEM BY QUOTES.
       *
             DISPLAY "TEST END   (EX5-1-1A)".
-           ACCEPT OMIT-WK.
+           *>ACCEPT OMIT-WK.
            GOBACK
            .
 

@@ -1,8 +1,8 @@
 *>(c) 2005 - 2021 Veryant
-*>compiler version: isCOBOL-BETA release 2021 R1 build#1041.1-20210329-31547
-*>source file name:  C:\isTEST\GIT\Jpn_test\source\QA-99.cbl
-*>date generated  :  Sun Jun 27 11:53:58 GMT+09:00 2021
-*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/isTEST/GIT/Jpn_test/output -jj -eo=C:/isTEST/GIT/Jpn_test/errs -d -g -lo=C:/isTEST/GIT/Jpn_test/list -tasks
+*>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
+*>source file name:  C:\ISTEST\Git\Jpn_test\source\QA-99.cbl
+*>date generated  :  Mon Jun 28 15:09:49 JST 2021
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/ISTEST/Git/Jpn_test/output -jj -eo=C:/ISTEST/Git/Jpn_test/errs -b -d -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks
 IDENTIFICATION    DIVISION.                                      
 PROGRAM-ID. QA-99.                                         
 *>                                                                 
@@ -31,3 +31,5 @@ PROCEDURE         DIVISION.
 100-RTN.                                                         
     MOVE      M-MNT-DATA         TO        RS2-MNT-DATA.         
 *>                                                                 
+*> --W: #151 National with -b option may not work! M-MNT-DATA; file = QA-99.cbl, line = 14, col 8
+*> --W: #151 National with -b option may not work! RS2-MNT-DATA; file = QA-99.cbl, line = 16, col 7

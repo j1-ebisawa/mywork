@@ -1,8 +1,8 @@
 *>(c) 2005 - 2021 Veryant
-*>compiler version: isCOBOL-BETA release 2021 R1 build#1041.1-20210329-31547
-*>source file name:  C:\isTEST\GIT\Jpn_test\source\IF_TEST.cbl
-*>date generated  :  Sun Jun 27 11:53:55 GMT+09:00 2021
-*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/isTEST/GIT/Jpn_test/output -jj -eo=C:/isTEST/GIT/Jpn_test/errs -d -g -lo=C:/isTEST/GIT/Jpn_test/list -tasks
+*>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
+*>source file name:  C:\ISTEST\Git\Jpn_test\source\IF_TEST.cbl
+*>date generated  :  Mon Jun 28 15:09:48 JST 2021
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/ISTEST/Git/Jpn_test/output -jj -eo=C:/ISTEST/Git/Jpn_test/errs -b -d -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks
 *>*****************************************************************
 *>    ¥Æ¥¹¥È¥±¡¼¥¹¡§5-1-1A                                         
 *>    ¥×¥úÁ°¥é¥àÌ¾¡§Æ?ËÜ¸?²½¥Æ¥¹¥È ¡Ê¼?Â³¤­Éô¡Ë¾ò·? Èæ³Ó¾ò·?       
@@ -1214,6 +1214,10 @@ P-170.
     GOBACK                                                       
     .                                                            
                                                                  
+*> --W: #151 National with -b option may not work! L-G; file = IF_TEST.cbl, line = 40, col 8
+*> --W: #151 National with -b option may not work! L-GE; file = IF_TEST.cbl, line = 41, col 8
+*> --W: #151 National with -b option may not work! R-G; file = IF_TEST.cbl, line = 54, col 8
+*> --W: #151 National with -b option may not work! R-GE; file = IF_TEST.cbl, line = 55, col 8
 *> --E: #43 Illegal condition W-L-GRP & R-ZONE-DEC; file = IF_TEST.cbl, line = 80, col 5
 *> --E: #43 Illegal condition W-L-GRP & R-PACK; file = IF_TEST.cbl, line = 84, col 5
 *> --E: #43 Illegal condition W-L-GRP & R-PACK-DEC; file = IF_TEST.cbl, line = 88, col 5

@@ -37,7 +37,7 @@
             display CASE-ID " NG:" G-01.           
       *
      
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
             GOBACK
             .
       

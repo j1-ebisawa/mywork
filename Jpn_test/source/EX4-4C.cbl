@@ -81,7 +81,7 @@
             DISPLAY  NE-01.
       *
             DISPLAY "TEST END   (EX4-4C)".
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
       *
             GOBACK
             .

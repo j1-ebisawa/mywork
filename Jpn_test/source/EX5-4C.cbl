@@ -160,7 +160,7 @@
             MOVE "–––‚¢––‚«–" TO GE-01.
 
             INSPECT G-01 CONVERTING "–‚¨" TO "——" BEFORE "‚«–".
-            IF G-01 = "‚ ‚¢———‚©‚«–––"                              *>20111107
+            IF G-01 = "‚ ‚¢–——‚©‚«–––"                              *>20111107
                   DISPLAY CASE-ID "OK"
             ELSE  DISPLAY CASE-ID "NG:" G-01
             END-IF.
@@ -251,7 +251,7 @@
             END-IF.
 
       *
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
             GOBACK
             .
 

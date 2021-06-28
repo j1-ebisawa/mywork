@@ -279,7 +279,7 @@
             END-IF.
       *
              DISPLAY "TEST END   (EX5-5D)".
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
             GOBACK
             .
 

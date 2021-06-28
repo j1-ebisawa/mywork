@@ -1,15 +1,8 @@
 *>(c) 2005 - 2021 Veryant
-<<<<<<< HEAD
-*>compiler version: isCOBOL-BETA release 2021 R1 build#1041.1-20210329-31547
-*>source file name:  C:\isTEST\GIT\Jpn_test\source\EX3-3-6D.cbl
-*>date generated  :  Sun Jun 27 11:53:41 GMT+09:00 2021
-*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/isTEST/GIT/Jpn_test/output -jj -eo=C:/isTEST/GIT/Jpn_test/errs -d -g -lo=C:/isTEST/GIT/Jpn_test/list -tasks
-=======
 *>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
 *>source file name:  C:\ISTEST\Git\Jpn_test\source\EX3-3-6D.cbl
-*>date generated  :  Sun Jun 27 14:22:48 JST 2021
-*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/ISTEST/Git/Jpn_test/output -jj -eo=C:/ISTEST/Git/Jpn_test/errs -d -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks
->>>>>>> branch 'master' of https://github.com/j1-ebisawa/mywork
+*>date generated  :  Mon Jun 28 15:09:45 JST 2021
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/ISTEST/Git/Jpn_test/output -jj -eo=C:/ISTEST/Git/Jpn_test/errs -b -d -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks
 *>*****************************************************************
 *>    テストケース：3-3-6D                                         
 *>    プログラム名：日本語化テスト （言語要素）部分参照            
@@ -140,7 +133,29 @@ P-150.
                                                                  
 *>                                                                 
       DISPLAY "TEST END   (EX3-3-6D)".                           
-     ACCEPT OMIT-WK.                                             
+     *>ACCEPT OMIT-WK.                                           
      GOBACK                                                      
      .                                                           
                                                                  
+*> --W: #151 National with -b option may not work! L-G; file = EX3-3-6D.cbl, line = 48, col 8
+*> --W: #151 National with -b option may not work! L-G-5; file = EX3-3-6D.cbl, line = 50, col 12
+*> --W: #151 National with -b option may not work! L-G-3; file = EX3-3-6D.cbl, line = 51, col 12
+*> --W: #151 National with -b option may not work! L-G-2; file = EX3-3-6D.cbl, line = 52, col 12
+*> --W: #151 National with -b option may not work! L-GE; file = EX3-3-6D.cbl, line = 53, col 8
+*> --W: #151 National with -b option may not work! L-GE-3; file = EX3-3-6D.cbl, line = 55, col 12
+*> --W: #151 National with -b option may not work! L-GE-2; file = EX3-3-6D.cbl, line = 56, col 12
+*> --W: #151 National with -b option may not work! R-G; file = EX3-3-6D.cbl, line = 76, col 8
+*> --W: #151 National with -b option may not work! R-G-5; file = EX3-3-6D.cbl, line = 78, col 12
+*> --W: #151 National with -b option may not work! R-G-3; file = EX3-3-6D.cbl, line = 79, col 12
+*> --W: #151 National with -b option may not work! R-G-2; file = EX3-3-6D.cbl, line = 80, col 12
+*> --W: #151 National with -b option may not work! R-GJ; file = EX3-3-6D.cbl, line = 81, col 8
+*> --W: #151 National with -b option may not work! R-GJ-5; file = EX3-3-6D.cbl, line = 83, col 12
+*> --W: #151 National with -b option may not work! R-GJ-3; file = EX3-3-6D.cbl, line = 84, col 12
+*> --W: #151 National with -b option may not work! R-GJ-2; file = EX3-3-6D.cbl, line = 85, col 12
+*> --W: #151 National with -b option may not work! R-GE; file = EX3-3-6D.cbl, line = 86, col 8
+*> --W: #151 National with -b option may not work! R-GE-3; file = EX3-3-6D.cbl, line = 88, col 12
+*> --W: #151 National with -b option may not work! R-GE-2; file = EX3-3-6D.cbl, line = 89, col 12
+*> --W: #151 National with -b option may not work! R-GE-NB; file = EX3-3-6D.cbl, line = 90, col 8
+*> --W: #151 National with -b option may not work! R-GE-NBZ; file = EX3-3-6D.cbl, line = 91, col 8
+*> --W: #151 National with -b option may not work! W-OCC-G; file = EX3-3-6D.cbl, line = 94, col 14
+*> --W: #151 National with -b option may not work! W-OCC-GE; file = EX3-3-6D.cbl, line = 95, col 14

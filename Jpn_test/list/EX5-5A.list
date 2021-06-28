@@ -1,8 +1,8 @@
 *>(c) 2005 - 2021 Veryant
-*>compiler version: isCOBOL-BETA release 2021 R1 build#1041.1-20210329-31547
-*>source file name:  C:\isTEST\GIT\Jpn_test\source\EX5-5A.cbl
-*>date generated  :  Sun Jun 27 11:53:51 GMT+09:00 2021
-*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/isTEST/GIT/Jpn_test/output -jj -eo=C:/isTEST/GIT/Jpn_test/errs -d -g -lo=C:/isTEST/GIT/Jpn_test/list -tasks
+*>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
+*>source file name:  C:\ISTEST\Git\Jpn_test\source\EX5-5A.cbl
+*>date generated  :  Mon Jun 28 15:09:47 JST 2021
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/ISTEST/Git/Jpn_test/output -jj -eo=C:/ISTEST/Git/Jpn_test/errs -b -d -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks
 *>*****************************************************************
 *>    テストケース：5-5A                                           
 *>    プログラム名：日本語化テスト （手続き部）MOVE命令            
@@ -261,7 +261,7 @@ P-050.
             DISPLAY CASE-ID "NG:"R-GE-NBZ                        
      END-IF.                                                     
 *>                                                                 
-     ACCEPT OMIT-WK.                                             
+     *>ACCEPT OMIT-WK.                                           
 *>                                                                 
 P-060.                                                           
 *>  ケース6.日本語編集→集団項目                                   
@@ -387,7 +387,27 @@ P-100.
 *>                                                                 
 *>                                                                 
       DISPLAY "TEST END   (EX5-5A)".                             
-     ACCEPT OMIT-WK.                                             
+     *>ACCEPT OMIT-WK.                                           
      GOBACK                                                      
      .                                                           
                                                                  
+*> --W: #151 National with -b option may not work! L-G; file = EX5-5A.cbl, line = 46, col 8
+*> --W: #151 National with -b option may not work! L-G-5; file = EX5-5A.cbl, line = 48, col 12
+*> --W: #151 National with -b option may not work! L-G-3; file = EX5-5A.cbl, line = 49, col 12
+*> --W: #151 National with -b option may not work! L-G-2; file = EX5-5A.cbl, line = 50, col 12
+*> --W: #151 National with -b option may not work! L-GE; file = EX5-5A.cbl, line = 51, col 8
+*> --W: #151 National with -b option may not work! L-GE-3; file = EX5-5A.cbl, line = 53, col 12
+*> --W: #151 National with -b option may not work! L-GE-2; file = EX5-5A.cbl, line = 54, col 12
+*> --W: #151 National with -b option may not work! R-G; file = EX5-5A.cbl, line = 74, col 8
+*> --W: #151 National with -b option may not work! R-G-5; file = EX5-5A.cbl, line = 76, col 12
+*> --W: #151 National with -b option may not work! R-G-3; file = EX5-5A.cbl, line = 77, col 12
+*> --W: #151 National with -b option may not work! R-G-2; file = EX5-5A.cbl, line = 78, col 12
+*> --W: #151 National with -b option may not work! R-GJ; file = EX5-5A.cbl, line = 79, col 8
+*> --W: #151 National with -b option may not work! R-GJ-5; file = EX5-5A.cbl, line = 81, col 12
+*> --W: #151 National with -b option may not work! R-GJ-3; file = EX5-5A.cbl, line = 82, col 12
+*> --W: #151 National with -b option may not work! R-GJ-2; file = EX5-5A.cbl, line = 83, col 12
+*> --W: #151 National with -b option may not work! R-GE; file = EX5-5A.cbl, line = 84, col 8
+*> --W: #151 National with -b option may not work! R-GE-3; file = EX5-5A.cbl, line = 86, col 12
+*> --W: #151 National with -b option may not work! R-GE-2; file = EX5-5A.cbl, line = 87, col 12
+*> --W: #151 National with -b option may not work! R-GE-NB; file = EX5-5A.cbl, line = 88, col 8
+*> --W: #151 National with -b option may not work! R-GE-NBZ; file = EX5-5A.cbl, line = 89, col 8

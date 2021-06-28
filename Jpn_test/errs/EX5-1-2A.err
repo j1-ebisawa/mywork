@@ -1,2 +1,21 @@
 I --> C:\ISTEST\Git\Jpn_test\source\EX5-1-2A.cbl
+--W: #151 National with -b option may not work! A-01; file = EX5-1-2A.cbl, line = 33, col 8
+--W: #151 National with -b option may not work! A-02; file = EX5-1-2A.cbl, line = 36, col 8
+--W: #151 National with -b option may not work! A-03; file = EX5-1-2A.cbl, line = 39, col 8
+--W: #151 National with -b option may not work! A-04; file = EX5-1-2A.cbl, line = 42, col 8
+--W: #151 National with -b option may not work! A-05; file = EX5-1-2A.cbl, line = 45, col 8
+--W: #151 National with -b option may not work! A-06; file = EX5-1-2A.cbl, line = 48, col 8
+--W: #151 National with -b option may not work! A-07; file = EX5-1-2A.cbl, line = 55, col 8
+--W: #151 National with -b option may not work! A-08; file = EX5-1-2A.cbl, line = 58, col 8
+--W: #151 National with -b option may not work! A-09; file = EX5-1-2A.cbl, line = 62, col 8
+--W: #151 National with -b option may not work! A-10; file = EX5-1-2A.cbl, line = 65, col 8
+--W: #151 National with -b option may not work! A-11; file = EX5-1-2A.cbl, line = 68, col 8
+--W: #151 National with -b option may not work! A-12; file = EX5-1-2A.cbl, line = 71, col 8
+--W: #151 National with -b option may not work! A-13; file = EX5-1-2A.cbl, line = 75, col 8
+--W: #151 National with -b option may not work! A-14; file = EX5-1-2A.cbl, line = 78, col 8
+--W: #151 National with -b option may not work! A-15; file = EX5-1-2A.cbl, line = 85, col 8
+--W: #151 National with -b option may not work! A-16; file = EX5-1-2A.cbl, line = 88, col 8
+--W: #151 National with -b option may not work! A-17; file = EX5-1-2A.cbl, line = 91, col 5
+--W: #151 National with -b option may not work! A-18; file = EX5-1-2A.cbl, line = 94, col 5
+--W: #151 National with -b option may not work! A-19-1; file = EX5-1-2A.cbl, line = 101, col 14
 --W: #170 VALUE size error "Ç†Å^Ç¢Å^Ç§Å^Ç¶Å^Ç®Å^Ç©"; file = EX5-1-2A.cbl, line = 89, col 29

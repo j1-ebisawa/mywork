@@ -45,6 +45,7 @@
       ******************************************************************
        MAIN                  SECTION.
        P-010. 
+            display "TEST START(EX5-4B)".
       *ケース22.一意名１、定数4（REPLACING,CHARACTERS指定）
             MOVE "P-220-01"        TO CASE-ID.
             MOVE "あいうえおかきくけこ" TO G-01.
@@ -539,7 +540,8 @@
             ELSE  DISPLAY CASE-ID "NG:" GE-01
             END-IF.
       *
-            ACCEPT OMIT-WK.
+            display "TEST END  (EX5-4B)".
+            *>ACCEPT OMIT-WK.
             GOBACK
             .
 

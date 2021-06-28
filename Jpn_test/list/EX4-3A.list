@@ -1,8 +1,8 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
-*>source file name:  C:\isTEST\Git\Jpn_test\source\EX4-3A.cbl
-*>date generated  :  Mon Jun 28 09:12:57 JST 2021
-*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/isTEST/Git/Jpn_test/output -jj -eo=C:/isTEST/Git/Jpn_test/errs -d -g -lo=C:/isTEST/Git/Jpn_test/list -tasks
+*>source file name:  C:\ISTEST\Git\Jpn_test\source\EX4-3A.cbl
+*>date generated  :  Mon Jun 28 15:09:46 JST 2021
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/ISTEST/Git/Jpn_test/output -jj -eo=C:/ISTEST/Git/Jpn_test/errs -b -d -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks
 *>*****************************************************************
 *>    テストケース：4-3A                                           
 *>    プログラム名：日本語化テスト （データ部）USAGE句             
@@ -126,3 +126,11 @@ P-020.
      GOBACK                                                      
      .                                                           
                                                                  
+*> --W: #151 National with -b option may not work! G-01; file = EX4-3A.cbl, line = 30, col 4
+*> --W: #151 National with -b option may not work! G-02; file = EX4-3A.cbl, line = 31, col 4
+*> --W: #151 National with -b option may not work! G-03; file = EX4-3A.cbl, line = 32, col 4
+*> --W: #151 National with -b option may not work! G-04; file = EX4-3A.cbl, line = 33, col 4
+*> --W: #151 National with -b option may not work! GE-01; file = EX4-3A.cbl, line = 35, col 4
+*> --W: #151 National with -b option may not work! GE-02; file = EX4-3A.cbl, line = 36, col 4
+*> --W: #151 National with -b option may not work! GE-03; file = EX4-3A.cbl, line = 37, col 4
+*> --W: #151 National with -b option may not work! GE-04; file = EX4-3A.cbl, line = 38, col 4

@@ -189,7 +189,7 @@
             END-IF.
                
       *
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
       *ケース8：日本語＋日本語定数（長さが大きい）
             MOVE "P-080-01"        TO CASE-ID.
             MOVE "あいうえおか" TO A-08.
@@ -316,7 +316,7 @@
       *ケース21：(エラー）日本語編集＋数字定数
       *      コンパイル時エラー、ならOK
             DISPLAY "TEST END   (EX5-1-2A)".
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
             GOBACK
             .
 

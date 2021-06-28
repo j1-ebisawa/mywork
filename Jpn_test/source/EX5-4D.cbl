@@ -74,7 +74,7 @@
       *     コンパイルエラー
       *     
             DISPLAY "EX5-4D NG".
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
             GOBACK
             .
 

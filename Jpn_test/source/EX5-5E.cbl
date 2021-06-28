@@ -158,7 +158,7 @@
             MOVE CORR W-L-GRP TO W-CORR-GRP.
       *
              DISPLAY "TEST END   (EX5-5E)".
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
             GOBACK
             .
 

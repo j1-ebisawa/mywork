@@ -256,7 +256,7 @@
                    DISPLAY CASE-ID "NG:"R-GE-NBZ
             END-IF.
       *
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
       *
        P-060. 
       *  ケース6.日本語編集→集団項目
@@ -382,7 +382,7 @@
       *
       *
              DISPLAY "TEST END   (EX5-5A)".
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
             GOBACK
             .
 

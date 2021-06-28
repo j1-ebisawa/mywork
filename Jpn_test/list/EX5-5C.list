@@ -1,8 +1,8 @@
 *>(c) 2005 - 2021 Veryant
-*>compiler version: isCOBOL-BETA release 2021 R1 build#1041.1-20210329-31547
-*>source file name:  C:\isTEST\GIT\Jpn_test\source\EX5-5C.cbl
-*>date generated  :  Sun Jun 27 11:53:53 GMT+09:00 2021
-*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/isTEST/GIT/Jpn_test/output -jj -eo=C:/isTEST/GIT/Jpn_test/errs -d -g -lo=C:/isTEST/GIT/Jpn_test/list -tasks
+*>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
+*>source file name:  C:\ISTEST\Git\Jpn_test\source\EX5-5C.cbl
+*>date generated  :  Mon Jun 28 15:09:47 JST 2021
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/ISTEST/Git/Jpn_test/output -jj -eo=C:/ISTEST/Git/Jpn_test/errs -d -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks
 *>*****************************************************************
 *>    テストケース：5-5C                                           
 *>    プログラム名：日本語化テスト （手続き部）MOVE命令            
@@ -115,7 +115,7 @@ P-210.
      MOVE L-GRP-10 TO R-G                                        
      IF  R-G = "ab12ｱｲあ$&"                                      
                               DISPLAY CASE-ID "OK"               
-        ELSE                  DISPLAY CASE-ID "NG"               
+        ELSE                  DISPLAY CASE-ID "NG:" R-G          
      END-IF.                                                     
 *>                                                                 
      MOVE "P-210-02"        TO CASE-ID.                          
@@ -133,7 +133,7 @@ P-210.
      MOVE L-GRP-4 TO R-G                                         
      IF R-G = "ab12      "                                       
                               DISPLAY CASE-ID "OK"               
-        ELSE                  DISPLAY CASE-ID "NG"               
+        ELSE                  DISPLAY CASE-ID "NG:" R-G          
      END-IF.                                                     
 *>                                                                 
 P-220.                                                           
@@ -172,7 +172,7 @@ P-230.
      MOVE L-AN TO R-G                                            
      IF  R-G = "ａｂ１２アイ＄＆＋＝"                            
                               DISPLAY CASE-ID "OK"               
-        ELSE                  DISPLAY CASE-ID "NG"               
+        ELSE                  DISPLAY CASE-ID "NG:" R-G          
      END-IF.                                                     
 *>                                                                 
      MOVE "P-230-02"        TO CASE-ID.                          
@@ -295,7 +295,7 @@ P-240.
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
 *>                                                                 
-     ACCEPT OMIT-WK.                                             
+     *>ACCEPT OMIT-WK.                                           
 *>                                                                 
 P-250.                                                           
 *>  ケース25.英字、数字(整数）、数字定数（整数）→日本語           
@@ -504,7 +504,7 @@ P-290.
      END-IF.                                                     
 *>                                                                 
       DISPLAY "TEST END   (EX5-5C)".                             
-     ACCEPT OMIT-WK.                                             
+     *>ACCEPT OMIT-WK.                                           
      GOBACK                                                      
      .                                                           
                                                                  
