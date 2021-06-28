@@ -1,4 +1,4 @@
-I --> C:\ISTEST\Git\Jpn_test\source\EX5-6B-2.cbl
+I --> C:\isTEST\Git\Jpn_test\source\EX5-6B-2.cbl
 --S: #68 Usage must be DISPLAY: G-02-2; file = EX5-6B-2.cbl, line = 60, col 21
 --S: #45 Unmatched <END-STRING>; file = EX5-6B-2.cbl, line = 63, col 4
 --S: #68 Usage must be DISPLAY: X-03; file = EX5-6B-2.cbl, line = 68, col 21

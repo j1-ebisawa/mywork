@@ -1,4 +1,4 @@
-I --> C:\ISTEST\Git\Jpn_test\source\EX4-4C.cbl
+I --> C:\isTEST\Git\Jpn_test\source\EX4-4C.cbl
 --S: #30 Invalid value: ERR-01; file = EX4-4C.cbl, line = 35, col 32
 --W: #170 VALUE size error "‚P‚Q‚R‚S‚T"; file = EX4-4C.cbl, line = 44, col 44
 --S: #30 Invalid value: N-ZONE; file = EX4-4C.cbl, line = 46, col 44
