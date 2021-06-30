@@ -1,8 +1,4 @@
 I --> C:\ISTEST\Git\Jpn_test\source\IF_TEST.cbl
---W: #151 National with -b option may not work! L-G; file = IF_TEST.cbl, line = 40, col 8
---W: #151 National with -b option may not work! L-GE; file = IF_TEST.cbl, line = 41, col 8
---W: #151 National with -b option may not work! R-G; file = IF_TEST.cbl, line = 54, col 8
---W: #151 National with -b option may not work! R-GE; file = IF_TEST.cbl, line = 55, col 8
 --E: #43 Illegal condition W-L-GRP & R-ZONE-DEC; file = IF_TEST.cbl, line = 80, col 5
 --E: #43 Illegal condition W-L-GRP & R-PACK; file = IF_TEST.cbl, line = 84, col 5
 --E: #43 Illegal condition W-L-GRP & R-PACK-DEC; file = IF_TEST.cbl, line = 88, col 5
@@ -39,8 +35,8 @@ I --> C:\ISTEST\Git\Jpn_test\source\IF_TEST.cbl
 --E: #43 Illegal condition L-ZONE-DEC & R-NE; file = IF_TEST.cbl, line = 546, col 5
 --E: #43 Illegal condition L-ZONE-DEC & R-G; file = IF_TEST.cbl, line = 550, col 5
 --E: #43 Illegal condition L-ZONE-DEC & R-GE; file = IF_TEST.cbl, line = 554, col 5
---E: #43 Illegal condition L-ZONE-DEC & "ﾆ?ﾋﾜｸ?"; file = IF_TEST.cbl, line = 558, col 5
---E: #43 Illegal condition L-ZONE-DEC & "ﾆ?ﾋﾜｸ?"; file = IF_TEST.cbl, line = 562, col 5
+--E: #43 Illegal condition L-ZONE-DEC & "日本語"; file = IF_TEST.cbl, line = 558, col 5
+--E: #43 Illegal condition L-ZONE-DEC & "日本語"; file = IF_TEST.cbl, line = 562, col 5
 --E: #43 Illegal condition L-ZONE-DEC & '"'; file = IF_TEST.cbl, line = 566, col 5
 --E: #43 Illegal condition L-PACK & W-R-GRP; file = IF_TEST.cbl, line = 573, col 5
 --E: #43 Illegal condition L-PACK & R-A; file = IF_TEST.cbl, line = 577, col 5
@@ -48,8 +44,8 @@ I --> C:\ISTEST\Git\Jpn_test\source\IF_TEST.cbl
 --E: #43 Illegal condition L-PACK & R-NE; file = IF_TEST.cbl, line = 609, col 5
 --E: #43 Illegal condition L-PACK & R-G; file = IF_TEST.cbl, line = 613, col 5
 --E: #43 Illegal condition L-PACK & R-GE; file = IF_TEST.cbl, line = 617, col 5
---E: #43 Illegal condition L-PACK & "ﾆ?ﾋﾜｸ?"; file = IF_TEST.cbl, line = 621, col 5
---E: #43 Illegal condition L-PACK & "ﾆ?ﾋﾜｸ?"; file = IF_TEST.cbl, line = 625, col 5
+--E: #43 Illegal condition L-PACK & "日本語"; file = IF_TEST.cbl, line = 621, col 5
+--E: #43 Illegal condition L-PACK & "日本語"; file = IF_TEST.cbl, line = 625, col 5
 --E: #43 Illegal condition L-PACK & '"'; file = IF_TEST.cbl, line = 629, col 5
 --E: #43 Illegal condition L-PACK-DEC & W-R-GRP; file = IF_TEST.cbl, line = 637, col 5
 --E: #43 Illegal condition L-PACK-DEC & R-A; file = IF_TEST.cbl, line = 641, col 5
@@ -57,8 +53,8 @@ I --> C:\ISTEST\Git\Jpn_test\source\IF_TEST.cbl
 --E: #43 Illegal condition L-PACK-DEC & R-NE; file = IF_TEST.cbl, line = 673, col 5
 --E: #43 Illegal condition L-PACK-DEC & R-G; file = IF_TEST.cbl, line = 677, col 5
 --E: #43 Illegal condition L-PACK-DEC & R-GE; file = IF_TEST.cbl, line = 681, col 5
---E: #43 Illegal condition L-PACK-DEC & "ﾆ?ﾋﾜｸ?"; file = IF_TEST.cbl, line = 685, col 5
---E: #43 Illegal condition L-PACK-DEC & "ﾆ?ﾋﾜｸ?"; file = IF_TEST.cbl, line = 689, col 5
+--E: #43 Illegal condition L-PACK-DEC & "日本語"; file = IF_TEST.cbl, line = 685, col 5
+--E: #43 Illegal condition L-PACK-DEC & "日本語"; file = IF_TEST.cbl, line = 689, col 5
 --E: #43 Illegal condition L-PACK-DEC & '"'; file = IF_TEST.cbl, line = 693, col 5
 --E: #43 Illegal condition L-BIN & W-R-GRP; file = IF_TEST.cbl, line = 701, col 5
 --E: #43 Illegal condition L-BIN & R-A; file = IF_TEST.cbl, line = 705, col 5
@@ -66,8 +62,8 @@ I --> C:\ISTEST\Git\Jpn_test\source\IF_TEST.cbl
 --E: #43 Illegal condition L-BIN & R-NE; file = IF_TEST.cbl, line = 737, col 5
 --E: #43 Illegal condition L-BIN & R-G; file = IF_TEST.cbl, line = 741, col 5
 --E: #43 Illegal condition L-BIN & R-GE; file = IF_TEST.cbl, line = 745, col 5
---E: #43 Illegal condition L-BIN & "ﾆ?ﾋﾜｸ?"; file = IF_TEST.cbl, line = 749, col 5
---E: #43 Illegal condition L-BIN & "ﾆ?ﾋﾜｸ?"; file = IF_TEST.cbl, line = 753, col 5
+--E: #43 Illegal condition L-BIN & "日本語"; file = IF_TEST.cbl, line = 749, col 5
+--E: #43 Illegal condition L-BIN & "日本語"; file = IF_TEST.cbl, line = 753, col 5
 --E: #43 Illegal condition L-BIN & '"'; file = IF_TEST.cbl, line = 757, col 5
 --E: #43 Illegal condition L-BIN-DEC & W-R-GRP; file = IF_TEST.cbl, line = 765, col 5
 --E: #43 Illegal condition L-BIN-DEC & R-A; file = IF_TEST.cbl, line = 769, col 5
@@ -75,8 +71,8 @@ I --> C:\ISTEST\Git\Jpn_test\source\IF_TEST.cbl
 --E: #43 Illegal condition L-BIN-DEC & R-NE; file = IF_TEST.cbl, line = 801, col 5
 --E: #43 Illegal condition L-BIN-DEC & R-G; file = IF_TEST.cbl, line = 805, col 5
 --E: #43 Illegal condition L-BIN-DEC & R-GE; file = IF_TEST.cbl, line = 809, col 5
---E: #43 Illegal condition L-BIN-DEC & "ﾆ?ﾋﾜｸ?"; file = IF_TEST.cbl, line = 813, col 5
---E: #43 Illegal condition L-BIN-DEC & "ﾆ?ﾋﾜｸ?"; file = IF_TEST.cbl, line = 817, col 5
+--E: #43 Illegal condition L-BIN-DEC & "日本語"; file = IF_TEST.cbl, line = 813, col 5
+--E: #43 Illegal condition L-BIN-DEC & "日本語"; file = IF_TEST.cbl, line = 817, col 5
 --E: #43 Illegal condition L-BIN-DEC & '"'; file = IF_TEST.cbl, line = 821, col 5
 --E: #43 Illegal condition L-NE & R-ZONE-DEC; file = IF_TEST.cbl, line = 845, col 5
 --E: #43 Illegal condition L-NE & R-PACK; file = IF_TEST.cbl, line = 849, col 5
@@ -93,16 +89,16 @@ I --> C:\ISTEST\Git\Jpn_test\source\IF_TEST.cbl
 --E: #43 Illegal condition L-GE & R-PACK-DEC; file = IF_TEST.cbl, line = 980, col 5
 --E: #43 Illegal condition L-GE & R-BIN; file = IF_TEST.cbl, line = 984, col 5
 --E: #43 Illegal condition L-GE & R-BIN-DEC; file = IF_TEST.cbl, line = 988, col 5
---E: #43 Illegal condition "ﾆ?ﾋﾜｸ?" & R-ZONE-DEC; file = IF_TEST.cbl, line = 1036, col 5
---E: #43 Illegal condition "ﾆ?ﾋﾜｸ?" & R-PACK; file = IF_TEST.cbl, line = 1040, col 5
---E: #43 Illegal condition "ﾆ?ﾋﾜｸ?" & R-PACK-DEC; file = IF_TEST.cbl, line = 1044, col 5
---E: #43 Illegal condition "ﾆ?ﾋﾜｸ?" & R-BIN; file = IF_TEST.cbl, line = 1048, col 5
---E: #43 Illegal condition "ﾆ?ﾋﾜｸ?" & R-BIN-DEC; file = IF_TEST.cbl, line = 1052, col 5
---E: #43 Illegal condition "ﾆ?ﾋﾜｸ?" & R-ZONE-DEC; file = IF_TEST.cbl, line = 1099, col 5
---E: #43 Illegal condition "ﾆ?ﾋﾜｸ?" & R-PACK; file = IF_TEST.cbl, line = 1103, col 5
---E: #43 Illegal condition "ﾆ?ﾋﾜｸ?" & R-PACK-DEC; file = IF_TEST.cbl, line = 1107, col 5
---E: #43 Illegal condition "ﾆ?ﾋﾜｸ?" & R-BIN; file = IF_TEST.cbl, line = 1111, col 5
---E: #43 Illegal condition "ﾆ?ﾋﾜｸ?" & R-BIN-DEC; file = IF_TEST.cbl, line = 1115, col 5
+--E: #43 Illegal condition "日本語" & R-ZONE-DEC; file = IF_TEST.cbl, line = 1036, col 5
+--E: #43 Illegal condition "日本語" & R-PACK; file = IF_TEST.cbl, line = 1040, col 5
+--E: #43 Illegal condition "日本語" & R-PACK-DEC; file = IF_TEST.cbl, line = 1044, col 5
+--E: #43 Illegal condition "日本語" & R-BIN; file = IF_TEST.cbl, line = 1048, col 5
+--E: #43 Illegal condition "日本語" & R-BIN-DEC; file = IF_TEST.cbl, line = 1052, col 5
+--E: #43 Illegal condition "日本語" & R-ZONE-DEC; file = IF_TEST.cbl, line = 1099, col 5
+--E: #43 Illegal condition "日本語" & R-PACK; file = IF_TEST.cbl, line = 1103, col 5
+--E: #43 Illegal condition "日本語" & R-PACK-DEC; file = IF_TEST.cbl, line = 1107, col 5
+--E: #43 Illegal condition "日本語" & R-BIN; file = IF_TEST.cbl, line = 1111, col 5
+--E: #43 Illegal condition "日本語" & R-BIN-DEC; file = IF_TEST.cbl, line = 1115, col 5
 --E: #43 Illegal condition ' ' & R-ZONE-DEC; file = IF_TEST.cbl, line = 1163, col 5
 --E: #43 Illegal condition ' ' & R-PACK; file = IF_TEST.cbl, line = 1167, col 5
 --E: #43 Illegal condition ' ' & R-PACK-DEC; file = IF_TEST.cbl, line = 1171, col 5

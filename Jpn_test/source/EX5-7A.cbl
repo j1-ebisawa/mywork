@@ -390,7 +390,7 @@
             ELSE  DISPLAY CASE-ID "NG:"
             END-IF.
       *
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
       *ケース11：DELIMITED BY 定数1/一意名2（2バイトDELIMITER)
             MOVE "P-110-01"        TO CASE-ID.
             MOVE "あいうえおかきくけこ" TO G-01.
@@ -701,7 +701,7 @@
             END-IF.
       ***
             DISPLAY "TEST END    (EX5-7A)".
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
             GOBACK
             .
 

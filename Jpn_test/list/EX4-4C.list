@@ -1,8 +1,8 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
 *>source file name:  C:\ISTEST\Git\Jpn_test\source\EX4-4C.cbl
-*>date generated  :  Mon Jun 28 15:09:46 JST 2021
-*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/ISTEST/Git/Jpn_test/output -jj -eo=C:/ISTEST/Git/Jpn_test/errs -b -d -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks
+*>date generated  :  Wed Jun 30 13:59:05 JST 2021
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/ISTEST/Git/Jpn_test/output -jj -eo=C:/ISTEST/Git/Jpn_test/errs -d -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks
 *>*****************************************************************
 *>    テストケース：4-4C                                           
 *>    プログラム名：日本語化テスト （データ部）VALUE句             
@@ -91,14 +91,7 @@ P-010.
      GOBACK                                                      
      .                                                           
                                                                  
-*> --W: #151 National with -b option may not work! G-08; file = EX4-4C.cbl, line = 31, col 4
-*> --W: #151 National with -b option may not work! G-09; file = EX4-4C.cbl, line = 32, col 4
-*> --W: #151 National with -b option may not work! GE-08; file = EX4-4C.cbl, line = 33, col 4
-*> --W: #151 National with -b option may not work! GE-09; file = EX4-4C.cbl, line = 34, col 4
-*> --W: #151 National with -b option may not work! ERR-01; file = EX4-4C.cbl, line = 35, col 4
 *> --S: #30 Invalid value: ERR-01; file = EX4-4C.cbl, line = 35, col 32
-*> --W: #151 National with -b option may not work! ERR-02; file = EX4-4C.cbl, line = 36, col 4
-*> --W: #151 National with -b option may not work! ERR-03-12; file = EX4-4C.cbl, line = 43, col 11
 *> --W: #170 VALUE size error "１２３４５"; file = EX4-4C.cbl, line = 44, col 44
 *> --S: #30 Invalid value: N-ZONE; file = EX4-4C.cbl, line = 46, col 44
 *> --S: #30 Invalid value: N-ZONE-DEC; file = EX4-4C.cbl, line = 47, col 44

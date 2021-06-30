@@ -1,8 +1,8 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
 *>source file name:  C:\ISTEST\Git\Jpn_test\source\Jpn_01.cbl
-*>date generated  :  Mon Jun 28 15:09:48 JST 2021
-*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/ISTEST/Git/Jpn_test/output -jj -eo=C:/ISTEST/Git/Jpn_test/errs -b -d -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks
+*>date generated  :  Wed Jun 30 13:59:08 JST 2021
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/ISTEST/Git/Jpn_test/output -jj -eo=C:/ISTEST/Git/Jpn_test/errs -d -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks
 IDENTIFICATION             DIVISION.                             
 PROGRAM-ID. Jpn_01.                               
 DATA DIVISION.                                                   
@@ -18,7 +18,7 @@ PROCEDURE                  DIVISION.
     DISPLAY "X_CONFIG" UPON ENVIRONMENT-NAME.                    
     ACCEPT N-01        FROM ENVIRONMENT-VALUE.                   
     DISPLAY N-01.                                                
-    go to P-EXIT.                                                
+    *>go to P-EXIT.                                              
 *>                                                                 
     MOVE FUNCTION LENGTH(N-01) TO LENG.                          
     DISPLAY LENG ":" N-01.                                       
@@ -42,8 +42,5 @@ PROCEDURE                  DIVISION.
     DISPLAY LENG ":" NE-01.                                      
 *>                                                                 
  P-EXIT.                                                         
-    accept omit-wk.                                              
+    *>accept omit-wk.                                            
     GOBACK.                                                      
-*> --W: #151 National with -b option may not work! N-01; file = Jpn_01.cbl, line = 5, col 4
-*> --W: #151 National with -b option may not work! N-02; file = Jpn_01.cbl, line = 6, col 4
-*> --W: #151 National with -b option may not work! NE-01; file = Jpn_01.cbl, line = 7, col 4

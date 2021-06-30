@@ -1,8 +1,8 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
 *>source file name:  C:\ISTEST\Git\Jpn_test\source\EX5-1-1G.cbl
-*>date generated  :  Mon Jun 28 15:09:46 JST 2021
-*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/ISTEST/Git/Jpn_test/output -jj -eo=C:/ISTEST/Git/Jpn_test/errs -b -d -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks
+*>date generated  :  Wed Jun 30 13:59:06 JST 2021
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/ISTEST/Git/Jpn_test/output -jj -eo=C:/ISTEST/Git/Jpn_test/errs -d -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks
 *>*****************************************************************
 *>    テストケース：5-1-1G                                         
 *>    プログラム名：日本語化テスト （手続き部）条件 比較条件       
@@ -272,18 +272,6 @@ P-440.
      GOBACK                                                      
      .                                                           
                                                                  
-*> --W: #151 National with -b option may not work! L-G; file = EX5-1-1G.cbl, line = 45, col 8
-*> --W: #151 National with -b option may not work! L-G-3; file = EX5-1-1G.cbl, line = 47, col 12
-*> --W: #151 National with -b option may not work! L-G-2; file = EX5-1-1G.cbl, line = 48, col 12
-*> --W: #151 National with -b option may not work! L-GE; file = EX5-1-1G.cbl, line = 49, col 8
-*> --W: #151 National with -b option may not work! L-GE-3; file = EX5-1-1G.cbl, line = 51, col 12
-*> --W: #151 National with -b option may not work! L-GE-2; file = EX5-1-1G.cbl, line = 52, col 12
-*> --W: #151 National with -b option may not work! R-G; file = EX5-1-1G.cbl, line = 69, col 8
-*> --W: #151 National with -b option may not work! R-G-3; file = EX5-1-1G.cbl, line = 71, col 12
-*> --W: #151 National with -b option may not work! R-G-2; file = EX5-1-1G.cbl, line = 72, col 12
-*> --W: #151 National with -b option may not work! R-GE; file = EX5-1-1G.cbl, line = 73, col 8
-*> --W: #151 National with -b option may not work! R-GE-3; file = EX5-1-1G.cbl, line = 75, col 12
-*> --W: #151 National with -b option may not work! R-GE-2; file = EX5-1-1G.cbl, line = 76, col 12
 *> --S: #43 Illegal condition L-G & 123.45; file = EX5-1-1G.cbl, line = 103, col 5
 *> --S: #43 Illegal condition L-GE & 123.45; file = EX5-1-1G.cbl, line = 126, col 5
 *> --E: #43 Illegal condition L-PACK & R-G; file = EX5-1-1G.cbl, line = 175, col 5

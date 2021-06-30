@@ -1,16 +1,4 @@
 I --> C:\ISTEST\Git\Jpn_test\source\EX5-1-1G.cbl
---W: #151 National with -b option may not work! L-G; file = EX5-1-1G.cbl, line = 45, col 8
---W: #151 National with -b option may not work! L-G-3; file = EX5-1-1G.cbl, line = 47, col 12
---W: #151 National with -b option may not work! L-G-2; file = EX5-1-1G.cbl, line = 48, col 12
---W: #151 National with -b option may not work! L-GE; file = EX5-1-1G.cbl, line = 49, col 8
---W: #151 National with -b option may not work! L-GE-3; file = EX5-1-1G.cbl, line = 51, col 12
---W: #151 National with -b option may not work! L-GE-2; file = EX5-1-1G.cbl, line = 52, col 12
---W: #151 National with -b option may not work! R-G; file = EX5-1-1G.cbl, line = 69, col 8
---W: #151 National with -b option may not work! R-G-3; file = EX5-1-1G.cbl, line = 71, col 12
---W: #151 National with -b option may not work! R-G-2; file = EX5-1-1G.cbl, line = 72, col 12
---W: #151 National with -b option may not work! R-GE; file = EX5-1-1G.cbl, line = 73, col 8
---W: #151 National with -b option may not work! R-GE-3; file = EX5-1-1G.cbl, line = 75, col 12
---W: #151 National with -b option may not work! R-GE-2; file = EX5-1-1G.cbl, line = 76, col 12
 --S: #43 Illegal condition L-G & 123.45; file = EX5-1-1G.cbl, line = 103, col 5
 --S: #43 Illegal condition L-GE & 123.45; file = EX5-1-1G.cbl, line = 126, col 5
 --E: #43 Illegal condition L-PACK & R-G; file = EX5-1-1G.cbl, line = 175, col 5

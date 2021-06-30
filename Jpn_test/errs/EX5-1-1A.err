@@ -1,8 +1,4 @@
 I --> C:\ISTEST\Git\Jpn_test\source\EX5-1-1A.cbl
---W: #151 National with -b option may not work! L-G; file = EX5-1-1A.cbl, line = 40, col 8
---W: #151 National with -b option may not work! L-GE; file = EX5-1-1A.cbl, line = 41, col 8
---W: #151 National with -b option may not work! R-G; file = EX5-1-1A.cbl, line = 54, col 8
---W: #151 National with -b option may not work! R-GE; file = EX5-1-1A.cbl, line = 55, col 8
 --E: #43 Illegal condition W-L-GRP & R-ZONE-DEC; file = EX5-1-1A.cbl, line = 80, col 5
 --E: #43 Illegal condition W-L-GRP & R-PACK; file = EX5-1-1A.cbl, line = 84, col 5
 --E: #43 Illegal condition W-L-GRP & R-PACK-DEC; file = EX5-1-1A.cbl, line = 88, col 5

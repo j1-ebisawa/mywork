@@ -59,24 +59,24 @@
 
         01  GRP-04.
            05  GRP-04-1  PIC X(1).                       *>1
-           05  GRP-04-2  USAGE BINARY-SHORT.             *>2
+           05  GRP-04-2  USAGE SIGNED-SHORT.             *>2
            05  GRP-04-3  PIC N.                          *>2
-           05  GRP-04-4  USAGE BINARY-LONG.              *>4
+           05  GRP-04-4  USAGE SIGNED-LONG.              *>4
            05  GRP-04-5  PIC N.                          *>2
            05  GRP-04-6  PIC X(1).                       *>1
-           05  GRP-04-7  USAGE BINARY-DOUBLE.            *>8
+           05  GRP-04-7  USAGE DOUBLE.                   *>8
 
        01  GRP-05.
            05  GRP-05-1  PIC X(1).                       *>1
                                                          *>1  FILLER
-           05  GRP-05-2  USAGE BINARY-SHORT SYNC.        *>2
+           05  GRP-05-2  USAGE SIGNED-SHORT SYNC.        *>2
            05  GRP-05-3  PIC N.                          *>2
                                                          *>2  FILLER
-           05  GRP-05-4  USAGE BINARY-LONG SYNC.         *>4
+           05  GRP-05-4  USAGE SIGNED-LONG SYNC.         *>4
            05  GRP-05-5  PIC N.                          *>2
            05  GRP-05-6  PIC X(1).                       *>1
                                                          *>1  FILLER
-           05  GRP-05-7  USAGE BINARY-DOUBLE SYNC.       *>8
+           05  GRP-05-7  USAGE DOUBLE SYNC.              *>8
 
       ******************************************************************
        PROCEDURE             DIVISION.

@@ -1,8 +1,8 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
 *>source file name:  C:\ISTEST\Git\Jpn_test\source\EX3-4.cbl
-*>date generated  :  Mon Jun 28 15:09:45 JST 2021
-*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/ISTEST/Git/Jpn_test/output -jj -eo=C:/ISTEST/Git/Jpn_test/errs -b -d -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks
+*>date generated  :  Wed Jun 30 13:59:05 JST 2021
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/ISTEST/Git/Jpn_test/output -jj -eo=C:/ISTEST/Git/Jpn_test/errs -d -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks
 *>*****************************************************************
 *>    テストケース：3-4                                            
 *>    プログラム名：日本語化テスト （言語要素）英数字データ        
@@ -194,7 +194,3 @@ P-050.
      GOBACK                                                      
      .                                                           
                                                                  
-*> --W: #151 National with -b option may not work! G-01; file = EX3-4.cbl, line = 37, col 4
-*> --W: #151 National with -b option may not work! G-02; file = EX3-4.cbl, line = 38, col 4
-*> --W: #151 National with -b option may not work! G-03; file = EX3-4.cbl, line = 39, col 4
-*> --W: #151 National with -b option may not work! G-04; file = EX3-4.cbl, line = 40, col 4

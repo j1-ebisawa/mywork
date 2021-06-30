@@ -13,7 +13,7 @@
            DISPLAY "X_CONFIG" UPON ENVIRONMENT-NAME.
            ACCEPT N-01        FROM ENVIRONMENT-VALUE.
            DISPLAY N-01.
-           go to P-EXIT.
+           *>go to P-EXIT.
       *
            MOVE FUNCTION LENGTH(N-01) TO LENG.
            DISPLAY LENG ":" N-01.
@@ -37,5 +37,5 @@
            DISPLAY LENG ":" NE-01.
       *
         P-EXIT.
-           accept omit-wk.
+           *>accept omit-wk.
            GOBACK.

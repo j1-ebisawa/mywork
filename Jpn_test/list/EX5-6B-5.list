@@ -1,8 +1,8 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
 *>source file name:  C:\ISTEST\Git\Jpn_test\source\EX5-6B-5.cbl
-*>date generated  :  Mon Jun 28 15:09:48 JST 2021
-*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/ISTEST/Git/Jpn_test/output -jj -eo=C:/ISTEST/Git/Jpn_test/errs -b -d -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks
+*>date generated  :  Wed Jun 30 13:59:07 JST 2021
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/ISTEST/Git/Jpn_test/output -jj -eo=C:/ISTEST/Git/Jpn_test/errs -d -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks
 *>*****************************************************************
 *>    テストケース：EX5-6B-4                                       
 *>    プログラム名：日本語化テスト （手続き部）STRING命令          
@@ -60,10 +60,6 @@ P-010.
     ACCEPT OMIT-WK.                                              
     GOBACK                                                       
     .                                                            
-*> --W: #151 National with -b option may not work! W-INTO; file = EX5-6B-5.cbl, line = 32, col 4
-*> --W: #151 National with -b option may not work! W-INTO-2; file = EX5-6B-5.cbl, line = 33, col 4
-*> --W: #151 National with -b option may not work! G-01; file = EX5-6B-5.cbl, line = 34, col 4
-*> --W: #151 National with -b option may not work! G-02; file = EX5-6B-5.cbl, line = 35, col 4
 *> --S: #46 Integer variable expected: W-PTR; file = EX5-6B-5.cbl, line = 49, col 29
 *> --S: #45 Unmatched <END-STRING>; file = EX5-6B-5.cbl, line = 51, col 4
 *> --S: #35 Undefined data item N-04; file = EX5-6B-5.cbl, line = 52, col 12
