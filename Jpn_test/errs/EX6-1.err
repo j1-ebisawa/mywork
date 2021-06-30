@@ -1,9 +1,0 @@
-I --> C:\ISTEST\Git\Jpn_test\source\EX6-1.cbl
---W: #151 National with -b option may not work! G-01; file = EX6-1.cbl, line = 36, col 4
---W: #151 National with -b option may not work! GE-01; file = EX6-1.cbl, line = 37, col 4
---W: #151 National with -b option may not work! GRP-01-4; file = EX6-1.cbl, line = 43, col 8
---W: #151 National with -b option may not work! GRP-02-4; file = EX6-1.cbl, line = 50, col 8
---W: #151 National with -b option may not work! GRP-03-4; file = EX6-1.cbl, line = 57, col 8
---E: #188 Period missing. Period Assumed. '.'; file = EX6-1.cbl, line = 62
---E: #152 Variable has zero length: GRP-04-2; file = EX6-1.cbl, line = 62, col 8
---S: #31 Expected/found token mismatch: PROCEDURE/BINARY-SHORT; file = EX6-1.cbl, line = 62, col 24
