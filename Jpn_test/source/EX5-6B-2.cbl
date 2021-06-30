@@ -72,6 +72,6 @@
            DISPLAY X-03.  
       ****
            
-           ACCEPT OMIT-WK.
+           *>ACCEPT OMIT-WK.
            GOBACK
            .

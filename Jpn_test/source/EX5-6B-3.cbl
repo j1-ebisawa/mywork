@@ -97,6 +97,6 @@
            DISPLAY W-INTO-X.
       ****
            
-           ACCEPT OMIT-WK.
+           *>ACCEPT OMIT-WK.
            GOBACK
            .

@@ -68,7 +68,7 @@
             END-EVALUATE.
       *
             DISPLAY "QA-28 test end".
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
             GOBACK
             .
       *ƒP[ƒX1:
@@ -189,6 +189,6 @@
       *
        TEST-OWARI.
             DISPLAY "QA-28 test end".
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
             GOBACK.
 

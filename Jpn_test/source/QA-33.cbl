@@ -57,7 +57,7 @@
             DISPLAY CASE-ID "N-EDIT=" N-EDIT.
       *     
             DISPLAY "QA-33 test end".
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
             GOBACK
             .
 

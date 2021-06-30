@@ -218,7 +218,7 @@
             END-IF.
       *
             DISPLAY "TEST END   (EX6-1)".
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
             GOBACK
             .
 

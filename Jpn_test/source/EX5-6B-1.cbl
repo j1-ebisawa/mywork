@@ -69,6 +69,6 @@
            DISPLAY W-INTO.  
       ****
            
-           ACCEPT OMIT-WK.
+           *>ACCEPT OMIT-WK.
            GOBACK
            .

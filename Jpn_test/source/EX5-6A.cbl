@@ -303,7 +303,7 @@
                   DISPLAY CASE-ID "OK"
             ELSE  DISPLAY CASE-ID "NG:"
             END-IF.
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
       *ケース13：一意名１、定数1、DELIMITED BY 一意名２、.ALL 一意名２、WITH POINTER
             MOVE "P-130-01"        TO CASE-ID.
             MOVE "あいう" TO G-01.
@@ -684,7 +684,7 @@
             END-IF.
       ***
             DISPLAY "TEST END    (EX5-6A)".
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
             GOBACK
             .
 

@@ -26,6 +26,6 @@
       * 
             if X-01 = " "  stop "test".
       *
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
             GOBACK
             .

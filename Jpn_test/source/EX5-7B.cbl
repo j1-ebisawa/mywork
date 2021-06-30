@@ -97,7 +97,7 @@
            END-UNSTRING.
       ***
            DISPLAY "EX5-7B OK".
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
             GOBACK
             .
 

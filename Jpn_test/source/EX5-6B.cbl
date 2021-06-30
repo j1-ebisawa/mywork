@@ -80,6 +80,6 @@
            END-STRING.
       ****
            DISPLAY "EX5-6B OK".
-           ACCEPT OMIT-WK.
+           *>ACCEPT OMIT-WK.
            GOBACK
            .

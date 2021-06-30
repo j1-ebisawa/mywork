@@ -87,6 +87,6 @@
            DISPLAY N-04.
       ****
            
-           ACCEPT OMIT-WK.
+           *>ACCEPT OMIT-WK.
            GOBACK
            .

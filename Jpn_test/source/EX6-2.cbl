@@ -219,7 +219,7 @@
             END-IF.
       *
             DISPLAY "TEST END   (EX6-2)".
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
             GOBACK
             .
 
