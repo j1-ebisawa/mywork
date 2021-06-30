@@ -1,7 +1,7 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
 *>source file name:  C:\ISTEST\Git\Jpn_test\source\EX5-6B-3.cbl
-*>date generated  :  Wed Jun 30 14:13:26 JST 2021
+*>date generated  :  Wed Jun 30 14:50:47 JST 2021
 *>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/ISTEST/Git/Jpn_test/output -jj -eo=C:/ISTEST/Git/Jpn_test/errs -d -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks
 *>*****************************************************************
 *>    テストケース：EX5-6B-3                                       
@@ -53,6 +53,7 @@ PROCEDURE             DIVISION.
 *>*****************************************************************
 MAIN                  SECTION.                                   
 P-010.                                                           
+     DISPLAY "TEST START (EX5-6B-3)".                            
 *> ケース1.一意名１一意名２がすべて編集タイプではない場合で、      
 *> 一意名３が非編集タイプの場合                                    
     MOVE "ABCDE" TO X-01.                                        
@@ -101,6 +102,7 @@ P-010.
     END-STRING.                                                  
     DISPLAY W-INTO-X.                                            
 *>***                                                              
+     DISPLAY "TEST END   (EX5-6B-3)".                            
                                                                  
     *>ACCEPT OMIT-WK.                                            
     GOBACK                                                       

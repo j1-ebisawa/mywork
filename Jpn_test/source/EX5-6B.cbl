@@ -45,6 +45,7 @@
       ******************************************************************
        MAIN                  SECTION.
        P-010. 
+            DISPLAY "TEST START (EX5-6B)".
       *ケース26.エラーチェック
            MOVE "ABCDE" TO X-01.
            MOVE 12345 TO N-01.
@@ -79,7 +80,8 @@
                   ON OVERFLOW MOVE 1 TO OVER-SW
            END-STRING.
       ****
-           DISPLAY "EX5-6B OK".
+           DISPLAY "NG?".
+            DISPLAY "TEST START (EX5-6B)".
            *>ACCEPT OMIT-WK.
            GOBACK
            .

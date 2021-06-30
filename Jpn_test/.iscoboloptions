@@ -208,43 +208,11 @@
      </void>
     </object>
    </void>
-   <void method="put">
-    <string>/Jpn_test/source/EX5-6A.cbl</string>
-    <object class="com.iscobol.plugins.editor.util.SettingList" id="SettingList4">
-     <string>/Jpn_test/source/EX5-6A.cbl</string>
-     <void id="LinkedHashMap14" property="modes">
-      <void id="SettingMode8" method="get">
-       <string>Release</string>
-       <void id="LinkedHashMap15" property="properties">
-        <void method="put">
-         <string>-b</string>
-         <string>___iscobol.option.false</string>
-        </void>
-       </void>
-       <void property="properties">
-        <object idref="LinkedHashMap15"/>
-       </void>
-      </void>
-      <void id="SettingMode9" method="get">
-       <string>Debug</string>
-       <void id="LinkedHashMap16" property="properties">
-        <void method="put">
-         <string>-b</string>
-         <string>___iscobol.option.false</string>
-        </void>
-       </void>
-       <void property="properties">
-        <object idref="LinkedHashMap16"/>
-       </void>
-      </void>
-     </void>
-    </object>
-   </void>
   </void>
-  <void id="LinkedHashMap17" property="modes">
-   <void id="SettingMode10" method="get">
+  <void id="LinkedHashMap14" property="modes">
+   <void id="SettingMode8" method="get">
     <string>Default</string>
-    <void id="LinkedHashMap18" property="properties">
+    <void id="LinkedHashMap15" property="properties">
      <void method="put">
       <string>sourcedir</string>
       <string>source</string>
@@ -307,12 +275,12 @@
      </void>
     </void>
     <void property="properties">
-     <object idref="LinkedHashMap18"/>
+     <object idref="LinkedHashMap15"/>
     </void>
    </void>
-   <void id="SettingMode11" method="get">
+   <void id="SettingMode9" method="get">
     <string>Release</string>
-    <void id="LinkedHashMap19" property="properties">
+    <void id="LinkedHashMap16" property="properties">
      <void method="put">
       <string>-eo=</string>
       <string>errs</string>
@@ -351,12 +319,12 @@
      </void>
     </void>
     <void property="properties">
-     <object idref="LinkedHashMap19"/>
+     <object idref="LinkedHashMap16"/>
     </void>
    </void>
-   <void id="SettingMode12" method="get">
+   <void id="SettingMode10" method="get">
     <string>Debug</string>
-    <void id="LinkedHashMap20" property="properties">
+    <void id="LinkedHashMap17" property="properties">
      <void method="put">
       <string>iscobol.prog.sysprops</string>
       <string>-XX:ErrorFile=../logs/java_error%p.log</string>
@@ -419,17 +387,17 @@
      </void>
     </void>
     <void property="properties">
-     <object idref="LinkedHashMap20"/>
+     <object idref="LinkedHashMap17"/>
     </void>
    </void>
   </void>
   <void property="runtimeCurrentMode">
    <string>Run</string>
   </void>
-  <void id="LinkedHashMap21" property="runtimeModes">
-   <void id="SettingMode13" method="get">
+  <void id="LinkedHashMap18" property="runtimeModes">
+   <void id="SettingMode11" method="get">
     <string>Run</string>
-    <void id="LinkedHashMap22" property="properties">
+    <void id="LinkedHashMap19" property="properties">
      <void method="put">
       <string>iscobol.prog.lafopt</string>
       <string></string>
@@ -452,7 +420,7 @@
      </void>
     </void>
     <void property="properties">
-     <object idref="LinkedHashMap22"/>
+     <object idref="LinkedHashMap19"/>
     </void>
    </void>
   </void>

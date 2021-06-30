@@ -48,6 +48,7 @@
       ******************************************************************
        MAIN                  SECTION.
        P-010. 
+            DISPLAY "TEST START (EX5-6B-3)".
       * ケース1.一意名１一意名２がすべて編集タイプではない場合で、
       * 一意名３が非編集タイプの場合
            MOVE "ABCDE" TO X-01.
@@ -96,6 +97,7 @@
            END-STRING.            
            DISPLAY W-INTO-X.
       ****
+            DISPLAY "TEST END   (EX5-6B-3)".
            
            *>ACCEPT OMIT-WK.
            GOBACK

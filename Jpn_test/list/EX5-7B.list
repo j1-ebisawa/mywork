@@ -1,7 +1,7 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
 *>source file name:  C:\ISTEST\Git\Jpn_test\source\EX5-7B.cbl
-*>date generated  :  Wed Jun 30 14:13:27 JST 2021
+*>date generated  :  Wed Jun 30 14:56:46 JST 2021
 *>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/ISTEST/Git/Jpn_test/output -jj -eo=C:/ISTEST/Git/Jpn_test/errs -d -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks
 *>*****************************************************************
 *>    テストケース：5-7B                                           
@@ -61,6 +61,7 @@ PROCEDURE             DIVISION.
 *>*****************************************************************
 MAIN                  SECTION.                                   
 P-010.                                                           
+     DISPLAY "TEST START  (EX5-7B)".                             
 *>ケース20.エラーチェック                                          
     MOVE "あいうえおかきくけこ" TO G-01.                         
     MOVE ALL "＊" TO W-INTO.                                     
@@ -102,6 +103,7 @@ P-010.
     END-UNSTRING.                                                
 *>**                                                               
     DISPLAY "EX5-7B OK".                                         
+     DISPLAY "TEST END    (EX5-7B)".                             
      *>ACCEPT OMIT-WK.                                           
      GOBACK                                                      
      .                                                           

@@ -45,6 +45,7 @@
       ******************************************************************
        MAIN                  SECTION.
        P-010. 
+            DISPLAY "TEST START (EX5-6B-1)".
       * ケース1.一意名１一意名２と一意名３が
       * すべて日本語ではない場合、タイプ不一致
            MOVE "ABCDE" TO X-01.
@@ -68,6 +69,7 @@
            END-STRING. 
            DISPLAY W-INTO.  
       ****
+            DISPLAY "TEST END   (EX5-6B-1)".
            
            *>ACCEPT OMIT-WK.
            GOBACK

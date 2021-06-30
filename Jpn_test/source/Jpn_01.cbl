@@ -9,6 +9,8 @@
        01  omit-wk pic x.
        PROCEDURE                  DIVISION.
          P-01.
+           DISPLAY "TEST START  (JPN_TEST)".
+         
            MOVE SPACE TO N-01.
            DISPLAY "X_CONFIG" UPON ENVIRONMENT-NAME.
            ACCEPT N-01        FROM ENVIRONMENT-VALUE.
@@ -37,5 +39,6 @@
            DISPLAY LENG ":" NE-01.
       *
         P-EXIT.
+           DISPLAY "TEST END    (JPN_TEST)".
            *>accept omit-wk.
            GOBACK.

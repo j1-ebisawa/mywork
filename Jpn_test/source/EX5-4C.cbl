@@ -47,6 +47,7 @@
       ******************************************************************
        MAIN                  SECTION.
        P-010. 
+            DISPLAY "TEST START (EX5-4C)".
       *ケース48.一意名１、定数5、定数6（CONVERTING,ALL指定）
             MOVE "P-480-01"        TO CASE-ID.
             MOVE "あい＊＊おかき＊＊＊" TO G-01.
@@ -251,6 +252,7 @@
             END-IF.
 
       *
+            DISPLAY "TEST END   (EX5-4C)".
             *>ACCEPT OMIT-WK.
             GOBACK
             .

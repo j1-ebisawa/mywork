@@ -1,7 +1,7 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
 *>source file name:  C:\ISTEST\Git\Jpn_test\source\EX5-4C.cbl
-*>date generated  :  Wed Jun 30 14:13:26 JST 2021
+*>date generated  :  Wed Jun 30 14:41:42 JST 2021
 *>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/ISTEST/Git/Jpn_test/output -jj -eo=C:/ISTEST/Git/Jpn_test/errs -d -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks
 *>*****************************************************************
 *>    テストケース：5-4C                                           
@@ -52,6 +52,7 @@ PROCEDURE             DIVISION.
 *>*****************************************************************
 MAIN                  SECTION.                                   
 P-010.                                                           
+     DISPLAY "TEST START (EX5-4C)".                              
 *>ケース48.一意名１、定数5、定数6（CONVERTING,ALL指定）            
      MOVE "P-480-01"        TO CASE-ID.                          
      MOVE "あい＊＊おかき＊＊＊" TO G-01.                        
@@ -256,6 +257,7 @@ P-010.
      END-IF.                                                     
                                                                  
 *>                                                                 
+     DISPLAY "TEST END   (EX5-4C)".                              
      *>ACCEPT OMIT-WK.                                           
      GOBACK                                                      
      .                                                           

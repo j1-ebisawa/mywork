@@ -70,7 +70,7 @@
                ELSE                     DISPLAY CASE-ID "NG"
             END-IF.
       *
-            DISPLAY "TEST END   (EX3-5A)".
+            DISPLAY "TEST END   (EX3-5C)".
             *>ACCEPT OMIT-WK.
       *
             GOBACK

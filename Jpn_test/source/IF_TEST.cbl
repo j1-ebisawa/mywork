@@ -58,7 +58,7 @@
       ******************************************************************
        MAIN                  SECTION.
        P-010. 
-            DISPLAY "TEST START (EX5-1-1A)".
+            DISPLAY "TEST START (IF_TEST)".
       *   W’c
       *     {W’c
             IF W-L-GRP = W-R-GRP
@@ -1204,7 +1204,7 @@
                CONTINUE
             END-IF.
       *
-            DISPLAY "TEST END   (EX5-1-1A)".
+            DISPLAY "TEST END   (IF_TEST)".
            *>ACCEPT OMIT-WK.
            GOBACK
            .

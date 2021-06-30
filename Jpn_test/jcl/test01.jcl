@@ -9,4 +9,5 @@
 \CS-07
 \CS-08
 @display TEST End
+@pause
 @end

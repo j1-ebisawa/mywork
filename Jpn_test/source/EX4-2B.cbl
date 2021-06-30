@@ -45,6 +45,7 @@
        MAIN                  SECTION.
        P-010. 
             DISPLAY "TEST START (EX4-2B)".
+            go to p-end.
       *  ケース1.日本語データ（N）
       *
             DISPLAY G-10.
@@ -67,6 +68,8 @@
       *
             DISPLAY G-19.
       *
+       p-end.
+            display "NG".
             DISPLAY "TEST END   (EX4-2B)".
             *>ACCEPT OMIT-WK.
       *
