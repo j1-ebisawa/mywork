@@ -13,5 +13,5 @@
 ##\EX5-6B-4
 ##\EX5-6B-5
 @display TEST End
-@pause
+##@pause
 @end

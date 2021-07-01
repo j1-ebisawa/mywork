@@ -11,5 +11,5 @@
 \EX5-4C
 ##\EX5-4D
 @display TEST End
-@pause
+##@pause
 @end

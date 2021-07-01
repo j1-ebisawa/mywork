@@ -7,5 +7,5 @@
 \EX4-4B
 ##\EX4-4C
 @display TEST End
-@pause
+##@pause
 @end

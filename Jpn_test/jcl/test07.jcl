@@ -6,5 +6,5 @@
 \IF_TEST
 \JPN_01
 @display TEST End
-@pause
+##@pause
 @end

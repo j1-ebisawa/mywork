@@ -8,5 +8,5 @@
 \EX3-5B
 \EX3-5C
 @display TEST End
-@pause
+##@pause
 @end

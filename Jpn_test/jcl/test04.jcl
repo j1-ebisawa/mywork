@@ -9,5 +9,5 @@
 \EX5-1-2A
 \EX5-1-2B
 @display TEST End
-@pause
+##@pause
 @end
