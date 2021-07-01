@@ -55,7 +55,7 @@
             END-IF.
       *     
             DISPLAY "QA-17 test end".
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
             GOBACK
             .
 

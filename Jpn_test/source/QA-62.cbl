@@ -26,7 +26,7 @@
       * 
             perform S01-PROC.
       *
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
             GOBACK
             .
        S01-PROC.

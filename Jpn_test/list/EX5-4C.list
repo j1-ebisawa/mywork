@@ -1,8 +1,8 @@
 *>(c) 2005 - 2021 Veryant
-*>compiler version: isCOBOL-BETA release 2021 R1 build#1041.1-20210329-31547
-*>source file name:  C:\isTEST\GIT\Jpn_test\source\EX5-4C.cbl
-*>date generated  :  Sun Jun 27 11:53:51 GMT+09:00 2021
-*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/isTEST/GIT/Jpn_test/output -jj -eo=C:/isTEST/GIT/Jpn_test/errs -d -g -lo=C:/isTEST/GIT/Jpn_test/list -tasks
+*>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
+*>source file name:  C:\ISTEST\Git\Jpn_test\source\EX5-4C.cbl
+*>date generated  :  Wed Jun 30 15:02:23 JST 2021
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/ISTEST/Git/Jpn_test/output -jj -eo=C:/ISTEST/Git/Jpn_test/errs -d -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks
 *>*****************************************************************
 *>    テストケース：5-4C                                           
 *>    プログラム名：日本語化テスト （手続き部）INSPECT命令         
@@ -52,6 +52,7 @@ PROCEDURE             DIVISION.
 *>*****************************************************************
 MAIN                  SECTION.                                   
 P-010.                                                           
+     DISPLAY "TEST START (EX5-4C)".                              
 *>ケース48.一意名１、定数5、定数6（CONVERTING,ALL指定）            
      MOVE "P-480-01"        TO CASE-ID.                          
      MOVE "あい＊＊おかき＊＊＊" TO G-01.                        
@@ -165,7 +166,7 @@ P-010.
      MOVE "＊＊＊い＊＊き＊" TO GE-01.                           
                                                                  
      INSPECT G-01 CONVERTING "＊お" TO "＠＠" BEFORE "き＊".     
-     IF G-01 = "あい＠＠＠かき＊＊＊"                            
+     IF G-01 = "あい＊＠＠かき＊＊＊"                            
            DISPLAY CASE-ID "OK"                                  
      ELSE  DISPLAY CASE-ID "NG:" G-01                            
      END-IF.                                                     
@@ -256,7 +257,8 @@ P-010.
      END-IF.                                                     
                                                                  
 *>                                                                 
-     ACCEPT OMIT-WK.                                             
+     DISPLAY "TEST END   (EX5-4C)".                              
+     *>ACCEPT OMIT-WK.                                           
      GOBACK                                                      
      .                                                           
                                                                  

@@ -235,7 +235,7 @@
             END-IF.
       *
             DISPLAY "TEST END   (EX4-4B)".
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
       *
             GOBACK
             .

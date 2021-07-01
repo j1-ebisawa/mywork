@@ -244,7 +244,7 @@
                ELSE                  DISPLAY CASE-ID "NG"
             END-IF.
       *
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
       *
        P-160. 
       *  ケース16.ALL 日本語定数→集団項目
@@ -400,7 +400,7 @@
       *
       *
              DISPLAY "TEST END   (EX5-5B)".
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
             GOBACK
             .
 

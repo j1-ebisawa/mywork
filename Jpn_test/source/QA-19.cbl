@@ -52,7 +52,7 @@
             END-IF.
       *     
             DISPLAY "QA-19 test end".
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
             GOBACK
             .
 

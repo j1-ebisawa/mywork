@@ -1,7 +1,7 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
 *>source file name:  C:\isTEST\Git\Jpn_test\source\EX5-3.cbl
-*>date generated  :  Mon Jun 28 10:45:23 JST 2021
+*>date generated  :  Thu Jul 01 14:49:17 JST 2021
 *>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/isTEST/Git/Jpn_test/output -jj -eo=C:/isTEST/Git/Jpn_test/errs -d -g -lo=C:/isTEST/Git/Jpn_test/list -tasks
 *>*****************************************************************
 *>    テストケース：5-3                                            
@@ -79,7 +79,7 @@ P-010.
 *>ケース2：一意名１が日本語項目のとき（TO VALUE指定のとき）        
      MOVE "P-020-01"        TO CASE-ID.                          
      MOVE SPACE       TO A-02.                                   
-     INITIALIZE A-02 NATIONAL TO VALUE.                          
+     INITIALIZE A-02 replacing NATIONAL TO VALUE.                
      IF A-02 = "あいうえお"   DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG" "A-02=" A-02  
      END-IF.                                                     
@@ -108,7 +108,7 @@ P-010.
 *>ケース6：一意名１が日本語編集項目のとき（TO VALUE指定のとき）    
      MOVE "P-060-01"        TO CASE-ID.                          
      MOVE SPACE       TO A-06.                                   
-     INITIALIZE A-06 NATIONAL-EDITED TO VALUE.                   
+     INITIALIZE A-06 replacing NATIONAL-EDITED TO VALUE.         
      IF A-06 = "１／２／３"                                      
                               DISPLAY CASE-ID "OK"               
         ELSE                  DISPLAY CASE-ID "NG" "A-06=" A-06  
@@ -174,16 +174,14 @@ P-010.
      END-IF.                                                     
 *>                                                                 
      DISPLAY "TEST END   (EX5-3)".                               
-     ACCEPT OMIT-WK.                                             
+     *>ACCEPT OMIT-WK.                                           
      GOBACK                                                      
      .                                                           
                                                                  
-*> --S: #15 Unexpected token <NATIONAL>; file = EX5-3.cbl, line = 77, col 21
-*> --S: #15 Unexpected token <TO>; file = EX5-3.cbl, line = 77, col 30
-*> --S: #15 Unexpected token <VALUE>; file = EX5-3.cbl, line = 77, col 33
+*> --S: #15 Unexpected token <NATIONAL>; file = EX5-3.cbl, line = 77, col 31
 *> --S: #15 Unexpected token <NATIONAL>; file = EX5-3.cbl, line = 84, col 33
 *> --S: #15 Unexpected token <NATIONAL>; file = EX5-3.cbl, line = 91, col 31
-*> --S: #35 Undefined data item NATIONAL-EDITED; file = EX5-3.cbl, line = 106, col 21
+*> --S: #15 Unexpected token <NATIONAL-EDITED>; file = EX5-3.cbl, line = 106, col 31
 *> --S: #15 Unexpected token <NATIONAL-EDITED>; file = EX5-3.cbl, line = 113, col 33
 *> --S: #15 Unexpected token <NATIONAL-EDITED>; file = EX5-3.cbl, line = 120, col 31
 *> --S: #15 Unexpected token <NATIONAL>; file = EX5-3.cbl, line = 128, col 26

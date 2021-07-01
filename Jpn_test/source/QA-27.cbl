@@ -98,7 +98,7 @@
                display "B=" B
             END-IF.
             DISPLAY "QA-27 test end".
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
             GOBACK
             .
 

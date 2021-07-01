@@ -49,8 +49,9 @@
       *  ケース6.コンパイルエラー（集団項目＋JUST句）
       *  
       *
+           display "NG".
             DISPLAY "TEST END   (EX4-1B)".
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
       *
             GOBACK
             .

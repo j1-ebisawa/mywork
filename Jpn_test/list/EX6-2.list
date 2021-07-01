@@ -1,7 +1,7 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
 *>source file name:  C:\isTEST\Git\Jpn_test\source\EX6-2.cbl
-*>date generated  :  Mon Jun 28 10:45:23 JST 2021
+*>date generated  :  Thu Jul 01 14:49:19 JST 2021
 *>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/isTEST/Git/Jpn_test/output -jj -eo=C:/isTEST/Git/Jpn_test/errs -d -g -lo=C:/isTEST/Git/Jpn_test/list -tasks
 *>*****************************************************************
 *>    テストケース：6-2                                            
@@ -65,24 +65,24 @@ WORKING-STORAGE       SECTION.
                                                                  
  01  GRP-04.                                                     
     05  GRP-04-1  PIC X(1). *>1            
-    05  GRP-04-2  USAGE BINARY-SHORT. *>2            
+    05  GRP-04-2  USAGE SIGNED-SHORT. *>2            
     05  GRP-04-3  PIC N. *>2            
-    05  GRP-04-4  USAGE BINARY-LONG. *>4            
+    05  GRP-04-4  USAGE SIGNED-LONG. *>4            
     05  GRP-04-5  PIC N. *>2            
     05  GRP-04-6  PIC X(1). *>1            
-    05  GRP-04-7  USAGE BINARY-DOUBLE. *>8            
+    05  GRP-04-7  USAGE DOUBLE. *>8                   
                                                                  
 01  GRP-05.                                                      
     05  GRP-05-1  PIC X(1). *>1            
                                                   *>1  FILLER    
-    05  GRP-05-2  USAGE BINARY-SHORT SYNC. *>2            
+    05  GRP-05-2  USAGE SIGNED-SHORT SYNC. *>2            
     05  GRP-05-3  PIC N. *>2            
                                                   *>2  FILLER    
-    05  GRP-05-4  USAGE BINARY-LONG SYNC. *>4            
+    05  GRP-05-4  USAGE SIGNED-LONG SYNC. *>4            
     05  GRP-05-5  PIC N. *>2            
     05  GRP-05-6  PIC X(1). *>1            
                                                   *>1  FILLER    
-    05  GRP-05-7  USAGE BINARY-DOUBLE SYNC. *>8            
+    05  GRP-05-7  USAGE DOUBLE SYNC. *>8                   
                                                                  
 *>*****************************************************************
 PROCEDURE             DIVISION.                                  
@@ -224,10 +224,7 @@ P-010.
      END-IF.                                                     
 *>                                                                 
      DISPLAY "TEST END   (EX6-2)".                               
-     ACCEPT OMIT-WK.                                             
+     *>ACCEPT OMIT-WK.                                           
      GOBACK                                                      
      .                                                           
                                                                  
-*> --E: #188 Period missing. Period Assumed. '.'; file = EX6-2.cbl, line = 63
-*> --E: #152 Variable has zero length: GRP-04-2; file = EX6-2.cbl, line = 63, col 8
-*> --S: #31 Expected/found token mismatch: PROCEDURE/BINARY-SHORT; file = EX6-2.cbl, line = 63, col 24

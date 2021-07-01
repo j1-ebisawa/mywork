@@ -65,7 +65,7 @@
             END-IF.
       *
             DISPLAY "TEST END   (QA-43)".
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
             GOBACK
             .
 

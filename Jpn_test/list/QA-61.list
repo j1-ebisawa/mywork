@@ -1,8 +1,8 @@
 *>(c) 2005 - 2021 Veryant
-*>compiler version: isCOBOL-BETA release 2021 R1 build#1041.1-20210329-31547
-*>source file name:  C:\isTEST\GIT\Jpn_test\source\QA-61.cbl
-*>date generated  :  Sun Jun 27 11:53:58 GMT+09:00 2021
-*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/isTEST/GIT/Jpn_test/output -jj -eo=C:/isTEST/GIT/Jpn_test/errs -d -g -lo=C:/isTEST/GIT/Jpn_test/list -tasks
+*>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
+*>source file name:  C:\ISTEST\Git\Jpn_test\source\QA-61.cbl
+*>date generated  :  Wed Jun 30 14:13:27 JST 2021
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/ISTEST/Git/Jpn_test/output -jj -eo=C:/ISTEST/Git/Jpn_test/errs -d -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks
 IDENTIFICATION        DIVISION.                                  
 *>*****************************************************************
 PROGRAM-ID. QA-61.                                     
@@ -31,6 +31,6 @@ MAIN                  SECTION.
 *>                                                                 
      if X-01 = " "  stop "test".                                 
 *>                                                                 
-     ACCEPT OMIT-WK.                                             
+     *>ACCEPT OMIT-WK.                                           
      GOBACK                                                      
      .                                                           

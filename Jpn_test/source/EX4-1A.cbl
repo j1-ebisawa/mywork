@@ -125,7 +125,7 @@
       *
       *
             DISPLAY "TEST END   (EX4-1A)".
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
       *
             GOBACK
             .

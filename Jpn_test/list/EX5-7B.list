@@ -1,8 +1,8 @@
 *>(c) 2005 - 2021 Veryant
-*>compiler version: isCOBOL-BETA release 2021 R1 build#1041.1-20210329-31547
-*>source file name:  C:\isTEST\GIT\Jpn_test\source\EX5-7B.cbl
-*>date generated  :  Sun Jun 27 11:53:55 GMT+09:00 2021
-*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/isTEST/GIT/Jpn_test/output -jj -eo=C:/isTEST/GIT/Jpn_test/errs -d -g -lo=C:/isTEST/GIT/Jpn_test/list -tasks
+*>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
+*>source file name:  C:\isTEST\Git\Jpn_test\source\EX5-7B.cbl
+*>date generated  :  Thu Jul 01 14:49:19 JST 2021
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/isTEST/Git/Jpn_test/output -jj -eo=C:/isTEST/Git/Jpn_test/errs -d -g -lo=C:/isTEST/Git/Jpn_test/list -tasks
 *>*****************************************************************
 *>    テストケース：5-7B                                           
 *>    プログラム名：日本語化テスト （手続き部）UNSTRING命令        
@@ -61,6 +61,7 @@ PROCEDURE             DIVISION.
 *>*****************************************************************
 MAIN                  SECTION.                                   
 P-010.                                                           
+     DISPLAY "TEST START  (EX5-7B)".                             
 *>ケース20.エラーチェック                                          
     MOVE "あいうえおかきくけこ" TO G-01.                         
     MOVE ALL "＊" TO W-INTO.                                     
@@ -102,7 +103,8 @@ P-010.
     END-UNSTRING.                                                
 *>**                                                               
     DISPLAY "EX5-7B OK".                                         
-     ACCEPT OMIT-WK.                                             
+     DISPLAY "TEST END    (EX5-7B)".                             
+     *>ACCEPT OMIT-WK.                                           
      GOBACK                                                      
      .                                                           
                                                                  

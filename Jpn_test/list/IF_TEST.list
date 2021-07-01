@@ -1,15 +1,15 @@
 *>(c) 2005 - 2021 Veryant
-*>compiler version: isCOBOL-BETA release 2021 R1 build#1041.1-20210329-31547
-*>source file name:  C:\isTEST\GIT\Jpn_test\source\IF_TEST.cbl
-*>date generated  :  Sun Jun 27 11:53:55 GMT+09:00 2021
-*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/isTEST/GIT/Jpn_test/output -jj -eo=C:/isTEST/GIT/Jpn_test/errs -d -g -lo=C:/isTEST/GIT/Jpn_test/list -tasks
+*>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
+*>source file name:  C:\isTEST\Git\Jpn_test\source\IF_TEST.cbl
+*>date generated  :  Thu Jul 01 14:49:19 JST 2021
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/isTEST/Git/Jpn_test/output -jj -eo=C:/isTEST/Git/Jpn_test/errs -d -g -lo=C:/isTEST/Git/Jpn_test/list -tasks
 *>*****************************************************************
-*>    ･ﾆ･ｹ･ﾈ･ｱ｡ｼ･ｹ｡ｧ5-1-1A                                         
-*>    ･ﾗ･愠ｰ･鬣猯ｾ｡ｧﾆ?ﾋﾜｸ?ｲｽ･ﾆ･ｹ･ﾈ ｡ﾊｼ?ﾂｳ､ｭﾉﾋｾ? ﾈ豕ﾓｾ?       
-*>    ｽ靉?ｳｵﾍﾗ｡｡｡｡｡ｧﾆ?ﾋﾜｸ?ﾈ豕ﾓ､ｬﾀｵ､ｷ､ｯﾈ豕ﾓﾉｽ､ﾋ､ｷ､ｿ､ｬ､ﾃ､ﾆ           
-*>                  ﾀｵ､ｷ､ｯ･ｨ･鬘ｼ･ﾁ･ｧ･ﾃ･ｯ､ｵ､?､?､ｫ､ﾁ･ｧ･ﾃ･ｯ､ｹ､?｡｣   
+*>    テストケース：5-1-1A                                         
+*>    プログラム名：日本語化テスト （手続き部）条件 比較条件       
+*>    処理概要　　：日本語比較が正しく比較表にしたがって           
+*>                  正しくエラーチェックされるかをチェックする。   
 *>  -------------------------------------------------------------- 
-*>    ､ｳ､ﾎ･ﾗ･愠ｰ･鬣爨ﾏ･ｨ･鬘ｼ･ﾁ･ｧ･ﾃ･ｯ､ｴ､ﾙ､?､ﾎ､ﾇ｡｢ｼﾂｹﾔ､ﾇ､ｭ､ﾊ､､｡｣   
+*>    このプログラムはエラーチェックを調べるので、実行できない。   
 *>*****************************************************************
 IDENTIFICATION        DIVISION.                                  
 *>*****************************************************************
@@ -63,1154 +63,1154 @@ PROCEDURE             DIVISION.
 *>*****************************************************************
 MAIN                  SECTION.                                   
 P-010.                                                           
-     DISPLAY "TEST START (EX5-1-1A)".                            
-*>   ｽｸﾃﾄ                                                          
-*>     ｡ﾜｽｸﾃﾄ                                                      
+     DISPLAY "TEST START (IF_TEST)".                             
+*>   集団                                                          
+*>     ＋集団                                                      
      IF W-L-GRP = W-R-GRP                                        
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｱﾑｻ?                                                       
+*>     +英字                                                       
      IF W-L-GRP = R-A                                            
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｱﾑｿ?                                                     
+*>     +英数字                                                     
      IF W-L-GRP = R-AN                                           
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(ZONEﾀｰｿ?)                                             
+*>     +数字(ZONE整数)                                             
      IF W-L-GRP = R-ZONE                                         
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(ZONEﾈｰｿﾋ                                          
+*>     +数字(ZONE非整数）                                          
      IF W-L-GRP = R-ZONE-DEC                                     
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(PACKﾀｰｿ?)                                             
+*>     +数字(PACK整数)                                             
      IF W-L-GRP = R-PACK                                         
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(PACKﾈｰｿﾋ                                          
+*>     +数字(PACK非整数）                                          
      IF W-L-GRP =  R-PACK-DEC                                    
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(BINﾀｰｿ?)                                              
+*>     +数字(BIN整数)                                              
      IF W-L-GRP = R-BIN                                          
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(BINﾈｰｿﾋ                                           
+*>     +数字(BIN非整数）                                           
      IF W-L-GRP = R-BIN-DEC                                      
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(ｿ摠ﾔｽｸ｡ﾋ                                            
+*>     +数字(数字編集）                                            
      IF W-L-GRP =  R-NE                                          
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾆ?ﾋﾜｸ?                                                     
+*>     +日本語                                                     
      IF W-L-GRP =  R-G                                           
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾆ?ﾋﾜｸ?ﾊﾔｽｸ                                                 
+*>     +日本語編集                                                 
      IF W-L-GRP =  R-GE                                          
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾆ?ﾋﾜｸ?ﾄ?ｿ?                                                 
-     IF W-L-GRP =  "ﾆ?ﾋﾜｸ?"                                      
+*>     +日本語定数                                                 
+     IF W-L-GRP =  "日本語"                                      
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ALL ﾆ?ﾋﾜｸ?ﾄ?ｿ?                                             
-     IF W-L-GRP = ALL "ﾆ?ﾋﾜｸ?"                                   
+*>     +ALL 日本語定数                                             
+     IF W-L-GRP = ALL "日本語"                                   
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾉｽｰﾕﾄ?ｿ?                                                   
+*>     +表意定数                                                   
      IF W-L-GRP = QUOTES                                         
         CONTINUE                                                 
      END-IF.                                                     
 *>                                                                 
 P-020.                                                           
-*>   ｱﾑｻ?                                                          
-*>     +ｽｸﾃﾄ                                                       
+*>   英字                                                          
+*>     +集団                                                       
      IF L-A = W-R-GRP                                            
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｱﾑｻ?                                                       
+*>     +英字                                                       
      IF L-A =  R-A                                               
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｱﾑｿ?                                                     
+*>     +英数字                                                     
      IF L-A =  R-AN                                              
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(ZONEﾀｰｿ?)                                             
+*>     +数字(ZONE整数)                                             
      IF L-A = R-ZONE                                             
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(ZONEﾈｰｿﾋ                                          
+*>     +数字(ZONE非整数）                                          
      IF L-A = R-ZONE-DEC                                         
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(PACKﾀｰｿ?)                                             
+*>     +数字(PACK整数)                                             
      IF L-A = R-PACK                                             
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(PACKﾈｰｿﾋ                                          
+*>     +数字(PACK非整数）                                          
      IF L-A = R-PACK-DEC                                         
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(BINﾀｰｿ?)                                              
+*>     +数字(BIN整数)                                              
      IF L-A =  R-BIN                                             
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(BINﾈｰｿﾋ                                           
+*>     +数字(BIN非整数）                                           
      IF L-A =  R-BIN-DEC                                         
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(ｿ摠ﾔｽｸ｡ﾋ                                            
+*>     +数字(数字編集）                                            
      IF L-A =  R-NE                                              
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾆ?ﾋﾜｸ?                                                     
+*>     +日本語                                                     
      IF L-A =  R-G                                               
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾆ?ﾋﾜｸ?ﾊﾔｽｸ                                                 
+*>     +日本語編集                                                 
      IF L-A =  R-GE                                              
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾆ?ﾋﾜｸ?ﾄ?ｿ?                                                 
-     IF L-A =  "ﾆ?ﾋﾜｸ?"                                          
+*>     +日本語定数                                                 
+     IF L-A =  "日本語"                                          
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ALL ﾆ?ﾋﾜｸ?ﾄ?ｿ?                                             
-     IF L-A = ALL "ﾆ?ﾋﾜｸ?"                                       
+*>     +ALL 日本語定数                                             
+     IF L-A = ALL "日本語"                                       
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾉｽｰﾕﾄ?ｿ?                                                   
+*>     +表意定数                                                   
      IF L-A =  QUOTES                                            
         CONTINUE                                                 
      END-IF.                                                     
 *>                                                                 
 *>                                                                 
 P-030.                                                           
-*>   ｱﾑｿ?                                                        
-*>     +ｽｸﾃﾄ                                                       
+*>   英数字                                                        
+*>     +集団                                                       
      IF L-AN =  W-R-GRP                                          
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｱﾑｻ?                                                       
+*>     +英字                                                       
      IF L-AN =  R-A                                              
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｱﾑｿ?                                                     
+*>     +英数字                                                     
      IF L-AN =  R-AN                                             
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(ZONEﾀｰｿ?)                                             
+*>     +数字(ZONE整数)                                             
      IF L-AN =  R-ZONE                                           
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(ZONEﾈｰｿﾋ                                          
+*>     +数字(ZONE非整数）                                          
      IF L-AN =  R-ZONE-DEC                                       
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(PACKﾀｰｿ?)                                             
+*>     +数字(PACK整数)                                             
      IF L-AN =  R-PACK                                           
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(PACKﾈｰｿﾋ                                          
+*>     +数字(PACK非整数）                                          
      IF L-AN =  R-PACK-DEC                                       
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(BINﾀｰｿ?)                                              
+*>     +数字(BIN整数)                                              
      IF L-AN =  R-BIN                                            
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(BINﾈｰｿﾋ                                           
+*>     +数字(BIN非整数）                                           
      IF L-AN =  R-BIN-DEC                                        
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(ｿ摠ﾔｽｸ｡ﾋ                                            
+*>     +数字(数字編集）                                            
      IF L-AN = R-NE                                              
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾆ?ﾋﾜｸ?                                                     
+*>     +日本語                                                     
      IF L-AN =  R-G                                              
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾆ?ﾋﾜｸ?ﾊﾔｽｸ                                                 
+*>     +日本語編集                                                 
      IF L-AN =  R-GE                                             
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾆ?ﾋﾜｸ?ﾄ?ｿ?                                                 
-     IF L-AN =  "ﾆ?ﾋﾜｸ?"                                         
+*>     +日本語定数                                                 
+     IF L-AN =  "日本語"                                         
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ALL ﾆ?ﾋﾜｸ?ﾄ?ｿ?                                             
-     IF L-AN = ALL "ﾆ?ﾋﾜｸ?"                                      
+*>     +ALL 日本語定数                                             
+     IF L-AN = ALL "日本語"                                      
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾉｽｰﾕﾄ?ｿ?                                                   
+*>     +表意定数                                                   
      IF L-AN =  QUOTES                                           
         CONTINUE                                                 
      END-IF.                                                     
 *>                                                                 
 *>                                                                 
 P-040.                                                           
-*>   ｱﾑｿ摠ﾔｽｸ                                                    
-*>     +ｽｸﾃﾄ                                                       
+*>   英数字編集                                                    
+*>     +集団                                                       
      IF L-ANE =  W-R-GRP                                         
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｱﾑｻ?                                                       
+*>     +英字                                                       
      IF L-ANE =  R-A                                             
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｱﾑｿ?                                                     
+*>     +英数字                                                     
      IF L-ANE =  R-AN                                            
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(ZONEﾀｰｿ?)                                             
+*>     +数字(ZONE整数)                                             
      IF L-ANE =  R-ZONE                                          
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(ZONEﾈｰｿﾋ                                          
+*>     +数字(ZONE非整数）                                          
      IF L-ANE =  R-ZONE-DEC                                      
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(PACKﾀｰｿ?)                                             
+*>     +数字(PACK整数)                                             
      IF L-ANE =  R-PACK                                          
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(PACKﾈｰｿﾋ                                          
+*>     +数字(PACK非整数）                                          
      IF L-ANE =  R-PACK-DEC                                      
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(BINﾀｰｿ?)                                              
+*>     +数字(BIN整数)                                              
      IF L-ANE =  R-BIN                                           
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(BINﾈｰｿﾋ                                           
+*>     +数字(BIN非整数）                                           
      IF L-ANE =  R-BIN-DEC                                       
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(ｿ摠ﾔｽｸ｡ﾋ                                            
+*>     +数字(数字編集）                                            
      IF L-ANE =  R-NE                                            
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾆ?ﾋﾜｸ?                                                     
+*>     +日本語                                                     
      IF L-ANE =  R-G                                             
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾆ?ﾋﾜｸ?ﾊﾔｽｸ                                                 
+*>     +日本語編集                                                 
      IF L-ANE =  R-GE                                            
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾆ?ﾋﾜｸ?ﾄ?ｿ?                                                 
-     IF L-ANE =  "ﾆ?ﾋﾜｸ?"                                        
+*>     +日本語定数                                                 
+     IF L-ANE =  "日本語"                                        
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ALL ﾆ?ﾋﾜｸ?ﾄ?ｿ?                                             
-     IF L-ANE = ALL "ﾆ?ﾋﾜｸ?"                                     
+*>     +ALL 日本語定数                                             
+     IF L-ANE = ALL "日本語"                                     
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾉｽｰﾕﾄ?ｿ?                                                   
+*>     +表意定数                                                   
      IF L-ANE =  QUOTES                                          
         CONTINUE                                                 
      END-IF.                                                     
 *>                                                                 
 P-050.                                                           
-*>   ｿ摠ﾔｽｸ                                                      
-*>     +ｽｸﾃﾄ                                                       
+*>   数字編集                                                      
+*>     +集団                                                       
      IF L-NE =  W-R-GRP                                          
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｱﾑｻ?                                                       
+*>     +英字                                                       
      IF L-NE =  R-A                                              
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｱﾑｿ?                                                     
+*>     +英数字                                                     
      IF L-NE =  R-AN                                             
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(ZONEﾀｰｿ?)                                             
+*>     +数字(ZONE整数)                                             
      IF L-NE =  R-ZONE                                           
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(ZONEﾈｰｿﾋ                                          
+*>     +数字(ZONE非整数）                                          
      IF L-NE = R-ZONE-DEC                                        
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(PACKﾀｰｿ?)                                             
+*>     +数字(PACK整数)                                             
      IF L-NE = R-PACK                                            
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(PACKﾈｰｿﾋ                                          
+*>     +数字(PACK非整数）                                          
      IF L-NE =  R-PACK-DEC                                       
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(BINﾀｰｿ?)                                              
+*>     +数字(BIN整数)                                              
      IF L-NE =  R-BIN                                            
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(BINﾈｰｿﾋ                                           
+*>     +数字(BIN非整数）                                           
      IF L-NE =  R-BIN-DEC                                        
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(ｿ摠ﾔｽｸ｡ﾋ                                            
+*>     +数字(数字編集）                                            
      IF L-NE =  R-NE                                             
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾆ?ﾋﾜｸ?                                                     
+*>     +日本語                                                     
      IF L-NE =  R-G                                              
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾆ?ﾋﾜｸ?ﾊﾔｽｸ                                                 
+*>     +日本語編集                                                 
      IF L-NE =  R-GE                                             
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾆ?ﾋﾜｸ?ﾄ?ｿ?                                                 
-     IF L-NE =  "ﾆ?ﾋﾜｸ?"                                         
+*>     +日本語定数                                                 
+     IF L-NE =  "日本語"                                         
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ALL ﾆ?ﾋﾜｸ?ﾄ?ｿ?                                             
-     IF L-NE = ALL "ﾆ?ﾋﾜｸ?"                                      
+*>     +ALL 日本語定数                                             
+     IF L-NE = ALL "日本語"                                      
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾉｽｰﾕﾄ?ｿ?                                                   
+*>     +表意定数                                                   
      IF L-NE = QUOTES                                            
         CONTINUE                                                 
      END-IF.                                                     
 *>                                                                 
 *>                                                                 
 P-060.                                                           
-*>   ｱﾑｻ?                                                          
-*>     +ｽｸﾃﾄ                                                       
+*>   英字                                                          
+*>     +集団                                                       
      IF L-A = W-R-GRP                                            
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｱﾑｻ?                                                       
+*>     +英字                                                       
      IF L-A =  R-A                                               
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｱﾑｿ?                                                     
+*>     +英数字                                                     
      IF L-A =  R-AN                                              
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(ZONEﾀｰｿ?)                                             
+*>     +数字(ZONE整数)                                             
      IF L-A =  R-ZONE                                            
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(ZONEﾈｰｿﾋ                                          
+*>     +数字(ZONE非整数）                                          
      IF L-A = R-ZONE-DEC                                         
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(PACKﾀｰｿ?)                                             
+*>     +数字(PACK整数)                                             
      IF L-A =  R-PACK                                            
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(PACKﾈｰｿﾋ                                          
+*>     +数字(PACK非整数）                                          
      IF L-A = R-PACK-DEC                                         
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(BINﾀｰｿ?)                                              
+*>     +数字(BIN整数)                                              
      IF L-A = R-BIN                                              
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(BINﾈｰｿﾋ                                           
+*>     +数字(BIN非整数）                                           
      IF L-A =  R-BIN-DEC                                         
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(ｿ摠ﾔｽｸ｡ﾋ                                            
+*>     +数字(数字編集）                                            
      IF L-A =  R-NE                                              
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾆ?ﾋﾜｸ?                                                     
+*>     +日本語                                                     
      IF L-A =  R-G                                               
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾆ?ﾋﾜｸ?ﾊﾔｽｸ                                                 
+*>     +日本語編集                                                 
      IF L-A =  R-GE                                              
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾆ?ﾋﾜｸ?ﾄ?ｿ?                                                 
-     IF L-A = "ﾆ?ﾋﾜｸ?"                                           
+*>     +日本語定数                                                 
+     IF L-A = "日本語"                                           
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ALL ﾆ?ﾋﾜｸ?ﾄ?ｿ?                                             
-     IF L-A = ALL "ﾆ?ﾋﾜｸ?"                                       
+*>     +ALL 日本語定数                                             
+     IF L-A = ALL "日本語"                                       
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾉｽｰﾕﾄ?ｿ?                                                   
+*>     +表意定数                                                   
      IF L-A =  QUOTES                                            
         CONTINUE                                                 
      END-IF.                                                     
 *>                                                                 
 *>                                                                 
 P-070.                                                           
-*>   ZONEﾀｰｿ?                                                      
-*>     +ｽｸﾃﾄ                                                       
+*>   ZONE整数                                                      
+*>     +集団                                                       
      IF L-ZONE =  W-R-GRP                                        
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｱﾑｻ?                                                       
+*>     +英字                                                       
      IF L-ZONE =  R-A                                            
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｱﾑｿ?                                                     
+*>     +英数字                                                     
      IF L-ZONE =  R-AN                                           
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(ZONEﾀｰｿ?)                                             
+*>     +数字(ZONE整数)                                             
      IF L-ZONE =  R-ZONE                                         
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(ZONEﾈｰｿﾋ                                          
+*>     +数字(ZONE非整数）                                          
      IF L-ZONE =  R-ZONE-DEC                                     
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(PACKﾀｰｿ?)                                             
+*>     +数字(PACK整数)                                             
      IF L-ZONE =  R-PACK                                         
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(PACKﾈｰｿﾋ                                          
+*>     +数字(PACK非整数）                                          
      IF L-ZONE =  R-PACK-DEC                                     
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(BINﾀｰｿ?)                                              
+*>     +数字(BIN整数)                                              
      IF L-ZONE =  R-BIN                                          
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(BINﾈｰｿﾋ                                           
+*>     +数字(BIN非整数）                                           
      IF L-ZONE = R-BIN-DEC                                       
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(ｿ摠ﾔｽｸ｡ﾋ                                            
+*>     +数字(数字編集）                                            
      IF L-ZONE =  R-NE                                           
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾆ?ﾋﾜｸ?                                                     
+*>     +日本語                                                     
      IF L-ZONE =  R-G                                            
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾆ?ﾋﾜｸ?ﾊﾔｽｸ                                                 
+*>     +日本語編集                                                 
      IF L-ZONE =  R-GE                                           
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾆ?ﾋﾜｸ?ﾄ?ｿ?                                                 
-     IF L-ZONE =  "ﾆ?ﾋﾜｸ?"                                       
+*>     +日本語定数                                                 
+     IF L-ZONE =  "日本語"                                       
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ALL ﾆ?ﾋﾜｸ?ﾄ?ｿ?                                             
-     IF L-ZONE = ALL "ﾆ?ﾋﾜｸ?"                                    
+*>     +ALL 日本語定数                                             
+     IF L-ZONE = ALL "日本語"                                    
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾉｽｰﾕﾄ?ｿ?                                                   
+*>     +表意定数                                                   
      IF L-ZONE =  QUOTES                                         
         CONTINUE                                                 
      END-IF.                                                     
 *>                                                                 
 *>                                                                 
 P-080.                                                           
-*>   ZONEﾈｰｿ?                                                    
-*>     +ｽｸﾃﾄ                                                       
+*>   ZONE非整数                                                    
+*>     +集団                                                       
      IF L-ZONE-DEC =  W-R-GRP                                    
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｱﾑｻ?                                                       
+*>     +英字                                                       
      IF L-ZONE-DEC =  R-A                                        
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｱﾑｿ?                                                     
+*>     +英数字                                                     
      IF L-ZONE-DEC =  R-AN                                       
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(ZONEﾀｰｿ?)                                             
+*>     +数字(ZONE整数)                                             
      IF L-ZONE-DEC =  R-ZONE                                     
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(ZONEﾈｰｿﾋ                                          
+*>     +数字(ZONE非整数）                                          
      IF L-ZONE-DEC =  R-ZONE-DEC                                 
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(PACKﾀｰｿ?)                                             
+*>     +数字(PACK整数)                                             
      IF L-ZONE-DEC =  R-PACK                                     
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(PACKﾈｰｿﾋ                                          
+*>     +数字(PACK非整数）                                          
      IF L-ZONE-DEC = R-PACK-DEC                                  
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(BINﾀｰｿ?)                                              
+*>     +数字(BIN整数)                                              
      IF L-ZONE-DEC =  R-BIN                                      
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(BINﾈｰｿﾋ                                           
+*>     +数字(BIN非整数）                                           
      IF L-ZONE-DEC =  R-BIN-DEC                                  
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(ｿ摠ﾔｽｸ｡ﾋ                                            
+*>     +数字(数字編集）                                            
      IF L-ZONE-DEC =  R-NE                                       
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾆ?ﾋﾜｸ?                                                     
+*>     +日本語                                                     
      IF L-ZONE-DEC =  R-G                                        
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾆ?ﾋﾜｸ?ﾊﾔｽｸ                                                 
+*>     +日本語編集                                                 
      IF L-ZONE-DEC =  R-GE                                       
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾆ?ﾋﾜｸ?ﾄ?ｿ?                                                 
-     IF L-ZONE-DEC =  "ﾆ?ﾋﾜｸ?"                                   
+*>     +日本語定数                                                 
+     IF L-ZONE-DEC =  "日本語"                                   
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ALL ﾆ?ﾋﾜｸ?ﾄ?ｿ?                                             
-     IF L-ZONE-DEC = ALL "ﾆ?ﾋﾜｸ?"                                
+*>     +ALL 日本語定数                                             
+     IF L-ZONE-DEC = ALL "日本語"                                
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾉｽｰﾕﾄ?ｿ?                                                   
+*>     +表意定数                                                   
      IF L-ZONE-DEC =  QUOTES                                     
         CONTINUE                                                 
      END-IF.                                                     
 *>                                                                 
 P-090.                                                           
-*>   PACKﾀｰｿ?                                                      
-*>     +ｽｸﾃﾄ                                                       
+*>   PACK整数                                                      
+*>     +集団                                                       
      IF L-PACK =  W-R-GRP                                        
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｱﾑｻ?                                                       
+*>     +英字                                                       
      IF L-PACK =  R-A                                            
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｱﾑｿ?                                                     
+*>     +英数字                                                     
      IF L-PACK =  R-AN                                           
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(ZONEﾀｰｿ?)                                             
+*>     +数字(ZONE整数)                                             
      IF L-PACK =  R-ZONE                                         
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(ZONEﾈｰｿﾋ                                          
+*>     +数字(ZONE非整数）                                          
      IF L-PACK =  R-ZONE-DEC                                     
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(PACKﾀｰｿ?)                                             
+*>     +数字(PACK整数)                                             
      IF L-PACK =  R-PACK                                         
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(PACKﾈｰｿﾋ                                          
+*>     +数字(PACK非整数）                                          
      IF L-PACK =  R-PACK-DEC                                     
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(BINﾀｰｿ?)                                              
+*>     +数字(BIN整数)                                              
      IF L-PACK =  R-BIN                                          
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(BINﾈｰｿﾋ                                           
+*>     +数字(BIN非整数）                                           
      IF L-PACK =  R-BIN-DEC                                      
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(ｿ摠ﾔｽｸ｡ﾋ                                            
+*>     +数字(数字編集）                                            
      IF L-PACK =  R-NE                                           
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾆ?ﾋﾜｸ?                                                     
+*>     +日本語                                                     
      IF L-PACK =  R-G                                            
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾆ?ﾋﾜｸ?ﾊﾔｽｸ                                                 
+*>     +日本語編集                                                 
      IF L-PACK =  R-GE                                           
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾆ?ﾋﾜｸ?ﾄ?ｿ?                                                 
-     IF L-PACK =  "ﾆ?ﾋﾜｸ?"                                       
+*>     +日本語定数                                                 
+     IF L-PACK =  "日本語"                                       
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ALL ﾆ?ﾋﾜｸ?ﾄ?ｿ?                                             
-     IF L-PACK = ALL "ﾆ?ﾋﾜｸ?"                                    
+*>     +ALL 日本語定数                                             
+     IF L-PACK = ALL "日本語"                                    
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾉｽｰﾕﾄ?ｿ?                                                   
+*>     +表意定数                                                   
      IF L-PACK =  QUOTES                                         
         CONTINUE                                                 
      END-IF.                                                     
 *>                                                                 
 *>                                                                 
 P-100.                                                           
-*>   PACKﾈｰｿ?                                                    
-*>     +ｽｸﾃﾄ                                                       
+*>   PACK非整数                                                    
+*>     +集団                                                       
      IF L-PACK-DEC =  W-R-GRP                                    
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｱﾑｻ?                                                       
+*>     +英字                                                       
      IF L-PACK-DEC =  R-A                                        
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｱﾑｿ?                                                     
+*>     +英数字                                                     
      IF L-PACK-DEC =  R-AN                                       
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(ZONEﾀｰｿ?)                                             
+*>     +数字(ZONE整数)                                             
      IF L-PACK-DEC =  R-ZONE                                     
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(ZONEﾈｰｿﾋ                                          
+*>     +数字(ZONE非整数）                                          
      IF L-PACK-DEC =  R-ZONE-DEC                                 
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(PACKﾀｰｿ?)                                             
+*>     +数字(PACK整数)                                             
      IF L-PACK-DEC =  R-PACK                                     
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(PACKﾈｰｿﾋ                                          
+*>     +数字(PACK非整数）                                          
      IF L-PACK-DEC =  R-PACK-DEC                                 
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(BINﾀｰｿ?)                                              
+*>     +数字(BIN整数)                                              
      IF L-PACK-DEC =  R-BIN                                      
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(BINﾈｰｿﾋ                                           
+*>     +数字(BIN非整数）                                           
      IF L-PACK-DEC =  R-BIN-DEC                                  
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(ｿ摠ﾔｽｸ｡ﾋ                                            
+*>     +数字(数字編集）                                            
      IF L-PACK-DEC =  R-NE                                       
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾆ?ﾋﾜｸ?                                                     
+*>     +日本語                                                     
      IF L-PACK-DEC =  R-G                                        
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾆ?ﾋﾜｸ?ﾊﾔｽｸ                                                 
+*>     +日本語編集                                                 
      IF L-PACK-DEC =  R-GE                                       
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾆ?ﾋﾜｸ?ﾄ?ｿ?                                                 
-     IF L-PACK-DEC =  "ﾆ?ﾋﾜｸ?"                                   
+*>     +日本語定数                                                 
+     IF L-PACK-DEC =  "日本語"                                   
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ALL ﾆ?ﾋﾜｸ?ﾄ?ｿ?                                             
-     IF L-PACK-DEC = ALL "ﾆ?ﾋﾜｸ?"                                
+*>     +ALL 日本語定数                                             
+     IF L-PACK-DEC = ALL "日本語"                                
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾉｽｰﾕﾄ?ｿ?                                                   
+*>     +表意定数                                                   
      IF L-PACK-DEC =  QUOTES                                     
         CONTINUE                                                 
      END-IF.                                                     
 *>                                                                 
 *>                                                                 
 P-110.                                                           
-*>   BINﾀｰｿ?                                                       
-*>     +ｽｸﾃﾄ                                                       
+*>   BIN整数                                                       
+*>     +集団                                                       
      IF L-BIN =  W-R-GRP                                         
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｱﾑｻ?                                                       
+*>     +英字                                                       
      IF L-BIN =  R-A                                             
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｱﾑｿ?                                                     
+*>     +英数字                                                     
      IF L-BIN =  R-AN                                            
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(ZONEﾀｰｿ?)                                             
+*>     +数字(ZONE整数)                                             
      IF L-BIN =  R-ZONE                                          
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(ZONEﾈｰｿﾋ                                          
+*>     +数字(ZONE非整数）                                          
      IF L-BIN =  R-ZONE-DEC                                      
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(PACKﾀｰｿ?)                                             
+*>     +数字(PACK整数)                                             
      IF L-BIN =  R-PACK                                          
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(PACKﾈｰｿﾋ                                          
+*>     +数字(PACK非整数）                                          
      IF L-BIN =  R-PACK-DEC                                      
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(BINﾀｰｿ?)                                              
+*>     +数字(BIN整数)                                              
      IF L-BIN =  R-BIN                                           
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(BINﾈｰｿﾋ                                           
+*>     +数字(BIN非整数）                                           
      IF L-BIN =  R-BIN-DEC                                       
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(ｿ摠ﾔｽｸ｡ﾋ                                            
+*>     +数字(数字編集）                                            
      IF L-BIN =  R-NE                                            
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾆ?ﾋﾜｸ?                                                     
+*>     +日本語                                                     
      IF L-BIN =  R-G                                             
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾆ?ﾋﾜｸ?ﾊﾔｽｸ                                                 
+*>     +日本語編集                                                 
      IF L-BIN =  R-GE                                            
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾆ?ﾋﾜｸ?ﾄ?ｿ?                                                 
-     IF L-BIN =  "ﾆ?ﾋﾜｸ?"                                        
+*>     +日本語定数                                                 
+     IF L-BIN =  "日本語"                                        
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ALL ﾆ?ﾋﾜｸ?ﾄ?ｿ?                                             
-     IF L-BIN = ALL "ﾆ?ﾋﾜｸ?"                                     
+*>     +ALL 日本語定数                                             
+     IF L-BIN = ALL "日本語"                                     
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾉｽｰﾕﾄ?ｿ?                                                   
+*>     +表意定数                                                   
      IF L-BIN =  QUOTES                                          
         CONTINUE                                                 
      END-IF.                                                     
 *>                                                                 
 *>                                                                 
 P-120.                                                           
-*>   BINﾈｰｿ?                                                     
-*>     +ｽｸﾃﾄ                                                       
+*>   BIN非整数                                                     
+*>     +集団                                                       
      IF L-BIN-DEC =  W-R-GRP                                     
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｱﾑｻ?                                                       
+*>     +英字                                                       
      IF L-BIN-DEC =  R-A                                         
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｱﾑｿ?                                                     
+*>     +英数字                                                     
      IF L-BIN-DEC =  R-AN                                        
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(ZONEﾀｰｿ?)                                             
+*>     +数字(ZONE整数)                                             
      IF L-BIN-DEC =  R-ZONE                                      
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(ZONEﾈｰｿﾋ                                          
+*>     +数字(ZONE非整数）                                          
      IF L-BIN-DEC =  R-ZONE-DEC                                  
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(PACKﾀｰｿ?)                                             
+*>     +数字(PACK整数)                                             
      IF L-BIN-DEC =  R-PACK                                      
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(PACKﾈｰｿﾋ                                          
+*>     +数字(PACK非整数）                                          
      IF L-BIN-DEC =  R-PACK-DEC                                  
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(BINﾀｰｿ?)                                              
+*>     +数字(BIN整数)                                              
      IF L-BIN-DEC =  R-BIN                                       
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(BINﾈｰｿﾋ                                           
+*>     +数字(BIN非整数）                                           
      IF L-BIN-DEC =  R-BIN-DEC                                   
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(ｿ摠ﾔｽｸ｡ﾋ                                            
+*>     +数字(数字編集）                                            
      IF L-BIN-DEC =  R-NE                                        
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾆ?ﾋﾜｸ?                                                     
+*>     +日本語                                                     
      IF L-BIN-DEC =  R-G                                         
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾆ?ﾋﾜｸ?ﾊﾔｽｸ                                                 
+*>     +日本語編集                                                 
      IF L-BIN-DEC =  R-GE                                        
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾆ?ﾋﾜｸ?ﾄ?ｿ?                                                 
-     IF L-BIN-DEC =  "ﾆ?ﾋﾜｸ?"                                    
+*>     +日本語定数                                                 
+     IF L-BIN-DEC =  "日本語"                                    
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ALL ﾆ?ﾋﾜｸ?ﾄ?ｿ?                                             
-     IF L-BIN-DEC = ALL "ﾆ?ﾋﾜｸ?"                                 
+*>     +ALL 日本語定数                                             
+     IF L-BIN-DEC = ALL "日本語"                                 
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾉｽｰﾕﾄ?ｿ?                                                   
+*>     +表意定数                                                   
      IF L-BIN-DEC =  QUOTES                                      
         CONTINUE                                                 
      END-IF.                                                     
 *>                                                                 
 *>                                                                 
 P-130.                                                           
-*>   ｿ摠ﾔｽｸ                                                      
-*>     +ｽｸﾃﾄ                                                       
+*>   数字編集                                                      
+*>     +集団                                                       
      IF L-NE =  W-R-GRP                                          
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｱﾑｻ?                                                       
+*>     +英字                                                       
      IF L-NE =  R-A                                              
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｱﾑｿ?                                                     
+*>     +英数字                                                     
      IF L-NE =  R-AN                                             
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(ZONEﾀｰｿ?)                                             
+*>     +数字(ZONE整数)                                             
      IF L-NE =  R-ZONE                                           
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(ZONEﾈｰｿﾋ                                          
+*>     +数字(ZONE非整数）                                          
      IF L-NE =  R-ZONE-DEC                                       
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(PACKﾀｰｿ?)                                             
+*>     +数字(PACK整数)                                             
      IF L-NE =  R-PACK                                           
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(PACKﾈｰｿﾋ                                          
+*>     +数字(PACK非整数）                                          
      IF L-NE =  R-PACK-DEC                                       
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(BINﾀｰｿ?)                                              
+*>     +数字(BIN整数)                                              
      IF L-NE =  R-BIN                                            
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(BINﾈｰｿﾋ                                           
+*>     +数字(BIN非整数）                                           
      IF L-NE =  R-BIN-DEC                                        
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(ｿ摠ﾔｽｸ｡ﾋ                                            
+*>     +数字(数字編集）                                            
      IF L-NE =  R-NE                                             
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾆ?ﾋﾜｸ?                                                     
+*>     +日本語                                                     
      IF L-NE =  R-G                                              
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾆ?ﾋﾜｸ?ﾊﾔｽｸ                                                 
+*>     +日本語編集                                                 
      IF L-NE =  R-GE                                             
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾆ?ﾋﾜｸ?ﾄ?ｿ?                                                 
-     IF L-NE =  "ﾆ?ﾋﾜｸ?"                                         
+*>     +日本語定数                                                 
+     IF L-NE =  "日本語"                                         
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ALL ﾆ?ﾋﾜｸ?ﾄ?ｿ?                                             
-     IF L-NE = ALL "ﾆ?ﾋﾜｸ?"                                      
+*>     +ALL 日本語定数                                             
+     IF L-NE = ALL "日本語"                                      
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾉｽｰﾕﾄ?ｿ?                                                   
+*>     +表意定数                                                   
      IF L-NE =  QUOTES                                           
         CONTINUE                                                 
      END-IF.                                                     
 *>                                                                 
 *>                                                                 
 P-140.                                                           
-*>   ﾆ?ﾋﾜｸ?                                                        
-*>     +ｽｸﾃﾄ                                                       
+*>   日本語                                                        
+*>     +集団                                                       
      IF L-G =  W-R-GRP                                           
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｱﾑｻ?                                                       
+*>     +英字                                                       
      IF L-G =  R-A                                               
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｱﾑｿ?                                                     
+*>     +英数字                                                     
      IF L-G =  R-AN                                              
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(ZONEﾀｰｿ?)                                             
+*>     +数字(ZONE整数)                                             
      IF L-G =  R-ZONE                                            
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(ZONEﾈｰｿﾋ                                          
+*>     +数字(ZONE非整数）                                          
      IF L-G =  R-ZONE-DEC                                        
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(PACKﾀｰｿ?)                                             
+*>     +数字(PACK整数)                                             
      IF L-G =  R-PACK                                            
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(PACKﾈｰｿﾋ                                          
+*>     +数字(PACK非整数）                                          
      IF L-G =  R-PACK-DEC                                        
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(BINﾀｰｿ?)                                              
+*>     +数字(BIN整数)                                              
      IF L-G =  R-BIN                                             
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(BINﾈｰｿﾋ                                           
+*>     +数字(BIN非整数）                                           
      IF L-G =  R-BIN-DEC                                         
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(ｿ摠ﾔｽｸ｡ﾋ                                            
+*>     +数字(数字編集）                                            
      IF L-G =  R-NE                                              
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾆ?ﾋﾜｸ?                                                     
+*>     +日本語                                                     
      IF L-G =  R-G                                               
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾆ?ﾋﾜｸ?ﾊﾔｽｸ                                                 
+*>     +日本語編集                                                 
      IF L-G =  R-GE                                              
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾆ?ﾋﾜｸ?ﾄ?ｿ?                                                 
-     IF L-G =  "ﾆ?ﾋﾜｸ?"                                          
+*>     +日本語定数                                                 
+     IF L-G =  "日本語"                                          
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ALL ﾆ?ﾋﾜｸ?ﾄ?ｿ?                                             
-     IF L-G = ALL "ﾆ?ﾋﾜｸ?"                                       
+*>     +ALL 日本語定数                                             
+     IF L-G = ALL "日本語"                                       
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾉｽｰﾕﾄ?ｿ?                                                   
+*>     +表意定数                                                   
      IF L-G =  QUOTES                                            
         CONTINUE                                                 
      END-IF.                                                     
 *>                                                                 
 P-150.                                                           
-*>   ﾆ?ﾋﾜｸ?ﾊﾔｽｸ                                                    
-*>     +ｽｸﾃﾄ                                                       
+*>   日本語編集                                                    
+*>     +集団                                                       
      IF L-GE =  W-R-GRP                                          
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｱﾑｻ?                                                       
+*>     +英字                                                       
      IF L-GE =  R-A                                              
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｱﾑｿ?                                                     
+*>     +英数字                                                     
      IF L-GE =  R-AN                                             
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(ZONEﾀｰｿ?)                                             
+*>     +数字(ZONE整数)                                             
      IF L-GE =  R-ZONE                                           
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(ZONEﾈｰｿﾋ                                          
+*>     +数字(ZONE非整数）                                          
      IF L-GE =  R-ZONE-DEC                                       
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(PACKﾀｰｿ?)                                             
+*>     +数字(PACK整数)                                             
      IF L-GE =  R-PACK                                           
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(PACKﾈｰｿﾋ                                          
+*>     +数字(PACK非整数）                                          
      IF L-GE =  R-PACK-DEC                                       
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(BINﾀｰｿ?)                                              
+*>     +数字(BIN整数)                                              
      IF L-GE =  R-BIN                                            
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(BINﾈｰｿﾋ                                           
+*>     +数字(BIN非整数）                                           
      IF L-GE =  R-BIN-DEC                                        
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(ｿ摠ﾔｽｸ｡ﾋ                                            
+*>     +数字(数字編集）                                            
      IF L-GE =  R-NE                                             
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾆ?ﾋﾜｸ?                                                     
+*>     +日本語                                                     
      IF L-GE =  R-G                                              
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾆ?ﾋﾜｸ?ﾊﾔｽｸ                                                 
+*>     +日本語編集                                                 
      IF L-GE =  R-GE                                             
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾆ?ﾋﾜｸ?ﾄ?ｿ?                                                 
-     IF L-GE =  "ﾆ?ﾋﾜｸ?"                                         
+*>     +日本語定数                                                 
+     IF L-GE =  "日本語"                                         
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ALL ﾆ?ﾋﾜｸ?ﾄ?ｿ?                                             
-     IF L-GE = ALL "ﾆ?ﾋﾜｸ?"                                      
+*>     +ALL 日本語定数                                             
+     IF L-GE = ALL "日本語"                                      
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾉｽｰﾕﾄ?ｿ?                                                   
+*>     +表意定数                                                   
      IF L-GE =  QUOTES                                           
         CONTINUE                                                 
      END-IF.                                                     
 *>                                                                 
 *>                                                                 
 P-160.                                                           
-*>   ﾆ?ﾋﾜｸ?ﾄ?ｿ?                                                    
-*>     +ｽｸﾃﾄ                                                       
-     IF "ﾆ?ﾋﾜｸ?" =  W-R-GRP                                      
+*>   日本語定数                                                    
+*>     +集団                                                       
+     IF "日本語" =  W-R-GRP                                      
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｱﾑｻ?                                                       
-     IF "ﾆ?ﾋﾜｸ?" =  R-A                                          
+*>     +英字                                                       
+     IF "日本語" =  R-A                                          
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｱﾑｿ?                                                     
-     IF "ﾆ?ﾋﾜｸ?" =  R-AN                                         
+*>     +英数字                                                     
+     IF "日本語" =  R-AN                                         
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(ZONEﾀｰｿ?)                                             
-     IF "ﾆ?ﾋﾜｸ?" =  R-ZONE                                       
+*>     +数字(ZONE整数)                                             
+     IF "日本語" =  R-ZONE                                       
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(ZONEﾈｰｿﾋ                                          
-     IF "ﾆ?ﾋﾜｸ?" =  R-ZONE-DEC                                   
+*>     +数字(ZONE非整数）                                          
+     IF "日本語" =  R-ZONE-DEC                                   
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(PACKﾀｰｿ?)                                             
-     IF "ﾆ?ﾋﾜｸ?" =  R-PACK                                       
+*>     +数字(PACK整数)                                             
+     IF "日本語" =  R-PACK                                       
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(PACKﾈｰｿﾋ                                          
-     IF "ﾆ?ﾋﾜｸ?" =  R-PACK-DEC                                   
+*>     +数字(PACK非整数）                                          
+     IF "日本語" =  R-PACK-DEC                                   
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(BINﾀｰｿ?)                                              
-     IF "ﾆ?ﾋﾜｸ?" =  R-BIN                                        
+*>     +数字(BIN整数)                                              
+     IF "日本語" =  R-BIN                                        
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(BINﾈｰｿﾋ                                           
-     IF "ﾆ?ﾋﾜｸ?" =  R-BIN-DEC                                    
+*>     +数字(BIN非整数）                                           
+     IF "日本語" =  R-BIN-DEC                                    
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(ｿ摠ﾔｽｸ｡ﾋ                                            
-     IF "ﾆ?ﾋﾜｸ?" =  R-NE                                         
+*>     +数字(数字編集）                                            
+     IF "日本語" =  R-NE                                         
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾆ?ﾋﾜｸ?                                                     
-     IF "ﾆ?ﾋﾜｸ?" =  R-G                                          
+*>     +日本語                                                     
+     IF "日本語" =  R-G                                          
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾆ?ﾋﾜｸ?ﾊﾔｽｸ                                                 
-     IF "ﾆ?ﾋﾜｸ?" =  R-GE                                         
+*>     +日本語編集                                                 
+     IF "日本語" =  R-GE                                         
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾆ?ﾋﾜｸ?ﾄ?ｿ?                                                 
-     IF "ﾆ?ﾋﾜｸ?" =  "ﾆ?ﾋﾜｸ?"                                     
+*>     +日本語定数                                                 
+     IF "日本語" =  "日本語"                                     
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ALL ﾆ?ﾋﾜｸ?ﾄ?ｿ?                                             
-     IF "ﾆ?ﾋﾜｸ?" = ALL "ﾆ?ﾋﾜｸ?"                                  
+*>     +ALL 日本語定数                                             
+     IF "日本語" = ALL "日本語"                                  
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾉｽｰﾕﾄ?ｿ?                                                   
-     IF "ﾆ?ﾋﾜｸ?" =  QUOTES                                       
+*>     +表意定数                                                   
+     IF "日本語" =  QUOTES                                       
         CONTINUE                                                 
      END-IF.                                                     
 *>                                                                 
 P-170.                                                           
-*>   ALL ﾆ?ﾋﾜｸ?ﾄ?ｿ?                                                
-*>     +ｽｸﾃﾄ                                                       
-     IF ALL "ﾆ?ﾋﾜｸ?" =  W-R-GRP                                  
+*>   ALL 日本語定数                                                
+*>     +集団                                                       
+     IF ALL "日本語" =  W-R-GRP                                  
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｱﾑｻ?                                                       
-     IF ALL "ﾆ?ﾋﾜｸ?" =  R-A                                      
+*>     +英字                                                       
+     IF ALL "日本語" =  R-A                                      
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｱﾑｿ?                                                     
-     IF ALL "ﾆ?ﾋﾜｸ?" =  R-AN                                     
+*>     +英数字                                                     
+     IF ALL "日本語" =  R-AN                                     
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(ZONEﾀｰｿ?)                                             
-     IF ALL "ﾆ?ﾋﾜｸ?" =  R-ZONE                                   
+*>     +数字(ZONE整数)                                             
+     IF ALL "日本語" =  R-ZONE                                   
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(ZONEﾈｰｿﾋ                                          
-     IF ALL "ﾆ?ﾋﾜｸ?" =  R-ZONE-DEC                               
+*>     +数字(ZONE非整数）                                          
+     IF ALL "日本語" =  R-ZONE-DEC                               
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(PACKﾀｰｿ?)                                             
-     IF ALL "ﾆ?ﾋﾜｸ?" =  R-PACK                                   
+*>     +数字(PACK整数)                                             
+     IF ALL "日本語" =  R-PACK                                   
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(PACKﾈｰｿﾋ                                          
-     IF ALL "ﾆ?ﾋﾜｸ?" =  R-PACK-DEC                               
+*>     +数字(PACK非整数）                                          
+     IF ALL "日本語" =  R-PACK-DEC                               
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(BINﾀｰｿ?)                                              
-     IF ALL "ﾆ?ﾋﾜｸ?" =  R-BIN                                    
+*>     +数字(BIN整数)                                              
+     IF ALL "日本語" =  R-BIN                                    
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(BINﾈｰｿﾋ                                           
-     IF ALL "ﾆ?ﾋﾜｸ?" =  R-BIN-DEC                                
+*>     +数字(BIN非整数）                                           
+     IF ALL "日本語" =  R-BIN-DEC                                
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(ｿ摠ﾔｽｸ｡ﾋ                                            
-     IF ALL "ﾆ?ﾋﾜｸ?" =  R-NE                                     
+*>     +数字(数字編集）                                            
+     IF ALL "日本語" =  R-NE                                     
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾆ?ﾋﾜｸ?                                                     
-     IF ALL "ﾆ?ﾋﾜｸ?" =  R-G                                      
+*>     +日本語                                                     
+     IF ALL "日本語" =  R-G                                      
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾆ?ﾋﾜｸ?ﾊﾔｽｸ                                                 
-     IF ALL "ﾆ?ﾋﾜｸ?" =  R-GE                                     
+*>     +日本語編集                                                 
+     IF ALL "日本語" =  R-GE                                     
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾆ?ﾋﾜｸ?ﾄ?ｿ?                                                 
-     IF ALL "ﾆ?ﾋﾜｸ?" =  "ﾆ?ﾋﾜｸ?"                                 
+*>     +日本語定数                                                 
+     IF ALL "日本語" =  "日本語"                                 
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ALL ﾆ?ﾋﾜｸ?ﾄ?ｿ?                                             
-     IF ALL "ﾆ?ﾋﾜｸ?" = ALL "ﾆ?ﾋﾜｸ?"                              
+*>     +ALL 日本語定数                                             
+     IF ALL "日本語" = ALL "日本語"                              
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾉｽｰﾕﾄ?ｿ?                                                   
-     IF ALL "ﾆ?ﾋﾜｸ?" =  QUOTES                                   
+*>     +表意定数                                                   
+     IF ALL "日本語" =  QUOTES                                   
         CONTINUE                                                 
      END-IF.                                                     
 *>                                                                 
 *>                                                                 
 P-170.                                                           
-*>   ﾉｽｰﾕﾄ?ｿ?                                                      
-*>     +ｽｸﾃﾄ                                                       
+*>   表意定数                                                      
+*>     +集団                                                       
      IF SPACES =  W-R-GRP                                        
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｱﾑｻ?                                                       
+*>     +英字                                                       
      IF SPACES =  R-A                                            
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｱﾑｿ?                                                     
+*>     +英数字                                                     
      IF SPACES =  R-AN                                           
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(ZONEﾀｰｿ?)                                             
+*>     +数字(ZONE整数)                                             
      IF SPACES =  R-ZONE                                         
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(ZONEﾈｰｿﾋ                                          
+*>     +数字(ZONE非整数）                                          
      IF SPACES =  R-ZONE-DEC                                     
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(PACKﾀｰｿ?)                                             
+*>     +数字(PACK整数)                                             
      IF SPACES =  R-PACK                                         
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(PACKﾈｰｿﾋ                                          
+*>     +数字(PACK非整数）                                          
      IF SPACES =  R-PACK-DEC                                     
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(BINﾀｰｿ?)                                              
+*>     +数字(BIN整数)                                              
      IF SPACES =  R-BIN                                          
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(BINﾈｰｿﾋ                                           
+*>     +数字(BIN非整数）                                           
      IF SPACES =  R-BIN-DEC                                      
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ｿ?(ｿ摠ﾔｽｸ｡ﾋ                                            
+*>     +数字(数字編集）                                            
      IF SPACES =  R-NE                                           
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾆ?ﾋﾜｸ?                                                     
+*>     +日本語                                                     
      IF SPACES =  R-G                                            
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾆ?ﾋﾜｸ?ﾊﾔｽｸ                                                 
+*>     +日本語編集                                                 
      IF SPACES =  R-GE                                           
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾆ?ﾋﾜｸ?ﾄ?ｿ?                                                 
-     IF SPACES =  "ﾆ?ﾋﾜｸ?"                                       
+*>     +日本語定数                                                 
+     IF SPACES =  "日本語"                                       
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ALL ﾆ?ﾋﾜｸ?ﾄ?ｿ?                                             
-     IF SPACES = ALL "ﾆ?ﾋﾜｸ?"                                    
+*>     +ALL 日本語定数                                             
+     IF SPACES = ALL "日本語"                                    
         CONTINUE                                                 
      END-IF.                                                     
-*>     +ﾉｽｰﾕﾄ?ｿ?                                                   
+*>     +表意定数                                                   
      IF SPACES =  QUOTES                                         
         CONTINUE                                                 
      END-IF.                                                     
 *>                                                                 
-     DISPLAY "TEST END   (EX5-1-1A)".                            
-    ACCEPT OMIT-WK.                                              
+     DISPLAY "TEST END   (IF_TEST)".                             
+    *>ACCEPT OMIT-WK.                                            
     GOBACK                                                       
     .                                                            
                                                                  
@@ -1250,8 +1250,8 @@ P-170.
 *> --E: #43 Illegal condition L-ZONE-DEC & R-NE; file = IF_TEST.cbl, line = 546, col 5
 *> --E: #43 Illegal condition L-ZONE-DEC & R-G; file = IF_TEST.cbl, line = 550, col 5
 *> --E: #43 Illegal condition L-ZONE-DEC & R-GE; file = IF_TEST.cbl, line = 554, col 5
-*> --E: #43 Illegal condition L-ZONE-DEC & "ﾆ?ﾋﾜｸ?"; file = IF_TEST.cbl, line = 558, col 5
-*> --E: #43 Illegal condition L-ZONE-DEC & "ﾆ?ﾋﾜｸ?"; file = IF_TEST.cbl, line = 562, col 5
+*> --E: #43 Illegal condition L-ZONE-DEC & "日本語"; file = IF_TEST.cbl, line = 558, col 5
+*> --E: #43 Illegal condition L-ZONE-DEC & "日本語"; file = IF_TEST.cbl, line = 562, col 5
 *> --E: #43 Illegal condition L-ZONE-DEC & '"'; file = IF_TEST.cbl, line = 566, col 5
 *> --E: #43 Illegal condition L-PACK & W-R-GRP; file = IF_TEST.cbl, line = 573, col 5
 *> --E: #43 Illegal condition L-PACK & R-A; file = IF_TEST.cbl, line = 577, col 5
@@ -1259,8 +1259,8 @@ P-170.
 *> --E: #43 Illegal condition L-PACK & R-NE; file = IF_TEST.cbl, line = 609, col 5
 *> --E: #43 Illegal condition L-PACK & R-G; file = IF_TEST.cbl, line = 613, col 5
 *> --E: #43 Illegal condition L-PACK & R-GE; file = IF_TEST.cbl, line = 617, col 5
-*> --E: #43 Illegal condition L-PACK & "ﾆ?ﾋﾜｸ?"; file = IF_TEST.cbl, line = 621, col 5
-*> --E: #43 Illegal condition L-PACK & "ﾆ?ﾋﾜｸ?"; file = IF_TEST.cbl, line = 625, col 5
+*> --E: #43 Illegal condition L-PACK & "日本語"; file = IF_TEST.cbl, line = 621, col 5
+*> --E: #43 Illegal condition L-PACK & "日本語"; file = IF_TEST.cbl, line = 625, col 5
 *> --E: #43 Illegal condition L-PACK & '"'; file = IF_TEST.cbl, line = 629, col 5
 *> --E: #43 Illegal condition L-PACK-DEC & W-R-GRP; file = IF_TEST.cbl, line = 637, col 5
 *> --E: #43 Illegal condition L-PACK-DEC & R-A; file = IF_TEST.cbl, line = 641, col 5
@@ -1268,8 +1268,8 @@ P-170.
 *> --E: #43 Illegal condition L-PACK-DEC & R-NE; file = IF_TEST.cbl, line = 673, col 5
 *> --E: #43 Illegal condition L-PACK-DEC & R-G; file = IF_TEST.cbl, line = 677, col 5
 *> --E: #43 Illegal condition L-PACK-DEC & R-GE; file = IF_TEST.cbl, line = 681, col 5
-*> --E: #43 Illegal condition L-PACK-DEC & "ﾆ?ﾋﾜｸ?"; file = IF_TEST.cbl, line = 685, col 5
-*> --E: #43 Illegal condition L-PACK-DEC & "ﾆ?ﾋﾜｸ?"; file = IF_TEST.cbl, line = 689, col 5
+*> --E: #43 Illegal condition L-PACK-DEC & "日本語"; file = IF_TEST.cbl, line = 685, col 5
+*> --E: #43 Illegal condition L-PACK-DEC & "日本語"; file = IF_TEST.cbl, line = 689, col 5
 *> --E: #43 Illegal condition L-PACK-DEC & '"'; file = IF_TEST.cbl, line = 693, col 5
 *> --E: #43 Illegal condition L-BIN & W-R-GRP; file = IF_TEST.cbl, line = 701, col 5
 *> --E: #43 Illegal condition L-BIN & R-A; file = IF_TEST.cbl, line = 705, col 5
@@ -1277,8 +1277,8 @@ P-170.
 *> --E: #43 Illegal condition L-BIN & R-NE; file = IF_TEST.cbl, line = 737, col 5
 *> --E: #43 Illegal condition L-BIN & R-G; file = IF_TEST.cbl, line = 741, col 5
 *> --E: #43 Illegal condition L-BIN & R-GE; file = IF_TEST.cbl, line = 745, col 5
-*> --E: #43 Illegal condition L-BIN & "ﾆ?ﾋﾜｸ?"; file = IF_TEST.cbl, line = 749, col 5
-*> --E: #43 Illegal condition L-BIN & "ﾆ?ﾋﾜｸ?"; file = IF_TEST.cbl, line = 753, col 5
+*> --E: #43 Illegal condition L-BIN & "日本語"; file = IF_TEST.cbl, line = 749, col 5
+*> --E: #43 Illegal condition L-BIN & "日本語"; file = IF_TEST.cbl, line = 753, col 5
 *> --E: #43 Illegal condition L-BIN & '"'; file = IF_TEST.cbl, line = 757, col 5
 *> --E: #43 Illegal condition L-BIN-DEC & W-R-GRP; file = IF_TEST.cbl, line = 765, col 5
 *> --E: #43 Illegal condition L-BIN-DEC & R-A; file = IF_TEST.cbl, line = 769, col 5
@@ -1286,8 +1286,8 @@ P-170.
 *> --E: #43 Illegal condition L-BIN-DEC & R-NE; file = IF_TEST.cbl, line = 801, col 5
 *> --E: #43 Illegal condition L-BIN-DEC & R-G; file = IF_TEST.cbl, line = 805, col 5
 *> --E: #43 Illegal condition L-BIN-DEC & R-GE; file = IF_TEST.cbl, line = 809, col 5
-*> --E: #43 Illegal condition L-BIN-DEC & "ﾆ?ﾋﾜｸ?"; file = IF_TEST.cbl, line = 813, col 5
-*> --E: #43 Illegal condition L-BIN-DEC & "ﾆ?ﾋﾜｸ?"; file = IF_TEST.cbl, line = 817, col 5
+*> --E: #43 Illegal condition L-BIN-DEC & "日本語"; file = IF_TEST.cbl, line = 813, col 5
+*> --E: #43 Illegal condition L-BIN-DEC & "日本語"; file = IF_TEST.cbl, line = 817, col 5
 *> --E: #43 Illegal condition L-BIN-DEC & '"'; file = IF_TEST.cbl, line = 821, col 5
 *> --E: #43 Illegal condition L-NE & R-ZONE-DEC; file = IF_TEST.cbl, line = 845, col 5
 *> --E: #43 Illegal condition L-NE & R-PACK; file = IF_TEST.cbl, line = 849, col 5
@@ -1304,16 +1304,16 @@ P-170.
 *> --E: #43 Illegal condition L-GE & R-PACK-DEC; file = IF_TEST.cbl, line = 980, col 5
 *> --E: #43 Illegal condition L-GE & R-BIN; file = IF_TEST.cbl, line = 984, col 5
 *> --E: #43 Illegal condition L-GE & R-BIN-DEC; file = IF_TEST.cbl, line = 988, col 5
-*> --E: #43 Illegal condition "ﾆ?ﾋﾜｸ?" & R-ZONE-DEC; file = IF_TEST.cbl, line = 1036, col 5
-*> --E: #43 Illegal condition "ﾆ?ﾋﾜｸ?" & R-PACK; file = IF_TEST.cbl, line = 1040, col 5
-*> --E: #43 Illegal condition "ﾆ?ﾋﾜｸ?" & R-PACK-DEC; file = IF_TEST.cbl, line = 1044, col 5
-*> --E: #43 Illegal condition "ﾆ?ﾋﾜｸ?" & R-BIN; file = IF_TEST.cbl, line = 1048, col 5
-*> --E: #43 Illegal condition "ﾆ?ﾋﾜｸ?" & R-BIN-DEC; file = IF_TEST.cbl, line = 1052, col 5
-*> --E: #43 Illegal condition "ﾆ?ﾋﾜｸ?" & R-ZONE-DEC; file = IF_TEST.cbl, line = 1099, col 5
-*> --E: #43 Illegal condition "ﾆ?ﾋﾜｸ?" & R-PACK; file = IF_TEST.cbl, line = 1103, col 5
-*> --E: #43 Illegal condition "ﾆ?ﾋﾜｸ?" & R-PACK-DEC; file = IF_TEST.cbl, line = 1107, col 5
-*> --E: #43 Illegal condition "ﾆ?ﾋﾜｸ?" & R-BIN; file = IF_TEST.cbl, line = 1111, col 5
-*> --E: #43 Illegal condition "ﾆ?ﾋﾜｸ?" & R-BIN-DEC; file = IF_TEST.cbl, line = 1115, col 5
+*> --E: #43 Illegal condition "日本語" & R-ZONE-DEC; file = IF_TEST.cbl, line = 1036, col 5
+*> --E: #43 Illegal condition "日本語" & R-PACK; file = IF_TEST.cbl, line = 1040, col 5
+*> --E: #43 Illegal condition "日本語" & R-PACK-DEC; file = IF_TEST.cbl, line = 1044, col 5
+*> --E: #43 Illegal condition "日本語" & R-BIN; file = IF_TEST.cbl, line = 1048, col 5
+*> --E: #43 Illegal condition "日本語" & R-BIN-DEC; file = IF_TEST.cbl, line = 1052, col 5
+*> --E: #43 Illegal condition "日本語" & R-ZONE-DEC; file = IF_TEST.cbl, line = 1099, col 5
+*> --E: #43 Illegal condition "日本語" & R-PACK; file = IF_TEST.cbl, line = 1103, col 5
+*> --E: #43 Illegal condition "日本語" & R-PACK-DEC; file = IF_TEST.cbl, line = 1107, col 5
+*> --E: #43 Illegal condition "日本語" & R-BIN; file = IF_TEST.cbl, line = 1111, col 5
+*> --E: #43 Illegal condition "日本語" & R-BIN-DEC; file = IF_TEST.cbl, line = 1115, col 5
 *> --E: #43 Illegal condition ' ' & R-ZONE-DEC; file = IF_TEST.cbl, line = 1163, col 5
 *> --E: #43 Illegal condition ' ' & R-PACK; file = IF_TEST.cbl, line = 1167, col 5
 *> --E: #43 Illegal condition ' ' & R-PACK-DEC; file = IF_TEST.cbl, line = 1171, col 5

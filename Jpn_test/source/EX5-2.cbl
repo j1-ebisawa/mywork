@@ -117,7 +117,7 @@
             END-IF.                                                     *>20110921’Ç‰Á
       *
             DISPLAY "TEST END   (EX5-2)".
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
             GOBACK
             .
 

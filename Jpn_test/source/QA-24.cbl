@@ -85,7 +85,7 @@
       *      END-IF.
       *
             DISPLAY "TEST END   (QA-24)".
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
       *
             GOBACK
             .

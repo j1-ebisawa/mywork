@@ -263,7 +263,7 @@
             END-IF.
       *
             DISPLAY "TEST END   (EX5-1-1G)".
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
             GOBACK
             .
 

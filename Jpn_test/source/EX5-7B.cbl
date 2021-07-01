@@ -56,6 +56,7 @@
       ******************************************************************
        MAIN                  SECTION.
        P-010. 
+            DISPLAY "TEST START  (EX5-7B)".
       *ケース20.エラーチェック
            MOVE "あいうえおかきくけこ" TO G-01.
            MOVE ALL "＊" TO W-INTO.
@@ -97,7 +98,8 @@
            END-UNSTRING.
       ***
            DISPLAY "EX5-7B OK".
-            ACCEPT OMIT-WK.
+            DISPLAY "TEST END    (EX5-7B)".
+            *>ACCEPT OMIT-WK.
             GOBACK
             .
 

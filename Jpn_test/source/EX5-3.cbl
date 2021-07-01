@@ -74,7 +74,7 @@
       *ケース2：一意名１が日本語項目のとき（TO VALUE指定のとき）
             MOVE "P-020-01"        TO CASE-ID.
             MOVE SPACE       TO A-02.
-            INITIALIZE A-02 NATIONAL TO VALUE.
+            INITIALIZE A-02 replacing NATIONAL TO VALUE.
             IF A-02 = "あいうえお"   DISPLAY CASE-ID "OK"
                ELSE                  DISPLAY CASE-ID "NG" "A-02=" A-02
             END-IF.
@@ -103,7 +103,7 @@
       *ケース6：一意名１が日本語編集項目のとき（TO VALUE指定のとき）
             MOVE "P-060-01"        TO CASE-ID.
             MOVE SPACE       TO A-06.
-            INITIALIZE A-06 NATIONAL-EDITED TO VALUE.
+            INITIALIZE A-06 replacing NATIONAL-EDITED TO VALUE.
             IF A-06 = "１／２／３"
                                      DISPLAY CASE-ID "OK"
                ELSE                  DISPLAY CASE-ID "NG" "A-06=" A-06
@@ -169,7 +169,7 @@
             END-IF.
       *
             DISPLAY "TEST END   (EX5-3)".
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
             GOBACK
             .
 

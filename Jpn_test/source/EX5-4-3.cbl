@@ -30,11 +30,14 @@
       ******************************************************************
        MAIN                  SECTION.
       * 
+            DISPLAY "TEST START (EX5-4-3)".
             MOVE "5-4-3"          TO CASE-ID.
             MOVE "‚ ‚¢‚¤‚¦‚¨"     TO G-01.
-            INSPECT G-01 REPLACING ALL "‚ " BY "A".            
+            INSPECT G-01 REPLACING ALL "‚ " BY "A".    
+            display CASE-ID " NG:" G-01        .
       *
-            ACCEPT OMIT-WK.
+            DISPLAY "TEST END   (EX5-4-3)".
+            *>ACCEPT OMIT-WK.
             GOBACK
             .
       

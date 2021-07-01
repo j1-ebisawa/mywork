@@ -141,7 +141,7 @@
             END-IF.
       *
             DISPLAY "TEST END    (EX5-1-2B)".
-            ACCEPT OMIT-WK.
+            *>ACCEPT OMIT-WK.
             GOBACK
             .
 
