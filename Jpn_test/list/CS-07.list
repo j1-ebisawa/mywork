@@ -1,7 +1,7 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
 *>source file name:  C:\ISTEST\Git\Jpn_test\source\CS-07.cbl
-*>date generated  :  Wed Jun 30 14:13:24 JST 2021
+*>date generated  :  Sun Jul 04 11:51:57 JST 2021
 *>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/ISTEST/Git/Jpn_test/output -jj -eo=C:/ISTEST/Git/Jpn_test/errs -d -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks
 *>*****************************************************************
 *>    テストケース：CS-07                                          
@@ -9,7 +9,7 @@
 *>    処理概要　　：通貨記号「￥」および、CURRENCY-SIGN句により    
 *>                  「￥」が編集記号として機能するかチェックする。 
 *>  -------------------------------------------------------------- 
-*>   テストケース:CURRENCY SIGNに「￥」指定しても「$」が使える。   
+*>   テストケース:CURRENCY SIGNに「￥」指定すると「$」が使えない。 
 *>*****************************************************************
 IDENTIFICATION        DIVISION.                                  
 *>*****************************************************************
@@ -23,8 +23,8 @@ ENVIRONMENT           DIVISION.
 CONFIGURATION         SECTION.                                   
 SOURCE-COMPUTER. PC.                                        
 OBJECT-COMPUTER. PC.                                        
-*> SPECIAL-NAMES.                                                  
-*>        CURRENCY SIGN IS "\".                                    
+SPECIAL-NAMES.                                                   
+       CURRENCY SIGN IS "\".                                     
 *>*****************************************************************
 DATA                  DIVISION.                                  
 *>*****************************************************************
@@ -198,3 +198,19 @@ P-010.
      GOBACK                                                      
      .                                                           
                                                                  
+*> --S: #32 Illegal picture: $; file = CS-07.cbl, line = 37, col 7
+*> --S: #27 Invalid level number 05; file = CS-07.cbl, line = 39, col 4
+*> --S: #32 Illegal picture: $; file = CS-07.cbl, line = 41, col 7
+*> --S: #27 Invalid level number 05; file = CS-07.cbl, line = 43, col 4
+*> --S: #32 Illegal picture: $; file = CS-07.cbl, line = 45, col 7
+*> --S: #27 Invalid level number 05; file = CS-07.cbl, line = 47, col 4
+*> --S: #32 Illegal picture: $; file = CS-07.cbl, line = 49, col 7
+*> --S: #27 Invalid level number 05; file = CS-07.cbl, line = 51, col 4
+*> --S: #32 Illegal picture: $; file = CS-07.cbl, line = 54, col 7
+*> --S: #27 Invalid level number 05; file = CS-07.cbl, line = 56, col 4
+*> --S: #32 Illegal picture: $; file = CS-07.cbl, line = 58, col 7
+*> --S: #27 Invalid level number 05; file = CS-07.cbl, line = 60, col 4
+*> --S: #32 Illegal picture: $; file = CS-07.cbl, line = 62, col 7
+*> --S: #27 Invalid level number 05; file = CS-07.cbl, line = 64, col 4
+*> --S: #32 Illegal picture: $; file = CS-07.cbl, line = 66, col 7
+*> --S: #27 Invalid level number 05; file = CS-07.cbl, line = 68, col 4

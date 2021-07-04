@@ -1,7 +1,7 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
 *>source file name:  C:\ISTEST\Git\Jpn_test\source\CS-03.cbl
-*>date generated  :  Wed Jun 30 14:13:24 JST 2021
+*>date generated  :  Sun Jul 04 11:51:57 JST 2021
 *>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/ISTEST/Git/Jpn_test/output -jj -eo=C:/ISTEST/Git/Jpn_test/errs -d -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks
 *>*****************************************************************
 *>    テストケース：CS-03                                          
@@ -10,10 +10,7 @@
 *>                  CURRENCY-SIGN句が使えるかチェックする。        
 *>  -------------------------------------------------------------- 
 *>   テストケース:CURRENCY SIGN句の指定なしで、                    
-*>                MF =「$」はエラー。                              
-*>                ACU=PIC文字列に現れた「\」または「$」が指摘された
-*>                    解釈されて、それのみが以降使える。           
-*>                    ただし、両方は使えない。                     
+*>               「\」と「$」両方は使えるか。                      
 *>*****************************************************************
 IDENTIFICATION        DIVISION.                                  
 *>*****************************************************************
@@ -45,8 +42,7 @@ WORKING-STORAGE       SECTION.
 01  NEDIT-01X.                                                   
     05 NEDIT-01   PIC $$$,$$9.                                   
 01  NEDIT-02X.                                                   
-*>>  05  NEDIT-02  PIC \\\,\\9.  *>#002 C-SIGN only 1 character    
-    05  NEDIT-02  PIC $$$,$$9.                                   
+    05  NEDIT-02  PIC \\\,\\9. *>#002 C-SIGN only 1 character   
 01  WK-I          PIC S9(3).                                     
 *>*****************************************************************
 PROCEDURE             DIVISION.                                  
@@ -110,3 +106,4 @@ P-010.
      GOBACK                                                      
      .                                                           
                                                                  
+*> --S: #32 Illegal picture: \; file = CS-03.cbl, line = 40, col 8

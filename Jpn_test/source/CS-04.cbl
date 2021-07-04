@@ -19,7 +19,7 @@
        SOURCE-COMPUTER.      PC.
        OBJECT-COMPUTER.      PC.
         SPECIAL-NAMES.
-              CURRENCY SIGN IS "\".
+              CURRENCY SIGN IS "$".
       ******************************************************************
        DATA                  DIVISION.
       ******************************************************************
@@ -33,11 +33,10 @@
        01  NUM-02        PIC S9(5).
        01  NUM-03        PIC S9(5).
       *
+       01  NEDIT-02X.
+           05 NEDIT-02   PIC $$$,$$9.   *>#002 C-SIGN only 1 character
        01  NEDIT-01X.
            05 NEDIT-01   PIC \\\,\\9.
-       01  NEDIT-02X.
-      *>   05 NEDIT-02  PIC $$$,$$9.   *>#002 C-SIGN only 1 character
-           05 NEDIT-02  PIC \\\,\\9.   *>#002 C-SIGN only 1 character
        01  WK-I          PIC S9(3).
       ******************************************************************
        PROCEDURE             DIVISION.
