@@ -34,11 +34,10 @@
        01  NUM-03        PIC S9(5).
       *
        01  NEDIT-01X.
-      *>   05 NEDIT-01   PIC \\\,\\9.   *>#001 Default \
-           05 NEDIT-01   PIC $$$,$$9.   *>#001 Default \
+           05 NEDIT-01   PIC \\\,\\9.   *>#001 Default \
+       01  XXX           PIC XX.
        01  NEDIT-02X.
-      *>   05  NEDIT-02  PIC \\\,\\9.   *>#001 Default \
-           05  NEDIT-02  PIC $$$,$$9.   *>#001 Default \
+           05  NEDIT-02  PIC \\\,\\9.   *>#001 Default \
        01  WK-I          PIC S9(3).
       ******************************************************************
        PROCEDURE             DIVISION.

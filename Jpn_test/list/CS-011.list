@@ -1,7 +1,7 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
 *>source file name:  C:\ISTEST\Git\Jpn_test\source\CS-011.cbl
-*>date generated  :  Sun Jul 04 11:54:02 JST 2021
+*>date generated  :  Sun Jul 04 12:10:03 JST 2021
 *>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/ISTEST/Git/Jpn_test/output -jj -eo=C:/ISTEST/Git/Jpn_test/errs -d -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks
 *>*****************************************************************
 *>    テストケース：CS-011                                         
@@ -39,11 +39,10 @@ WORKING-STORAGE       SECTION.
 01  NUM-03        PIC S9(5).                                     
 *>                                                                 
 01  NEDIT-01X.                                                   
-*>>   05 NEDIT-01   PIC \\\,\\9.   *>#001 Default \                
-    05 NEDIT-01   PIC $$$,$$9. *>#001 Default \                
+    05 NEDIT-01   PIC \\\,\\9. *>#001 Default \                
+01  XXX           PIC XX.                                        
 01  NEDIT-02X.                                                   
-*>>   05  NEDIT-02  PIC \\\,\\9.   *>#001 Default \                
-    05  NEDIT-02  PIC $$$,$$9. *>#001 Default \                
+    05  NEDIT-02  PIC \\\,\\9. *>#001 Default \                
 01  WK-I          PIC S9(3).                                     
 *>*****************************************************************
 PROCEDURE             DIVISION.                                  
@@ -82,3 +81,5 @@ P-010.
      GOBACK                                                      
      .                                                           
                                                                  
+*> --S: #32 Illegal picture: \; file = CS-011.cbl, line = 37, col 7
+*> --S: #32 Illegal picture: \; file = CS-011.cbl, line = 40, col 8
