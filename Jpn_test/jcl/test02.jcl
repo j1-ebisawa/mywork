@@ -6,7 +6,7 @@
 \EX3-4
 \EX3-5A
 \EX3-5B
-\EX3-5C
+##\EX3-5C
 @display TEST End
 ##@pause
 @end

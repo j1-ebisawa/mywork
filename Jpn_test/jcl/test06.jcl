@@ -2,7 +2,7 @@
 \EX5-5A
 \EX5-5B
 \EX5-5C
-##\EX5-5D
+\EX5-5D
 ##\EX5-5E
 ##\EX5-5F
 \EX5-6A
