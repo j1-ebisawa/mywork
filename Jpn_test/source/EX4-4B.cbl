@@ -26,7 +26,7 @@
       ******************************************************************
        78  C-01      VALUE "‚ ‚¢‚¤".
        78  C-02      VALUE "‚P‚Q‚R".
-       78  C-03      VALUE "‚P^‚Q^‚R".
+       78  C-03      VALUE "‚P‚Q‚R".
        78  C-04      VALUE "‚`‚a‚b123".
        01  OMIT-WK            PIC X.
        01  CASE-ID            PIC X(10).
@@ -42,13 +42,13 @@
        01  G-09      PIC NNN    VALUE "ABC".
        
        01  GE-01      PIC N/N/N    VALUE C-03.
-       01  GE-02      PIC N/N/N    VALUE "‚©^‚«^‚­".
-       01  GE-03      PIC N/N/N    VALUE "‚³^‚µ^".
+       01  GE-02      PIC N/N/N    VALUE "‚©‚«‚­".
+       01  GE-03      PIC N/N/N    VALUE "‚³‚µ".
        01  GE-05      PIC N/N/N    VALUE SPACE.
        01  GE-06      PIC N/N/N    VALUE ALL "–".
        01  GE-07      PIC N(5)/N(5)  VALUE ALL "‚P‚Q‚R".
       *01  GE-08      PIC N/N/N    VALUE "‚P^‚Q^‚R^‚S^‚T".    *>20111019
-       01  GE-08      PIC N/N/N    VALUE "‚P^‚Q^‚R".
+       01  GE-08      PIC N/N/N    VALUE "‚P‚Q‚R".
        01  GE-09      PIC N/N/N    VALUE "ABC".
        
        01  GRP-DAT-1    VALUE "‚ ‚¢‚¤‚P^‚Q^‚Rabcdef1234567890".
@@ -130,7 +130,7 @@
             MOVE "P-030-02"             TO CASE-ID.
             IF G-09 = "‚`‚a‚b"
                                         DISPLAY CASE-ID "OK"
-               ELSE                     DISPLAY CASE-ID "NG"
+               ELSE                     DISPLAY CASE-ID "NG:" G-09
             END-IF.
        P-040. 
       *  ƒP[ƒX‚S.“ú–{Œê•ÒW€–Ú‚Ö‚Ì‰Šú’l(³íŒnj
@@ -157,21 +157,21 @@
             END-IF.
       *
             MOVE "P-040-05"             TO CASE-ID.
-            IF GE-05 = "@@@@@"
+            IF GE-05 = "@^@^@"
                                         DISPLAY CASE-ID "OK"
                ELSE                     DISPLAY CASE-ID "NG"
                                         display GE-05
             END-IF.
       *
             MOVE "P-040-06"             TO CASE-ID.
-            IF GE-06 = "–––––"                          *>20111019
+            IF GE-06 = "–^–^–"                          *>20111019
                                         DISPLAY CASE-ID "OK"
                ELSE                     DISPLAY CASE-ID "NG"
                                         display GE-06
             END-IF.
       *
             MOVE "P-040-07"             TO CASE-ID.
-            IF GE-07 = "‚P‚Q‚R‚P‚Q‚R‚P‚Q‚R‚P‚Q"              *>20111019
+            IF GE-07 = "‚P‚Q‚R‚P‚Q^‚R‚P‚Q‚R‚P"              *>20111019
                                         DISPLAY CASE-ID "OK"
                ELSE                     DISPLAY CASE-ID "NG"
                                         display GE-07
