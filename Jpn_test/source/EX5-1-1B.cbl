@@ -125,23 +125,23 @@
        P-030. 
       *  ケース3.（左辺）日本語＋（右辺）英字・数字
       *           コンパイルエラーとなるか
-      *     MOVE "P-030-01"        TO CASE-ID.
-      *     IF L-G = R-A             DISPLAY CASE-ID "NG"
-      *        ELSE                  DISPLAY CASE-ID "NG"
-      *     END-IF.
+           MOVE "P-030-01"        TO CASE-ID.
+           IF L-G = R-A             DISPLAY CASE-ID "NG"
+              ELSE                  DISPLAY CASE-ID "NG"
+           END-IF.
       *
-      *     MOVE "P-030-02"        TO CASE-ID.
-      *     IF L-G > R-ZONE          DISPLAY CASE-ID "NG"
-      *        ELSE                  DISPLAY CASE-ID "NG"
-      *     END-IF.
+           MOVE "P-030-02"        TO CASE-ID.
+           IF L-G > R-ZONE          DISPLAY CASE-ID "NG"
+              ELSE                  DISPLAY CASE-ID "NG"
+           END-IF.
       *
-      *     MOVE "P-030-03"        TO CASE-ID.
-      *     IF L-G > 123             DISPLAY CASE-ID "NG"
-      *        ELSE                  DISPLAY CASE-ID "NG"
-      *     END-IF.
+           MOVE "P-030-03"        TO CASE-ID.
+           IF L-G > 123             DISPLAY CASE-ID "NG"
+              ELSE                  DISPLAY CASE-ID "NG"
+           END-IF.
       *
       *     MOVE "P-030-04"        TO CASE-ID.
-      *     IF L-G > 123.45          DISPLAY CASE-ID "NG"
+      *     IF L-G > 123.45          DISPLAY CASE-ID "NG"  *>エラーになった
       *        ELSE                  DISPLAY CASE-ID "NG"
       *     END-IF.
       *
@@ -299,23 +299,23 @@
        P-110. 
       *  ケース11.（左辺）日本語編集＋（右辺）英字・数字
       *           コンパイルエラーとなるか
-      *     MOVE "P-110-01"        TO CASE-ID.
-      *     IF L-GE = R-A            DISPLAY CASE-ID "NG"
-      *        ELSE                  DISPLAY CASE-ID "NG"
-      *     END-IF.
+           MOVE "P-110-01"        TO CASE-ID.
+           IF L-GE = R-A            DISPLAY CASE-ID "NG"
+              ELSE                  DISPLAY CASE-ID "NG"
+           END-IF.
       *
-      *     MOVE "P-110-02"        TO CASE-ID.
-      *     IF L-GE > R-ZONE         DISPLAY CASE-ID "NG"
-      *        ELSE                  DISPLAY CASE-ID "NG"
-      *     END-IF.
+           MOVE "P-110-02"        TO CASE-ID.
+           IF L-GE > R-ZONE         DISPLAY CASE-ID "NG"
+              ELSE                  DISPLAY CASE-ID "NG"
+           END-IF.
       *
-      *     MOVE "P-110-03"        TO CASE-ID.
-      *     IF L-GE = 123            DISPLAY CASE-ID "NG"
-      *        ELSE                  DISPLAY CASE-ID "NG"
-      *     END-IF.
+           MOVE "P-110-03"        TO CASE-ID.
+           IF L-GE = 123            DISPLAY CASE-ID "NG"
+              ELSE                  DISPLAY CASE-ID "NG"
+           END-IF.
       *
       *     MOVE "P-110-04"        TO CASE-ID.
-      *     IF L-GE > 123.45         DISPLAY CASE-ID "NG"
+      *     IF L-GE > 123.45         DISPLAY CASE-ID "NG"  *>エラーになった
       *        ELSE                  DISPLAY CASE-ID "NG"
       *     END-IF.
       *

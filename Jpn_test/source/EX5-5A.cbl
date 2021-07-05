@@ -153,25 +153,30 @@
        P-030. 
       *  ケース3.日本語→英字・数字・数字編集
       *           コンパイルエラーとなるか
-      *      MOVE "あいうえおかきくけこ" TO L-G.
+            MOVE "あいうえおかきくけこ" TO L-G.
       *
-      *     MOVE "P-030-01"        TO CASE-ID.
-      *     MOVE L-G-5 TO R-A.
+           MOVE "P-030-01"        TO CASE-ID.
+           MOVE L-G-5 TO R-A.
+           DISPLAY CASE-ID "NG"
       *
-      *     MOVE "P-030-02"        TO CASE-ID.
-      *     MOVE L-G-5 TO R-ZONE.
-      *     MOVE L-G-5 TO R-ZONE-DEC.
+           MOVE "P-030-02"        TO CASE-ID.
+           MOVE L-G-5 TO R-ZONE.
+           MOVE L-G-5 TO R-ZONE-DEC.
+           DISPLAY CASE-ID "NG"
       *
-      *     MOVE "P-030-03"        TO CASE-ID.
-      *     MOVE L-G-5 TO R-PACK.
-      *     MOVE L-G-5 TO R-PACK-DEC.
+           MOVE "P-030-03"        TO CASE-ID.
+           MOVE L-G-5 TO R-PACK.
+           MOVE L-G-5 TO R-PACK-DEC.
+           DISPLAY CASE-ID "NG"
       *
-      *     MOVE "P-030-04"        TO CASE-ID.
-      *     MOVE L-G-5 TO R-BIN.
-      *     MOVE L-G-5 TO R-BIN-DEC.
+           MOVE "P-030-04"        TO CASE-ID.
+           MOVE L-G-5 TO R-BIN.
+           MOVE L-G-5 TO R-BIN-DEC.
+           DISPLAY CASE-ID "NG"
       *
-      *     MOVE "P-030-05"        TO CASE-ID.
-      *     MOVE L-G-5 TO R-NE.
+           MOVE "P-030-05"        TO CASE-ID.
+           MOVE L-G-5 TO R-NE.
+           DISPLAY CASE-ID "NG".
       *
        P-040. 
       *  ケース4.日本語→日本語
@@ -311,24 +316,25 @@
        P-080. 
       *  ケース8.日本語編集→英字・数字・数字編集
       *           コンパイルエラーとなるか
-      *     MOVE "あいう"            TO L-GE.
-      *     MOVE "P-080-01"        TO CASE-ID.
-      *     MOVE L-GE TO R-A.
+           MOVE "あいう"            TO L-GE.
+           MOVE "P-080-01"        TO CASE-ID.
+           MOVE L-GE TO R-A.
+           DISPLAY CASE-ID "NG".
       *
       *     MOVE "P-080-02"        TO CASE-ID.
-      *     MOVE L-GE TO R-ZONE.
-      *     MOVE L-GE TO R-ZONE-DEC.
+      *     MOVE L-GE TO R-ZONE.            *>エラー確認した
+      *     MOVE L-GE TO R-ZONE-DEC.        *>エラー確認した
       *
       *     MOVE "P-080-03"        TO CASE-ID.
-      *     MOVE L-GE TO R-PACK.
-      *     MOVE L-GE TO R-PACK-DEC.
+      *     MOVE L-GE TO R-PACK.            *>エラー確認した
+      *     MOVE L-GE TO R-PACK-DEC.        *>エラー確認した
       *
       *     MOVE "P-080-04"        TO CASE-ID.
-      *     MOVE L-GE TO R-BIN.
-      *     MOVE L-GE TO R-BIN-DEC.
+      *     MOVE L-GE TO R-BIN.              *>エラー確認した
+      *     MOVE L-GE TO R-BIN-DEC.          *>エラー確認した
       *
       *     MOVE "P-080-05"        TO CASE-ID.
-      *     MOVE L-GE TO R-NE.
+      *     MOVE L-GE TO R-NE.               *>エラー確認した
        P-090. 
       *  ケース09.日本語編集→日本語
             MOVE "あいう"            TO L-GE.

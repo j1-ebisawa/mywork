@@ -190,9 +190,11 @@
                           ALPHANUMERIC        BY "X"
                           NUMERIC             BY 123
                           ALPHANUMERIC-EDITED BY "E"
-                          NUMERIC-EDITED      BY 999
-                          NATIONAL            BY "Ç†"
-                          NATIONAL-EDITED     BY "Ç©".
+                          NUMERIC-EDITED      BY 999.
+                          *>NATIONAL            BY "Ç†"
+                          *>NATIONAL-EDITED     BY "Ç©".
+            MOVE "Ç†" TO L-G-10 of W-L-GRP.
+            MOVE "Ç©" TO L-GE   of W-L-GRP.
       *
             MOVE CORR W-L-GRP TO W-CORR-GRP.
       *
@@ -273,9 +275,10 @@
             END-IF.
       *
             MOVE "P-330-12"        TO CASE-ID.
-            IF  L-GE          OF W-CORR-GRP = "Ç©Å^Å^Å^Å@"
+            IF  L-GE          OF W-L-GRP =
+                L-GE          OF W-CORR-GRP
                               DISPLAY CASE-ID "OK"
-               ELSE           DISPLAY CASE-ID "NG"
+               ELSE           DISPLAY CASE-ID "NG:" L-GE OF W-CORR-GRP
             END-IF.
       *
              DISPLAY "TEST END   (EX5-5D)".

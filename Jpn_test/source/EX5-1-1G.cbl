@@ -99,10 +99,10 @@
                ELSE                  DISPLAY CASE-ID "NG"
             END-IF.
       *
-            MOVE "P-030-04"        TO CASE-ID.
-            IF L-G > 123.45          DISPLAY CASE-ID "NG"
-               ELSE                  DISPLAY CASE-ID "NG"
-            END-IF.
+      *      MOVE "P-030-04"        TO CASE-ID.
+      *      IF L-G > 123.45          DISPLAY CASE-ID "NG"  *>エラーとなった
+      *         ELSE                  DISPLAY CASE-ID "NG"
+      *      END-IF.
       *
        P-110. 
       *  ケース11.（左辺）日本語編集＋（右辺）英字・数字
@@ -122,10 +122,10 @@
                ELSE                  DISPLAY CASE-ID "NG"
             END-IF.
       *
-            MOVE "P-110-04"        TO CASE-ID.
-            IF L-GE > 123.45         DISPLAY CASE-ID "NG"
-               ELSE                  DISPLAY CASE-ID "NG"
-            END-IF.
+      *      MOVE "P-110-04"        TO CASE-ID.
+      *      IF L-GE > 123.45         DISPLAY CASE-ID "NG"  *>エラーとなった
+      *         ELSE                  DISPLAY CASE-ID "NG"
+      *      END-IF.
       *
        P-019. 
       *  ケース19.（左辺）日本語定数＋（右辺）英字・数字
@@ -181,10 +181,10 @@
                ELSE                  DISPLAY CASE-ID "NG"
             END-IF.
       *
-            MOVE "P-410-05"        TO CASE-ID.
-            IF 123.45 < R-G          DISPLAY CASE-ID "NG"
-               ELSE                  DISPLAY CASE-ID "NG"
-            END-IF.
+      *      MOVE "P-410-05"        TO CASE-ID.
+      *      IF 123.45 < R-G          DISPLAY CASE-ID "NG"  *>エラーとなった
+      *         ELSE                  DISPLAY CASE-ID "NG"
+      *      END-IF.
       *
        P-420. 
       *  ケース42.（左辺）英字・数字＋（右辺）日本語編集
@@ -213,10 +213,10 @@
                ELSE                  DISPLAY CASE-ID "NG"
             END-IF.
       *
-            MOVE "P-420-04"        TO CASE-ID.
-            IF 123.45 < R-GE         DISPLAY CASE-ID "NG"
-               ELSE                  DISPLAY CASE-ID "NG"
-            END-IF.
+      *      MOVE "P-420-04"        TO CASE-ID.
+      *      IF 123.45 < R-GE         DISPLAY CASE-ID "NG"  *>エラーとなった
+      *         ELSE                  DISPLAY CASE-ID "NG"
+      *      END-IF.
       *
        P-430. 
       *  ケース43.（左辺）英字・数字＋（右辺）日本語定数

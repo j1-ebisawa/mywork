@@ -255,32 +255,32 @@
        P-410. 
       *  ケース41.（左辺）英字・数字＋（右辺）日本語
       *  コンパイルエラー
-      *     MOVE "ABCDE"             TO L-A.
-      *     MOVE 12345               TO L-ZONE.
-      *     MOVE "あいうえお"        TO R-G.
+           MOVE "ABCDE"             TO L-A.
+           MOVE 12345               TO L-ZONE.
+           MOVE "あいうえお"        TO R-G.
       *
-      *     MOVE "P-410-01"        TO CASE-ID.
-      *     IF L-A = R-G             DISPLAY CASE-ID "NG"
-      *        ELSE                  DISPLAY CASE-ID "NG"
-      *     END-IF.
+           MOVE "P-410-01"        TO CASE-ID.
+           IF L-A = R-G             DISPLAY CASE-ID "NG"
+              ELSE                  DISPLAY CASE-ID "NG"
+           END-IF.
       *
-      *     MOVE "P-410-02"        TO CASE-ID.
-      *     IF L-ZONE > R-G          DISPLAY CASE-ID "NG"
-      *        ELSE                  DISPLAY CASE-ID "NG"
-      *     END-IF.
+           MOVE "P-410-02"        TO CASE-ID.
+           IF L-ZONE > R-G          DISPLAY CASE-ID "NG"
+              ELSE                  DISPLAY CASE-ID "NG"
+           END-IF.
       *
-      *     MOVE "P-410-03"        TO CASE-ID.
-      *     IF L-PACK < R-G          DISPLAY CASE-ID "NG"
-      *        ELSE                  DISPLAY CASE-ID "NG"
-      *     END-IF.
+           MOVE "P-410-03"        TO CASE-ID.
+           IF L-PACK < R-G          DISPLAY CASE-ID "NG"
+              ELSE                  DISPLAY CASE-ID "NG"
+           END-IF.
       *
-      *     MOVE "P-410-04"        TO CASE-ID.
-      *     IF 12345  < R-G          DISPLAY CASE-ID "NG"
-      *        ELSE                  DISPLAY CASE-ID "NG"
-      *     END-IF.
+           MOVE "P-410-04"        TO CASE-ID.
+           IF 12345  < R-G          DISPLAY CASE-ID "NG"
+              ELSE                  DISPLAY CASE-ID "NG"
+           END-IF.
       *
       *     MOVE "P-410-05"        TO CASE-ID.
-      *     IF 123.45 < R-G          DISPLAY CASE-ID "NG"
+      *     IF 123.45 < R-G          DISPLAY CASE-ID "NG"  *>エラーになった
       *        ELSE                  DISPLAY CASE-ID "NG"
       *     END-IF.
       *

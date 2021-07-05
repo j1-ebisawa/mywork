@@ -97,6 +97,7 @@
            END-STRING.            
            DISPLAY W-INTO-X.
       ****
+           DISPLAY "NG?".
             DISPLAY "TEST END   (EX5-6B-3)".
            
            *>ACCEPT OMIT-WK.

@@ -1,7 +1,7 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
 *>source file name:  C:\ISTEST\Git\Jpn_test\source\EX5-1-1C.cbl
-*>date generated  :  Wed Jun 30 14:13:25 JST 2021
+*>date generated  :  Mon Jul 05 08:14:56 JST 2021
 *>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/ISTEST/Git/Jpn_test/output -jj -eo=C:/ISTEST/Git/Jpn_test/errs -d -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks
 *>*****************************************************************
 *>    テストケース：5-1-1C                                         
@@ -131,15 +131,15 @@ P-018.
 P-019.                                                           
 *>  ケース19.（左辺）日本語定数＋（右辺）英字・数字                
 *>           コンパイルエラーとなるか                              
-*>     MOVE "P-190-01"        TO CASE-ID.                          
-*>     IF "あいうえお" = R-A    DISPLAY CASE-ID "NG"               
-*>        ELSE                  DISPLAY CASE-ID "NG"               
-*>     END-IF.                                                     
+    MOVE "P-190-01"        TO CASE-ID.                           
+    IF "あいうえお" = R-A    DISPLAY CASE-ID "NG"                
+       ELSE                  DISPLAY CASE-ID "NG"                
+    END-IF.                                                      
 *>                                                                 
-*>     MOVE "P-190-02"        TO CASE-ID.                          
-*>     IF "あいうえお" > R-ZONE DISPLAY CASE-ID "NG"               
-*>        ELSE                  DISPLAY CASE-ID "NG"               
-*>     END-IF.                                                     
+    MOVE "P-190-02"        TO CASE-ID.                           
+    IF "あいうえお" > R-ZONE DISPLAY CASE-ID "NG"                
+       ELSE                  DISPLAY CASE-ID "NG"                
+    END-IF.                                                      
 *>                                                                 
 P-200.                                                           
 *>  ケース4.（左辺）日本語定数＋（右辺）日本語                     
@@ -290,15 +290,15 @@ P-260.
 P-270.                                                           
 *>  ケース27.（左辺）ALL 日本語定数＋（右辺）英字・数字            
 *>           コンパイルエラーとなるか                              
-*>     MOVE "P-270-01"        TO CASE-ID.                          
-*>     IF ALL "あいう" = R-A    DISPLAY CASE-ID "NG"               
-*>        ELSE                  DISPLAY CASE-ID "NG"               
-*>     END-IF.                                                     
+    MOVE "P-270-01"        TO CASE-ID.                           
+    IF ALL "あいう" = R-A    DISPLAY CASE-ID "NG"                
+       ELSE                  DISPLAY CASE-ID "NG"                
+    END-IF.                                                      
 *>                                                                 
-*>     MOVE "P-270-02"        TO CASE-ID.                          
-*>     IF ALL "あいう" > R-ZONE DISPLAY CASE-ID "NG"               
-*>        ELSE                  DISPLAY CASE-ID "NG"               
-*>     END-IF.                                                     
+    MOVE "P-270-02"        TO CASE-ID.                           
+    IF ALL "あいう" > R-ZONE DISPLAY CASE-ID "NG"                
+       ELSE                  DISPLAY CASE-ID "NG"                
+    END-IF.                                                      
 *>                                                                 
 P-280.                                                           
 *>  ケース28.（左辺）ALL 日本語定数＋（右辺）日本語                

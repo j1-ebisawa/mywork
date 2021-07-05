@@ -147,15 +147,17 @@
        P-130. 
       *  ケース13.日本語定数→英字・数字・数字編集
       *           コンパイルエラーとなるか
-      *     MOVE "P-130-01"        TO CASE-ID.
-      *     MOVE "あいうえお" TO R-A.
-      *     MOVE "あいうえお" TO R-ZONE.
-      *     MOVE "あいうえお" TO R-ZONE-DEC.
-      *     MOVE "あいうえお" TO R-PACK.
-      *     MOVE "あいうえお" TO R-PACK-DEC.
-      *     MOVE "あいうえお" TO R-BIN.
-      *     MOVE "あいうえお" TO R-BIN-DEC.
-      *     MOVE "あいうえお" TO R-NE.
+           MOVE "P-130-01"        TO CASE-ID.
+           MOVE "あいうえお" TO R-A.
+           MOVE "あいうえお" TO R-ZONE.
+           MOVE "あいうえお" TO R-ZONE-DEC.
+           MOVE "あいうえお" TO R-PACK.
+           MOVE "あいうえお" TO R-PACK-DEC.
+           MOVE "あいうえお" TO R-BIN.
+           MOVE "あいうえお" TO R-BIN-DEC.
+           MOVE "あいうえお" TO R-NE.
+           DISPLAY CASE-ID "NG".
+           
       *
        P-140. 
       *  ケース14.日本語定数→日本語
@@ -300,15 +302,16 @@
        P-180. 
       *  ケース18.ALL 日本語定数→英字・数字・数字編集
       *           コンパイルエラーとなるか
-      *     MOVE "P-180-01"        TO CASE-ID.
-      *     MOVE ALL "あいうえお" TO R-A.
-      *     MOVE ALL "あいうえお" TO R-ZONE.
-      *     MOVE ALL "あいうえお" TO R-ZONE-DEC.
-      *     MOVE ALL "あいうえお" TO R-PACK.
-      *     MOVE ALL "あいうえお" TO R-PACK-DEC.
-      *     MOVE ALL "あいうえお" TO R-BIN.
-      *     MOVE ALL "あいうえお" TO R-BIN-DEC.
-      *     MOVE ALL "あいうえお" TO R-NE.
+           MOVE "P-180-01"        TO CASE-ID.
+           MOVE ALL "あいうえお" TO R-A.
+           MOVE ALL "あいうえお" TO R-ZONE.
+           MOVE ALL "あいうえお" TO R-ZONE-DEC.
+           MOVE ALL "あいうえお" TO R-PACK.
+           MOVE ALL "あいうえお" TO R-PACK-DEC.
+           MOVE ALL "あいうえお" TO R-BIN.
+           MOVE ALL "あいうえお" TO R-BIN-DEC.
+           MOVE ALL "あいうえお" TO R-NE.
+           DISPLAY CASE-ID "NG".
       *
        P-190. 
       *  ケース19.ALL 日本語定数→日本語

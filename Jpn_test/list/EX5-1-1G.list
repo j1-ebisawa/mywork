@@ -1,7 +1,7 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
 *>source file name:  C:\ISTEST\Git\Jpn_test\source\EX5-1-1G.cbl
-*>date generated  :  Sun Jul 04 14:45:27 JST 2021
+*>date generated  :  Mon Jul 05 08:25:44 JST 2021
 *>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/ISTEST/Git/Jpn_test/output -jj -eo=C:/ISTEST/Git/Jpn_test/errs -d -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks
 *>*****************************************************************
 *>    テストケース：5-1-1G                                         
@@ -104,10 +104,10 @@ P-030.
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
 *>                                                                 
-     MOVE "P-030-04"        TO CASE-ID.                          
-     IF L-G > 123.45          DISPLAY CASE-ID "NG"               
-        ELSE                  DISPLAY CASE-ID "NG"               
-     END-IF.                                                     
+*>      MOVE "P-030-04"        TO CASE-ID.                         
+*>      IF L-G > 123.45          DISPLAY CASE-ID "NG"  *>エラーとな
+*>         ELSE                  DISPLAY CASE-ID "NG"              
+*>      END-IF.                                                    
 *>                                                                 
 P-110.                                                           
 *>  ケース11.（左辺）日本語編集＋（右辺）英字・数字                
@@ -127,10 +127,10 @@ P-110.
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
 *>                                                                 
-     MOVE "P-110-04"        TO CASE-ID.                          
-     IF L-GE > 123.45         DISPLAY CASE-ID "NG"               
-        ELSE                  DISPLAY CASE-ID "NG"               
-     END-IF.                                                     
+*>      MOVE "P-110-04"        TO CASE-ID.                         
+*>      IF L-GE > 123.45         DISPLAY CASE-ID "NG"  *>エラーとな
+*>         ELSE                  DISPLAY CASE-ID "NG"              
+*>      END-IF.                                                    
 *>                                                                 
 P-019.                                                           
 *>  ケース19.（左辺）日本語定数＋（右辺）英字・数字                
@@ -186,10 +186,10 @@ P-410.
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
 *>                                                                 
-     MOVE "P-410-05"        TO CASE-ID.                          
-     IF 123.45 < R-G          DISPLAY CASE-ID "NG"               
-        ELSE                  DISPLAY CASE-ID "NG"               
-     END-IF.                                                     
+*>      MOVE "P-410-05"        TO CASE-ID.                         
+*>      IF 123.45 < R-G          DISPLAY CASE-ID "NG"  *>エラーとな
+*>         ELSE                  DISPLAY CASE-ID "NG"              
+*>      END-IF.                                                    
 *>                                                                 
 P-420.                                                           
 *>  ケース42.（左辺）英字・数字＋（右辺）日本語編集                
@@ -218,10 +218,10 @@ P-420.
         ELSE                  DISPLAY CASE-ID "NG"               
      END-IF.                                                     
 *>                                                                 
-     MOVE "P-420-04"        TO CASE-ID.                          
-     IF 123.45 < R-GE         DISPLAY CASE-ID "NG"               
-        ELSE                  DISPLAY CASE-ID "NG"               
-     END-IF.                                                     
+*>      MOVE "P-420-04"        TO CASE-ID.                         
+*>      IF 123.45 < R-GE         DISPLAY CASE-ID "NG"  *>エラーとな
+*>         ELSE                  DISPLAY CASE-ID "NG"              
+*>      END-IF.                                                    
 *>                                                                 
 P-430.                                                           
 *>  ケース43.（左辺）英字・数字＋（右辺）日本語定数                
@@ -272,12 +272,8 @@ P-440.
      GOBACK                                                      
      .                                                           
                                                                  
-*> --S: #43 Illegal condition L-G & 123.45; file = EX5-1-1G.cbl, line = 103, col 5
-*> --S: #43 Illegal condition L-GE & 123.45; file = EX5-1-1G.cbl, line = 126, col 5
 *> --E: #43 Illegal condition L-PACK & R-G; file = EX5-1-1G.cbl, line = 175, col 5
-*> --S: #43 Illegal condition 123.45 & R-G; file = EX5-1-1G.cbl, line = 185, col 5
 *> --E: #43 Illegal condition L-PACK & R-GE; file = EX5-1-1G.cbl, line = 207, col 5
-*> --S: #43 Illegal condition 123.45 & R-GE; file = EX5-1-1G.cbl, line = 217, col 5
 *> --E: #43 Illegal condition L-ZONE-DEC & "あいう"; file = EX5-1-1G.cbl, line = 233, col 5
 *> --E: #43 Illegal condition L-PACK-DEC & "あいう"; file = EX5-1-1G.cbl, line = 238, col 5
 *> --E: #43 Illegal condition L-ZONE-DEC & "あいう"; file = EX5-1-1G.cbl, line = 254, col 5

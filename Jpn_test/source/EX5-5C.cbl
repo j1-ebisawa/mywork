@@ -425,25 +425,27 @@
        P-270. 
       *  ケース27.数字（小数）、数字定数(小数）→日本語
       *           コンパイルエラーとなるか
-      *     MOVE "P-270-01"        TO CASE-ID.
-      *     MOVE 123.456 TO L-ZONE-DEC.
-      *     MOVE 123.456 TO L-PACK-DEC.
-      *     MOVE 123.456 TO L-BIN-DEC.
-      *     
-      *     MOVE L-ZONE-DEC TO R-G.
-      *     MOVE L-PACK-DEC TO R-G.
-      *     MOVE L-BIN-DEC  TO R-G.
+           MOVE "P-270-01"        TO CASE-ID.
+           MOVE 123.456 TO L-ZONE-DEC.
+           MOVE 123.456 TO L-PACK-DEC.
+           MOVE 123.456 TO L-BIN-DEC.
+           
+           MOVE L-ZONE-DEC TO R-G.
+           MOVE L-PACK-DEC TO R-G.
+           MOVE L-BIN-DEC  TO R-G.
+           DISPLAY CASE-ID "NG".
             
        P-280. 
       *  ケース28.数字（小数）、数字定数(小数）→日本語編集
       *           コンパイルエラーとなるか
-      *     MOVE "P-280-01"        TO CASE-ID.
-      *     MOVE 123.456 TO L-ZONE-DEC.
-      *     MOVE 123.456 TO L-PACK-DEC.
-      *     MOVE 123.456 TO L-BIN-DEC.
-      *     MOVE L-ZONE-DEC TO R-GE.
-      *     MOVE L-PACK-DEC TO R-GE.
-      *     MOVE L-BIN-DEC  TO R-GE.
+           MOVE "P-280-01"        TO CASE-ID.
+           MOVE 123.456 TO L-ZONE-DEC.
+           MOVE 123.456 TO L-PACK-DEC.
+           MOVE 123.456 TO L-BIN-DEC.
+           MOVE L-ZONE-DEC TO R-GE.
+           MOVE L-PACK-DEC TO R-GE.
+           MOVE L-BIN-DEC  TO R-GE.
+           DISPLAY CASE-ID "NG".
       *
        P-290. 
       *  ケース29.表意定数→日本語

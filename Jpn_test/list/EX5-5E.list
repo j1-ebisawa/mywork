@@ -1,7 +1,7 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
 *>source file name:  C:\ISTEST\Git\Jpn_test\source\EX5-5E.cbl
-*>date generated  :  Sun Jul 04 14:45:27 JST 2021
+*>date generated  :  Mon Jul 05 10:33:28 JST 2021
 *>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/ISTEST/Git/Jpn_test/output -jj -eo=C:/ISTEST/Git/Jpn_test/errs -d -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks
 *>*****************************************************************
 *>    テストケース：5-5E                                           
@@ -156,9 +156,11 @@ P-320.
                    ALPHANUMERIC        BY "X"                    
                    NUMERIC             BY 123                    
                    ALPHANUMERIC-EDITED BY "E"                    
-                   NUMERIC-EDITED      BY 999                    
-                   NATIONAL            BY "あ"                   
-                   NATIONAL-EDITED     BY "か".                  
+                   NUMERIC-EDITED      BY 999.                   
+                  *> NATIONAL            BY "あ"                 
+                  *> NATIONAL-EDITED     BY "か".                
+     MOVE "あ" TO L-G-10 of W-L-GRP.                             
+     MOVE "か" TO L-GE   of W-L-GRP.                             
 *>                                                                 
      MOVE CORR W-L-GRP TO W-CORR-GRP.                            
 *>                                                                 
@@ -167,12 +169,4 @@ P-320.
      GOBACK                                                      
      .                                                           
                                                                  
-*> --S: #15 Unexpected token <NATIONAL>; file = EX5-5E.cbl, line = 155, col 19
-*> --S: #15 Unexpected token <BY>; file = EX5-5E.cbl, line = 155, col 39
-*> --S: #15 Unexpected token <"あ">; file = EX5-5E.cbl, line = 155, col 42
-*> --S: #13 Missing dot ; file = EX5-5E.cbl, line = 155, col 42
-*> --E: #212 Assumed to be a paragraph without final dot: NATIONAL-EDITED; file = EX5-5E.cbl, line = 156, col 19
-*> --W: #253 Paragraph name found in Area B: NATIONAL-EDITED; file = EX5-5E.cbl, line = 156, col 19
-*> --S: #15 Unexpected token <BY>; file = EX5-5E.cbl, line = 156, col 39
-*> --S: #15 Unexpected token <"か">; file = EX5-5E.cbl, line = 156, col 42
-*> --S: #59 Illegal receiver from source type: L-GE; file = EX5-5E.cbl, line = 158, col 26
+*> --S: #59 Illegal receiver from source type: L-GE; file = EX5-5E.cbl, line = 160, col 26

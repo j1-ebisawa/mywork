@@ -1,8 +1,8 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
-*>source file name:  C:\isTEST\Git\Jpn_test\source\EX5-5B.cbl
-*>date generated  :  Thu Jul 01 14:49:18 JST 2021
-*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/isTEST/Git/Jpn_test/output -jj -eo=C:/isTEST/Git/Jpn_test/errs -d -g -lo=C:/isTEST/Git/Jpn_test/list -tasks
+*>source file name:  C:\ISTEST\Git\Jpn_test\source\EX5-5B.cbl
+*>date generated  :  Mon Jul 05 09:12:41 JST 2021
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/ISTEST/Git/Jpn_test/output -jj -eo=C:/ISTEST/Git/Jpn_test/errs -d -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks
 *>*****************************************************************
 *>    テストケース：5-5B                                           
 *>    プログラム名：日本語化テスト （手続き部）MOVE命令            
@@ -152,15 +152,17 @@ P-120.
 P-130.                                                           
 *>  ケース13.日本語定数→英字・数字・数字編集                      
 *>           コンパイルエラーとなるか                              
-*>     MOVE "P-130-01"        TO CASE-ID.                          
-*>     MOVE "あいうえお" TO R-A.                                   
-*>     MOVE "あいうえお" TO R-ZONE.                                
-*>     MOVE "あいうえお" TO R-ZONE-DEC.                            
-*>     MOVE "あいうえお" TO R-PACK.                                
-*>     MOVE "あいうえお" TO R-PACK-DEC.                            
-*>     MOVE "あいうえお" TO R-BIN.                                 
-*>     MOVE "あいうえお" TO R-BIN-DEC.                             
-*>     MOVE "あいうえお" TO R-NE.                                  
+    MOVE "P-130-01"        TO CASE-ID.                           
+    MOVE "あいうえお" TO R-A.                                    
+    MOVE "あいうえお" TO R-ZONE.                                 
+    MOVE "あいうえお" TO R-ZONE-DEC.                             
+    MOVE "あいうえお" TO R-PACK.                                 
+    MOVE "あいうえお" TO R-PACK-DEC.                             
+    MOVE "あいうえお" TO R-BIN.                                  
+    MOVE "あいうえお" TO R-BIN-DEC.                              
+    MOVE "あいうえお" TO R-NE.                                   
+    DISPLAY CASE-ID "NG".                                        
+                                                                 
 *>                                                                 
 P-140.                                                           
 *>  ケース14.日本語定数→日本語                                    
@@ -305,15 +307,16 @@ P-170.
 P-180.                                                           
 *>  ケース18.ALL 日本語定数→英字・数字・数字編集                  
 *>           コンパイルエラーとなるか                              
-*>     MOVE "P-180-01"        TO CASE-ID.                          
-*>     MOVE ALL "あいうえお" TO R-A.                               
-*>     MOVE ALL "あいうえお" TO R-ZONE.                            
-*>     MOVE ALL "あいうえお" TO R-ZONE-DEC.                        
-*>     MOVE ALL "あいうえお" TO R-PACK.                            
-*>     MOVE ALL "あいうえお" TO R-PACK-DEC.                        
-*>     MOVE ALL "あいうえお" TO R-BIN.                             
-*>     MOVE ALL "あいうえお" TO R-BIN-DEC.                         
-*>     MOVE ALL "あいうえお" TO R-NE.                              
+    MOVE "P-180-01"        TO CASE-ID.                           
+    MOVE ALL "あいうえお" TO R-A.                                
+    MOVE ALL "あいうえお" TO R-ZONE.                             
+    MOVE ALL "あいうえお" TO R-ZONE-DEC.                         
+    MOVE ALL "あいうえお" TO R-PACK.                             
+    MOVE ALL "あいうえお" TO R-PACK-DEC.                         
+    MOVE ALL "あいうえお" TO R-BIN.                              
+    MOVE ALL "あいうえお" TO R-BIN-DEC.                          
+    MOVE ALL "あいうえお" TO R-NE.                               
+    DISPLAY CASE-ID "NG".                                        
 *>                                                                 
 P-190.                                                           
 *>  ケース19.ALL 日本語定数→日本語                                

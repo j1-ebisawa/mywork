@@ -151,9 +151,11 @@
                           ALPHANUMERIC        BY "X"
                           NUMERIC             BY 123
                           ALPHANUMERIC-EDITED BY "E"
-                          NUMERIC-EDITED      BY 999
-                          NATIONAL            BY "‚ "
-                          NATIONAL-EDITED     BY "‚©".
+                          NUMERIC-EDITED      BY 999.
+                         *> NATIONAL            BY "‚ "
+                         *> NATIONAL-EDITED     BY "‚©".
+            MOVE "‚ " TO L-G-10 of W-L-GRP.
+            MOVE "‚©" TO L-GE   of W-L-GRP.
       *
             MOVE CORR W-L-GRP TO W-CORR-GRP.
       *

@@ -1,7 +1,7 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL release 2021 R1 build#1041.6-20210604-31963
 *>source file name:  C:\ISTEST\Git\Jpn_test\source\EX5-1-1B.cbl
-*>date generated  :  Wed Jun 30 14:13:25 JST 2021
+*>date generated  :  Mon Jul 05 07:59:28 JST 2021
 *>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/ISTEST/Git/Jpn_test/output -jj -eo=C:/ISTEST/Git/Jpn_test/errs -d -g -lo=C:/ISTEST/Git/Jpn_test/list -tasks
 *>*****************************************************************
 *>    テストケース：5-1-1B                                         
@@ -130,23 +130,23 @@ P-020.
 P-030.                                                           
 *>  ケース3.（左辺）日本語＋（右辺）英字・数字                     
 *>           コンパイルエラーとなるか                              
-*>     MOVE "P-030-01"        TO CASE-ID.                          
-*>     IF L-G = R-A             DISPLAY CASE-ID "NG"               
-*>        ELSE                  DISPLAY CASE-ID "NG"               
-*>     END-IF.                                                     
+    MOVE "P-030-01"        TO CASE-ID.                           
+    IF L-G = R-A             DISPLAY CASE-ID "NG"                
+       ELSE                  DISPLAY CASE-ID "NG"                
+    END-IF.                                                      
 *>                                                                 
-*>     MOVE "P-030-02"        TO CASE-ID.                          
-*>     IF L-G > R-ZONE          DISPLAY CASE-ID "NG"               
-*>        ELSE                  DISPLAY CASE-ID "NG"               
-*>     END-IF.                                                     
+    MOVE "P-030-02"        TO CASE-ID.                           
+    IF L-G > R-ZONE          DISPLAY CASE-ID "NG"                
+       ELSE                  DISPLAY CASE-ID "NG"                
+    END-IF.                                                      
 *>                                                                 
-*>     MOVE "P-030-03"        TO CASE-ID.                          
-*>     IF L-G > 123             DISPLAY CASE-ID "NG"               
-*>        ELSE                  DISPLAY CASE-ID "NG"               
-*>     END-IF.                                                     
+    MOVE "P-030-03"        TO CASE-ID.                           
+    IF L-G > 123             DISPLAY CASE-ID "NG"                
+       ELSE                  DISPLAY CASE-ID "NG"                
+    END-IF.                                                      
 *>                                                                 
 *>     MOVE "P-030-04"        TO CASE-ID.                          
-*>     IF L-G > 123.45          DISPLAY CASE-ID "NG"               
+*>     IF L-G > 123.45          DISPLAY CASE-ID "NG"  *>エラーにな?
 *>        ELSE                  DISPLAY CASE-ID "NG"               
 *>     END-IF.                                                     
 *>                                                                 
@@ -304,23 +304,23 @@ P-100.
 P-110.                                                           
 *>  ケース11.（左辺）日本語編集＋（右辺）英字・数字                
 *>           コンパイルエラーとなるか                              
-*>     MOVE "P-110-01"        TO CASE-ID.                          
-*>     IF L-GE = R-A            DISPLAY CASE-ID "NG"               
-*>        ELSE                  DISPLAY CASE-ID "NG"               
-*>     END-IF.                                                     
+    MOVE "P-110-01"        TO CASE-ID.                           
+    IF L-GE = R-A            DISPLAY CASE-ID "NG"                
+       ELSE                  DISPLAY CASE-ID "NG"                
+    END-IF.                                                      
 *>                                                                 
-*>     MOVE "P-110-02"        TO CASE-ID.                          
-*>     IF L-GE > R-ZONE         DISPLAY CASE-ID "NG"               
-*>        ELSE                  DISPLAY CASE-ID "NG"               
-*>     END-IF.                                                     
+    MOVE "P-110-02"        TO CASE-ID.                           
+    IF L-GE > R-ZONE         DISPLAY CASE-ID "NG"                
+       ELSE                  DISPLAY CASE-ID "NG"                
+    END-IF.                                                      
 *>                                                                 
-*>     MOVE "P-110-03"        TO CASE-ID.                          
-*>     IF L-GE = 123            DISPLAY CASE-ID "NG"               
-*>        ELSE                  DISPLAY CASE-ID "NG"               
-*>     END-IF.                                                     
+    MOVE "P-110-03"        TO CASE-ID.                           
+    IF L-GE = 123            DISPLAY CASE-ID "NG"                
+       ELSE                  DISPLAY CASE-ID "NG"                
+    END-IF.                                                      
 *>                                                                 
 *>     MOVE "P-110-04"        TO CASE-ID.                          
-*>     IF L-GE > 123.45         DISPLAY CASE-ID "NG"               
+*>     IF L-GE > 123.45         DISPLAY CASE-ID "NG"  *>エラーにな?
 *>        ELSE                  DISPLAY CASE-ID "NG"               
 *>     END-IF.                                                     
 *>                                                                 

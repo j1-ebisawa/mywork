@@ -4,13 +4,15 @@
        WORKING-STORAGE SECTION.
        01  N-01    PIC N(10) VALUE ALL "Ç†".
        01  N-02    PIC N(4)  VALUE "Ç¢".
-       01  NE-01   PIC NN/NN/NN VALUE "Ç`Ç`Å^ÇaÇaÅ^ÇbÇb".
+       01  NE-01   PIC NN/NN/NN VALUE "Ç`Ç`ÇaÇaÇbÇb".
        01  LENG    PIC 9(3).
        01  omit-wk pic x.
        PROCEDURE                  DIVISION.
          P-01.
            DISPLAY "TEST START  (JPN_TEST)".
-         
+           DISPLAY "X_CONFIG"   UPON ENVIRONMENT-NAME.
+           DISPLAY "Ç†Ç¢Ç§Ç¶Ç®" UPON ENVIRONMENT-VALUE.
+           .       
            MOVE SPACE TO N-01.
            DISPLAY "X_CONFIG" UPON ENVIRONMENT-NAME.
            ACCEPT N-01        FROM ENVIRONMENT-VALUE.

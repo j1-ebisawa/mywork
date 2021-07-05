@@ -1,2 +1,3 @@
 I --> C:\ISTEST\Git\Jpn_test\source\EX5-1-2A.cbl
+--E: #218 Numeric literal treated as alphanumeric: A-20; file = EX5-1-2A.cbl, line = 106, col 28
 --W: #170 VALUE size error "Ç†Å^Ç¢Å^Ç§Å^Ç¶Å^Ç®Å^Ç©"; file = EX5-1-2A.cbl, line = 89, col 29

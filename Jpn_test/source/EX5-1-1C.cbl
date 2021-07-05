@@ -126,15 +126,15 @@
        P-019. 
       *  ケース19.（左辺）日本語定数＋（右辺）英字・数字
       *           コンパイルエラーとなるか
-      *     MOVE "P-190-01"        TO CASE-ID.
-      *     IF "あいうえお" = R-A    DISPLAY CASE-ID "NG"
-      *        ELSE                  DISPLAY CASE-ID "NG"
-      *     END-IF.
+           MOVE "P-190-01"        TO CASE-ID.
+           IF "あいうえお" = R-A    DISPLAY CASE-ID "NG"
+              ELSE                  DISPLAY CASE-ID "NG"
+           END-IF.
       *
-      *     MOVE "P-190-02"        TO CASE-ID.
-      *     IF "あいうえお" > R-ZONE DISPLAY CASE-ID "NG"
-      *        ELSE                  DISPLAY CASE-ID "NG"
-      *     END-IF.
+           MOVE "P-190-02"        TO CASE-ID.
+           IF "あいうえお" > R-ZONE DISPLAY CASE-ID "NG"
+              ELSE                  DISPLAY CASE-ID "NG"
+           END-IF.
       *
        P-200. 
       *  ケース4.（左辺）日本語定数＋（右辺）日本語
@@ -285,15 +285,15 @@
        P-270. 
       *  ケース27.（左辺）ALL 日本語定数＋（右辺）英字・数字
       *           コンパイルエラーとなるか
-      *     MOVE "P-270-01"        TO CASE-ID.
-      *     IF ALL "あいう" = R-A    DISPLAY CASE-ID "NG"
-      *        ELSE                  DISPLAY CASE-ID "NG"
-      *     END-IF.
+           MOVE "P-270-01"        TO CASE-ID.
+           IF ALL "あいう" = R-A    DISPLAY CASE-ID "NG"
+              ELSE                  DISPLAY CASE-ID "NG"
+           END-IF.
       *
-      *     MOVE "P-270-02"        TO CASE-ID.
-      *     IF ALL "あいう" > R-ZONE DISPLAY CASE-ID "NG"
-      *        ELSE                  DISPLAY CASE-ID "NG"
-      *     END-IF.
+           MOVE "P-270-02"        TO CASE-ID.
+           IF ALL "あいう" > R-ZONE DISPLAY CASE-ID "NG"
+              ELSE                  DISPLAY CASE-ID "NG"
+           END-IF.
       *
        P-280. 
       *  ケース28.（左辺）ALL 日本語定数＋（右辺）日本語

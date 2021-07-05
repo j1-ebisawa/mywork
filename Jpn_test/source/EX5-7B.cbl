@@ -67,6 +67,10 @@
                 INTO W-INTO-1 DELIMITER IN W-DELIN2-1 
                               COUNT IN W-CNT-1
            END-UNSTRING.
+           DISPLAY "EX5-7B-01".
+           DISPLAY "W-INTO-1:" W-INTO-1
+           DISPLAY "W-DELIN2-1:" W-DELIN2-1 
+           DISPLAY "W-CNT-1:" W-CNT-1
            
            
            UNSTRING G-01 DELIMITED BY X-01
@@ -75,6 +79,11 @@
                 ON OVERFLOW MOVE 1 TO OVER-SW
                 NOT ON OVERFLOW MOVE 0 TO OVER-SW
            END-UNSTRING.
+           DISPLAY "EX5-7B-02".
+           DISPLAY "W-INTO-1:" W-INTO-1
+           DISPLAY "W-DELIN-1:" W-DELIN-1 
+           DISPLAY "W-CNT-1:" W-CNT-1
+           DISPLAY "OVER-SW:" OVER-SW
            
            UNSTRING G-01 DELIMITED BY "‚ "
                 INTO X-01 DELIMITER IN W-DELIN-1 
@@ -82,6 +91,11 @@
                 ON OVERFLOW MOVE 1 TO OVER-SW
                 NOT ON OVERFLOW MOVE 0 TO OVER-SW
            END-UNSTRING.
+           DISPLAY "EX5-7B-03".
+           DISPLAY "X-01:" X-01
+           DISPLAY "W-DELIN-1:" W-DELIN-1 
+           DISPLAY "W-CNT-1:" W-CNT-1
+           DISPLAY "OVER-SW:" OVER-SW
            
            UNSTRING G-01 DELIMITED BY "‚©"
                 INTO W-INTO-1 DELIMITER IN X-01 
@@ -89,6 +103,11 @@
                 ON OVERFLOW MOVE 1 TO OVER-SW
                 NOT ON OVERFLOW MOVE 0 TO OVER-SW
            END-UNSTRING.
+           DISPLAY "EX5-7B-04".
+           DISPLAY "W-INTO-1:" W-INTO-1
+           DISPLAY "X-01:" X-01
+           DISPLAY "W-CNT-1:" W-CNT-1
+           DISPLAY "OVER-SW:" OVER-SW
            
            UNSTRING X-01 DELIMITED BY W-DEL-1
                 INTO W-INTO-1 DELIMITER IN W-DELIN-1 
@@ -96,8 +115,13 @@
                 ON OVERFLOW MOVE 1 TO OVER-SW
                 NOT ON OVERFLOW MOVE 0 TO OVER-SW
            END-UNSTRING.
+           DISPLAY "EX5-7B-05".
+           DISPLAY "W-INTO-1:" W-INTO-1
+           DISPLAY "W-DELIN-1:" W-DELIN-1
+           DISPLAY "W-CNT-1:" W-CNT-1
+           DISPLAY "OVER-SW:" OVER-SW
       ***
-           DISPLAY "EX5-7B OK".
+           DISPLAY "EX5-7B NG".
             DISPLAY "TEST END    (EX5-7B)".
             *>ACCEPT OMIT-WK.
             GOBACK
